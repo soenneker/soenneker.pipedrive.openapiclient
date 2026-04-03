@@ -35,19 +35,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products
                 return new global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Item.WithProduct_attachment_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.Pipedrive.OpenApiClient.deals.item.products.item collection</summary>
-        /// <param name="position">The ID of the deal-product (the ID of the product attached to the deal)</param>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Item.WithProduct_attachment_ItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Item.WithProduct_attachment_ItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("product_attachment_id", position);
-                return new global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Item.WithProduct_attachment_ItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsRequestBuilder"/> and sets the default values.
         /// </summary>
@@ -72,34 +59,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsDeleteResponse?> DeleteAsProductsDeleteResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsRequestBuilder.ProductsRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsDeleteResponse?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsRequestBuilder.ProductsRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsDeleteResponse> DeleteAsProductsDeleteResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsRequestBuilder.ProductsRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsDeleteResponse> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsRequestBuilder.ProductsRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsDeleteResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsDeleteResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Deletes multiple products from a deal. If no product IDs are specified, up to 100 products will be removed from the deal. A maximum of 100 product IDs can be provided per request.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use DeleteAsProductsDeleteResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsResponse?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsRequestBuilder.ProductsRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsResponse> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsRequestBuilder.ProductsRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists products attached to a deal.
@@ -109,34 +77,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsGetResponse?> GetAsProductsGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsRequestBuilder.ProductsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsRequestBuilder.ProductsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsGetResponse> GetAsProductsGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsRequestBuilder.ProductsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsRequestBuilder.ProductsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsGetResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Lists products attached to a deal.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use GetAsProductsGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsRequestBuilder.ProductsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsRequestBuilder.ProductsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Adds a product to a deal, creating a new item called a deal-product.
@@ -147,37 +96,16 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsPostResponse?> PostAsProductsPostResponseAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsPostResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsPostResponse> PostAsProductsPostResponseAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsPostResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsPostResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Adds a product to a deal, creating a new item called a deal-product.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsResponse"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use PostAsProductsPostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Deletes multiple products from a deal. If no product IDs are specified, up to 100 products will be removed from the deal. A maximum of 100 product IDs can be provided per request.
@@ -266,14 +194,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products
 #endif
         }
         /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ProductsRequestBuilderDeleteRequestConfiguration : RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsRequestBuilder.ProductsRequestBuilderDeleteQueryParameters>
-        {
-        }
-        /// <summary>
         /// Lists products attached to a deal.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
@@ -293,49 +213,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             /// <summary>The field to sort by. Supported fields: `id`, `add_time`, `update_time`, `order_nr`.</summary>
-            [Obsolete("This property is deprecated, use SortByAsGetSortByQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("sort_by")]
-            public string? SortBy { get; set; }
-#nullable restore
-#else
-            [QueryParameter("sort_by")]
-            public string SortBy { get; set; }
-#endif
-            /// <summary>The field to sort by. Supported fields: `id`, `add_time`, `update_time`, `order_nr`.</summary>
-            [QueryParameter("sort_by")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.GetSort_byQueryParameterType? SortByAsGetSortByQueryParameterType { get; set; }
-            /// <summary>The sorting direction. Supported values: `asc`, `desc`.</summary>
-            [Obsolete("This property is deprecated, use SortDirectionAsGetSortDirectionQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("sort_direction")]
-            public string? SortDirection { get; set; }
-#nullable restore
-#else
-            [QueryParameter("sort_direction")]
-            public string SortDirection { get; set; }
-#endif
+            public global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.GetSort_byQueryParameterType? SortBy { get; set; }
             /// <summary>The sorting direction. Supported values: `asc`, `desc`.</summary>
             [QueryParameter("sort_direction")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.GetSort_directionQueryParameterType? SortDirectionAsGetSortDirectionQueryParameterType { get; set; }
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ProductsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsRequestBuilder.ProductsRequestBuilderGetQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ProductsRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
+            public global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.GetSort_directionQueryParameterType? SortDirection { get; set; }
         }
     }
 }

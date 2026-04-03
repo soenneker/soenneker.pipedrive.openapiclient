@@ -40,34 +40,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeGetResponse?> GetAsWithField_codeGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeItemRequestBuilder.WithField_codeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeItemRequestBuilder.WithField_codeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeGetResponse> GetAsWithField_codeGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeItemRequestBuilder.WithField_codeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeItemRequestBuilder.WithField_codeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeGetResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Returns metadata about a specific activity field.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use GetAsWithField_codeGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeItemRequestBuilder.WithField_codeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeItemRequestBuilder.WithField_codeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns metadata about a specific activity field.
@@ -104,27 +85,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item
         public partial class WithField_codeItemRequestBuilderGetQueryParameters 
         {
             /// <summary>Optional comma separated string array of additional data namespaces to include in response</summary>
-            [Obsolete("This property is deprecated, use IncludeFieldsAsGetIncludeFieldsQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("include_fields")]
-            public string? IncludeFields { get; set; }
-#nullable restore
-#else
-            [QueryParameter("include_fields")]
-            public string IncludeFields { get; set; }
-#endif
-            /// <summary>Optional comma separated string array of additional data namespaces to include in response</summary>
-            [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.GetInclude_fieldsQueryParameterType? IncludeFieldsAsGetIncludeFieldsQueryParameterType { get; set; }
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithField_codeItemRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeItemRequestBuilder.WithField_codeItemRequestBuilderGetQueryParameters>
-        {
+            public global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.GetInclude_fieldsQueryParameterType? IncludeFields { get; set; }
         }
     }
 }

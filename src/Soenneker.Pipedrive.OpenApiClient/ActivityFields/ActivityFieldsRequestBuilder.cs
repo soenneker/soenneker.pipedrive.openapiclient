@@ -53,34 +53,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.ActivityFields
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsGetResponse?> GetAsActivityFieldsGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsRequestBuilder.ActivityFieldsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsRequestBuilder.ActivityFieldsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsGetResponse> GetAsActivityFieldsGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsRequestBuilder.ActivityFieldsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsRequestBuilder.ActivityFieldsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsGetResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Returns metadata about all activity fields in the company.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use GetAsActivityFieldsGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsRequestBuilder.ActivityFieldsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsRequestBuilder.ActivityFieldsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns metadata about all activity fields in the company.
@@ -127,30 +108,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.ActivityFields
             public string Cursor { get; set; }
 #endif
             /// <summary>Optional comma separated string array of additional data namespaces to include in response</summary>
-            [Obsolete("This property is deprecated, use IncludeFieldsAsGetIncludeFieldsQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("include_fields")]
-            public string? IncludeFields { get; set; }
-#nullable restore
-#else
-            [QueryParameter("include_fields")]
-            public string IncludeFields { get; set; }
-#endif
-            /// <summary>Optional comma separated string array of additional data namespaces to include in response</summary>
-            [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.GetInclude_fieldsQueryParameterType? IncludeFieldsAsGetIncludeFieldsQueryParameterType { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.GetInclude_fieldsQueryParameterType? IncludeFields { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ActivityFieldsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsRequestBuilder.ActivityFieldsRequestBuilderGetQueryParameters>
-        {
         }
     }
 }

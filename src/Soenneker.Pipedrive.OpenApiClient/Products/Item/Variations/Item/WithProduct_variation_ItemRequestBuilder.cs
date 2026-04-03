@@ -40,34 +40,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_DeleteResponse?> DeleteAsWithProduct_variation_DeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_DeleteResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_DeleteResponse> DeleteAsWithProduct_variation_DeleteResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_DeleteResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_DeleteResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_DeleteResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Deletes a product variation.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_Response"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use DeleteAsWithProduct_variation_DeleteResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_Response?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_Response> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates product variation data.
@@ -78,37 +59,16 @@ namespace Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_PatchResponse?> PatchAsWithProduct_variation_PatchResponseAsync(global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_PatchResponse?> PatchAsync(global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_PatchResponse> PatchAsWithProduct_variation_PatchResponseAsync(global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_PatchResponse> PatchAsync(global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_PatchResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_PatchResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Updates product variation data.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_Response"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use PatchAsWithProduct_variation_PatchResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_Response?> PatchAsync(global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_Response> PatchAsync(global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_PatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Deletes a product variation.
@@ -159,22 +119,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item
         public global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_ItemRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Pipedrive.OpenApiClient.Products.Item.Variations.Item.WithProduct_variation_ItemRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithProduct_variation_ItemRequestBuilderDeleteRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithProduct_variation_ItemRequestBuilderPatchRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

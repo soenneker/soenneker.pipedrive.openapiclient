@@ -35,19 +35,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
                 return new global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.Pipedrive.OpenApiClient.persons.item collection</summary>
-        /// <param name="position">The ID of the person</param>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("id", position);
-                return new global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsRequestBuilder"/> and sets the default values.
         /// </summary>
@@ -72,34 +59,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsGetResponse?> GetAsPersonsGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsRequestBuilder.PersonsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsRequestBuilder.PersonsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsGetResponse> GetAsPersonsGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsRequestBuilder.PersonsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsRequestBuilder.PersonsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsGetResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Returns data about all persons. Fields `ims`, `postal_address`, `notes`, `birthday`, and `job_title` are only included if contact sync is enabled for the company.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use GetAsPersonsGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsRequestBuilder.PersonsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsRequestBuilder.PersonsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Adds a new person. If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field.
@@ -110,37 +78,16 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsPostResponse?> PostAsPersonsPostResponseAsync(global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsPostResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsPostResponse> PostAsPersonsPostResponseAsync(global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsPostResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsPostResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Adds a new person. If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsResponse"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use PostAsPersonsPostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns data about all persons. Fields `ims`, `postal_address`, `notes`, `birthday`, and `job_title` are only included if contact sync is enabled for the company.
@@ -235,19 +182,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
             public string Ids { get; set; }
 #endif
             /// <summary>Optional comma separated string array of additional fields to include. `marketing_status` and `doi_status` can only be included if the company has marketing app enabled.</summary>
-            [Obsolete("This property is deprecated, use IncludeFieldsAsGetIncludeFieldsQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("include_fields")]
-            public string? IncludeFields { get; set; }
-#nullable restore
-#else
-            [QueryParameter("include_fields")]
-            public string IncludeFields { get; set; }
-#endif
-            /// <summary>Optional comma separated string array of additional fields to include. `marketing_status` and `doi_status` can only be included if the company has marketing app enabled.</summary>
-            [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Persons.GetInclude_fieldsQueryParameterType? IncludeFieldsAsGetIncludeFieldsQueryParameterType { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Persons.GetInclude_fieldsQueryParameterType? IncludeFields { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
@@ -258,33 +194,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
             [QueryParameter("owner_id")]
             public int? OwnerId { get; set; }
             /// <summary>The field to sort by. Supported fields: `id`, `update_time`, `add_time`.</summary>
-            [Obsolete("This property is deprecated, use SortByAsGetSortByQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("sort_by")]
-            public string? SortBy { get; set; }
-#nullable restore
-#else
-            [QueryParameter("sort_by")]
-            public string SortBy { get; set; }
-#endif
-            /// <summary>The field to sort by. Supported fields: `id`, `update_time`, `add_time`.</summary>
-            [QueryParameter("sort_by")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Persons.GetSort_byQueryParameterType? SortByAsGetSortByQueryParameterType { get; set; }
-            /// <summary>The sorting direction. Supported values: `asc`, `desc`.</summary>
-            [Obsolete("This property is deprecated, use SortDirectionAsGetSortDirectionQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("sort_direction")]
-            public string? SortDirection { get; set; }
-#nullable restore
-#else
-            [QueryParameter("sort_direction")]
-            public string SortDirection { get; set; }
-#endif
+            public global::Soenneker.Pipedrive.OpenApiClient.Persons.GetSort_byQueryParameterType? SortBy { get; set; }
             /// <summary>The sorting direction. Supported values: `asc`, `desc`.</summary>
             [QueryParameter("sort_direction")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Persons.GetSort_directionQueryParameterType? SortDirectionAsGetSortDirectionQueryParameterType { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Persons.GetSort_directionQueryParameterType? SortDirection { get; set; }
             /// <summary>If set, only persons with an `update_time` later than or equal to this time are returned. In RFC3339 format, e.g. 2025-01-01T10:20:00Z.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -305,22 +219,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
             [QueryParameter("updated_until")]
             public string UpdatedUntil { get; set; }
 #endif
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PersonsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsRequestBuilder.PersonsRequestBuilderGetQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PersonsRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

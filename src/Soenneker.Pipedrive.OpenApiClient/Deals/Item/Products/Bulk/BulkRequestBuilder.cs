@@ -41,37 +41,16 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkPostResponse?> PostAsBulkPostResponseAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkPostResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkPostResponse> PostAsBulkPostResponseAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkPostResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkPostResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Adds multiple products to a deal in a single request. Maximum of 100 products allowed per request.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkResponse"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use PostAsBulkPostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Adds multiple products to a deal in a single request. Maximum of 100 products allowed per request.
@@ -103,14 +82,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk
         public global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BulkRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

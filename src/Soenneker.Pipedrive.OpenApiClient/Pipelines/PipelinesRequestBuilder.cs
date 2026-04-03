@@ -29,19 +29,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Pipelines
                 return new global::Soenneker.Pipedrive.OpenApiClient.Pipelines.Item.PipelinesItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.Pipedrive.OpenApiClient.pipelines.item collection</summary>
-        /// <param name="position">The ID of the pipeline</param>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Pipelines.Item.PipelinesItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.Pipedrive.OpenApiClient.Pipelines.Item.PipelinesItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("id", position);
-                return new global::Soenneker.Pipedrive.OpenApiClient.Pipelines.Item.PipelinesItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesRequestBuilder"/> and sets the default values.
         /// </summary>
@@ -66,34 +53,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.Pipelines
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesGetResponse?> GetAsPipelinesGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesRequestBuilder.PipelinesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesRequestBuilder.PipelinesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesGetResponse> GetAsPipelinesGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesRequestBuilder.PipelinesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesRequestBuilder.PipelinesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesGetResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Returns data about all pipelines.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use GetAsPipelinesGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesRequestBuilder.PipelinesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesRequestBuilder.PipelinesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Adds a new pipeline.
@@ -104,37 +72,16 @@ namespace Soenneker.Pipedrive.OpenApiClient.Pipelines
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesPostResponse?> PostAsPipelinesPostResponseAsync(global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesPostResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesPostResponse> PostAsPipelinesPostResponseAsync(global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesPostResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesPostResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Adds a new pipeline.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesResponse"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use PostAsPipelinesPostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns data about all pipelines.
@@ -206,49 +153,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Pipelines
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             /// <summary>The field to sort by. Supported fields: `id`, `update_time`, `add_time`.</summary>
-            [Obsolete("This property is deprecated, use SortByAsGetSortByQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("sort_by")]
-            public string? SortBy { get; set; }
-#nullable restore
-#else
-            [QueryParameter("sort_by")]
-            public string SortBy { get; set; }
-#endif
-            /// <summary>The field to sort by. Supported fields: `id`, `update_time`, `add_time`.</summary>
-            [QueryParameter("sort_by")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Pipelines.GetSort_byQueryParameterType? SortByAsGetSortByQueryParameterType { get; set; }
-            /// <summary>The sorting direction. Supported values: `asc`, `desc`.</summary>
-            [Obsolete("This property is deprecated, use SortDirectionAsGetSortDirectionQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("sort_direction")]
-            public string? SortDirection { get; set; }
-#nullable restore
-#else
-            [QueryParameter("sort_direction")]
-            public string SortDirection { get; set; }
-#endif
+            public global::Soenneker.Pipedrive.OpenApiClient.Pipelines.GetSort_byQueryParameterType? SortBy { get; set; }
             /// <summary>The sorting direction. Supported values: `asc`, `desc`.</summary>
             [QueryParameter("sort_direction")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Pipelines.GetSort_directionQueryParameterType? SortDirectionAsGetSortDirectionQueryParameterType { get; set; }
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PipelinesRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesRequestBuilder.PipelinesRequestBuilderGetQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PipelinesRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
+            public global::Soenneker.Pipedrive.OpenApiClient.Pipelines.GetSort_directionQueryParameterType? SortDirection { get; set; }
         }
     }
 }

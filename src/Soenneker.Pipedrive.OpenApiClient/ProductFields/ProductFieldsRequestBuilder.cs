@@ -53,34 +53,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.ProductFields
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsGetResponse?> GetAsProductFieldsGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsRequestBuilder.ProductFieldsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsRequestBuilder.ProductFieldsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsGetResponse> GetAsProductFieldsGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsRequestBuilder.ProductFieldsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsRequestBuilder.ProductFieldsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsGetResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Returns metadata about all product fields in the company.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use GetAsProductFieldsGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsRequestBuilder.ProductFieldsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsRequestBuilder.ProductFieldsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a new product custom field.
@@ -91,37 +72,16 @@ namespace Soenneker.Pipedrive.OpenApiClient.ProductFields
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostResponse?> PostAsProductFieldsPostResponseAsync(global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostResponse> PostAsProductFieldsPostResponseAsync(global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Creates a new product custom field.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsResponse"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use PostAsProductFieldsPostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns metadata about all product fields in the company.
@@ -190,38 +150,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.ProductFields
             public string Cursor { get; set; }
 #endif
             /// <summary>Optional comma separated string array of additional data namespaces to include in response</summary>
-            [Obsolete("This property is deprecated, use IncludeFieldsAsGetIncludeFieldsQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("include_fields")]
-            public string? IncludeFields { get; set; }
-#nullable restore
-#else
-            [QueryParameter("include_fields")]
-            public string IncludeFields { get; set; }
-#endif
-            /// <summary>Optional comma separated string array of additional data namespaces to include in response</summary>
-            [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.ProductFields.GetInclude_fieldsQueryParameterType? IncludeFieldsAsGetIncludeFieldsQueryParameterType { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.ProductFields.GetInclude_fieldsQueryParameterType? IncludeFields { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ProductFieldsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsRequestBuilder.ProductFieldsRequestBuilderGetQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ProductFieldsRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

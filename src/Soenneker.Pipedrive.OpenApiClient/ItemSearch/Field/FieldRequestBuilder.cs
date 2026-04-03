@@ -40,34 +40,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldGetResponse?> GetAsFieldGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldRequestBuilder.FieldRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldRequestBuilder.FieldRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldGetResponse> GetAsFieldGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldRequestBuilder.FieldRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldRequestBuilder.FieldRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldGetResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Performs a search from the values of a specific field. Results can either be the distinct values of the field (useful for searching autocomplete field values), or the IDs of actual items (deals, leads, persons, organizations or products).
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use GetAsFieldGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldRequestBuilder.FieldRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldRequestBuilder.FieldRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Performs a search from the values of a specific field. Results can either be the distinct values of the field (useful for searching autocomplete field values), or the IDs of actual items (deals, leads, persons, organizations or products).
@@ -114,19 +95,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field
             public string Cursor { get; set; }
 #endif
             /// <summary>The type of the field to perform the search from</summary>
-            [Obsolete("This property is deprecated, use EntityTypeAsGetEntityTypeQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("entity_type")]
-            public string? EntityType { get; set; }
-#nullable restore
-#else
-            [QueryParameter("entity_type")]
-            public string EntityType { get; set; }
-#endif
-            /// <summary>The type of the field to perform the search from</summary>
-            [QueryParameter("entity_type")]
-            public global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.GetEntity_typeQueryParameterType? EntityTypeAsGetEntityTypeQueryParameterType { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.GetEntity_typeQueryParameterType? EntityType { get; set; }
             /// <summary>The key of the field to search from. The field key can be obtained by fetching the list of the fields using any of the fields&apos; API GET methods (dealFields, personFields, etc.). Only the following custom field types are searchable: `address`, `varchar`, `text`, `varchar_auto`, `double`, `monetary` and `phone`. Read more about searching by custom fields &lt;a href=&quot;https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;here&lt;/a&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -141,19 +111,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             /// <summary>The type of match used against the term. The search &lt;b&gt;is&lt;/b&gt; case sensitive.&lt;br/&gt;&lt;br/&gt; E.g. in case of searching for a value `monkey`, &lt;ul&gt; &lt;li&gt;with `exact` match, you will only find it if term is `monkey`&lt;/li&gt; &lt;li&gt;with `beginning` match, you will only find it if the term matches the beginning or the whole string, e.g. `monk` and `monkey`&lt;/li&gt; &lt;li&gt;with `middle` match, you will find the it if the term matches any substring of the value, e.g. `onk` and `ke`&lt;/li&gt; &lt;/ul&gt;.</summary>
-            [Obsolete("This property is deprecated, use MatchAsGetMatchQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("match")]
-            public string? Match { get; set; }
-#nullable restore
-#else
-            [QueryParameter("match")]
-            public string Match { get; set; }
-#endif
-            /// <summary>The type of match used against the term. The search &lt;b&gt;is&lt;/b&gt; case sensitive.&lt;br/&gt;&lt;br/&gt; E.g. in case of searching for a value `monkey`, &lt;ul&gt; &lt;li&gt;with `exact` match, you will only find it if term is `monkey`&lt;/li&gt; &lt;li&gt;with `beginning` match, you will only find it if the term matches the beginning or the whole string, e.g. `monk` and `monkey`&lt;/li&gt; &lt;li&gt;with `middle` match, you will find the it if the term matches any substring of the value, e.g. `onk` and `ke`&lt;/li&gt; &lt;/ul&gt;.</summary>
-            [QueryParameter("match")]
-            public global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.GetMatchQueryParameterType? MatchAsGetMatchQueryParameterType { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.GetMatchQueryParameterType? Match { get; set; }
             /// <summary>The search term to look for. Minimum 2 characters (or 1 if `match` is `exact`). Please note that the search term has to be URL encoded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -164,14 +123,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field
             [QueryParameter("term")]
             public string Term { get; set; }
 #endif
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class FieldRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldRequestBuilder.FieldRequestBuilderGetQueryParameters>
-        {
         }
     }
 }

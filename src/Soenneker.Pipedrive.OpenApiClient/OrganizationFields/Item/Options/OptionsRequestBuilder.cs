@@ -41,37 +41,16 @@ namespace Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsDeleteResponse?> DeleteAsOptionsDeleteResponseAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsDeleteResponse?> DeleteAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsDeleteResponse> DeleteAsOptionsDeleteResponseAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsDeleteResponse> DeleteAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToDeleteRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsDeleteResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsDeleteResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Removes existing options from an organization custom field. This operation is atomic and fails if any of the specified option IDs do not exist. Returns only the deleted options.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsResponse"/></returns>
-        /// <param name="body">Array of option IDs to delete. Each item must contain an ID of the option to delete. At least one option ID is required. The entire request fails if any option does not exist.</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use DeleteAsOptionsDeleteResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsResponse?> DeleteAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsResponse> DeleteAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToDeleteRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates existing options for an organization custom field. This operation is atomic and fails if any of the specified option IDs do not exist. Returns only the updated options.
@@ -82,37 +61,16 @@ namespace Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsPatchResponse?> PatchAsOptionsPatchResponseAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsPatchResponse?> PatchAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsPatchResponse> PatchAsOptionsPatchResponseAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsPatchResponse> PatchAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsPatchResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsPatchResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Updates existing options for an organization custom field. This operation is atomic and fails if any of the specified option IDs do not exist. Returns only the updated options.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsResponse"/></returns>
-        /// <param name="body">Array of options to update. Each item must contain an ID and the updated label. At least one option is required. The entire request fails if any option does not exist.</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use PatchAsOptionsPatchResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsResponse?> PatchAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsResponse> PatchAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Adds new options to an organization custom field that supports options (enum or set field types). This operation is atomic - all options are added or none are added. Returns only the newly added options.
@@ -123,37 +81,16 @@ namespace Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsPostResponse?> PostAsOptionsPostResponseAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsPostResponse?> PostAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsPostResponse> PostAsOptionsPostResponseAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsPostResponse> PostAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsPostResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Adds new options to an organization custom field that supports options (enum or set field types). This operation is atomic - all options are added or none are added. Returns only the newly added options.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsResponse"/></returns>
-        /// <param name="body">Array of options to add. Each item must contain a label. At least one option is required.</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use PostAsOptionsPostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsResponse?> PostAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsResponse> PostAsync(List<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Removes existing options from an organization custom field. This operation is atomic and fails if any of the specified option IDs do not exist. Returns only the deleted options.
@@ -229,30 +166,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options
         public global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.Options.OptionsRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class OptionsRequestBuilderDeleteRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class OptionsRequestBuilderPatchRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class OptionsRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

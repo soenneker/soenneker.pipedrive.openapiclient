@@ -42,11 +42,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal
         /// <exception cref="global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.Deal404Error">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealPostResponse?> PostAsDealPostResponseAsync(global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealPostResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealPostResponse> PostAsDealPostResponseAsync(global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealPostResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,32 +56,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal
                 { "404", global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.Deal404Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealPostResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Initiates a conversion of a lead to a deal. The return value is an ID of a job that was assigned to perform the conversion. Related entities (notes, files, emails, activities, ...) are transferred during the process to the target entity. If the conversion is successful, the lead is marked as deleted. To retrieve the created entity ID and the result of the conversion, call the &lt;a href=&quot;https://developers.pipedrive.com/docs/api/v1/Leads#getLeadConversionStatus&quot;&gt;/api/v2/leads/{lead_id}/convert/status/{conversion_id}&lt;/a&gt; endpoint.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealResponse"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.Deal404Error">When receiving a 404 status code</exception>
-        [Obsolete("This method is obsolete. Use PostAsDealPostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
-            {
-                { "404", global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.Deal404Error.CreateFromDiscriminatorValue },
-            };
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Initiates a conversion of a lead to a deal. The return value is an ID of a job that was assigned to perform the conversion. Related entities (notes, files, emails, activities, ...) are transferred during the process to the target entity. If the conversion is successful, the lead is marked as deleted. To retrieve the created entity ID and the result of the conversion, call the &lt;a href=&quot;https://developers.pipedrive.com/docs/api/v1/Leads#getLeadConversionStatus&quot;&gt;/api/v2/leads/{lead_id}/convert/status/{conversion_id}&lt;/a&gt; endpoint.
@@ -113,14 +87,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal
         public global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal.DealRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class DealRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

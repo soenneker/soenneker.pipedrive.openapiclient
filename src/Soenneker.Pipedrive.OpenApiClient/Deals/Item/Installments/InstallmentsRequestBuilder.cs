@@ -29,19 +29,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments
                 return new global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.Item.WithInstallment_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.Pipedrive.OpenApiClient.deals.item.installments.item collection</summary>
-        /// <param name="position">The ID of the installment</param>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.Item.WithInstallment_ItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.Item.WithInstallment_ItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("installment_id", position);
-                return new global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.Item.WithInstallment_ItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsRequestBuilder"/> and sets the default values.
         /// </summary>
@@ -67,37 +54,16 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsPostResponse?> PostAsInstallmentsPostResponseAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsPostResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsPostResponse> PostAsInstallmentsPostResponseAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsPostResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsPostResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Adds an installment to a deal.An installment can only be added if the deal includes at least one one-time product. If the deal contains at least one recurring product, adding installments is not allowed.Only available in Growth and above plans.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsResponse"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use PostAsInstallmentsPostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Adds an installment to a deal.An installment can only be added if the deal includes at least one one-time product. If the deal contains at least one recurring product, adding installments is not allowed.Only available in Growth and above plans.
@@ -129,14 +95,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments
         public global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments.InstallmentsRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class InstallmentsRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

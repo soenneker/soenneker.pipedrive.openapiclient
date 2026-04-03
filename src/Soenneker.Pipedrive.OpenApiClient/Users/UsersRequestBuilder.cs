@@ -27,19 +27,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Users
                 return new global::Soenneker.Pipedrive.OpenApiClient.Users.Item.UsersItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.Pipedrive.OpenApiClient.users.item collection</summary>
-        /// <param name="position">The ID of the user</param>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Users.Item.UsersItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.Pipedrive.OpenApiClient.Users.Item.UsersItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("id", position);
-                return new global::Soenneker.Pipedrive.OpenApiClient.Users.Item.UsersItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Users.UsersRequestBuilder"/> and sets the default values.
         /// </summary>

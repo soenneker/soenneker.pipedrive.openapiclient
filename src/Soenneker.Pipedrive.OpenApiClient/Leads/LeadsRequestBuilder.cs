@@ -33,19 +33,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Leads
                 return new global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.LeadsItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.Pipedrive.OpenApiClient.leads.item collection</summary>
-        /// <param name="position">The ID of the lead to convert</param>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.LeadsItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.LeadsItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("id", position);
-                return new global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.LeadsItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Leads.LeadsRequestBuilder"/> and sets the default values.
         /// </summary>

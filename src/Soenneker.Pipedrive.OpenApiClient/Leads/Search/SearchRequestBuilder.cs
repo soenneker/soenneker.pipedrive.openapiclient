@@ -40,34 +40,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.Leads.Search
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchGetResponse?> GetAsSearchGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchGetResponse> GetAsSearchGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchGetResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Searches all leads by title, notes and/or custom fields. This endpoint is a wrapper of &lt;a href=&quot;https://developers.pipedrive.com/docs/api/v1/ItemSearch#searchItem&quot;&gt;/v1/itemSearch&lt;/a&gt; with a narrower OAuth scope. Found leads can be filtered by the person ID and the organization ID.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use GetAsSearchGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Searches all leads by title, notes and/or custom fields. This endpoint is a wrapper of &lt;a href=&quot;https://developers.pipedrive.com/docs/api/v1/ItemSearch#searchItem&quot;&gt;/v1/itemSearch&lt;/a&gt; with a narrower OAuth scope. Found leads can be filtered by the person ID and the organization ID.
@@ -117,33 +98,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Leads.Search
             [QueryParameter("exact_match")]
             public bool? ExactMatch { get; set; }
             /// <summary>A comma-separated string array. The fields to perform the search from. Defaults to all of them.</summary>
-            [Obsolete("This property is deprecated, use FieldsAsGetFieldsQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("fields")]
-            public string? Fields { get; set; }
-#nullable restore
-#else
-            [QueryParameter("fields")]
-            public string Fields { get; set; }
-#endif
-            /// <summary>A comma-separated string array. The fields to perform the search from. Defaults to all of them.</summary>
-            [QueryParameter("fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.GetFieldsQueryParameterType? FieldsAsGetFieldsQueryParameterType { get; set; }
-            /// <summary>Supports including optional fields in the results which are not provided by default</summary>
-            [Obsolete("This property is deprecated, use IncludeFieldsAsGetIncludeFieldsQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("include_fields")]
-            public string? IncludeFields { get; set; }
-#nullable restore
-#else
-            [QueryParameter("include_fields")]
-            public string IncludeFields { get; set; }
-#endif
+            public global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.GetFieldsQueryParameterType? Fields { get; set; }
             /// <summary>Supports including optional fields in the results which are not provided by default</summary>
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.GetInclude_fieldsQueryParameterType? IncludeFieldsAsGetIncludeFieldsQueryParameterType { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.GetInclude_fieldsQueryParameterType? IncludeFields { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
@@ -163,14 +122,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Leads.Search
             [QueryParameter("term")]
             public string Term { get; set; }
 #endif
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class SearchRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>
-        {
         }
     }
 }
