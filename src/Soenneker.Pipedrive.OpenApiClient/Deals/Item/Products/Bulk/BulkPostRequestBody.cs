@@ -14,7 +14,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Array of products to attach to the deal. See the single product endpoint (https://developers.pipedrive.com/docs/api/v1/Deals#addDealProduct) for the expected format of array items.</summary>
+        /// <summary>Array of products to attach to the deal. Each product object may have the following properties.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.Bulk.BulkPostRequestBody_data>? Data { get; set; }
