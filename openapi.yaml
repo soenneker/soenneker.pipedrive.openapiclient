@@ -7897,8 +7897,6 @@ paths:
         content:
           application/json:
             schema:
-              required:
-                - title
               type: object
               properties:
                 name:
@@ -9486,10 +9484,6 @@ paths:
                       type: boolean
                       description: 'Whether the field is required. When false, the field is optional. When true, the field is required when creating or updating persons. Default is false.'
                       default: false
-                description:
-                  type: string
-                  nullable: true
-                  description: Field description
       responses:
         '200':
           description: Create one person field
@@ -9960,10 +9954,6 @@ paths:
                       type: boolean
                       description: 'Whether the field is required. When false, the field is optional. When true, the field is required when creating or updating persons. Default is false.'
                       default: false
-                description:
-                  type: string
-                  nullable: true
-                  description: Field description
       responses:
         '200':
           description: Get one person field
@@ -11969,10 +11959,6 @@ paths:
                       type: boolean
                       description: 'Whether the field is required. When false, the field is optional. When true, the field is required when creating or updating organizations. Default is false.'
                       default: false
-                description:
-                  type: string
-                  nullable: true
-                  description: Field description
       responses:
         '200':
           description: Create one organization field
@@ -15264,10 +15250,6 @@ paths:
                       type: boolean
                       description: Whether the field is shown in the product details view. Default is true.
                       default: true
-                description:
-                  type: string
-                  nullable: true
-                  description: Field description
       responses:
         '200':
           description: Create one product field
@@ -15622,10 +15604,6 @@ paths:
                       type: boolean
                       description: Whether the field is shown in the product details view. Default is true.
                       default: true
-                description:
-                  type: string
-                  nullable: true
-                  description: Field description
       responses:
         '200':
           description: Get one product field

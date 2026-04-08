@@ -14,14 +14,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.ProductFields
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Field description</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Description { get; set; }
-#nullable restore
-#else
-        public string Description { get; set; }
-#endif
         /// <summary>Field name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,7 +65,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.ProductFields
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "description", n => { Description = n.GetStringValue(); } },
                 { "field_name", n => { FieldName = n.GetStringValue(); } },
                 { "field_type", n => { FieldType = n.GetEnumValue<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostRequestBody_field_type>(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostRequestBody_options>(global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostRequestBody_options.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -87,7 +78,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.ProductFields
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("description", Description);
             writer.WriteStringValue("field_name", FieldName);
             writer.WriteEnumValue<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostRequestBody_field_type>("field_type", FieldType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.ProductFieldsPostRequestBody_options>("options", Options);

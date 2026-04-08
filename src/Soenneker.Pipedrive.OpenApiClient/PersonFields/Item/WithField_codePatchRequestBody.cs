@@ -14,14 +14,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.PersonFields.Item
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Field description</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Description { get; set; }
-#nullable restore
-#else
-        public string Description { get; set; }
-#endif
         /// <summary>Field name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,7 +71,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.PersonFields.Item
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "description", n => { Description = n.GetStringValue(); } },
                 { "field_name", n => { FieldName = n.GetStringValue(); } },
                 { "important_fields", n => { ImportantFields = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.PersonFields.Item.WithField_codePatchRequestBody_important_fields>(global::Soenneker.Pipedrive.OpenApiClient.PersonFields.Item.WithField_codePatchRequestBody_important_fields.CreateFromDiscriminatorValue); } },
                 { "required_fields", n => { RequiredFields = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.PersonFields.Item.WithField_codePatchRequestBody_required_fields>(global::Soenneker.Pipedrive.OpenApiClient.PersonFields.Item.WithField_codePatchRequestBody_required_fields.CreateFromDiscriminatorValue); } },
@@ -93,7 +84,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.PersonFields.Item
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("description", Description);
             writer.WriteStringValue("field_name", FieldName);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.PersonFields.Item.WithField_codePatchRequestBody_important_fields>("important_fields", ImportantFields);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.PersonFields.Item.WithField_codePatchRequestBody_required_fields>("required_fields", RequiredFields);
