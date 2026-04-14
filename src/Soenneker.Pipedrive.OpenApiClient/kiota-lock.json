@@ -2,7 +2,7 @@
   "descriptionHash": "D30B8FBF6620D76E6F77F04A6075F420D056140E077A0E78280255090D38712ED7E2FD1E5DBABA4E16BC192EE726BBA52FDCCCCFCF4649ECE1A3C916C91C9C22",
   "descriptionLocation": "../../openapi.yaml",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.31.0",
+  "kiotaVersion": "1.31.1",
   "clientClassName": "PipedriveOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Pipedrive.OpenApiClient",
