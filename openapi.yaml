@@ -2047,7 +2047,7 @@ paths:
                             custom_fields:
                               type: object
                               additionalProperties: true
-                              description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                              description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
                       additional_data:
                         type: object
                         description: The additional data of the list
@@ -2189,7 +2189,7 @@ paths:
                 custom_fields:
                   type: object
                   additionalProperties: true
-                  description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                  description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
       responses:
         '200':
           description: Add deal
@@ -2336,7 +2336,7 @@ paths:
                           custom_fields:
                             type: object
                             additionalProperties: true
-                            description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                            description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
               example:
                 success: true
                 data:
@@ -2656,7 +2656,7 @@ paths:
                             custom_fields:
                               type: object
                               additionalProperties: true
-                              description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                              description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
                       additional_data:
                         type: object
                         description: The additional data of the list
@@ -2944,7 +2944,7 @@ paths:
                           custom_fields:
                             type: object
                             additionalProperties: true
-                            description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                            description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
               example:
                 success: true
                 data:
@@ -3082,7 +3082,7 @@ paths:
                 custom_fields:
                   type: object
                   additionalProperties: true
-                  description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                  description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
       responses:
         '200':
           description: Edit deal
@@ -3229,7 +3229,7 @@ paths:
                           custom_fields:
                             type: object
                             additionalProperties: true
-                            description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                            description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
               example:
                 success: true
                 data:
@@ -7818,7 +7818,7 @@ paths:
                             custom_fields:
                               type: object
                               additionalProperties: true
-                              description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                              description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
                       additional_data:
                         type: object
                         description: The additional data of the list
@@ -7963,7 +7963,7 @@ paths:
                 custom_fields:
                   type: object
                   additionalProperties: true
-                  description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                  description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
       responses:
         '200':
           description: Add person
@@ -8114,7 +8114,7 @@ paths:
                           custom_fields:
                             type: object
                             additionalProperties: true
-                            description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                            description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
               example:
                 success: true
                 data:
@@ -8414,7 +8414,7 @@ paths:
                           custom_fields:
                             type: object
                             additionalProperties: true
-                            description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                            description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
               example:
                 success: true
                 data:
@@ -8557,7 +8557,7 @@ paths:
                 custom_fields:
                   type: object
                   additionalProperties: true
-                  description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                  description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
       responses:
         '200':
           description: Edit person
@@ -8708,7 +8708,7 @@ paths:
                           custom_fields:
                             type: object
                             additionalProperties: true
-                            description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                            description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
               example:
                 success: true
                 data:
@@ -10605,7 +10605,7 @@ paths:
                             custom_fields:
                               type: object
                               additionalProperties: true
-                              description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                              description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
                       additional_data:
                         type: object
                         description: The additional data of the list
@@ -10719,7 +10719,7 @@ paths:
                 custom_fields:
                   type: object
                   additionalProperties: true
-                  description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                  description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
       responses:
         '200':
           description: Add organization
@@ -10805,7 +10805,7 @@ paths:
                           custom_fields:
                             type: object
                             additionalProperties: true
-                            description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                            description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
               example:
                 success: true
                 data:
@@ -11008,7 +11008,7 @@ paths:
                           custom_fields:
                             type: object
                             additionalProperties: true
-                            description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                            description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
               example:
                 success: true
                 data:
@@ -11118,7 +11118,7 @@ paths:
                 custom_fields:
                   type: object
                   additionalProperties: true
-                  description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                  description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
       responses:
         '200':
           description: Edit organization
@@ -11204,7 +11204,7 @@ paths:
                           custom_fields:
                             type: object
                             additionalProperties: true
-                            description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                            description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
               example:
                 success: true
                 data:
@@ -13123,7 +13123,7 @@ paths:
                                     custom_fields:
                                       type: object
                                       additionalProperties: true
-                                      description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                                      description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
                                 - type: object
                                   properties:
                                     billing_frequency:
@@ -13277,7 +13277,7 @@ paths:
                     custom_fields:
                       type: object
                       additionalProperties: true
-                      description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                      description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
                 - type: object
                   properties:
                     billing_frequency:
@@ -13369,7 +13369,7 @@ paths:
                               custom_fields:
                                 type: object
                                 additionalProperties: true
-                                description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                                description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
                           - type: object
                             properties:
                               billing_frequency:
@@ -13963,7 +13963,7 @@ paths:
                               custom_fields:
                                 type: object
                                 additionalProperties: true
-                                description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                                description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
                           - type: object
                             properties:
                               billing_frequency:
@@ -14113,7 +14113,7 @@ paths:
                     custom_fields:
                       type: object
                       additionalProperties: true
-                      description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                      description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
                 - type: object
                   properties:
                     billing_frequency:
@@ -14203,7 +14203,7 @@ paths:
                               custom_fields:
                                 type: object
                                 additionalProperties: true
-                                description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                                description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
                           - type: object
                             properties:
                               billing_frequency:
@@ -14356,7 +14356,7 @@ paths:
                               custom_fields:
                                 type: object
                                 additionalProperties: true
-                                description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+                                description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
                           - type: object
                             properties:
                               billing_frequency:
@@ -18267,7 +18267,7 @@ components:
         custom_fields:
           type: object
           additionalProperties: true
-          description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+          description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
     FollowerItem:
       type: object
       properties:
@@ -18344,7 +18344,7 @@ components:
         custom_fields:
           type: object
           additionalProperties: true
-          description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+          description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
     Person:
       type: object
       properties:
@@ -18477,7 +18477,7 @@ components:
         custom_fields:
           type: object
           additionalProperties: true
-          description: An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+          description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
   securitySchemes:
     basic_authentication:
       type: http

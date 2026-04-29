@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Pipedrive.OpenApiClient.Organizations.Item
 {
     /// <summary>
-    /// An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes
+    /// An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OrganizationsPatchRequestBody_custom_fields : IAdditionalDataHolder, IParsable
