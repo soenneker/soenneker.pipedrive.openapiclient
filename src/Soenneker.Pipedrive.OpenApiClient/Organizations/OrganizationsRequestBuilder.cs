@@ -40,7 +40,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Organizations
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OrganizationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizations{?cursor*,custom_fields*,filter_id*,ids*,include_fields*,limit*,owner_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", pathParameters)
+        public OrganizationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizations{?cursor*,custom_fields*,filter_id*,ids*,include_fields*,include_labels*,include_option_labels*,limit*,owner_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", pathParameters)
         {
         }
         /// <summary>
@@ -48,7 +48,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Organizations
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OrganizationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizations{?cursor*,custom_fields*,filter_id*,ids*,include_fields*,limit*,owner_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", rawUrl)
+        public OrganizationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizations{?cursor*,custom_fields*,filter_id*,ids*,include_fields*,include_labels*,include_option_labels*,limit*,owner_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", rawUrl)
         {
         }
         /// <summary>
@@ -181,6 +181,12 @@ namespace Soenneker.Pipedrive.OpenApiClient.Organizations
             /// <summary>Optional comma separated string array of additional fields to include</summary>
             [QueryParameter("include_fields")]
             public global::Soenneker.Pipedrive.OpenApiClient.Organizations.GetInclude_fieldsQueryParameterType? IncludeFields { get; set; }
+            /// <summary>When provided with &apos;true&apos; value, response will include an array of label objects in the form of &apos;{ id: number, label: string }&apos;</summary>
+            [QueryParameter("include_labels")]
+            public bool? IncludeLabels { get; set; }
+            /// <summary>When provided with a &apos;true&apos; value, single option and multiple option custom fields values contain objects in the form of &apos;{ id: number, label: string }&apos; instead of plain id</summary>
+            [QueryParameter("include_option_labels")]
+            public bool? IncludeOptionLabels { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }

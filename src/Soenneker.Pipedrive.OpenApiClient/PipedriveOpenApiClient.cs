@@ -8,6 +8,7 @@ using Microsoft.Kiota.Serialization.Multipart;
 using Microsoft.Kiota.Serialization.Text;
 using Soenneker.Pipedrive.OpenApiClient.Activities;
 using Soenneker.Pipedrive.OpenApiClient.ActivityFields;
+using Soenneker.Pipedrive.OpenApiClient.Boards;
 using Soenneker.Pipedrive.OpenApiClient.DealFields;
 using Soenneker.Pipedrive.OpenApiClient.Deals;
 using Soenneker.Pipedrive.OpenApiClient.ItemSearch;
@@ -16,10 +17,15 @@ using Soenneker.Pipedrive.OpenApiClient.OrganizationFields;
 using Soenneker.Pipedrive.OpenApiClient.Organizations;
 using Soenneker.Pipedrive.OpenApiClient.PersonFields;
 using Soenneker.Pipedrive.OpenApiClient.Persons;
+using Soenneker.Pipedrive.OpenApiClient.Phases;
 using Soenneker.Pipedrive.OpenApiClient.Pipelines;
 using Soenneker.Pipedrive.OpenApiClient.ProductFields;
 using Soenneker.Pipedrive.OpenApiClient.Products;
+using Soenneker.Pipedrive.OpenApiClient.ProjectFields;
+using Soenneker.Pipedrive.OpenApiClient.ProjectTemplates;
+using Soenneker.Pipedrive.OpenApiClient.Projects;
 using Soenneker.Pipedrive.OpenApiClient.Stages;
+using Soenneker.Pipedrive.OpenApiClient.Tasks;
 using Soenneker.Pipedrive.OpenApiClient.Users;
 using System.Collections.Generic;
 using System.IO;
@@ -42,6 +48,11 @@ namespace Soenneker.Pipedrive.OpenApiClient
         public global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsRequestBuilder ActivityFields
         {
             get => new global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The boards property</summary>
+        public global::Soenneker.Pipedrive.OpenApiClient.Boards.BoardsRequestBuilder Boards
+        {
+            get => new global::Soenneker.Pipedrive.OpenApiClient.Boards.BoardsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The dealFields property</summary>
         public global::Soenneker.Pipedrive.OpenApiClient.DealFields.DealFieldsRequestBuilder DealFields
@@ -83,6 +94,11 @@ namespace Soenneker.Pipedrive.OpenApiClient
         {
             get => new global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The phases property</summary>
+        public global::Soenneker.Pipedrive.OpenApiClient.Phases.PhasesRequestBuilder Phases
+        {
+            get => new global::Soenneker.Pipedrive.OpenApiClient.Phases.PhasesRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The pipelines property</summary>
         public global::Soenneker.Pipedrive.OpenApiClient.Pipelines.PipelinesRequestBuilder Pipelines
         {
@@ -98,10 +114,30 @@ namespace Soenneker.Pipedrive.OpenApiClient
         {
             get => new global::Soenneker.Pipedrive.OpenApiClient.Products.ProductsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The projectFields property</summary>
+        public global::Soenneker.Pipedrive.OpenApiClient.ProjectFields.ProjectFieldsRequestBuilder ProjectFields
+        {
+            get => new global::Soenneker.Pipedrive.OpenApiClient.ProjectFields.ProjectFieldsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The projects property</summary>
+        public global::Soenneker.Pipedrive.OpenApiClient.Projects.ProjectsRequestBuilder Projects
+        {
+            get => new global::Soenneker.Pipedrive.OpenApiClient.Projects.ProjectsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The projectTemplates property</summary>
+        public global::Soenneker.Pipedrive.OpenApiClient.ProjectTemplates.ProjectTemplatesRequestBuilder ProjectTemplates
+        {
+            get => new global::Soenneker.Pipedrive.OpenApiClient.ProjectTemplates.ProjectTemplatesRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The stages property</summary>
         public global::Soenneker.Pipedrive.OpenApiClient.Stages.StagesRequestBuilder Stages
         {
             get => new global::Soenneker.Pipedrive.OpenApiClient.Stages.StagesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The tasks property</summary>
+        public global::Soenneker.Pipedrive.OpenApiClient.Tasks.TasksRequestBuilder Tasks
+        {
+            get => new global::Soenneker.Pipedrive.OpenApiClient.Tasks.TasksRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The users property</summary>
         public global::Soenneker.Pipedrive.OpenApiClient.Users.UsersRequestBuilder Users
