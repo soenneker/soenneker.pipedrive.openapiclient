@@ -3607,6 +3607,8 @@ paths:
         - in: query
           name: deal_ids
           required: true
+          style: form
+          explode: false
           schema:
             type: array
             items:
