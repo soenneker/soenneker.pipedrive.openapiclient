@@ -46,7 +46,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Projects
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ProjectsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects{?cursor*,filter_id*,limit*,phase_id*,status*}", pathParameters)
+        public ProjectsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects{?cursor*,deal_id*,filter_id*,limit*,org_id*,person_id*,phase_id*,status*}", pathParameters)
         {
         }
         /// <summary>
@@ -54,7 +54,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Projects
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ProjectsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects{?cursor*,filter_id*,limit*,phase_id*,status*}", rawUrl)
+        public ProjectsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/projects{?cursor*,deal_id*,filter_id*,limit*,org_id*,person_id*,phase_id*,status*}", rawUrl)
         {
         }
         /// <summary>
@@ -161,12 +161,21 @@ namespace Soenneker.Pipedrive.OpenApiClient.Projects
             [QueryParameter("cursor")]
             public string Cursor { get; set; }
 #endif
+            /// <summary>If supplied, only projects associated with the specified deal are returned</summary>
+            [QueryParameter("deal_id")]
+            public int? DealId { get; set; }
             /// <summary>If supplied, only projects matching the specified filter are returned</summary>
             [QueryParameter("filter_id")]
             public int? FilterId { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
+            /// <summary>If supplied, only projects associated with the specified organization are returned</summary>
+            [QueryParameter("org_id")]
+            public int? OrgId { get; set; }
+            /// <summary>If supplied, only projects associated with the specified person are returned</summary>
+            [QueryParameter("person_id")]
+            public int? PersonId { get; set; }
             /// <summary>If supplied, only projects in the specified phase are returned</summary>
             [QueryParameter("phase_id")]
             public int? PhaseId { get; set; }

@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
+using Microsoft.Kiota.Abstractions;
 using System.Collections.Generic;
 using System.IO;
 using System;
@@ -27,13 +28,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products
         /// <summary>Only available in Growth and above plansThe number of times the billing frequency repeats for a product in a dealWhen `billing_frequency` is set to `one-time`, this field must be `null`When `billing_frequency` is set to `weekly`, this field cannot be `null`For all the other values of `billing_frequency`, `null` represents a product billed indefinitelyMust be a positive integer less or equal to 208</summary>
         public int? BillingFrequencyCycles { get; set; }
         /// <summary>Only available in Growth and above plansThe billing start date. Must be between 10 years in the past and 10 years in the future</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? BillingStartDate { get; set; }
-#nullable restore
-#else
-        public string BillingStartDate { get; set; }
-#endif
+        public Date? BillingStartDate { get; set; }
         /// <summary>The comments of the product</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -122,7 +117,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products
                 { "add_time", n => { AddTime = n.GetStringValue(); } },
                 { "billing_frequency", n => { BillingFrequency = n.GetEnumValue<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsPostResponse_data_billing_frequency>(); } },
                 { "billing_frequency_cycles", n => { BillingFrequencyCycles = n.GetIntValue(); } },
-                { "billing_start_date", n => { BillingStartDate = n.GetStringValue(); } },
+                { "billing_start_date", n => { BillingStartDate = n.GetDateValue(); } },
                 { "comments", n => { Comments = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "deal_id", n => { DealId = n.GetIntValue(); } },
@@ -152,7 +147,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products
             writer.WriteStringValue("add_time", AddTime);
             writer.WriteEnumValue<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Products.ProductsPostResponse_data_billing_frequency>("billing_frequency", BillingFrequency);
             writer.WriteIntValue("billing_frequency_cycles", BillingFrequencyCycles);
-            writer.WriteStringValue("billing_start_date", BillingStartDate);
+            writer.WriteDateValue("billing_start_date", BillingStartDate);
             writer.WriteStringValue("comments", Comments);
             writer.WriteStringValue("currency", Currency);
             writer.WriteIntValue("deal_id", DealId);

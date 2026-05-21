@@ -30,6 +30,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Organizations
 #else
         public string AddTime { get; set; }
 #endif
+        /// <summary>The annual revenue of the organization</summary>
+        public int? AnnualRevenue { get; set; }
         /// <summary>An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,8 +40,12 @@ namespace Soenneker.Pipedrive.OpenApiClient.Organizations
 #else
         public global::Soenneker.Pipedrive.OpenApiClient.Organizations.OrganizationsGetResponse_data_custom_fields CustomFields { get; set; }
 #endif
+        /// <summary>The number of employees in the organization</summary>
+        public int? EmployeeCount { get; set; }
         /// <summary>The ID of the organization</summary>
         public int? Id { get; set; }
+        /// <summary>The industry the organization belongs to</summary>
+        public int? Industry { get; set; }
         /// <summary>Whether the organization is deleted or not</summary>
         public bool? IsDeleted { get; set; }
         /// <summary>The IDs of labels assigned to the organization</summary>
@@ -49,6 +55,14 @@ namespace Soenneker.Pipedrive.OpenApiClient.Organizations
 #nullable restore
 #else
         public List<int?> LabelIds { get; set; }
+#endif
+        /// <summary>The LinkedIn profile URL of the organization</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Linkedin { get; set; }
+#nullable restore
+#else
+        public string Linkedin { get; set; }
 #endif
         /// <summary>The name of the organization</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,6 +84,14 @@ namespace Soenneker.Pipedrive.OpenApiClient.Organizations
 #endif
         /// <summary>The visibility of the organization</summary>
         public int? VisibleTo { get; set; }
+        /// <summary>The website of the organization</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Website { get; set; }
+#nullable restore
+#else
+        public string Website { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Organizations.OrganizationsGetResponse_data"/> and sets the default values.
         /// </summary>
@@ -97,14 +119,19 @@ namespace Soenneker.Pipedrive.OpenApiClient.Organizations
             {
                 { "add_time", n => { AddTime = n.GetStringValue(); } },
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Organizations.OrganizationsGetResponse_data_address>(global::Soenneker.Pipedrive.OpenApiClient.Organizations.OrganizationsGetResponse_data_address.CreateFromDiscriminatorValue); } },
+                { "annual_revenue", n => { AnnualRevenue = n.GetIntValue(); } },
                 { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Organizations.OrganizationsGetResponse_data_custom_fields>(global::Soenneker.Pipedrive.OpenApiClient.Organizations.OrganizationsGetResponse_data_custom_fields.CreateFromDiscriminatorValue); } },
+                { "employee_count", n => { EmployeeCount = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
+                { "industry", n => { Industry = n.GetIntValue(); } },
                 { "is_deleted", n => { IsDeleted = n.GetBoolValue(); } },
                 { "label_ids", n => { LabelIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
+                { "linkedin", n => { Linkedin = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "owner_id", n => { OwnerId = n.GetIntValue(); } },
                 { "update_time", n => { UpdateTime = n.GetStringValue(); } },
                 { "visible_to", n => { VisibleTo = n.GetIntValue(); } },
+                { "website", n => { Website = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -116,14 +143,19 @@ namespace Soenneker.Pipedrive.OpenApiClient.Organizations
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Organizations.OrganizationsGetResponse_data_address>("address", Address);
             writer.WriteStringValue("add_time", AddTime);
+            writer.WriteIntValue("annual_revenue", AnnualRevenue);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Organizations.OrganizationsGetResponse_data_custom_fields>("custom_fields", CustomFields);
+            writer.WriteIntValue("employee_count", EmployeeCount);
             writer.WriteIntValue("id", Id);
+            writer.WriteIntValue("industry", Industry);
             writer.WriteBoolValue("is_deleted", IsDeleted);
             writer.WriteCollectionOfPrimitiveValues<int?>("label_ids", LabelIds);
+            writer.WriteStringValue("linkedin", Linkedin);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("owner_id", OwnerId);
             writer.WriteStringValue("update_time", UpdateTime);
             writer.WriteIntValue("visible_to", VisibleTo);
+            writer.WriteStringValue("website", Website);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
