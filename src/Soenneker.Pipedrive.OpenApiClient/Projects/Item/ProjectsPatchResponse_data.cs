@@ -60,13 +60,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Projects.Item
         /// <summary>The end date of the project. Format: YYYY-MM-DD</summary>
         public Date? EndDate { get; set; }
         /// <summary>The health status of the project</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? HealthStatus { get; set; }
-#nullable restore
-#else
-        public string HealthStatus { get; set; }
-#endif
+        public int? HealthStatus { get; set; }
         /// <summary>The ID of the project</summary>
         public int? Id { get; set; }
         /// <summary>An array of IDs of the labels this project has</summary>
@@ -163,7 +157,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Projects.Item
                 { "deal_ids", n => { DealIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "end_date", n => { EndDate = n.GetDateValue(); } },
-                { "health_status", n => { HealthStatus = n.GetStringValue(); } },
+                { "health_status", n => { HealthStatus = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "label_ids", n => { LabelIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "org_ids", n => { OrgIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
@@ -191,7 +185,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Projects.Item
             writer.WriteCollectionOfPrimitiveValues<int?>("deal_ids", DealIds);
             writer.WriteStringValue("description", Description);
             writer.WriteDateValue("end_date", EndDate);
-            writer.WriteStringValue("health_status", HealthStatus);
+            writer.WriteIntValue("health_status", HealthStatus);
             writer.WriteIntValue("id", Id);
             writer.WriteCollectionOfPrimitiveValues<int?>("label_ids", LabelIds);
             writer.WriteCollectionOfPrimitiveValues<int?>("org_ids", OrgIds);

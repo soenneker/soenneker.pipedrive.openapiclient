@@ -43,6 +43,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Projects
 #endif
         /// <summary>The end date of the project. Format: YYYY-MM-DD</summary>
         public Date? EndDate { get; set; }
+        /// <summary>The health status of the project</summary>
+        public int? HealthStatus { get; set; }
         /// <summary>An array of IDs of the labels this project has</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -121,6 +123,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Projects
                 { "deal_ids", n => { DealIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "end_date", n => { EndDate = n.GetDateValue(); } },
+                { "health_status", n => { HealthStatus = n.GetIntValue(); } },
                 { "label_ids", n => { LabelIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "org_ids", n => { OrgIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "owner_id", n => { OwnerId = n.GetIntValue(); } },
@@ -144,6 +147,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Projects
             writer.WriteCollectionOfPrimitiveValues<int?>("deal_ids", DealIds);
             writer.WriteStringValue("description", Description);
             writer.WriteDateValue("end_date", EndDate);
+            writer.WriteIntValue("health_status", HealthStatus);
             writer.WriteCollectionOfPrimitiveValues<int?>("label_ids", LabelIds);
             writer.WriteCollectionOfPrimitiveValues<int?>("org_ids", OrgIds);
             writer.WriteIntValue("owner_id", OwnerId);

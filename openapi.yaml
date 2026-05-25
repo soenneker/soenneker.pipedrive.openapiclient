@@ -19368,9 +19368,9 @@ paths:
                               items:
                                 type: integer
                             health_status:
-                              type: string
-                              nullable: true
+                              type: integer
                               description: The health status of the project
+                              nullable: true
                             add_time:
                               type: string
                               description: The creation date and time of the project in ISO 8601 format
@@ -19415,7 +19415,7 @@ paths:
                       - 1
                     label_ids:
                       - 1
-                    health_status: null
+                    health_status: 10
                     add_time: '2026-04-14T10:45:20.852Z'
                     update_time: '2026-04-14T10:45:20.852Z'
                     status_change_time: '2026-04-14T10:45:20.852Z'
@@ -19489,6 +19489,9 @@ paths:
                   description: An array of IDs of the labels this project has
                   items:
                     type: integer
+                health_status:
+                  type: integer
+                  description: The health status of the project
                 template_id:
                   type: integer
                   description: The ID of the template the project will be based on. Only used when creating a new project.
@@ -19567,9 +19570,9 @@ paths:
                             items:
                               type: integer
                           health_status:
-                            type: string
-                            nullable: true
+                            type: integer
                             description: The health status of the project
+                            nullable: true
                           add_time:
                             type: string
                             description: The creation date and time of the project in ISO 8601 format
@@ -19607,7 +19610,7 @@ paths:
                     - 1
                   label_ids:
                     - 1
-                  health_status: null
+                  health_status: 10
                   add_time: '2026-04-14T10:45:20.852Z'
                   update_time: '2026-04-14T10:45:20.852Z'
                   status_change_time: '2026-04-14T10:45:20.852Z'
@@ -19729,9 +19732,9 @@ paths:
                               items:
                                 type: integer
                             health_status:
-                              type: string
-                              nullable: true
+                              type: integer
                               description: The health status of the project
+                              nullable: true
                             add_time:
                               type: string
                               description: The creation date and time of the project in ISO 8601 format
@@ -19776,7 +19779,7 @@ paths:
                       - 1
                     label_ids:
                       - 1
-                    health_status: null
+                    health_status: 10
                     add_time: '2026-04-14T10:45:20.852Z'
                     update_time: '2026-04-14T10:45:20.852Z'
                     status_change_time: '2026-04-14T10:45:20.852Z'
@@ -19875,9 +19878,9 @@ paths:
                             items:
                               type: integer
                           health_status:
-                            type: string
-                            nullable: true
+                            type: integer
                             description: The health status of the project
+                            nullable: true
                           add_time:
                             type: string
                             description: The creation date and time of the project in ISO 8601 format
@@ -19915,7 +19918,7 @@ paths:
                     - 1
                   label_ids:
                     - 1
-                  health_status: null
+                  health_status: 10
                   add_time: '2026-04-14T10:45:20.852Z'
                   update_time: '2026-04-14T10:45:20.852Z'
                   status_change_time: '2026-04-14T10:45:20.852Z'
@@ -19991,6 +19994,9 @@ paths:
                   description: An array of IDs of the labels this project has
                   items:
                     type: integer
+                health_status:
+                  type: integer
+                  description: The health status of the project
                 template_id:
                   type: integer
                   description: The ID of the template the project will be based on. Only used when creating a new project.
@@ -20069,9 +20075,9 @@ paths:
                             items:
                               type: integer
                           health_status:
-                            type: string
-                            nullable: true
+                            type: integer
                             description: The health status of the project
+                            nullable: true
                           add_time:
                             type: string
                             description: The creation date and time of the project in ISO 8601 format
@@ -20109,7 +20115,7 @@ paths:
                     - 1
                   label_ids:
                     - 1
-                  health_status: null
+                  health_status: 10
                   add_time: '2026-04-14T10:45:20.852Z'
                   update_time: '2026-04-14T10:45:20.852Z'
                   status_change_time: '2026-04-14T10:45:20.852Z'
@@ -20623,9 +20629,9 @@ paths:
                             items:
                               type: integer
                           health_status:
-                            type: string
-                            nullable: true
+                            type: integer
                             description: The health status of the project
+                            nullable: true
                           add_time:
                             type: string
                             description: The creation date and time of the project in ISO 8601 format
@@ -20663,7 +20669,7 @@ paths:
                     - 1
                   label_ids:
                     - 1
-                  health_status: null
+                  health_status: 10
                   add_time: '2026-04-14T10:45:20.852Z'
                   update_time: '2026-04-14T10:45:20.852Z'
                   status_change_time: '2026-04-14T10:45:20.852Z'
