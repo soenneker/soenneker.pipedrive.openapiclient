@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Pipedrive.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -35,20 +36,20 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Products
         /// <summary>
         /// Returns data about products attached to deals
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Deals.Products.ProductsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsProductsResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Products.ProductsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Products.ProductsRequestBuilder.ProductsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsProductsResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Products.ProductsRequestBuilder.ProductsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Products.ProductsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Products.ProductsRequestBuilder.ProductsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsProductsResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Products.ProductsRequestBuilder.ProductsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Deals.Products.ProductsGetResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Deals.Products.ProductsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsProductsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsProductsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns data about products attached to deals
@@ -107,10 +108,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Products
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>The field to sort by. Supported fields: `id`, `deal_id`, `add_time`, `update_time`, `order_nr`.</summary>
+            /// <summary>&quot;The field to sort by. Supported fields: `id`, `deal_id`, `add_time`, `update_time`, `order_nr`.&quot;</summary>
             [QueryParameter("sort_by")]
             public global::Soenneker.Pipedrive.OpenApiClient.Deals.Products.GetSort_byQueryParameterType? SortBy { get; set; }
-            /// <summary>The sorting direction. Supported values: `asc`, `desc`.</summary>
+            /// <summary>&quot;The sorting direction. Supported values: `asc`, `desc`.&quot;</summary>
             [QueryParameter("sort_direction")]
             public global::Soenneker.Pipedrive.OpenApiClient.Deals.Products.GetSort_directionQueryParameterType? SortDirection { get; set; }
         }

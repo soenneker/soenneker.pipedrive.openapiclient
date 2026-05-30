@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Pipedrive.OpenApiClient.Models;
 using Soenneker.Pipedrive.OpenApiClient.Persons.Item.Followers;
 using Soenneker.Pipedrive.OpenApiClient.Persons.Item.Picture;
 using System.Collections.Generic;
@@ -47,58 +48,58 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item
         /// <summary>
         /// Marks a person as deleted. After 30 days, the person will be permanently deleted.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsDeleteResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.DeletePersonResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsDeleteResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.DeletePersonResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsDeleteResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.DeletePersonResponse> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsDeleteResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsDeleteResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.DeletePersonResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.DeletePersonResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns the details of a specific person. Fields `ims`, `postal_address`, `notes`, `birthday`, and `job_title` are only included if contact sync is enabled for the company.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertPersonResponseResponseApplicationJson"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsItemRequestBuilder.PersonsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertPersonResponseResponseApplicationJson?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsItemRequestBuilder.PersonsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsItemRequestBuilder.PersonsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertPersonResponseResponseApplicationJson> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsItemRequestBuilder.PersonsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsGetResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertPersonResponseResponseApplicationJson>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertPersonResponseResponseApplicationJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates the properties of a person. &lt;br&gt;If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsPatchResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertPersonResponseResponseApplicationJson"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsPatchResponse?> PatchAsync(global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsPatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertPersonResponseResponseApplicationJson?> PatchAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePerson body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsPatchResponse> PatchAsync(global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsPatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertPersonResponseResponseApplicationJson> PatchAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePerson body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsPatchResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsPatchResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertPersonResponseResponseApplicationJson>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertPersonResponseResponseApplicationJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Marks a person as deleted. After 30 days, the person will be permanently deleted.
@@ -146,11 +147,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsPatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePerson body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsPatchRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePerson body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -188,10 +189,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item
             /// <summary>Optional comma separated string array of additional fields to include. `marketing_status` and `doi_status` can only be included if the company has marketing app enabled.</summary>
             [QueryParameter("include_fields")]
             public global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.GetInclude_fieldsQueryParameterType? IncludeFields { get; set; }
-            /// <summary>When provided with &apos;true&apos; value, response will include an array of label objects in the form of &apos;{ id: number, label: string }&apos;</summary>
+            /// <summary>&quot;When provided with &apos;true&apos; value, response will include an array of label objects in the form of &apos;{ id: number, label: string }&apos;&quot;</summary>
             [QueryParameter("include_labels")]
             public bool? IncludeLabels { get; set; }
-            /// <summary>When provided with a &apos;true&apos; value, single option and multiple option custom fields values contain objects in the form of &apos;{ id: number, label: string }&apos; instead of plain id</summary>
+            /// <summary>&quot;When provided with a &apos;true&apos; value, single option and multiple option custom fields values contain objects in the form of &apos;{ id: number, label: string }&apos; instead of plain id&quot;</summary>
             [QueryParameter("include_option_labels")]
             public bool? IncludeOptionLabels { get; set; }
         }

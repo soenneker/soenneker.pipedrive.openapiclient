@@ -3716,7 +3716,7 @@ paths:
                               default: percentage
                               description: The type of the discount's value
                             quantity:
-                              type: integer
+                              type: number
                               description: The quantity of the product
                             item_price:
                               type: number
@@ -4146,7 +4146,7 @@ paths:
                               default: percentage
                               description: The type of the discount's value
                             quantity:
-                              type: integer
+                              type: number
                               description: The quantity of the product
                             item_price:
                               type: number
@@ -4443,7 +4443,7 @@ paths:
                             default: percentage
                             description: The type of the discount's value
                           quantity:
-                            type: integer
+                            type: number
                             description: The quantity of the product
                           item_price:
                             type: number
@@ -4790,7 +4790,7 @@ paths:
                             default: percentage
                             description: The type of the discount's value
                           quantity:
-                            type: integer
+                            type: number
                             description: The quantity of the product
                           item_price:
                             type: number
@@ -5140,7 +5140,7 @@ paths:
                               default: percentage
                               description: The type of the discount's value
                             quantity:
-                              type: integer
+                              type: number
                               description: The quantity of the product
                             item_price:
                               type: number
@@ -13207,6 +13207,11 @@ paths:
               - asc
               - desc
         - in: query
+          name: updated_since
+          schema:
+            type: string
+          description: 'If set, only products with an `update_time` later than or equal to this time are returned. In RFC3339 format, e.g. 2025-01-01T10:20:00Z.'
+        - in: query
           name: custom_fields
           description: 'Comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for a smaller response.<br/>A maximum of 15 keys is allowed.'
           schema:
@@ -13227,100 +13232,126 @@ paths:
                     type: array
                     description: Array containing data for all products
                     items:
-                      title: GetProductResponse
-                      type: object
-                      properties:
-                        success:
-                          type: boolean
-                          description: If the response is successful or not
-                        data:
+                      allOf:
+                        - title: BaseProduct
                           allOf:
-                            - title: BaseProduct
-                              allOf:
-                                - type: object
-                                  properties:
-                                    id:
-                                      type: number
-                                      description: The ID of the product
-                                    name:
-                                      type: string
-                                      description: The name of the product
-                                    code:
-                                      type: string
-                                      description: The product code
-                                    unit:
-                                      type: string
-                                      description: The unit in which this product is sold
-                                    tax:
-                                      type: number
-                                      description: The tax percentage
-                                      default: 0
-                                    is_deleted:
-                                      type: boolean
-                                      description: Whether this product will be marked as deleted or not
-                                      default: false
-                                    is_linkable:
-                                      type: boolean
-                                      description: Whether this product can be added to a deal or not
-                                      default: true
-                                    visible_to:
-                                      allOf:
-                                        - type: number
-                                          enum:
-                                            - 1
-                                            - 3
-                                            - 5
-                                            - 7
-                                      description: Visibility of the product
-                                    owner_id:
-                                      type: integer
-                                      description: Information about the Pipedrive user who owns the product
-                                    custom_fields:
-                                      type: object
-                                      additionalProperties: true
-                                      description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
-                                - type: object
-                                  properties:
-                                    billing_frequency:
-                                      default: one-time
-                                      type: string
-                                      enum:
-                                        - one-time
-                                        - annually
-                                        - semi-annually
-                                        - quarterly
-                                        - monthly
-                                        - weekly
-                                      description: |
-                                        Only available in Growth and above plans
-
-                                        How often a customer is billed for access to a service or product
-                                - type: object
-                                  properties:
-                                    billing_frequency_cycles:
-                                      default: null
-                                      type: integer
-                                      nullable: true
-                                      description: |
-                                        Only available in Growth and above plans
-
-                                        The number of times the billing frequency repeats for a product in a deal
-
-                                        When `billing_frequency` is set to `one-time`, this field must be `null`
-
-                                        When `billing_frequency` is set to `weekly`, this field cannot be `null`
-
-                                        For all the other values of `billing_frequency`, `null` represents a product billed indefinitely
-
-                                        Must be a positive integer less or equal to 208
                             - type: object
-                              title: PricesArray
                               properties:
-                                prices:
-                                  type: array
-                                  items:
-                                    type: object
-                                  description: 'Array of objects, each containing: product_id (number), currency (string), price (number), cost (number), direct_cost (number | null), notes (string)'
+                                id:
+                                  type: integer
+                                  description: The ID of the product
+                                name:
+                                  type: string
+                                  description: The name of the product
+                                code:
+                                  type: string
+                                  description: The product code
+                                unit:
+                                  type: string
+                                  description: The unit in which this product is sold
+                                tax:
+                                  type: number
+                                  description: The tax percentage
+                                  default: 0
+                                is_deleted:
+                                  type: boolean
+                                  description: Whether this product will be marked as deleted or not
+                                  default: false
+                                is_linkable:
+                                  type: boolean
+                                  description: Whether this product can be added to a deal or not
+                                  default: true
+                                visible_to:
+                                  allOf:
+                                    - type: number
+                                      enum:
+                                        - 1
+                                        - 3
+                                        - 5
+                                        - 7
+                                  description: Visibility of the product
+                                owner_id:
+                                  type: integer
+                                  description: The ID of the Pipedrive user who owns the product
+                                add_time:
+                                  type: string
+                                  description: The date and time when the product was added
+                                update_time:
+                                  type: string
+                                  description: The date and time when the product was last updated
+                                description:
+                                  type: string
+                                  description: The description of the product
+                                category:
+                                  type: string
+                                  nullable: true
+                                  description: The category of the product
+                                custom_fields:
+                                  type: object
+                                  additionalProperties: true
+                                  description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
+                            - type: object
+                              properties:
+                                billing_frequency:
+                                  default: one-time
+                                  type: string
+                                  enum:
+                                    - one-time
+                                    - annually
+                                    - semi-annually
+                                    - quarterly
+                                    - monthly
+                                    - weekly
+                                  description: |
+                                    Only available in Growth and above plans
+
+                                    How often a customer is billed for access to a service or product
+                            - type: object
+                              properties:
+                                billing_frequency_cycles:
+                                  default: null
+                                  type: integer
+                                  nullable: true
+                                  description: |
+                                    Only available in Growth and above plans
+
+                                    The number of times the billing frequency repeats for a product in a deal
+
+                                    When `billing_frequency` is set to `one-time`, this field must be `null`
+
+                                    When `billing_frequency` is set to `weekly`, this field cannot be `null`
+
+                                    For all the other values of `billing_frequency`, `null` represents a product billed indefinitely
+
+                                    Must be a positive integer less or equal to 208
+                        - type: object
+                          title: PricesArray
+                          properties:
+                            prices:
+                              type: array
+                              description: The prices of the product in different currencies
+                              items:
+                                type: object
+                                properties:
+                                  product_id:
+                                    type: integer
+                                    description: The ID of the product
+                                  price:
+                                    type: number
+                                    description: The price of the product
+                                  currency:
+                                    type: string
+                                    description: The currency of the price
+                                  cost:
+                                    type: number
+                                    description: The cost of the product
+                                  direct_cost:
+                                    type: number
+                                    nullable: true
+                                    description: The direct cost of the product
+                                  notes:
+                                    type: string
+                                    description: The notes about the price
                   additional_data:
                     type: object
                     description: Pagination related data
@@ -13486,7 +13517,7 @@ paths:
                           - type: object
                             properties:
                               id:
-                                type: number
+                                type: integer
                                 description: The ID of the product
                               name:
                                 type: string
@@ -13520,7 +13551,20 @@ paths:
                                 description: Visibility of the product
                               owner_id:
                                 type: integer
-                                description: Information about the Pipedrive user who owns the product
+                                description: The ID of the Pipedrive user who owns the product
+                              add_time:
+                                type: string
+                                description: The date and time when the product was added
+                              update_time:
+                                type: string
+                                description: The date and time when the product was last updated
+                              description:
+                                type: string
+                                description: The description of the product
+                              category:
+                                type: string
+                                nullable: true
+                                description: The category of the product
                               custom_fields:
                                 type: object
                                 additionalProperties: true
@@ -13564,9 +13608,29 @@ paths:
                         properties:
                           prices:
                             type: array
+                            description: The prices of the product in different currencies
                             items:
                               type: object
-                            description: 'Array of objects, each containing: product_id (number), currency (string), price (number), cost (number), direct_cost (number | null), notes (string)'
+                              properties:
+                                product_id:
+                                  type: integer
+                                  description: The ID of the product
+                                price:
+                                  type: number
+                                  description: The price of the product
+                                currency:
+                                  type: string
+                                  description: The currency of the price
+                                cost:
+                                  type: number
+                                  description: The cost of the product
+                                direct_cost:
+                                  type: number
+                                  nullable: true
+                                  description: The direct cost of the product
+                                notes:
+                                  type: string
+                                  description: The notes about the price
               example:
                 success: true
                 data:
@@ -14080,7 +14144,7 @@ paths:
                           - type: object
                             properties:
                               id:
-                                type: number
+                                type: integer
                                 description: The ID of the product
                               name:
                                 type: string
@@ -14114,7 +14178,20 @@ paths:
                                 description: Visibility of the product
                               owner_id:
                                 type: integer
-                                description: Information about the Pipedrive user who owns the product
+                                description: The ID of the Pipedrive user who owns the product
+                              add_time:
+                                type: string
+                                description: The date and time when the product was added
+                              update_time:
+                                type: string
+                                description: The date and time when the product was last updated
+                              description:
+                                type: string
+                                description: The description of the product
+                              category:
+                                type: string
+                                nullable: true
+                                description: The category of the product
                               custom_fields:
                                 type: object
                                 additionalProperties: true
@@ -14158,9 +14235,29 @@ paths:
                         properties:
                           prices:
                             type: array
+                            description: The prices of the product in different currencies
                             items:
                               type: object
-                            description: 'Array of objects, each containing: product_id (number), currency (string), price (number), cost (number), direct_cost (number | null), notes (string)'
+                              properties:
+                                product_id:
+                                  type: integer
+                                  description: The ID of the product
+                                price:
+                                  type: number
+                                  description: The price of the product
+                                currency:
+                                  type: string
+                                  description: The currency of the price
+                                cost:
+                                  type: number
+                                  description: The cost of the product
+                                direct_cost:
+                                  type: number
+                                  nullable: true
+                                  description: The direct cost of the product
+                                notes:
+                                  type: string
+                                  description: The notes about the price
               example:
                 success: true
                 data:
@@ -14320,7 +14417,7 @@ paths:
                           - type: object
                             properties:
                               id:
-                                type: number
+                                type: integer
                                 description: The ID of the product
                               name:
                                 type: string
@@ -14354,7 +14451,20 @@ paths:
                                 description: Visibility of the product
                               owner_id:
                                 type: integer
-                                description: Information about the Pipedrive user who owns the product
+                                description: The ID of the Pipedrive user who owns the product
+                              add_time:
+                                type: string
+                                description: The date and time when the product was added
+                              update_time:
+                                type: string
+                                description: The date and time when the product was last updated
+                              description:
+                                type: string
+                                description: The description of the product
+                              category:
+                                type: string
+                                nullable: true
+                                description: The category of the product
                               custom_fields:
                                 type: object
                                 additionalProperties: true
@@ -14398,9 +14508,29 @@ paths:
                         properties:
                           prices:
                             type: array
+                            description: The prices of the product in different currencies
                             items:
                               type: object
-                            description: 'Array of objects, each containing: product_id (number), currency (string), price (number), cost (number), direct_cost (number | null), notes (string)'
+                              properties:
+                                product_id:
+                                  type: integer
+                                  description: The ID of the product
+                                price:
+                                  type: number
+                                  description: The price of the product
+                                currency:
+                                  type: string
+                                  description: The currency of the price
+                                cost:
+                                  type: number
+                                  description: The cost of the product
+                                direct_cost:
+                                  type: number
+                                  nullable: true
+                                  description: The direct cost of the product
+                                notes:
+                                  type: string
+                                  description: The notes about the price
               example:
                 success: true
                 data:
@@ -14473,7 +14603,7 @@ paths:
                           - type: object
                             properties:
                               id:
-                                type: number
+                                type: integer
                                 description: The ID of the product
                               name:
                                 type: string
@@ -14507,7 +14637,20 @@ paths:
                                 description: Visibility of the product
                               owner_id:
                                 type: integer
-                                description: Information about the Pipedrive user who owns the product
+                                description: The ID of the Pipedrive user who owns the product
+                              add_time:
+                                type: string
+                                description: The date and time when the product was added
+                              update_time:
+                                type: string
+                                description: The date and time when the product was last updated
+                              description:
+                                type: string
+                                description: The description of the product
+                              category:
+                                type: string
+                                nullable: true
+                                description: The category of the product
                               custom_fields:
                                 type: object
                                 additionalProperties: true
@@ -14551,9 +14694,29 @@ paths:
                         properties:
                           prices:
                             type: array
+                            description: The prices of the product in different currencies
                             items:
                               type: object
-                            description: 'Array of objects, each containing: product_id (number), currency (string), price (number), cost (number), direct_cost (number | null), notes (string)'
+                              properties:
+                                product_id:
+                                  type: integer
+                                  description: The ID of the product
+                                price:
+                                  type: number
+                                  description: The price of the product
+                                currency:
+                                  type: string
+                                  description: The currency of the price
+                                cost:
+                                  type: number
+                                  description: The cost of the product
+                                direct_cost:
+                                  type: number
+                                  nullable: true
+                                  description: The direct cost of the product
+                                notes:
+                                  type: string
+                                  description: The notes about the price
               example:
                 success: true
                 data:
@@ -14639,7 +14802,7 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: number
+                          type: integer
                           description: The ID of the product variation
                         name:
                           type: string
@@ -14725,7 +14888,7 @@ paths:
                     type: object
                     properties:
                       id:
-                        type: number
+                        type: integer
                         description: The ID of the product variation
                       name:
                         type: string
@@ -14807,7 +14970,7 @@ paths:
                     type: object
                     properties:
                       id:
-                        type: number
+                        type: integer
                         description: The ID of the product variation
                       name:
                         type: string
@@ -14996,7 +15159,7 @@ paths:
                         type: integer
                         description: The ID of the product image
                       product_id:
-                        type: number
+                        type: integer
                         description: The ID of the product associated
                       company_id:
                         type: string
@@ -15061,7 +15224,7 @@ paths:
                         type: integer
                         description: The ID of the product image
                       product_id:
-                        type: number
+                        type: integer
                         description: The ID of the product associated
                       company_id:
                         type: string

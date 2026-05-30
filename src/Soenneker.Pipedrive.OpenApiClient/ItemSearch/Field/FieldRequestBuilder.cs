@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Pipedrive.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -35,20 +36,20 @@ namespace Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field
         /// <summary>
         /// Performs a search from the values of a specific field. Results can either be the distinct values of the field (useful for searching autocomplete field values), or the IDs of actual items (deals, leads, persons, organizations or products).
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchFieldResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldRequestBuilder.FieldRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchFieldResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldRequestBuilder.FieldRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldRequestBuilder.FieldRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchFieldResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldRequestBuilder.FieldRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldGetResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.FieldGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchFieldResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchFieldResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Performs a search from the values of a specific field. Results can either be the distinct values of the field (useful for searching autocomplete field values), or the IDs of actual items (deals, leads, persons, organizations or products).
@@ -97,7 +98,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field
             /// <summary>The type of the field to perform the search from</summary>
             [QueryParameter("entity_type")]
             public global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.GetEntity_typeQueryParameterType? EntityType { get; set; }
-            /// <summary>The key of the field to search from. The field key can be obtained by fetching the list of the fields using any of the fields&apos; API GET methods (dealFields, personFields, etc.). Only the following custom field types are searchable: `address`, `varchar`, `text`, `varchar_auto`, `double`, `monetary` and `phone`. Read more about searching by custom fields &lt;a href=&quot;https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;here&lt;/a&gt;.</summary>
+            /// <summary>&quot;The key of the field to search from. The field key can be obtained by fetching the list of the fields using any of the fields&apos; API GET methods (dealFields, personFields, etc.). Only the following custom field types are searchable: `address`, `varchar`, `text`, `varchar_auto`, `double`, `monetary` and `phone`. Read more about searching by custom fields &lt;a href=\&quot;https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\&quot; target=\&quot;_blank\&quot; rel=\&quot;noopener noreferrer\&quot;&gt;here&lt;/a&gt;.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("field")]

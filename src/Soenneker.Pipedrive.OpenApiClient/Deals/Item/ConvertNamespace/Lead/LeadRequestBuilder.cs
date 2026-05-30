@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Pipedrive.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -35,25 +36,25 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.ConvertNamespace.Lead
         /// <summary>
         /// Initiates a conversion of a deal to a lead. The return value is an ID of a job that was assigned to perform the conversion. Related entities (notes, files, emails, activities, ...) are transferred during the process to the target entity. There are exceptions for entities like invoices or history that are not transferred and remain linked to the original deal. If the conversion is successful, the deal is marked as deleted. To retrieve the created entity ID and the result of the conversion, call the &lt;a href=&quot;https://developers.pipedrive.com/docs/api/v1/Deals#getDealConversionStatus&quot;&gt;/api/v2/deals/{deal_id}/convert/status/{conversion_id}&lt;/a&gt; endpoint.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.ConvertNamespace.Lead.LeadPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddConvertDealToLeadResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.ConvertNamespace.Lead.Lead404Error">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponse">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.ConvertNamespace.Lead.LeadPostResponse?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddConvertDealToLeadResponse?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.ConvertNamespace.Lead.LeadPostResponse> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddConvertDealToLeadResponse> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "404", global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.ConvertNamespace.Lead.Lead404Error.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.ConvertNamespace.Lead.LeadPostResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.ConvertNamespace.Lead.LeadPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddConvertDealToLeadResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddConvertDealToLeadResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Initiates a conversion of a deal to a lead. The return value is an ID of a job that was assigned to perform the conversion. Related entities (notes, files, emails, activities, ...) are transferred during the process to the target entity. There are exceptions for entities like invoices or history that are not transferred and remain linked to the original deal. If the conversion is successful, the deal is marked as deleted. To retrieve the created entity ID and the result of the conversion, call the &lt;a href=&quot;https://developers.pipedrive.com/docs/api/v1/Deals#getDealConversionStatus&quot;&gt;/api/v2/deals/{deal_id}/convert/status/{conversion_id}&lt;/a&gt; endpoint.
