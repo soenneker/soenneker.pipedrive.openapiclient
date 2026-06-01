@@ -36,20 +36,20 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Archived
         /// <summary>
         /// Returns data about all archived deals.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsResponseResponseApplicationJson"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsResponseResponseJson"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsResponseResponseApplicationJson?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Archived.ArchivedRequestBuilder.ArchivedRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsResponseResponseJson?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Archived.ArchivedRequestBuilder.ArchivedRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsResponseResponseApplicationJson> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Archived.ArchivedRequestBuilder.ArchivedRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsResponseResponseJson> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Archived.ArchivedRequestBuilder.ArchivedRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsResponseResponseApplicationJson>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsResponseResponseApplicationJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsResponseResponseJson>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsResponseResponseJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns data about all archived deals.
@@ -120,7 +120,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Archived
 #endif
             /// <summary>Optional comma separated string array of additional fields to include</summary>
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Deals.Archived.GetInclude_fieldsQueryParameterType? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetArchivedDealsIncludeFieldsParameter? IncludeFields { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
@@ -138,16 +138,16 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Archived
             public int? PipelineId { get; set; }
             /// <summary>&quot;The field to sort by. Supported fields: `id`, `update_time`, `add_time`.&quot;</summary>
             [QueryParameter("sort_by")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Deals.Archived.GetSort_byQueryParameterType? SortBy { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetArchivedDealsSortByParameter? SortBy { get; set; }
             /// <summary>&quot;The sorting direction. Supported values: `asc`, `desc`.&quot;</summary>
             [QueryParameter("sort_direction")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Deals.Archived.GetSort_directionQueryParameterType? SortDirection { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetArchivedDealsSortDirectionParameter? SortDirection { get; set; }
             /// <summary>If supplied, only deals in the specified stage are returned. If filter_id is provided, this is ignored.</summary>
             [QueryParameter("stage_id")]
             public int? StageId { get; set; }
             /// <summary>Only fetch deals with a specific status. If omitted, all not deleted deals are returned. If set to deleted, deals that have been deleted up to 30 days ago will be included. Multiple statuses can be included as a comma separated array. If filter_id is provided, this is ignored.</summary>
             [QueryParameter("status")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Deals.Archived.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetArchivedDealsStatusParameter? Status { get; set; }
             /// <summary>If set, only deals with an `update_time` later than or equal to this time are returned. In RFC3339 format, e.g. 2025-01-01T10:20:00Z.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

@@ -97,11 +97,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertDealResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDeal body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertDealResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertDealResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDeal body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertDealResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -135,11 +135,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDeal body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDeal body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -199,7 +199,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals
 #endif
             /// <summary>Optional comma separated string array of additional fields to include</summary>
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Deals.GetInclude_fieldsQueryParameterType? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsIncludeFieldsParameter? IncludeFields { get; set; }
             /// <summary>&quot;When provided with &apos;true&apos; value, response will include an array of label objects in the form of &apos;{ id: number, label: string }&apos;&quot;</summary>
             [QueryParameter("include_labels")]
             public bool? IncludeLabels { get; set; }
@@ -223,16 +223,16 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals
             public int? PipelineId { get; set; }
             /// <summary>&quot;The field to sort by. Supported fields: `id`, `update_time`, `add_time`.&quot;</summary>
             [QueryParameter("sort_by")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Deals.GetSort_byQueryParameterType? SortBy { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsSortByParameter? SortBy { get; set; }
             /// <summary>&quot;The sorting direction. Supported values: `asc`, `desc`.&quot;</summary>
             [QueryParameter("sort_direction")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Deals.GetSort_directionQueryParameterType? SortDirection { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsSortDirectionParameter? SortDirection { get; set; }
             /// <summary>If supplied, only deals in the specified stage are returned. If filter_id is provided, this is ignored.</summary>
             [QueryParameter("stage_id")]
             public int? StageId { get; set; }
             /// <summary>Only fetch deals with a specific status. If omitted, all not deleted deals are returned. If set to deleted, deals that have been deleted up to 30 days ago will be included. Multiple statuses can be included as a comma separated array. If filter_id is provided, this is ignored.</summary>
             [QueryParameter("status")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Deals.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsStatusParameter? Status { get; set; }
             /// <summary>If set, only deals with an `update_time` later than or equal to this time are returned. In RFC3339 format, e.g. 2025-01-01T10:20:00Z.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

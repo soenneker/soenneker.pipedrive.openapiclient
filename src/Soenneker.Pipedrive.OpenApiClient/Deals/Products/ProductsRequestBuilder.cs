@@ -110,10 +110,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Products
             public int? Limit { get; set; }
             /// <summary>&quot;The field to sort by. Supported fields: `id`, `deal_id`, `add_time`, `update_time`, `order_nr`.&quot;</summary>
             [QueryParameter("sort_by")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Deals.Products.GetSort_byQueryParameterType? SortBy { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsProductsSortByParameter? SortBy { get; set; }
             /// <summary>&quot;The sorting direction. Supported values: `asc`, `desc`.&quot;</summary>
             [QueryParameter("sort_direction")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Deals.Products.GetSort_directionQueryParameterType? SortDirection { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsProductsSortDirectionParameter? SortDirection { get; set; }
         }
     }
 }

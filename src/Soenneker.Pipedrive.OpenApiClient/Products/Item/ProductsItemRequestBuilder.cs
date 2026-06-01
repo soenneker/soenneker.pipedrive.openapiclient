@@ -78,20 +78,20 @@ namespace Soenneker.Pipedrive.OpenApiClient.Products.Item
         /// <summary>
         /// Returns data about a specific product.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductResponseResponseApplicationJson"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductResponseResponseJson"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductResponseResponseApplicationJson?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductResponseResponseJson?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductResponseResponseApplicationJson> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductResponseResponseJson> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductResponseResponseApplicationJson>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductResponseResponseApplicationJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductResponseResponseJson>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductResponseResponseJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates product data.
@@ -102,11 +102,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Products.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductResponse?> PatchAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProduct body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductResponse?> PatchAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductResponse> PatchAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProduct body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductResponse> PatchAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -159,11 +159,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Products.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProduct body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProduct body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

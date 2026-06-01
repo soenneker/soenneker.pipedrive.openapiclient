@@ -106,13 +106,13 @@ namespace Soenneker.Pipedrive.OpenApiClient.ItemSearch
             public bool? ExactMatch { get; set; }
             /// <summary>&quot;A comma-separated string array. The fields to perform the search from. Defaults to all. Relevant for each item type are:&lt;br&gt; &lt;table&gt; &lt;tr&gt;&lt;th&gt;&lt;b&gt;Item type&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Field&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;Deal&lt;/td&gt;&lt;td&gt;`custom_fields`, `notes`, `title`&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;Person&lt;/td&gt;&lt;td&gt;`custom_fields`, `email`, `name`, `notes`, `phone`&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;Organization&lt;/td&gt;&lt;td&gt;`address`, `custom_fields`, `name`, `notes`&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;Product&lt;/td&gt;&lt;td&gt;`code`, `custom_fields`, `name`&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;Lead&lt;/td&gt;&lt;td&gt;`custom_fields`, `notes`, `title`&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;File&lt;/td&gt;&lt;td&gt;`name`&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;Mail attachment&lt;/td&gt;&lt;td&gt;`name`&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;Project&lt;/td&gt;&lt;td&gt; `custom_fields`, `notes`, `title`, `description` &lt;/td&gt;&lt;/tr&gt; &lt;/table&gt; &lt;br&gt; Only the following custom field types are searchable: `address`, `varchar`, `text`, `varchar_auto`, `double`, `monetary` and `phone`. Read more about searching by custom fields &lt;a href=\&quot;https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\&quot; target=\&quot;_blank\&quot; rel=\&quot;noopener noreferrer\&quot;&gt;here&lt;/a&gt;.&quot;</summary>
             [QueryParameter("fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.GetFieldsQueryParameterType? Fields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchItemFieldsParameter? Fields { get; set; }
             /// <summary>A comma-separated string array. Supports including optional fields in the results which are not provided by default.</summary>
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.GetInclude_fieldsQueryParameterType? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchItemIncludeFieldsParameter? IncludeFields { get; set; }
             /// <summary>A comma-separated string array. The type of items to perform the search from. Defaults to all.</summary>
             [QueryParameter("item_types")]
-            public global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.GetItem_typesQueryParameterType? ItemTypes { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchItemItemTypesParameter? ItemTypes { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }

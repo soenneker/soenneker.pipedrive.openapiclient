@@ -20,14 +20,14 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Discounts
     {
         /// <summary>Gets an item from the Soenneker.Pipedrive.OpenApiClient.deals.item.discounts.item collection</summary>
         /// <param name="position">The ID of the discount</param>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Discounts.Item.WithDiscount_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Discounts.Item.WithDiscount_ItemRequestBuilder this[Guid position]
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Discounts.Item.WithDiscountItemRequestBuilder"/></returns>
+        public global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Discounts.Item.WithDiscountItemRequestBuilder this[Guid position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("discount_id", position);
-                return new global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Discounts.Item.WithDiscount_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("discountId", position);
+                return new global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.Discounts.Item.WithDiscountItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -73,11 +73,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Discounts
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddAdditionalDiscountResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.PostAdditionalDiscount body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddAdditionalDiscountResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.PostAdditionalDiscountRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddAdditionalDiscountResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.PostAdditionalDiscount body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddAdditionalDiscountResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.PostAdditionalDiscountRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -111,11 +111,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Discounts
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.PostAdditionalDiscount body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.PostAdditionalDiscountRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.PostAdditionalDiscount body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.PostAdditionalDiscountRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

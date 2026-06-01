@@ -73,11 +73,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Pipelines
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertPipelineResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPipeline body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertPipelineResponse?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPipelineRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertPipelineResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPipeline body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertPipelineResponse> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPipelineRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -111,11 +111,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Pipelines
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPipeline body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPipelineRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPipeline body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPipelineRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -155,10 +155,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Pipelines
             public int? Limit { get; set; }
             /// <summary>&quot;The field to sort by. Supported fields: `id`, `update_time`, `add_time`.&quot;</summary>
             [QueryParameter("sort_by")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Pipelines.GetSort_byQueryParameterType? SortBy { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPipelinesSortByParameter? SortBy { get; set; }
             /// <summary>&quot;The sorting direction. Supported values: `asc`, `desc`.&quot;</summary>
             [QueryParameter("sort_direction")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Pipelines.GetSort_directionQueryParameterType? SortDirection { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPipelinesSortDirectionParameter? SortDirection { get; set; }
         }
     }
 }

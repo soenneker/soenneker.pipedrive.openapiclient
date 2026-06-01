@@ -20,14 +20,14 @@ namespace Soenneker.Pipedrive.OpenApiClient.ActivityFields
     {
         /// <summary>Gets an item from the Soenneker.Pipedrive.OpenApiClient.activityFields.item collection</summary>
         /// <param name="position">The unique code identifying the field</param>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeItemRequestBuilder"/></returns>
-        public global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithFieldCodeItemRequestBuilder"/></returns>
+        public global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithFieldCodeItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("field_code", position);
-                return new global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithField_codeItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("fieldCode", position);
+                return new global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item.WithFieldCodeItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -49,20 +49,20 @@ namespace Soenneker.Pipedrive.OpenApiClient.ActivityFields
         /// <summary>
         /// Returns metadata about all activity fields in the company.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsRequestBuilder.ActivityFieldsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsRequestBuilder.ActivityFieldsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsRequestBuilder.ActivityFieldsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.ActivityFieldsRequestBuilder.ActivityFieldsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns metadata about all activity fields in the company.
@@ -110,7 +110,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.ActivityFields
 #endif
             /// <summary>Optional comma separated string array of additional data namespaces to include in response</summary>
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.ActivityFields.GetInclude_fieldsQueryParameterType? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFieldsIncludeFieldsParameter? IncludeFields { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }

@@ -20,14 +20,14 @@ namespace Soenneker.Pipedrive.OpenApiClient.ProjectFields
     {
         /// <summary>Gets an item from the Soenneker.Pipedrive.OpenApiClient.projectFields.item collection</summary>
         /// <param name="position">The unique code identifying the field</param>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.ProjectFields.Item.WithField_codeItemRequestBuilder"/></returns>
-        public global::Soenneker.Pipedrive.OpenApiClient.ProjectFields.Item.WithField_codeItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.ProjectFields.Item.WithFieldCodeItemRequestBuilder"/></returns>
+        public global::Soenneker.Pipedrive.OpenApiClient.ProjectFields.Item.WithFieldCodeItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("field_code", position);
-                return new global::Soenneker.Pipedrive.OpenApiClient.ProjectFields.Item.WithField_codeItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("fieldCode", position);
+                return new global::Soenneker.Pipedrive.OpenApiClient.ProjectFields.Item.WithFieldCodeItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -49,40 +49,40 @@ namespace Soenneker.Pipedrive.OpenApiClient.ProjectFields
         /// <summary>
         /// Returns metadata about all project fields in the company.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectFields200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectFields200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectFields200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ProjectFields.ProjectFieldsRequestBuilder.ProjectFieldsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectFields200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ProjectFields.ProjectFieldsRequestBuilder.ProjectFieldsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectFields200> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ProjectFields.ProjectFieldsRequestBuilder.ProjectFieldsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectFields200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.ProjectFields.ProjectFieldsRequestBuilder.ProjectFieldsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectFields200>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectFields200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectFields200Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectFields200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a new project custom field.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectField200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectField200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectField200?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectField body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectField200Response?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectFieldRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectField200> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectField body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectField200Response> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectFieldRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectField200>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectField200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectField200Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectField200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns metadata about all project fields in the company.
@@ -111,11 +111,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.ProjectFields
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectField body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectFieldRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectField body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddProjectFieldRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

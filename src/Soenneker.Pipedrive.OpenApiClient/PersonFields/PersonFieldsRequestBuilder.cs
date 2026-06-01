@@ -20,14 +20,14 @@ namespace Soenneker.Pipedrive.OpenApiClient.PersonFields
     {
         /// <summary>Gets an item from the Soenneker.Pipedrive.OpenApiClient.personFields.item collection</summary>
         /// <param name="position">The unique code identifying the field</param>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.PersonFields.Item.WithField_codeItemRequestBuilder"/></returns>
-        public global::Soenneker.Pipedrive.OpenApiClient.PersonFields.Item.WithField_codeItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.PersonFields.Item.WithFieldCodeItemRequestBuilder"/></returns>
+        public global::Soenneker.Pipedrive.OpenApiClient.PersonFields.Item.WithFieldCodeItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("field_code", position);
-                return new global::Soenneker.Pipedrive.OpenApiClient.PersonFields.Item.WithField_codeItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("fieldCode", position);
+                return new global::Soenneker.Pipedrive.OpenApiClient.PersonFields.Item.WithFieldCodeItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -49,40 +49,40 @@ namespace Soenneker.Pipedrive.OpenApiClient.PersonFields
         /// <summary>
         /// Returns metadata about all person fields in the company.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonFields200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonFields200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonFields200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.PersonFields.PersonFieldsRequestBuilder.PersonFieldsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonFields200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.PersonFields.PersonFieldsRequestBuilder.PersonFieldsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonFields200> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.PersonFields.PersonFieldsRequestBuilder.PersonFieldsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonFields200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.PersonFields.PersonFieldsRequestBuilder.PersonFieldsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonFields200>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonFields200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonFields200Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonFields200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a new person custom field.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200Response?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonFieldRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200Response> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonFieldRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns metadata about all person fields in the company.
@@ -111,11 +111,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.PersonFields
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonFieldRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonFieldRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -152,7 +152,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.PersonFields
 #endif
             /// <summary>Optional comma separated string array of additional data namespaces to include in response</summary>
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.PersonFields.GetInclude_fieldsQueryParameterType? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonFieldsIncludeFieldsParameter? IncludeFields { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }

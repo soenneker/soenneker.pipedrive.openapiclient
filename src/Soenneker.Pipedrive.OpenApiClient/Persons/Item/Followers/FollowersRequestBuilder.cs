@@ -26,14 +26,14 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item.Followers
         }
         /// <summary>Gets an item from the Soenneker.Pipedrive.OpenApiClient.persons.item.followers.item collection</summary>
         /// <param name="position">The ID of the following user</param>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.Followers.Item.WithFollower_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.Followers.Item.WithFollower_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.Followers.Item.WithFollowerItemRequestBuilder"/></returns>
+        public global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.Followers.Item.WithFollowerItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("follower_id", position);
-                return new global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.Followers.Item.WithFollower_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("followerId", position);
+                return new global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.Followers.Item.WithFollowerItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -55,40 +55,40 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item.Followers
         /// <summary>
         /// Lists users who are following the person.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowersResponseResponseApplicationJson"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowersResponseResponseJson"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowersResponseResponseApplicationJson?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.Followers.FollowersRequestBuilder.FollowersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowersResponseResponseJson?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.Followers.FollowersRequestBuilder.FollowersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowersResponseResponseApplicationJson> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.Followers.FollowersRequestBuilder.FollowersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowersResponseResponseJson> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.Followers.FollowersRequestBuilder.FollowersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowersResponseResponseApplicationJson>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowersResponseResponseApplicationJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowersResponseResponseJson>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowersResponseResponseJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Adds a user as a follower to the person.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddFollowerResponseResponseApplicationJson"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddFollowerResponseResponseJson"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddFollowerResponseResponseApplicationJson?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonFollower body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddFollowerResponseResponseJson?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonFollowerRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddFollowerResponseResponseApplicationJson> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonFollower body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddFollowerResponseResponseJson> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonFollowerRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddFollowerResponseResponseApplicationJson>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddFollowerResponseResponseApplicationJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddFollowerResponseResponseJson>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddFollowerResponseResponseJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists users who are following the person.
@@ -117,11 +117,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item.Followers
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonFollower body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonFollowerRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonFollower body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonFollowerRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

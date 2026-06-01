@@ -17,14 +17,14 @@ namespace Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Status
     {
         /// <summary>Gets an item from the Soenneker.Pipedrive.OpenApiClient.leads.item.convert.status.item collection</summary>
         /// <param name="position">The ID of the conversion</param>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Status.Item.WithConversion_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Status.Item.WithConversion_ItemRequestBuilder this[Guid position]
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Status.Item.WithConversionItemRequestBuilder"/></returns>
+        public global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Status.Item.WithConversionItemRequestBuilder this[Guid position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("conversion_id", position);
-                return new global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Status.Item.WithConversion_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("conversionId", position);
+                return new global::Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Status.Item.WithConversionItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

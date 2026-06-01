@@ -100,10 +100,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Search
             public bool? ExactMatch { get; set; }
             /// <summary>&quot;A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: `address`, `varchar`, `text`, `varchar_auto`, `double`, `monetary` and `phone`. Read more about searching by custom fields &lt;a href=\&quot;https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\&quot; target=\&quot;_blank\&quot; rel=\&quot;noopener noreferrer\&quot;&gt;here&lt;/a&gt;.&quot;</summary>
             [QueryParameter("fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Persons.Search.GetFieldsQueryParameterType? Fields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchPersonsFieldsParameter? Fields { get; set; }
             /// <summary>Supports including optional fields in the results which are not provided by default</summary>
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Persons.Search.GetInclude_fieldsQueryParameterType? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchPersonsIncludeFieldsParameter? IncludeFields { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }

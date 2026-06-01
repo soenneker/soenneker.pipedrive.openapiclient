@@ -97,7 +97,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field
 #endif
             /// <summary>The type of the field to perform the search from</summary>
             [QueryParameter("entity_type")]
-            public global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.GetEntity_typeQueryParameterType? EntityType { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchItemByFieldEntityTypeParameter? EntityType { get; set; }
             /// <summary>&quot;The key of the field to search from. The field key can be obtained by fetching the list of the fields using any of the fields&apos; API GET methods (dealFields, personFields, etc.). Only the following custom field types are searchable: `address`, `varchar`, `text`, `varchar_auto`, `double`, `monetary` and `phone`. Read more about searching by custom fields &lt;a href=\&quot;https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\&quot; target=\&quot;_blank\&quot; rel=\&quot;noopener noreferrer\&quot;&gt;here&lt;/a&gt;.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -113,7 +113,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field
             public int? Limit { get; set; }
             /// <summary>The type of match used against the term. The search &lt;b&gt;is&lt;/b&gt; case sensitive.&lt;br/&gt;&lt;br/&gt; E.g. in case of searching for a value `monkey`, &lt;ul&gt; &lt;li&gt;with `exact` match, you will only find it if term is `monkey`&lt;/li&gt; &lt;li&gt;with `beginning` match, you will only find it if the term matches the beginning or the whole string, e.g. `monk` and `monkey`&lt;/li&gt; &lt;li&gt;with `middle` match, you will find the it if the term matches any substring of the value, e.g. `onk` and `ke`&lt;/li&gt; &lt;/ul&gt;.</summary>
             [QueryParameter("match")]
-            public global::Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field.GetMatchQueryParameterType? Match { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchItemByFieldMatchParameter? Match { get; set; }
             /// <summary>The search term to look for. Minimum 2 characters (or 1 if `match` is `exact`). Please note that the search term has to be URL encoded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

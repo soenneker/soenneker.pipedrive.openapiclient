@@ -60,40 +60,40 @@ namespace Soenneker.Pipedrive.OpenApiClient.Organizations.Item
         /// <summary>
         /// Returns the details of a specific organization.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseApplicationJson"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseJson"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseApplicationJson?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Organizations.Item.OrganizationsItemRequestBuilder.OrganizationsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseJson?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Organizations.Item.OrganizationsItemRequestBuilder.OrganizationsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseApplicationJson> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Organizations.Item.OrganizationsItemRequestBuilder.OrganizationsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseJson> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Organizations.Item.OrganizationsItemRequestBuilder.OrganizationsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseApplicationJson>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseApplicationJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseJson>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates the properties of a organization.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseApplicationJson"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseJson2"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseApplicationJson?> PatchAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateOrganization body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseJson2?> PatchAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateOrganizationRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseApplicationJson> PatchAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateOrganization body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseJson2> PatchAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateOrganizationRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseApplicationJson>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseApplicationJson.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseJson2>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.UpsertOrganizationResponseResponseJson2.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Marks a organization as deleted. After 30 days, the organization will be permanently deleted.
@@ -141,11 +141,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Organizations.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateOrganization body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateOrganizationRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateOrganization body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateOrganizationRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -182,7 +182,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Organizations.Item
 #endif
             /// <summary>Optional comma separated string array of additional fields to include</summary>
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Organizations.Item.GetInclude_fieldsQueryParameterType? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationIncludeFieldsParameter? IncludeFields { get; set; }
             /// <summary>&quot;When provided with &apos;true&apos; value, response will include an array of label objects in the form of &apos;{ id: number, label: string }&apos;&quot;</summary>
             [QueryParameter("include_labels")]
             public bool? IncludeLabels { get; set; }

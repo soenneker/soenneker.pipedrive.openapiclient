@@ -17,10 +17,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <summary>Array of created deal products</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddManyDealProductResponse_data>? Data { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddManyDealProductResponseDataItem>? Data { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddManyDealProductResponse_data> Data { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddManyDealProductResponseDataItem> Data { get; set; }
 #endif
         /// <summary>If the response is successful or not</summary>
         public bool? Success { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.AddManyDealProductResponse_data>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddManyDealProductResponse_data.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.AddManyDealProductResponseDataItem>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddManyDealProductResponseDataItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.AddManyDealProductResponse_data>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.AddManyDealProductResponseDataItem>("data", Data);
             writer.WriteBoolValue("success", Success);
             writer.WriteAdditionalData(AdditionalData);
         }

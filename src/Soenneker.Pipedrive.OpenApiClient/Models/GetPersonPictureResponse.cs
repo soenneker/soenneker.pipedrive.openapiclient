@@ -17,10 +17,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponse_data? Data { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseData? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponse_data Data { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseData Data { get; set; }
 #endif
         /// <summary>If the response is successful or not</summary>
         public bool? Success { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponse_data>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponse_data.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseData>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseData.CreateFromDiscriminatorValue); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponse_data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseData>("data", Data);
             writer.WriteBoolValue("success", Success);
             writer.WriteAdditionalData(AdditionalData);
         }

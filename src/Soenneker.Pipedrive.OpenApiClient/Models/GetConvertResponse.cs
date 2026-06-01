@@ -18,18 +18,18 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <summary>The additional_dataProperty property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponse_additional_data? AdditionalDataProperty { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponseAdditionalData? AdditionalDataProperty { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponse_additional_data AdditionalDataProperty { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponseAdditionalData AdditionalDataProperty { get; set; }
 #endif
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponse_data? DataEscaped { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponseData? DataEscaped { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponse_data DataEscaped { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponseData DataEscaped { get; set; }
 #endif
         /// <summary>The description of the error</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -76,8 +76,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "additional_data", n => { AdditionalDataProperty = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponse_additional_data>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponse_additional_data.CreateFromDiscriminatorValue); } },
-                { "data", n => { DataEscaped = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponse_data>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponse_data.CreateFromDiscriminatorValue); } },
+                { "additional_data", n => { AdditionalDataProperty = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponseAdditionalData>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponseAdditionalData.CreateFromDiscriminatorValue); } },
+                { "data", n => { DataEscaped = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponseData>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponseData.CreateFromDiscriminatorValue); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "error_info", n => { ErrorInfo = n.GetStringValue(); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
@@ -90,8 +90,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponse_additional_data>("additional_data", AdditionalDataProperty);
-            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponse_data>("data", DataEscaped);
+            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponseAdditionalData>("additional_data", AdditionalDataProperty);
+            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponseData>("data", DataEscaped);
             writer.WriteStringValue("error", Error);
             writer.WriteStringValue("error_info", ErrorInfo);
             writer.WriteBoolValue("success", Success);

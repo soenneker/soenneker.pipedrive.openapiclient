@@ -20,14 +20,14 @@ namespace Soenneker.Pipedrive.OpenApiClient.DealFields
     {
         /// <summary>Gets an item from the Soenneker.Pipedrive.OpenApiClient.dealFields.item collection</summary>
         /// <param name="position">The unique code identifying the field</param>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.DealFields.Item.WithField_codeItemRequestBuilder"/></returns>
-        public global::Soenneker.Pipedrive.OpenApiClient.DealFields.Item.WithField_codeItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.DealFields.Item.WithFieldCodeItemRequestBuilder"/></returns>
+        public global::Soenneker.Pipedrive.OpenApiClient.DealFields.Item.WithFieldCodeItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("field_code", position);
-                return new global::Soenneker.Pipedrive.OpenApiClient.DealFields.Item.WithField_codeItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("fieldCode", position);
+                return new global::Soenneker.Pipedrive.OpenApiClient.DealFields.Item.WithFieldCodeItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -49,40 +49,40 @@ namespace Soenneker.Pipedrive.OpenApiClient.DealFields
         /// <summary>
         /// Returns metadata about all deal fields in the company.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealFields200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealFields200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealFields200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.DealFields.DealFieldsRequestBuilder.DealFieldsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealFields200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.DealFields.DealFieldsRequestBuilder.DealFieldsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealFields200> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.DealFields.DealFieldsRequestBuilder.DealFieldsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealFields200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.DealFields.DealFieldsRequestBuilder.DealFieldsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealFields200>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealFields200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealFields200Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealFields200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a new deal custom field.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField200?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField200Response?> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealFieldRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField200> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField200Response> PostAsync(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealFieldRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField200>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField200Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns metadata about all deal fields in the company.
@@ -111,11 +111,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.DealFields
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealFieldRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealFieldRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -152,7 +152,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.DealFields
 #endif
             /// <summary>Optional comma separated string array of additional data namespaces to include in response</summary>
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.DealFields.GetInclude_fieldsQueryParameterType? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealFieldsIncludeFieldsParameter? IncludeFields { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }

@@ -17,18 +17,18 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <summary>Pagination related data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponse_additional_data? AdditionalDataProperty { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponseAdditionalData? AdditionalDataProperty { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponse_additional_data AdditionalDataProperty { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponseAdditionalData AdditionalDataProperty { get; set; }
 #endif
         /// <summary>Array containing data for all products</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponse_data>? Data { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponseDataItem>? Data { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponse_data> Data { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponseDataItem> Data { get; set; }
 #endif
         /// <summary>If the response is successful or not</summary>
         public bool? Success { get; set; }
@@ -57,8 +57,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "additional_data", n => { AdditionalDataProperty = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponse_additional_data>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponse_additional_data.CreateFromDiscriminatorValue); } },
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponse_data>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponse_data.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "additional_data", n => { AdditionalDataProperty = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponseAdditionalData>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponseAdditionalData.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponseDataItem>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponseDataItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
             };
         }
@@ -69,8 +69,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponse_additional_data>("additional_data", AdditionalDataProperty);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponse_data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponseAdditionalData>("additional_data", AdditionalDataProperty);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductVariationsResponseDataItem>("data", Data);
             writer.WriteBoolValue("success", Success);
             writer.WriteAdditionalData(AdditionalData);
         }

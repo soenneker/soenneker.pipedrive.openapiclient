@@ -17,18 +17,18 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <summary>The additional data of the list</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponse_additional_data? AdditionalDataProperty { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponseAdditionalData? AdditionalDataProperty { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponse_additional_data AdditionalDataProperty { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponseAdditionalData AdditionalDataProperty { get; set; }
 #endif
         /// <summary>Follower changelogs array</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponse_data>? Data { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponseDataItem>? Data { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponse_data> Data { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponseDataItem> Data { get; set; }
 #endif
         /// <summary>If the response is successful or not</summary>
         public bool? Success { get; set; }
@@ -57,8 +57,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "additional_data", n => { AdditionalDataProperty = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponse_additional_data>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponse_additional_data.CreateFromDiscriminatorValue); } },
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponse_data>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponse_data.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "additional_data", n => { AdditionalDataProperty = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponseAdditionalData>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponseAdditionalData.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponseDataItem>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponseDataItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
             };
         }
@@ -69,8 +69,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponse_additional_data>("additional_data", AdditionalDataProperty);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponse_data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponseAdditionalData>("additional_data", AdditionalDataProperty);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.GetFollowerChangelogsResponseDataItem>("data", Data);
             writer.WriteBoolValue("success", Success);
             writer.WriteAdditionalData(AdditionalData);
         }

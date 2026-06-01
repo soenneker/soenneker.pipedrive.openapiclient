@@ -100,10 +100,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Leads.Search
             public bool? ExactMatch { get; set; }
             /// <summary>A comma-separated string array. The fields to perform the search from. Defaults to all of them.</summary>
             [QueryParameter("fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.GetFieldsQueryParameterType? Fields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchLeadsFieldsParameter? Fields { get; set; }
             /// <summary>Supports including optional fields in the results which are not provided by default</summary>
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Leads.Search.GetInclude_fieldsQueryParameterType? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchLeadsIncludeFieldsParameter? IncludeFields { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }

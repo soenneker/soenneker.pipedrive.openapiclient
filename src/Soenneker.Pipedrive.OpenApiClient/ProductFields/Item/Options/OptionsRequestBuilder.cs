@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options
 {
     /// <summary>
-    /// Builds and executes requests for operations under \productFields\{field_code}\options
+    /// Builds and executes requests for operations under \productFields\{fieldCode}\options
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OptionsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OptionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/productFields/{field_code}/options", pathParameters)
+        public OptionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/productFields/{fieldCode}/options", pathParameters)
         {
         }
         /// <summary>
@@ -30,68 +30,68 @@ namespace Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OptionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/productFields/{field_code}/options", rawUrl)
+        public OptionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/productFields/{fieldCode}/options", rawUrl)
         {
         }
         /// <summary>
         /// Removes existing options from a product custom field. This operation is atomic and fails if any of the specified option IDs do not exist. Returns only the deleted options.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductFieldOptions200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductFieldOptions200Response"/></returns>
         /// <param name="body">Array of option IDs to delete. Each item must contain an ID of the option to delete. At least one option ID is required. The entire request fails if any option does not exist.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductFieldOptions200?> DeleteAsync(List<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductFieldOptions200Response?> DeleteAsync(List<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductFieldOptionsRequestRequestBodyItem> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductFieldOptions200> DeleteAsync(List<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductFieldOptions200Response> DeleteAsync(List<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductFieldOptionsRequestRequestBodyItem> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToDeleteRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductFieldOptions200>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductFieldOptions200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductFieldOptions200Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductFieldOptions200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates existing options for a product custom field. This operation is atomic and fails if any of the specified option IDs do not exist. Returns only the updated options.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductFieldOptions200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductFieldOptions200Response"/></returns>
         /// <param name="body">Array of options to update. Each item must contain an ID and the updated label. At least one option is required. The entire request fails if any option does not exist.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductFieldOptions200?> PatchAsync(List<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductFieldOptions200Response?> PatchAsync(List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductFieldOptionsRequestRequestBodyItem> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductFieldOptions200> PatchAsync(List<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductFieldOptions200Response> PatchAsync(List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductFieldOptionsRequestRequestBodyItem> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductFieldOptions200>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductFieldOptions200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductFieldOptions200Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductFieldOptions200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Adds new options to a product custom field that supports options (enum or set field types). This operation is atomic - all options are added or none are added. Returns only the newly added options.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductFieldOptions200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductFieldOptions200Response"/></returns>
         /// <param name="body">Array of options to add. Each item must contain a label. At least one option is required.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductFieldOptions200?> PostAsync(List<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductFieldOptions200Response?> PostAsync(List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductFieldOptionsRequestRequestBodyItem> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductFieldOptions200> PostAsync(List<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductFieldOptions200Response> PostAsync(List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductFieldOptionsRequestRequestBodyItem> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductFieldOptions200>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductFieldOptions200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductFieldOptions200Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductFieldOptions200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Removes existing options from a product custom field. This operation is atomic and fails if any of the specified option IDs do not exist. Returns only the deleted options.
@@ -101,11 +101,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToDeleteRequestInformation(List<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(List<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductFieldOptionsRequestRequestBodyItem> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToDeleteRequestInformation(List<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(List<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductFieldOptionsRequestRequestBodyItem> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -123,11 +123,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductFieldOptionsRequestRequestBodyItem> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductFieldOptionsRequestRequestBodyItem> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -145,11 +145,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(List<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductFieldOptionsRequestRequestBodyItem> body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(List<global::Soenneker.Pipedrive.OpenApiClient.ProductFields.Item.Options.Options> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductFieldOptionsRequestRequestBodyItem> body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

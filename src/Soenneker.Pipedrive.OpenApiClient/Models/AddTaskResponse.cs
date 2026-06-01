@@ -17,18 +17,18 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <summary>The additional_dataProperty property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponse_additional_data? AdditionalDataProperty { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponseAdditionalData? AdditionalDataProperty { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponse_additional_data AdditionalDataProperty { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponseAdditionalData AdditionalDataProperty { get; set; }
 #endif
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponse_data? Data { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponseData? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponse_data Data { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponseData Data { get; set; }
 #endif
         /// <summary>If the response is successful or not</summary>
         public bool? Success { get; set; }
@@ -57,8 +57,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "additional_data", n => { AdditionalDataProperty = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponse_additional_data>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponse_additional_data.CreateFromDiscriminatorValue); } },
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponse_data>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponse_data.CreateFromDiscriminatorValue); } },
+                { "additional_data", n => { AdditionalDataProperty = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponseAdditionalData>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponseAdditionalData.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponseData>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponseData.CreateFromDiscriminatorValue); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
             };
         }
@@ -69,8 +69,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponse_additional_data>("additional_data", AdditionalDataProperty);
-            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponse_data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponseAdditionalData>("additional_data", AdditionalDataProperty);
+            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddTaskResponseData>("data", Data);
             writer.WriteBoolValue("success", Success);
             writer.WriteAdditionalData(AdditionalData);
         }
