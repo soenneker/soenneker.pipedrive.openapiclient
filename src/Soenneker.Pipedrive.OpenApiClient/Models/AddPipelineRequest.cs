@@ -30,6 +30,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public AddPipelineRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            IsDealProbabilityEnabled = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

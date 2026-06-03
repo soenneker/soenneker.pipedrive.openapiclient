@@ -34,7 +34,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PersonsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/persons/{id}{?custom_fields*,include_fields*,include_labels*,include_option_labels*}", pathParameters)
+        public PersonsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/persons/{id}", pathParameters)
         {
         }
         /// <summary>
@@ -42,7 +42,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PersonsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/persons/{id}{?custom_fields*,include_fields*,include_labels*,include_option_labels*}", rawUrl)
+        public PersonsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/persons/{id}", rawUrl)
         {
         }
         /// <summary>

@@ -82,6 +82,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public UpdateProductRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            IsLinkable = true;
+            Tax = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

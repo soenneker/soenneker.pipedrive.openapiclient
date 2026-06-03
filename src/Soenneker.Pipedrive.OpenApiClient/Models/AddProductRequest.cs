@@ -83,6 +83,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         {
             AdditionalData = new Dictionary<string, object>();
             BillingFrequency = global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductRequestBillingFrequency.OneTime;
+            IsLinkable = true;
+            Tax = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

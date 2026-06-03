@@ -35,7 +35,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivitiesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities{?cursor*,deal_id*,done*,filter_id*,ids*,include_fields*,lead_id*,limit*,org_id*,owner_id*,person_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", pathParameters)
+        public ActivitiesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivitiesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities{?cursor*,deal_id*,done*,filter_id*,ids*,include_fields*,lead_id*,limit*,org_id*,owner_id*,person_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", rawUrl)
+        public ActivitiesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>

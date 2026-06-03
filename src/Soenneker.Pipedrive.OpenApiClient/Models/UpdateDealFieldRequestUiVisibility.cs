@@ -35,6 +35,9 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public UpdateDealFieldRequestUiVisibility()
         {
             AdditionalData = new Dictionary<string, object>();
+            AddVisibleFlag = false;
+            DetailsVisibleFlag = true;
+            ProjectsDetailVisibleFlag = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

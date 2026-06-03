@@ -31,6 +31,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public UpdateDealFieldRequestUiVisibilityShowInPipelines()
         {
             AdditionalData = new Dictionary<string, object>();
+            ShowInAll = true;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

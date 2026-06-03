@@ -25,6 +25,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public UpdatePersonFieldRequestUiVisibilityShowInAddDealDialog()
         {
             AdditionalData = new Dictionary<string, object>();
+            Show = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

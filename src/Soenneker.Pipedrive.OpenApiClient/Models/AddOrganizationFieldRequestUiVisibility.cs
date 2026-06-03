@@ -41,6 +41,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public AddOrganizationFieldRequestUiVisibility()
         {
             AdditionalData = new Dictionary<string, object>();
+            AddVisibleFlag = false;
+            DetailsVisibleFlag = true;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

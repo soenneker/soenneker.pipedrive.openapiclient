@@ -53,7 +53,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public UpdateDealProductRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            Discount = 0;
             DiscountType = global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealProductRequestDiscountType.Percentage;
+            IsEnabled = true;
+            Tax = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

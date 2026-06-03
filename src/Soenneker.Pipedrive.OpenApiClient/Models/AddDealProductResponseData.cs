@@ -94,7 +94,9 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         {
             AdditionalData = new Dictionary<string, object>();
             BillingFrequency = global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealProductResponseDataBillingFrequency.OneTime;
+            Discount = 0;
             DiscountType = global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealProductResponseDataDiscountType.Percentage;
+            IsEnabled = true;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

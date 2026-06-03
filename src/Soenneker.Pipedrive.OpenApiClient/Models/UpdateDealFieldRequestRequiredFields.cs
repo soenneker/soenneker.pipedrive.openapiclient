@@ -39,6 +39,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public UpdateDealFieldRequestRequiredFields()
         {
             AdditionalData = new Dictionary<string, object>();
+            Enabled = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

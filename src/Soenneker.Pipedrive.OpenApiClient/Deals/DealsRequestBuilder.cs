@@ -59,7 +59,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DealsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals{?cursor*,custom_fields*,filter_id*,ids*,include_fields*,include_labels*,include_option_labels*,limit*,org_id*,owner_id*,person_id*,pipeline_id*,sort_by*,sort_direction*,stage_id*,status*,updated_since*,updated_until*}", pathParameters)
+        public DealsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DealsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals{?cursor*,custom_fields*,filter_id*,ids*,include_fields*,include_labels*,include_option_labels*,limit*,org_id*,owner_id*,person_id*,pipeline_id*,sort_by*,sort_direction*,stage_id*,status*,updated_since*,updated_until*}", rawUrl)
+        public DealsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>
