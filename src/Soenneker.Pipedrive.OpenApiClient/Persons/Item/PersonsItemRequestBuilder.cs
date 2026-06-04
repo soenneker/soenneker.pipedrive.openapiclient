@@ -134,7 +134,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsItemRequestBuilder.PersonsItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/persons/{id}{?custom_fields*,include_fields*,include_labels*,include_option_labels*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

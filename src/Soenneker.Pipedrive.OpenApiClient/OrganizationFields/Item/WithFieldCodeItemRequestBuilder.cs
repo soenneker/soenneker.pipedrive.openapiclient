@@ -128,7 +128,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item.WithFieldCodeItemRequestBuilder.WithFieldCodeItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/organizationFields/{fieldCode}{?include_fields*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

@@ -104,7 +104,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsRequestBuilder.PersonsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/persons{?cursor*,custom_fields*,deal_id*,filter_id*,ids*,include_fields*,include_labels*,include_option_labels*,limit*,org_id*,owner_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -125,7 +125,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/persons", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
