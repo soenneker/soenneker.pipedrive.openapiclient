@@ -59,7 +59,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DealsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
+        public DealsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals{?cursor*,custom_fields*,filter_id*,ids*,include_fields*,include_labels*,include_option_labels*,limit*,org_id*,owner_id*,person_id*,pipeline_id*,sort_by*,sort_direction*,stage_id*,status*,updated_since*,updated_until*}", pathParameters)
         {
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DealsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
+        public DealsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals{?cursor*,custom_fields*,filter_id*,ids*,include_fields*,include_labels*,include_option_labels*,limit*,org_id*,owner_id*,person_id*,pipeline_id*,sort_by*,sort_direction*,stage_id*,status*,updated_since*,updated_until*}", rawUrl)
         {
         }
         /// <summary>
@@ -122,7 +122,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.DealsRequestBuilder.DealsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/deals{?cursor*,custom_fields*,filter_id*,ids*,include_fields*,include_labels*,include_option_labels*,limit*,org_id*,owner_id*,person_id*,pipeline_id*,sort_by*,sort_direction*,stage_id*,status*,updated_since*,updated_until*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -143,7 +143,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/deals", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

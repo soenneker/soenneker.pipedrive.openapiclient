@@ -35,7 +35,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivitiesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
+        public ActivitiesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities{?cursor*,deal_id*,done*,filter_id*,ids*,include_fields*,lead_id*,limit*,org_id*,owner_id*,person_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivitiesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
+        public ActivitiesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities{?cursor*,deal_id*,done*,filter_id*,ids*,include_fields*,lead_id*,limit*,org_id*,owner_id*,person_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", rawUrl)
         {
         }
         /// <summary>
@@ -98,7 +98,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Activities.ActivitiesRequestBuilder.ActivitiesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/activities{?cursor*,deal_id*,done*,filter_id*,ids*,include_fields*,lead_id*,limit*,org_id*,owner_id*,person_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -119,7 +119,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/activities", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

@@ -52,7 +52,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DealsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/{id}", pathParameters)
+        public DealsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/{id}{?custom_fields*,include_fields*,include_labels*,include_option_labels*}", pathParameters)
         {
         }
         /// <summary>
@@ -60,7 +60,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DealsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/{id}", rawUrl)
+        public DealsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/{id}{?custom_fields*,include_fields*,include_labels*,include_option_labels*}", rawUrl)
         {
         }
         /// <summary>
@@ -152,7 +152,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Deals.Item.DealsItemRequestBuilder.DealsItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/deals/{id}{?custom_fields*,include_fields*,include_labels*,include_option_labels*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

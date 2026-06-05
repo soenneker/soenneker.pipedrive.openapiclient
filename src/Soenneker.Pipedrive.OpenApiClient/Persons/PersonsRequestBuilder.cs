@@ -41,7 +41,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PersonsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
+        public PersonsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/persons{?cursor*,custom_fields*,deal_id*,filter_id*,ids*,include_fields*,include_labels*,include_option_labels*,limit*,org_id*,owner_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PersonsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
+        public PersonsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/persons{?cursor*,custom_fields*,deal_id*,filter_id*,ids*,include_fields*,include_labels*,include_option_labels*,limit*,org_id*,owner_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", rawUrl)
         {
         }
         /// <summary>
@@ -104,7 +104,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Pipedrive.OpenApiClient.Persons.PersonsRequestBuilder.PersonsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/persons{?cursor*,custom_fields*,deal_id*,filter_id*,ids*,include_fields*,include_labels*,include_option_labels*,limit*,org_id*,owner_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -125,7 +125,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/persons", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
