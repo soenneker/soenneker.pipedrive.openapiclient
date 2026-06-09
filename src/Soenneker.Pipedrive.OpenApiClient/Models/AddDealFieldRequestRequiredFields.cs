@@ -25,7 +25,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #else
         public List<int?> StageIds { get; set; }
 #endif
-        /// <summary>Pipeline-specific status requirements for when deals are won or lost. Keys are pipeline IDs (as strings), values are arrays of status strings (&apos;won&apos;, &apos;lost&apos;). Example - {&quot;1&quot;:[&quot;won&quot;,&quot;lost&quot;],&quot;2&quot;:[&quot;won&quot;]} means the field is required when marking deals as won or lost in pipeline 1, and only when won in pipeline 2. Must reference valid, active pipelines.</summary>
+        /// <summary>Pipeline-specific status requirements for when deals are won or lost. Keys are pipeline IDs (as strings), values are arrays of status strings (&apos;won&apos;, &apos;lost&apos;). Example - `{&quot;1&quot;:[&quot;won&quot;,&quot;lost&quot;],&quot;2&quot;:[&quot;won&quot;]}` means the field is required when marking deals as won or lost in pipeline 1, and only when won in pipeline 2. Must reference valid, active pipelines.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealFieldRequestRequiredFieldsStatuses? Statuses { get; set; }

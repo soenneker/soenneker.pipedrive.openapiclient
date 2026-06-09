@@ -1501,8 +1501,10 @@ paths:
                             type: object
                             properties:
                               id:
-                                type: integer
-                                description: The option ID
+                                oneOf:
+                                  - type: integer
+                                  - type: string
+                                description: 'The option ID (integer for custom fields, string for built-in fields)'
                               label:
                                 type: string
                                 description: The option display label
@@ -1730,8 +1732,10 @@ paths:
                           type: object
                           properties:
                             id:
-                              type: integer
-                              description: The option ID
+                              oneOf:
+                                - type: integer
+                                - type: string
+                              description: 'The option ID (integer for custom fields, string for built-in fields)'
                             label:
                               type: string
                               description: The option display label
@@ -6037,7 +6041,6 @@ paths:
                       required:
                         - field_name
                         - field_code
-                        - description
                         - field_type
                         - is_custom_field
                         - is_optional_response_field
@@ -6096,8 +6099,10 @@ paths:
                             type: object
                             properties:
                               id:
-                                type: integer
-                                description: The option ID
+                                oneOf:
+                                  - type: integer
+                                  - type: string
+                                description: 'The option ID (integer for custom fields, string for built-in fields)'
                               label:
                                 type: string
                                 description: The option display label
@@ -6423,7 +6428,7 @@ paths:
                       default: []
                     statuses:
                       type: object
-                      description: 'Pipeline-specific status requirements for when deals are won or lost. Keys are pipeline IDs (as strings), values are arrays of status strings (''won'', ''lost''). Example - {"1":["won","lost"],"2":["won"]} means the field is required when marking deals as won or lost in pipeline 1, and only when won in pipeline 2. Must reference valid, active pipelines.'
+                      description: 'Pipeline-specific status requirements for when deals are won or lost. Keys are pipeline IDs (as strings), values are arrays of status strings (''won'', ''lost''). Example - `{"1":["won","lost"],"2":["won"]}` means the field is required when marking deals as won or lost in pipeline 1, and only when won in pipeline 2. Must reference valid, active pipelines.'
                       default: {}
                       additionalProperties:
                         type: array
@@ -6452,7 +6457,6 @@ paths:
                     required:
                       - field_name
                       - field_code
-                      - description
                       - field_type
                       - is_custom_field
                       - is_optional_response_field
@@ -6511,8 +6515,10 @@ paths:
                           type: object
                           properties:
                             id:
-                              type: integer
-                              description: The option ID
+                              oneOf:
+                                - type: integer
+                                - type: string
+                              description: 'The option ID (integer for custom fields, string for built-in fields)'
                             label:
                               type: string
                               description: The option display label
@@ -6701,7 +6707,6 @@ paths:
                     required:
                       - field_name
                       - field_code
-                      - description
                       - field_type
                       - is_custom_field
                       - is_optional_response_field
@@ -6760,8 +6765,10 @@ paths:
                           type: object
                           properties:
                             id:
-                              type: integer
-                              description: The option ID
+                              oneOf:
+                                - type: integer
+                                - type: string
+                              description: 'The option ID (integer for custom fields, string for built-in fields)'
                             label:
                               type: string
                               description: The option display label
@@ -6980,7 +6987,7 @@ paths:
                       default: []
                     statuses:
                       type: object
-                      description: 'Pipeline-specific status requirements for when deals are won or lost. Keys are pipeline IDs (as strings), values are arrays of status strings (''won'', ''lost''). Example - {"1":["won","lost"],"2":["won"]} means the field is required when marking deals as won or lost in pipeline 1, and only when won in pipeline 2. Must reference valid, active pipelines.'
+                      description: 'Pipeline-specific status requirements for when deals are won or lost. Keys are pipeline IDs (as strings), values are arrays of status strings (''won'', ''lost''). Example - `{"1":["won","lost"],"2":["won"]}` means the field is required when marking deals as won or lost in pipeline 1, and only when won in pipeline 2. Must reference valid, active pipelines.'
                       default: {}
                       additionalProperties:
                         type: array
@@ -7009,7 +7016,6 @@ paths:
                     required:
                       - field_name
                       - field_code
-                      - description
                       - field_type
                       - is_custom_field
                       - is_optional_response_field
@@ -7068,8 +7074,10 @@ paths:
                           type: object
                           properties:
                             id:
-                              type: integer
-                              description: The option ID
+                              oneOf:
+                                - type: integer
+                                - type: string
+                              description: 'The option ID (integer for custom fields, string for built-in fields)'
                             label:
                               type: string
                               description: The option display label
@@ -7228,7 +7236,6 @@ paths:
                     required:
                       - field_name
                       - field_code
-                      - description
                       - field_type
                       - is_custom_field
                       - is_optional_response_field
@@ -9285,8 +9292,10 @@ paths:
                             type: object
                             properties:
                               id:
-                                type: integer
-                                description: The option ID
+                                oneOf:
+                                  - type: integer
+                                  - type: string
+                                description: 'The option ID (integer for custom fields, string for built-in fields)'
                               label:
                                 type: string
                                 description: The option display label
@@ -9621,8 +9630,10 @@ paths:
                           type: object
                           properties:
                             id:
-                              type: integer
-                              description: The option ID
+                              oneOf:
+                                - type: integer
+                                - type: string
+                              description: 'The option ID (integer for custom fields, string for built-in fields)'
                             label:
                               type: string
                               description: The option display label
@@ -9834,8 +9845,10 @@ paths:
                           type: object
                           properties:
                             id:
-                              type: integer
-                              description: The option ID
+                              oneOf:
+                                - type: integer
+                                - type: string
+                              description: 'The option ID (integer for custom fields, string for built-in fields)'
                             label:
                               type: string
                               description: The option display label
@@ -10091,8 +10104,10 @@ paths:
                           type: object
                           properties:
                             id:
-                              type: integer
-                              description: The option ID
+                              oneOf:
+                                - type: integer
+                                - type: string
+                              description: 'The option ID (integer for custom fields, string for built-in fields)'
                             label:
                               type: string
                               description: The option display label
@@ -11778,8 +11793,10 @@ paths:
                             type: object
                             properties:
                               id:
-                                type: integer
-                                description: The option ID
+                                oneOf:
+                                  - type: integer
+                                  - type: string
+                                description: 'The option ID (integer for custom fields, string for built-in fields)'
                               label:
                                 type: string
                                 description: The option display label
@@ -12193,8 +12210,10 @@ paths:
                           type: object
                           properties:
                             id:
-                              type: integer
-                              description: The option ID
+                              oneOf:
+                                - type: integer
+                                - type: string
+                              description: 'The option ID (integer for custom fields, string for built-in fields)'
                             label:
                               type: string
                               description: The option display label
@@ -12433,8 +12452,10 @@ paths:
                           type: object
                           properties:
                             id:
-                              type: integer
-                              description: The option ID
+                              oneOf:
+                                - type: integer
+                                - type: string
+                              description: 'The option ID (integer for custom fields, string for built-in fields)'
                             label:
                               type: string
                               description: The option display label
@@ -12728,8 +12749,10 @@ paths:
                           type: object
                           properties:
                             id:
-                              type: integer
-                              description: The option ID
+                              oneOf:
+                                - type: integer
+                                - type: string
+                              description: 'The option ID (integer for custom fields, string for built-in fields)'
                             label:
                               type: string
                               description: The option display label
@@ -15386,8 +15409,10 @@ paths:
                             type: object
                             properties:
                               id:
-                                type: integer
-                                description: The option ID
+                                oneOf:
+                                  - type: integer
+                                  - type: string
+                                description: 'The option ID (integer for custom fields, string for built-in fields)'
                               label:
                                 type: string
                                 description: The option display label
@@ -15636,8 +15661,10 @@ paths:
                           type: object
                           properties:
                             id:
-                              type: integer
-                              description: The option ID
+                              oneOf:
+                                - type: integer
+                                - type: string
+                              description: 'The option ID (integer for custom fields, string for built-in fields)'
                             label:
                               type: string
                               description: The option display label
@@ -15808,8 +15835,10 @@ paths:
                           type: object
                           properties:
                             id:
-                              type: integer
-                              description: The option ID
+                              oneOf:
+                                - type: integer
+                                - type: string
+                              description: 'The option ID (integer for custom fields, string for built-in fields)'
                             label:
                               type: string
                               description: The option display label
@@ -15988,8 +16017,10 @@ paths:
                           type: object
                           properties:
                             id:
-                              type: integer
-                              description: The option ID
+                              oneOf:
+                                - type: integer
+                                - type: string
+                              description: 'The option ID (integer for custom fields, string for built-in fields)'
                             label:
                               type: string
                               description: The option display label
@@ -18327,8 +18358,10 @@ paths:
                             type: object
                             properties:
                               id:
-                                type: integer
-                                description: The option ID
+                                oneOf:
+                                  - type: integer
+                                  - type: string
+                                description: 'The option ID (integer for custom fields, string for built-in fields)'
                               label:
                                 type: string
                                 description: The option display label
@@ -18611,8 +18644,10 @@ paths:
                           type: object
                           properties:
                             id:
-                              type: integer
-                              description: The option ID
+                              oneOf:
+                                - type: integer
+                                - type: string
+                              description: 'The option ID (integer for custom fields, string for built-in fields)'
                             label:
                               type: string
                               description: The option display label
@@ -18798,8 +18833,10 @@ paths:
                           type: object
                           properties:
                             id:
-                              type: integer
-                              description: The option ID
+                              oneOf:
+                                - type: integer
+                                - type: string
+                              description: 'The option ID (integer for custom fields, string for built-in fields)'
                             label:
                               type: string
                               description: The option display label
@@ -19026,8 +19063,10 @@ paths:
                           type: object
                           properties:
                             id:
-                              type: integer
-                              description: The option ID
+                              oneOf:
+                                - type: integer
+                                - type: string
+                              description: 'The option ID (integer for custom fields, string for built-in fields)'
                             label:
                               type: string
                               description: The option display label

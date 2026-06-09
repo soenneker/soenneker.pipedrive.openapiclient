@@ -24,8 +24,14 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #else
         public string Color { get; set; }
 #endif
-        /// <summary>The option ID</summary>
-        public int? Id { get; set; }
+        /// <summary>The option ID (integer for custom fields, string for built-in fields)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityField200ResponseDataOptionsItemId? Id { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityField200ResponseDataOptionsItemId Id { get; set; }
+#endif
         /// <summary>The option display label</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,7 +69,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             {
                 { "add_time", n => { AddTime = n.GetDateTimeOffsetValue(); } },
                 { "color", n => { Color = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetIntValue(); } },
+                { "id", n => { Id = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityField200ResponseDataOptionsItemId>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityField200ResponseDataOptionsItemId.CreateFromDiscriminatorValue); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "update_time", n => { UpdateTime = n.GetDateTimeOffsetValue(); } },
             };
@@ -77,7 +83,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("add_time", AddTime);
             writer.WriteStringValue("color", Color);
-            writer.WriteIntValue("id", Id);
+            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityField200ResponseDataOptionsItemId>("id", Id);
             writer.WriteStringValue("label", Label);
             writer.WriteDateTimeOffsetValue("update_time", UpdateTime);
             writer.WriteAdditionalData(AdditionalData);

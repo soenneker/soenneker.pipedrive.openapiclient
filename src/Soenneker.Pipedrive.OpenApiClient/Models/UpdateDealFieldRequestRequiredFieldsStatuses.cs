@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Pipedrive.OpenApiClient.Models
 {
     /// <summary>
-    /// Pipeline-specific status requirements for when deals are won or lost. Keys are pipeline IDs (as strings), values are arrays of status strings (&apos;won&apos;, &apos;lost&apos;). Example - {&quot;1&quot;:[&quot;won&quot;,&quot;lost&quot;],&quot;2&quot;:[&quot;won&quot;]} means the field is required when marking deals as won or lost in pipeline 1, and only when won in pipeline 2. Must reference valid, active pipelines.
+    /// Pipeline-specific status requirements for when deals are won or lost. Keys are pipeline IDs (as strings), values are arrays of status strings (&apos;won&apos;, &apos;lost&apos;). Example - `{&quot;1&quot;:[&quot;won&quot;,&quot;lost&quot;],&quot;2&quot;:[&quot;won&quot;]}` means the field is required when marking deals as won or lost in pipeline 1, and only when won in pipeline 2. Must reference valid, active pipelines.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateDealFieldRequestRequiredFieldsStatuses : IAdditionalDataHolder, IParsable

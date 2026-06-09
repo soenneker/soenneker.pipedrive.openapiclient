@@ -18445,6 +18445,270 @@
         },
         "description": "Array of options to update. Each item must contain an ID and the updated label. At least one option is required. The entire request fails if any option does not exist."
       },
+      "GetActivityFields200ResponseDataItemOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "GetActivityField200ResponseDataOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "GetDealFields200ResponseDataItemOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "AddDealField200ResponseDataOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "GetDealField200ResponseDataOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "UpdateDealField200ResponseDataOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "GetPersonFields200ResponseDataItemOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "AddPersonField200ResponseDataOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "GetPersonField200ResponseDataOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "UpdatePersonField200ResponseDataOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "GetOrganizationFields200ResponseDataItemOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "AddOrganizationField200ResponseDataOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "GetOrganizationField200ResponseDataOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "UpdateOrganizationField200ResponseDataOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "GetProductFields200ResponseDataItemOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "AddProductField200ResponseDataOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "GetProductField200ResponseDataOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "UpdateProductField200ResponseDataOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "GetProjectFields200ResponseDataItemOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "AddProjectField200ResponseDataOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "GetProjectField200ResponseDataOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
+      "UpdateProjectField200ResponseDataOptionsItemId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The option ID (integer for custom fields, string for built-in fields)"
+      },
       "DealCustomFieldsProperty": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
@@ -20962,7 +21226,6 @@
         "required": [
           "field_name",
           "field_code",
-          "description",
           "field_type",
           "is_custom_field",
           "is_optional_response_field"
@@ -21110,7 +21373,6 @@
         "required": [
           "field_name",
           "field_code",
-          "description",
           "field_type",
           "is_custom_field",
           "is_optional_response_field"
@@ -21171,7 +21433,6 @@
         "required": [
           "field_name",
           "field_code",
-          "description",
           "field_type",
           "is_custom_field",
           "is_optional_response_field"
@@ -21297,7 +21558,6 @@
         "required": [
           "field_name",
           "field_code",
-          "description",
           "field_type",
           "is_custom_field",
           "is_optional_response_field"
@@ -21358,7 +21618,6 @@
         "required": [
           "field_name",
           "field_code",
-          "description",
           "field_type",
           "is_custom_field",
           "is_optional_response_field"
@@ -27759,8 +28018,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/GetActivityFields200ResponseDataItemOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -27820,8 +28078,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/GetActivityField200ResponseDataOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -27913,8 +28170,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/GetDealFields200ResponseDataItemOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -28040,14 +28296,13 @@
             "$ref": "#/components/schemas/AddDealFieldRequestRequiredFieldsStatusesAdditionalPropertiesItem"
           }
         },
-        "description": "Pipeline-specific status requirements for when deals are won or lost. Keys are pipeline IDs (as strings), values are arrays of status strings (\u0027won\u0027, \u0027lost\u0027). Example - {\u00221\u0022:[\u0022won\u0022,\u0022lost\u0022],\u00222\u0022:[\u0022won\u0022]} means the field is required when marking deals as won or lost in pipeline 1, and only when won in pipeline 2. Must reference valid, active pipelines."
+        "description": "Pipeline-specific status requirements for when deals are won or lost. Keys are pipeline IDs (as strings), values are arrays of status strings (\u0027won\u0027, \u0027lost\u0027). Example - \u0060{\u00221\u0022:[\u0022won\u0022,\u0022lost\u0022],\u00222\u0022:[\u0022won\u0022]}\u0060 means the field is required when marking deals as won or lost in pipeline 1, and only when won in pipeline 2. Must reference valid, active pipelines."
       },
       "AddDealField200ResponseDataOptionsItem": {
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/AddDealField200ResponseDataOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -28151,8 +28406,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/GetDealField200ResponseDataOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -28278,14 +28532,13 @@
             "$ref": "#/components/schemas/UpdateDealFieldRequestRequiredFieldsStatusesAdditionalPropertiesItem"
           }
         },
-        "description": "Pipeline-specific status requirements for when deals are won or lost. Keys are pipeline IDs (as strings), values are arrays of status strings (\u0027won\u0027, \u0027lost\u0027). Example - {\u00221\u0022:[\u0022won\u0022,\u0022lost\u0022],\u00222\u0022:[\u0022won\u0022]} means the field is required when marking deals as won or lost in pipeline 1, and only when won in pipeline 2. Must reference valid, active pipelines."
+        "description": "Pipeline-specific status requirements for when deals are won or lost. Keys are pipeline IDs (as strings), values are arrays of status strings (\u0027won\u0027, \u0027lost\u0027). Example - \u0060{\u00221\u0022:[\u0022won\u0022,\u0022lost\u0022],\u00222\u0022:[\u0022won\u0022]}\u0060 means the field is required when marking deals as won or lost in pipeline 1, and only when won in pipeline 2. Must reference valid, active pipelines."
       },
       "UpdateDealField200ResponseDataOptionsItem": {
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/UpdateDealField200ResponseDataOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -28813,8 +29066,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/GetPersonFields200ResponseDataItemOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -28921,8 +29173,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/AddPersonField200ResponseDataOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -29012,8 +29263,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/GetPersonField200ResponseDataOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -29120,8 +29370,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/UpdatePersonField200ResponseDataOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -29421,8 +29670,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/GetOrganizationFields200ResponseDataItemOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -29561,8 +29809,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/AddOrganizationField200ResponseDataOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -29667,8 +29914,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/GetOrganizationField200ResponseDataOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -29807,8 +30053,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/UpdateOrganizationField200ResponseDataOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -30110,8 +30355,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/GetProductFields200ResponseDataItemOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -30171,8 +30415,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/AddProductField200ResponseDataOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -30232,8 +30475,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/GetProductField200ResponseDataOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -30293,8 +30535,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/UpdateProductField200ResponseDataOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -30427,8 +30668,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/GetProjectFields200ResponseDataItemOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -30515,8 +30755,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/AddProjectField200ResponseDataOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -30603,8 +30842,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/GetProjectField200ResponseDataOptionsItemId"
           },
           "label": {
             "type": "string",
@@ -30691,8 +30929,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "description": "The option ID"
+            "$ref": "#/components/schemas/UpdateProjectField200ResponseDataOptionsItemId"
           },
           "label": {
             "type": "string",
