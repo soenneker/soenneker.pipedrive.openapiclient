@@ -31926,7 +31926,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The value of the discount. The \u0060discount_type\u0060 field can be used to specify whether the value is an amount or a percentage",
-        "default": "percentage",
         "x-ms-enum": {
           "name": "AddDealProductRequestDiscountType",
           "modelAsString": false,
@@ -31954,7 +31953,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
-        "default": "one-time",
         "x-ms-enum": {
           "name": "AddDealProductRequestBillingFrequency",
           "modelAsString": false,
@@ -32022,7 +32020,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The value of the discount. The \u0060discount_type\u0060 field can be used to specify whether the value is an amount or a percentage",
-        "default": "percentage",
         "x-ms-enum": {
           "name": "UpdateDealProductRequestDiscountType",
           "modelAsString": false,
@@ -32495,7 +32492,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n",
-        "default": "one-time",
         "x-ms-enum": {
           "name": "AddProductRequestBillingFrequency",
           "modelAsString": false,
@@ -33167,7 +33163,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The type of the discount\u0027s value",
-        "default": "percentage",
         "x-ms-enum": {
           "name": "GetDealsProductsResponseDataItemDiscountType",
           "modelAsString": false,
@@ -33223,7 +33218,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
-        "default": "one-time",
         "x-ms-enum": {
           "name": "GetDealsProductsResponseDataItemBillingFrequency",
           "modelAsString": false,
@@ -33263,7 +33257,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The type of the discount\u0027s value",
-        "default": "percentage",
         "x-ms-enum": {
           "name": "GetDealsProductsResponseResponseJsonDataItemDiscountType",
           "modelAsString": false,
@@ -33319,7 +33312,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
-        "default": "one-time",
         "x-ms-enum": {
           "name": "GetDealsProductsResponseResponseJsonDataItemBillingFrequency",
           "modelAsString": false,
@@ -33359,7 +33351,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The type of the discount\u0027s value",
-        "default": "percentage",
         "x-ms-enum": {
           "name": "AddDealProductResponseDataDiscountType",
           "modelAsString": false,
@@ -33415,7 +33406,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
-        "default": "one-time",
         "x-ms-enum": {
           "name": "AddDealProductResponseDataBillingFrequency",
           "modelAsString": false,
@@ -33455,7 +33445,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The type of the discount\u0027s value",
-        "default": "percentage",
         "x-ms-enum": {
           "name": "AddDealProductResponseResponseJsonDataDiscountType",
           "modelAsString": false,
@@ -33511,7 +33500,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
-        "default": "one-time",
         "x-ms-enum": {
           "name": "AddDealProductResponseResponseJsonDataBillingFrequency",
           "modelAsString": false,
@@ -33579,7 +33567,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The value of the discount. The \u0060discount_type\u0060 field can be used to specify whether the value is an amount or a percentage",
-        "default": "percentage",
         "x-ms-enum": {
           "name": "AddManyDealProductsRequestDataItemDiscountType",
           "modelAsString": false,
@@ -33607,7 +33594,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
-        "default": "one-time",
         "x-ms-enum": {
           "name": "AddManyDealProductsRequestDataItemBillingFrequency",
           "modelAsString": false,
@@ -33647,7 +33633,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The type of the discount\u0027s value",
-        "default": "percentage",
         "x-ms-enum": {
           "name": "AddManyDealProductResponseDataItemDiscountType",
           "modelAsString": false,
@@ -33703,7 +33688,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
-        "default": "one-time",
         "x-ms-enum": {
           "name": "AddManyDealProductResponseDataItemBillingFrequency",
           "modelAsString": false,
@@ -36001,7 +35985,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n",
-        "default": "one-time",
         "x-ms-enum": {
           "name": "GetProductsResponseDataItemBillingFrequency",
           "modelAsString": false,
@@ -36056,7 +36039,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n",
-        "default": "one-time",
         "x-ms-enum": {
           "name": "GetProductResponseDataBillingFrequency",
           "modelAsString": false,
@@ -36111,7 +36093,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n",
-        "default": "one-time",
         "x-ms-enum": {
           "name": "GetProductResponseResponseJsonDataBillingFrequency",
           "modelAsString": false,
@@ -36166,7 +36147,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n",
-        "default": "one-time",
         "x-ms-enum": {
           "name": "UpdateProductResponseDataBillingFrequency",
           "modelAsString": false,
@@ -36221,7 +36201,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n",
-        "default": "one-time",
         "x-ms-enum": {
           "name": "GetProductResponseResponseJson2DataBillingFrequency",
           "modelAsString": false,
@@ -37856,7 +37835,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "id",
         "x-ms-enum": {
           "name": "GetActivitiesSortByParameter",
           "modelAsString": false,
@@ -37887,7 +37865,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "asc",
         "x-ms-enum": {
           "name": "GetActivitiesSortDirectionParameter",
           "modelAsString": false,
@@ -38011,7 +37988,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "id",
         "x-ms-enum": {
           "name": "GetDealsSortByParameter",
           "modelAsString": false,
@@ -38038,7 +38014,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "asc",
         "x-ms-enum": {
           "name": "GetDealsSortDirectionParameter",
           "modelAsString": false,
@@ -38186,7 +38161,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "id",
         "x-ms-enum": {
           "name": "GetArchivedDealsSortByParameter",
           "modelAsString": false,
@@ -38213,7 +38187,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "asc",
         "x-ms-enum": {
           "name": "GetArchivedDealsSortDirectionParameter",
           "modelAsString": false,
@@ -38423,7 +38396,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "id",
         "x-ms-enum": {
           "name": "GetDealsProductsSortByParameter",
           "modelAsString": false,
@@ -38458,7 +38430,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "asc",
         "x-ms-enum": {
           "name": "GetDealsProductsSortDirectionParameter",
           "modelAsString": false,
@@ -38554,7 +38525,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "id",
         "x-ms-enum": {
           "name": "GetDealProductsSortByParameter",
           "modelAsString": false,
@@ -38585,7 +38555,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "asc",
         "x-ms-enum": {
           "name": "GetDealProductsSortDirectionParameter",
           "modelAsString": false,
@@ -38609,7 +38578,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "id",
         "x-ms-enum": {
           "name": "GetInstallmentsSortByParameter",
           "modelAsString": false,
@@ -38636,7 +38604,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "asc",
         "x-ms-enum": {
           "name": "GetInstallmentsSortDirectionParameter",
           "modelAsString": false,
@@ -38754,7 +38721,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "id",
         "x-ms-enum": {
           "name": "GetPersonsSortByParameter",
           "modelAsString": false,
@@ -38781,7 +38747,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "asc",
         "x-ms-enum": {
           "name": "GetPersonsSortDirectionParameter",
           "modelAsString": false,
@@ -39163,7 +39128,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "id",
         "x-ms-enum": {
           "name": "GetOrganizationsSortByParameter",
           "modelAsString": false,
@@ -39190,7 +39154,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "asc",
         "x-ms-enum": {
           "name": "GetOrganizationsSortDirectionParameter",
           "modelAsString": false,
@@ -39523,7 +39486,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "id",
         "x-ms-enum": {
           "name": "GetProductsSortByParameter",
           "modelAsString": false,
@@ -39554,7 +39516,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "asc",
         "x-ms-enum": {
           "name": "GetProductsSortDirectionParameter",
           "modelAsString": false,
@@ -39964,7 +39925,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "exact",
         "x-ms-enum": {
           "name": "SearchItemByFieldMatchParameter",
           "modelAsString": false,
@@ -39993,7 +39953,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "id",
         "x-ms-enum": {
           "name": "GetStagesSortByParameter",
           "modelAsString": false,
@@ -40024,7 +39983,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "asc",
         "x-ms-enum": {
           "name": "GetStagesSortDirectionParameter",
           "modelAsString": false,
@@ -40048,7 +40006,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "id",
         "x-ms-enum": {
           "name": "GetPipelinesSortByParameter",
           "modelAsString": false,
@@ -40075,7 +40032,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "asc",
         "x-ms-enum": {
           "name": "GetPipelinesSortDirectionParameter",
           "modelAsString": false,

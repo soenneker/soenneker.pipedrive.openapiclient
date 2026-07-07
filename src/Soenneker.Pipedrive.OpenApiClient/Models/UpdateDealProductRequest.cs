@@ -54,7 +54,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         {
             AdditionalData = new Dictionary<string, object>();
             Discount = 0;
-            DiscountType = global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealProductRequestDiscountType.Percentage;
             IsEnabled = true;
             Tax = 0;
         }

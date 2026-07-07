@@ -108,7 +108,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public GetProductResponseResponseJson2Data()
         {
             AdditionalData = new Dictionary<string, object>();
-            BillingFrequency = global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductResponseResponseJson2DataBillingFrequency.OneTime;
             IsDeleted = false;
             IsLinkable = true;
             Tax = 0;

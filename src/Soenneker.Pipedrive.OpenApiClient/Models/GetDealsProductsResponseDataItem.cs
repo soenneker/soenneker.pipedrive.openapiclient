@@ -93,9 +93,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public GetDealsProductsResponseDataItem()
         {
             AdditionalData = new Dictionary<string, object>();
-            BillingFrequency = global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsProductsResponseDataItemBillingFrequency.OneTime;
             Discount = 0;
-            DiscountType = global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsProductsResponseDataItemDiscountType.Percentage;
             IsEnabled = true;
         }
         /// <summary>

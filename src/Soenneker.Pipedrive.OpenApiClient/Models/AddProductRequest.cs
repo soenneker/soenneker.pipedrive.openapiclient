@@ -82,7 +82,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public AddProductRequest()
         {
             AdditionalData = new Dictionary<string, object>();
-            BillingFrequency = global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductRequestBillingFrequency.OneTime;
             IsLinkable = true;
             Tax = 0;
         }
