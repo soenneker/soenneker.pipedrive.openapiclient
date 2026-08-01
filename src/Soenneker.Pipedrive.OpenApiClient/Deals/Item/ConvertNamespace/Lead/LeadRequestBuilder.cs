@@ -39,7 +39,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.ConvertNamespace.Lead
         /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddConvertDealToLeadResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponse">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Pipedrive.OpenApiClient.Models.ConvertDealToLead404Response">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Pipedrive.OpenApiClient.Models.AddConvertDealToLeadResponse?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -52,7 +52,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.ConvertNamespace.Lead
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "404", global::Soenneker.Pipedrive.OpenApiClient.Models.GetConvertResponse.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Pipedrive.OpenApiClient.Models.ConvertDealToLead404Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddConvertDealToLeadResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddConvertDealToLeadResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -250,7 +250,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertActivityResponse"
+                  "$ref": "#/components/schemas/AddActivity200Response"
                 },
                 "example": {
                   "success": true,
@@ -406,7 +406,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertActivityResponseResponseJson"
+                  "$ref": "#/components/schemas/GetActivity200Response"
                 },
                 "example": {
                   "success": true,
@@ -515,7 +515,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertActivityResponseResponseJson2"
+                  "$ref": "#/components/schemas/UpdateActivity200Response"
                 },
                 "example": {
                   "success": true,
@@ -993,7 +993,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetDealsResponse"
+                  "$ref": "#/components/schemas/GetDeals200Response"
                 },
                 "example": {
                   "success": true,
@@ -1084,7 +1084,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertDealResponse"
+                  "$ref": "#/components/schemas/AddDeal200Response"
                 },
                 "example": {
                   "success": true,
@@ -1293,7 +1293,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetDealsResponseResponseJson"
+                  "$ref": "#/components/schemas/GetArchivedDeals200Response"
                 },
                 "example": {
                   "success": true,
@@ -1467,7 +1467,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertDealResponseResponseJson"
+                  "$ref": "#/components/schemas/GetDeal200Response"
                 },
                 "example": {
                   "success": true,
@@ -1564,7 +1564,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertDealResponseResponseJson2"
+                  "$ref": "#/components/schemas/UpdateDeal200Response"
                 },
                 "example": {
                   "success": true,
@@ -1670,7 +1670,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetFollowersResponse"
+                  "$ref": "#/components/schemas/GetDealFollowers200Response"
                 },
                 "example": {
                   "success": true,
@@ -1733,7 +1733,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AddFollowerResponse"
+                  "$ref": "#/components/schemas/AddDealFollower201Response"
                 },
                 "example": {
                   "success": true,
@@ -1800,7 +1800,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetFollowerChangelogsResponse"
+                  "$ref": "#/components/schemas/GetDealFollowersChangelog200Response"
                 },
                 "example": {
                   "success": true,
@@ -1867,7 +1867,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DeleteFollowerResponse"
+                  "$ref": "#/components/schemas/DeleteDealFollower200Response"
                 },
                 "example": {
                   "success": true,
@@ -1953,7 +1953,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetDealsProductsResponse"
+                  "$ref": "#/components/schemas/GetDealsProducts200Response"
                 },
                 "example": {
                   "success": true,
@@ -2210,7 +2210,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetDealsProductsResponseResponseJson"
+                  "$ref": "#/components/schemas/GetDealProducts200Response"
                 },
                 "example": {
                   "success": true,
@@ -2294,7 +2294,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AddDealProductResponse"
+                  "$ref": "#/components/schemas/AddDealProduct201Response"
                 },
                 "example": {
                   "success": true,
@@ -2446,7 +2446,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AddDealProductResponseResponseJson"
+                  "$ref": "#/components/schemas/UpdateDealProduct200Response"
                 },
                 "example": {
                   "success": true,
@@ -3238,7 +3238,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetConvertResponse"
+                  "$ref": "#/components/schemas/ConvertDealToLead404Response"
                 },
                 "example": {
                   "success": false,
@@ -4006,7 +4006,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetConvertResponseResponseJson"
+                  "$ref": "#/components/schemas/GetDealConversionStatus200Response"
                 },
                 "example": {
                   "success": true,
@@ -4025,7 +4025,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetConvertResponseResponseJson2"
+                  "$ref": "#/components/schemas/GetDealConversionStatus404Response"
                 },
                 "example": {
                   "success": false,
@@ -4306,7 +4306,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertPersonResponse"
+                  "$ref": "#/components/schemas/AddPerson200Response"
                 },
                 "example": {
                   "success": true,
@@ -4501,7 +4501,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertPersonResponseResponseJson"
+                  "$ref": "#/components/schemas/GetPerson200Response"
                 },
                 "example": {
                   "success": true,
@@ -4625,7 +4625,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertPersonResponseResponseJson2"
+                  "$ref": "#/components/schemas/UpdatePerson200Response"
                 },
                 "example": {
                   "success": true,
@@ -4758,7 +4758,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetFollowersResponseResponseJson"
+                  "$ref": "#/components/schemas/GetPersonFollowers200Response"
                 },
                 "example": {
                   "success": true,
@@ -4821,7 +4821,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AddFollowerResponseResponseJson"
+                  "$ref": "#/components/schemas/AddPersonFollower201Response"
                 },
                 "example": {
                   "success": true,
@@ -4888,7 +4888,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetFollowerChangelogsResponseResponseJson"
+                  "$ref": "#/components/schemas/GetPersonFollowersChangelog200Response"
                 },
                 "example": {
                   "success": true,
@@ -4955,7 +4955,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DeleteFollowerResponseResponseJson"
+                  "$ref": "#/components/schemas/DeletePersonFollower200Response"
                 },
                 "example": {
                   "success": true,
@@ -5875,7 +5875,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertOrganizationResponse"
+                  "$ref": "#/components/schemas/AddOrganization200Response"
                 },
                 "example": {
                   "success": true,
@@ -6028,7 +6028,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertOrganizationResponseResponseJson"
+                  "$ref": "#/components/schemas/GetOrganization200Response"
                 },
                 "example": {
                   "success": true,
@@ -6110,7 +6110,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertOrganizationResponseResponseJson2"
+                  "$ref": "#/components/schemas/UpdateOrganization200Response"
                 },
                 "example": {
                   "success": true,
@@ -6201,7 +6201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetFollowersResponseResponseJson2"
+                  "$ref": "#/components/schemas/GetOrganizationFollowers200Response"
                 },
                 "example": {
                   "success": true,
@@ -6264,7 +6264,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AddFollowerResponseResponseJson2"
+                  "$ref": "#/components/schemas/AddOrganizationFollower201Response"
                 },
                 "example": {
                   "success": true,
@@ -6331,7 +6331,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetFollowerChangelogsResponseResponseJson2"
+                  "$ref": "#/components/schemas/GetOrganizationFollowersChangelog200Response"
                 },
                 "example": {
                   "success": true,
@@ -6398,7 +6398,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DeleteFollowerResponseResponseJson2"
+                  "$ref": "#/components/schemas/DeleteOrganizationFollower200Response"
                 },
                 "example": {
                   "success": true,
@@ -7337,7 +7337,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetProductResponse"
+                  "$ref": "#/components/schemas/AddProduct201Response"
                 },
                 "example": {
                   "success": true,
@@ -7445,7 +7445,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetFollowersResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetProductFollowers200Response"
                 },
                 "example": {
                   "success": true,
@@ -7508,7 +7508,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AddFollowerResponseResponseJson3"
+                  "$ref": "#/components/schemas/AddProductFollower201Response"
                 },
                 "example": {
                   "success": true,
@@ -7575,7 +7575,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetFollowerChangelogsResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetProductFollowersChangelog200Response"
                 },
                 "example": {
                   "success": true,
@@ -7642,7 +7642,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DeleteFollowerResponseResponseJson3"
+                  "$ref": "#/components/schemas/DeleteProductFollower200Response"
                 },
                 "example": {
                   "success": true,
@@ -7848,7 +7848,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetProductResponseResponseJson"
+                  "$ref": "#/components/schemas/GetProduct200Response"
                 },
                 "example": {
                   "success": true,
@@ -8038,7 +8038,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetProductResponseResponseJson2"
+                  "$ref": "#/components/schemas/DuplicateProduct201Response"
                 },
                 "example": {
                   "success": true,
@@ -8220,7 +8220,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetProductVariationResponse"
+                  "$ref": "#/components/schemas/AddProductVariation201Response"
                 },
                 "example": {
                   "success": true,
@@ -8299,7 +8299,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetProductVariationResponseResponseJson"
+                  "$ref": "#/components/schemas/UpdateProductVariation200Response"
                 },
                 "example": {
                   "success": true,
@@ -9387,7 +9387,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetConvertResponseResponseJson3"
+                  "$ref": "#/components/schemas/ConvertLeadToDeal404Response"
                 },
                 "example": {
                   "success": false,
@@ -9448,7 +9448,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetConvertResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetLeadConversionStatus200Response"
                 },
                 "example": {
                   "success": true,
@@ -9467,7 +9467,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetConvertResponseResponseJson5"
+                  "$ref": "#/components/schemas/GetLeadConversionStatus404Response"
                 },
                 "example": {
                   "success": false,
@@ -10208,7 +10208,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertStageResponse"
+                  "$ref": "#/components/schemas/AddStage200Response"
                 },
                 "example": {
                   "success": true,
@@ -10313,7 +10313,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertStageResponseResponseJson"
+                  "$ref": "#/components/schemas/GetStage200Response"
                 },
                 "example": {
                   "success": true,
@@ -10380,7 +10380,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertStageResponseResponseJson2"
+                  "$ref": "#/components/schemas/UpdateStage200Response"
                 },
                 "example": {
                   "success": true,
@@ -10520,7 +10520,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertPipelineResponse"
+                  "$ref": "#/components/schemas/AddPipeline200Response"
                 },
                 "example": {
                   "success": true,
@@ -10622,7 +10622,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertPipelineResponseResponseJson"
+                  "$ref": "#/components/schemas/GetPipeline200Response"
                 },
                 "example": {
                   "success": true,
@@ -10686,7 +10686,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertPipelineResponseResponseJson2"
+                  "$ref": "#/components/schemas/UpdatePipeline200Response"
                 },
                 "example": {
                   "success": true,
@@ -11371,7 +11371,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetProjectsResponse"
+                  "$ref": "#/components/schemas/GetProjects200Response"
                 },
                 "example": {
                   "success": true,
@@ -11448,7 +11448,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertProjectResponse"
+                  "$ref": "#/components/schemas/AddProject201Response"
                 },
                 "example": {
                   "success": true,
@@ -11556,7 +11556,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetProjectsResponseResponseJson"
+                  "$ref": "#/components/schemas/GetArchivedProjects200Response"
                 },
                 "example": {
                   "success": true,
@@ -11637,7 +11637,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertProjectResponseResponseJson"
+                  "$ref": "#/components/schemas/GetProject200Response"
                 },
                 "example": {
                   "success": true,
@@ -11720,7 +11720,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertProjectResponseResponseJson2"
+                  "$ref": "#/components/schemas/UpdateProject200Response"
                 },
                 "example": {
                   "success": true,
@@ -12108,7 +12108,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertProjectResponseResponseJson3"
+                  "$ref": "#/components/schemas/ArchiveProject200Response"
                 },
                 "example": {
                   "success": true,
@@ -12751,7 +12751,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertProjectBoardResponse"
+                  "$ref": "#/components/schemas/AddProjectBoard200Response"
                 },
                 "example": {
                   "success": true,
@@ -12805,7 +12805,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertProjectBoardResponseResponseJson"
+                  "$ref": "#/components/schemas/GetProjectsBoard200Response"
                 },
                 "example": {
                   "success": true,
@@ -12867,7 +12867,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertProjectBoardResponseResponseJson2"
+                  "$ref": "#/components/schemas/UpdateProjectBoard200Response"
                 },
                 "example": {
                   "success": true,
@@ -13025,7 +13025,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertProjectPhaseResponse"
+                  "$ref": "#/components/schemas/AddProjectPhase200Response"
                 },
                 "example": {
                   "success": true,
@@ -13080,7 +13080,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertProjectPhaseResponseResponseJson"
+                  "$ref": "#/components/schemas/GetProjectsPhase200Response"
                 },
                 "example": {
                   "success": true,
@@ -13143,7 +13143,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpsertProjectPhaseResponseResponseJson2"
+                  "$ref": "#/components/schemas/UpdateProjectPhase200Response"
                 },
                 "example": {
                   "success": true,
@@ -13262,7 +13262,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetFollowersResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetUserFollowers200Response"
                 },
                 "example": {
                   "success": true,
@@ -14093,7 +14093,7 @@
           }
         }
       },
-      "UpsertActivityResponse": {
+      "AddActivity200Response": {
         "title": "UpsertActivityResponse",
         "type": "object",
         "properties": {
@@ -14102,7 +14102,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertActivityResponseData"
+            "$ref": "#/components/schemas/AddActivity200ResponseData"
           }
         }
       },
@@ -14119,7 +14119,7 @@
           }
         }
       },
-      "UpsertActivityResponseResponseJson": {
+      "GetActivity200Response": {
         "title": "UpsertActivityResponse",
         "type": "object",
         "properties": {
@@ -14128,7 +14128,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertActivityResponseResponseJsonData"
+            "$ref": "#/components/schemas/GetActivity200ResponseData"
           }
         }
       },
@@ -14218,7 +14218,7 @@
           }
         }
       },
-      "UpsertActivityResponseResponseJson2": {
+      "UpdateActivity200Response": {
         "title": "UpsertActivityResponse",
         "type": "object",
         "properties": {
@@ -14227,7 +14227,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertActivityResponseResponseJson2Data"
+            "$ref": "#/components/schemas/UpdateActivity200ResponseData"
           }
         }
       },
@@ -14261,7 +14261,7 @@
           }
         }
       },
-      "GetDealsResponse": {
+      "GetDeals200Response": {
         "title": "GetDealsResponse",
         "type": "object",
         "properties": {
@@ -14272,12 +14272,12 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetDealsResponseDataItem"
+              "$ref": "#/components/schemas/GetDeals200ResponseDataItem"
             },
             "description": "Deals array"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetDealsResponseAdditionalData"
+            "$ref": "#/components/schemas/GetDeals200ResponseAdditionalData"
           }
         }
       },
@@ -14379,7 +14379,7 @@
           }
         }
       },
-      "UpsertDealResponse": {
+      "AddDeal200Response": {
         "title": "UpsertDealResponse",
         "type": "object",
         "properties": {
@@ -14388,11 +14388,11 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertDealResponseData"
+            "$ref": "#/components/schemas/AddDeal200ResponseData"
           }
         }
       },
-      "GetDealsResponseResponseJson": {
+      "GetArchivedDeals200Response": {
         "title": "GetDealsResponse",
         "type": "object",
         "properties": {
@@ -14403,12 +14403,12 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetDealsResponseResponseJsonDataItem"
+              "$ref": "#/components/schemas/GetArchivedDeals200ResponseDataItem"
             },
             "description": "Deals array"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetDealsResponseResponseJsonAdditionalData"
+            "$ref": "#/components/schemas/GetArchivedDeals200ResponseAdditionalData"
           }
         }
       },
@@ -14425,7 +14425,7 @@
           }
         }
       },
-      "UpsertDealResponseResponseJson": {
+      "GetDeal200Response": {
         "title": "UpsertDealResponse",
         "type": "object",
         "properties": {
@@ -14434,7 +14434,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertDealResponseResponseJsonData"
+            "$ref": "#/components/schemas/GetDeal200ResponseData"
           }
         }
       },
@@ -14533,7 +14533,7 @@
           }
         }
       },
-      "UpsertDealResponseResponseJson2": {
+      "UpdateDeal200Response": {
         "title": "UpsertDealResponse",
         "type": "object",
         "properties": {
@@ -14542,11 +14542,11 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertDealResponseResponseJson2Data"
+            "$ref": "#/components/schemas/UpdateDeal200ResponseData"
           }
         }
       },
-      "GetFollowersResponse": {
+      "GetDealFollowers200Response": {
         "title": "GetFollowersResponse",
         "type": "object",
         "properties": {
@@ -14557,12 +14557,12 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetFollowersResponseDataItem"
+              "$ref": "#/components/schemas/GetDealFollowers200ResponseDataItem"
             },
             "description": "Followers array"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetFollowersResponseAdditionalData"
+            "$ref": "#/components/schemas/GetDealFollowers200ResponseAdditionalData"
           }
         }
       },
@@ -14578,7 +14578,7 @@
           }
         }
       },
-      "AddFollowerResponse": {
+      "AddDealFollower201Response": {
         "title": "AddFollowerResponse",
         "type": "object",
         "properties": {
@@ -14587,11 +14587,11 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/AddFollowerResponseData"
+            "$ref": "#/components/schemas/AddDealFollower201ResponseData"
           }
         }
       },
-      "GetFollowerChangelogsResponse": {
+      "GetDealFollowersChangelog200Response": {
         "title": "GetFollowerChangelogsResponse",
         "type": "object",
         "properties": {
@@ -14602,16 +14602,16 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetFollowerChangelogsResponseDataItem"
+              "$ref": "#/components/schemas/GetDealFollowersChangelog200ResponseDataItem"
             },
             "description": "Follower changelogs array"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetFollowerChangelogsResponseAdditionalData"
+            "$ref": "#/components/schemas/GetDealFollowersChangelog200ResponseAdditionalData"
           }
         }
       },
-      "DeleteFollowerResponse": {
+      "DeleteDealFollower200Response": {
         "title": "DeleteFollowerResponse",
         "type": "object",
         "properties": {
@@ -14620,11 +14620,11 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/DeleteFollowerResponseData"
+            "$ref": "#/components/schemas/DeleteDealFollower200ResponseData"
           }
         }
       },
-      "GetDealsProductsResponse": {
+      "GetDealsProducts200Response": {
         "title": "GetDealsProductsResponse",
         "type": "object",
         "properties": {
@@ -14635,12 +14635,12 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetDealsProductsResponseDataItem"
+              "$ref": "#/components/schemas/GetDealsProducts200ResponseDataItem"
             },
             "description": "Array containing data for all products attached to deals"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetDealsProductsResponseAdditionalData"
+            "$ref": "#/components/schemas/GetDealsProducts200ResponseAdditionalData"
           }
         }
       },
@@ -14660,7 +14660,7 @@
           }
         }
       },
-      "GetDealsProductsResponseResponseJson": {
+      "GetDealProducts200Response": {
         "title": "GetDealsProductsResponse",
         "type": "object",
         "properties": {
@@ -14671,12 +14671,12 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetDealsProductsResponseResponseJsonDataItem"
+              "$ref": "#/components/schemas/GetDealProducts200ResponseDataItem"
             },
             "description": "Array containing data for all products attached to deals"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetDealsProductsResponseResponseJsonAdditionalData"
+            "$ref": "#/components/schemas/GetDealProducts200ResponseAdditionalData"
           }
         }
       },
@@ -14749,7 +14749,7 @@
           }
         }
       },
-      "AddDealProductResponse": {
+      "AddDealProduct201Response": {
         "title": "AddDealProductResponse",
         "type": "object",
         "properties": {
@@ -14758,7 +14758,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/AddDealProductResponseData"
+            "$ref": "#/components/schemas/AddDealProduct201ResponseData"
           }
         }
       },
@@ -14840,7 +14840,7 @@
           }
         }
       },
-      "AddDealProductResponseResponseJson": {
+      "UpdateDealProduct200Response": {
         "title": "AddDealProductResponse",
         "type": "object",
         "properties": {
@@ -14849,7 +14849,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/AddDealProductResponseResponseJsonData"
+            "$ref": "#/components/schemas/UpdateDealProduct200ResponseData"
           }
         }
       },
@@ -15107,7 +15107,7 @@
           }
         }
       },
-      "GetConvertResponse": {
+      "ConvertDealToLead404Response": {
         "title": "GetConvertResponse",
         "type": "object",
         "properties": {
@@ -15124,10 +15124,10 @@
             "description": "A message describing how to solve the problem"
           },
           "data": {
-            "$ref": "#/components/schemas/GetConvertResponseData"
+            "$ref": "#/components/schemas/ConvertDealToLead404ResponseData"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetConvertResponseAdditionalData"
+            "$ref": "#/components/schemas/ConvertDealToLead404ResponseAdditionalData"
           }
         }
       },
@@ -15334,7 +15334,7 @@
           }
         }
       },
-      "GetConvertResponseResponseJson": {
+      "GetDealConversionStatus200Response": {
         "title": "GetConvertResponse",
         "required": [
           "success",
@@ -15346,14 +15346,14 @@
             "type": "boolean"
           },
           "data": {
-            "$ref": "#/components/schemas/GetConvertResponseResponseJsonData"
+            "$ref": "#/components/schemas/GetDealConversionStatus200ResponseData"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetConvertResponseResponseJsonAdditionalData"
+            "$ref": "#/components/schemas/GetDealConversionStatus200ResponseAdditionalData"
           }
         }
       },
-      "GetConvertResponseResponseJson2": {
+      "GetDealConversionStatus404Response": {
         "title": "GetConvertResponse",
         "type": "object",
         "properties": {
@@ -15370,10 +15370,10 @@
             "description": "A message describing how to solve the problem"
           },
           "data": {
-            "$ref": "#/components/schemas/GetConvertResponseResponseJson2Data"
+            "$ref": "#/components/schemas/GetDealConversionStatus404ResponseData"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetConvertResponseResponseJson2AdditionalData"
+            "$ref": "#/components/schemas/GetDealConversionStatus404ResponseAdditionalData"
           }
         }
       },
@@ -15453,7 +15453,7 @@
           }
         }
       },
-      "UpsertPersonResponse": {
+      "AddPerson200Response": {
         "title": "UpsertPersonResponse",
         "type": "object",
         "properties": {
@@ -15462,7 +15462,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertPersonResponseData"
+            "$ref": "#/components/schemas/AddPerson200ResponseData"
           }
         }
       },
@@ -15479,7 +15479,7 @@
           }
         }
       },
-      "UpsertPersonResponseResponseJson": {
+      "GetPerson200Response": {
         "title": "UpsertPersonResponse",
         "type": "object",
         "properties": {
@@ -15488,7 +15488,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertPersonResponseResponseJsonData"
+            "$ref": "#/components/schemas/GetPerson200ResponseData"
           }
         }
       },
@@ -15548,7 +15548,7 @@
           }
         }
       },
-      "UpsertPersonResponseResponseJson2": {
+      "UpdatePerson200Response": {
         "title": "UpsertPersonResponse",
         "type": "object",
         "properties": {
@@ -15557,11 +15557,11 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertPersonResponseResponseJson2Data"
+            "$ref": "#/components/schemas/UpdatePerson200ResponseData"
           }
         }
       },
-      "GetFollowersResponseResponseJson": {
+      "GetPersonFollowers200Response": {
         "title": "GetFollowersResponse",
         "type": "object",
         "properties": {
@@ -15572,12 +15572,12 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetFollowersResponseResponseJsonDataItem"
+              "$ref": "#/components/schemas/GetPersonFollowers200ResponseDataItem"
             },
             "description": "Followers array"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetFollowersResponseResponseJsonAdditionalData"
+            "$ref": "#/components/schemas/GetPersonFollowers200ResponseAdditionalData"
           }
         }
       },
@@ -15593,7 +15593,7 @@
           }
         }
       },
-      "AddFollowerResponseResponseJson": {
+      "AddPersonFollower201Response": {
         "title": "AddFollowerResponse",
         "type": "object",
         "properties": {
@@ -15602,11 +15602,11 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/AddFollowerResponseResponseJsonData"
+            "$ref": "#/components/schemas/AddPersonFollower201ResponseData"
           }
         }
       },
-      "GetFollowerChangelogsResponseResponseJson": {
+      "GetPersonFollowersChangelog200Response": {
         "title": "GetFollowerChangelogsResponse",
         "type": "object",
         "properties": {
@@ -15617,16 +15617,16 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetFollowerChangelogsResponseResponseJsonDataItem"
+              "$ref": "#/components/schemas/GetPersonFollowersChangelog200ResponseDataItem"
             },
             "description": "Follower changelogs array"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetFollowerChangelogsResponseResponseJsonAdditionalData"
+            "$ref": "#/components/schemas/GetPersonFollowersChangelog200ResponseAdditionalData"
           }
         }
       },
-      "DeleteFollowerResponseResponseJson": {
+      "DeletePersonFollower200Response": {
         "title": "DeleteFollowerResponse",
         "type": "object",
         "properties": {
@@ -15635,7 +15635,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/DeleteFollowerResponseResponseJsonData"
+            "$ref": "#/components/schemas/DeletePersonFollower200ResponseData"
           }
         }
       },
@@ -15906,7 +15906,7 @@
           }
         }
       },
-      "UpsertOrganizationResponse": {
+      "AddOrganization200Response": {
         "title": "UpsertOrganizationResponse",
         "type": "object",
         "properties": {
@@ -15915,7 +15915,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertOrganizationResponseData"
+            "$ref": "#/components/schemas/AddOrganization200ResponseData"
           }
         }
       },
@@ -15932,7 +15932,7 @@
           }
         }
       },
-      "UpsertOrganizationResponseResponseJson": {
+      "GetOrganization200Response": {
         "title": "UpsertOrganizationResponse",
         "type": "object",
         "properties": {
@@ -15941,7 +15941,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertOrganizationResponseResponseJsonData"
+            "$ref": "#/components/schemas/GetOrganization200ResponseData"
           }
         }
       },
@@ -15983,7 +15983,7 @@
           }
         }
       },
-      "UpsertOrganizationResponseResponseJson2": {
+      "UpdateOrganization200Response": {
         "title": "UpsertOrganizationResponse",
         "type": "object",
         "properties": {
@@ -15992,11 +15992,11 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertOrganizationResponseResponseJson2Data"
+            "$ref": "#/components/schemas/UpdateOrganization200ResponseData"
           }
         }
       },
-      "GetFollowersResponseResponseJson2": {
+      "GetOrganizationFollowers200Response": {
         "title": "GetFollowersResponse",
         "type": "object",
         "properties": {
@@ -16007,12 +16007,12 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetFollowersResponseResponseJson2DataItem"
+              "$ref": "#/components/schemas/GetOrganizationFollowers200ResponseDataItem"
             },
             "description": "Followers array"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetFollowersResponseResponseJson2AdditionalData"
+            "$ref": "#/components/schemas/GetOrganizationFollowers200ResponseAdditionalData"
           }
         }
       },
@@ -16028,7 +16028,7 @@
           }
         }
       },
-      "AddFollowerResponseResponseJson2": {
+      "AddOrganizationFollower201Response": {
         "title": "AddFollowerResponse",
         "type": "object",
         "properties": {
@@ -16037,11 +16037,11 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/AddFollowerResponseResponseJson2Data"
+            "$ref": "#/components/schemas/AddOrganizationFollower201ResponseData"
           }
         }
       },
-      "GetFollowerChangelogsResponseResponseJson2": {
+      "GetOrganizationFollowersChangelog200Response": {
         "title": "GetFollowerChangelogsResponse",
         "type": "object",
         "properties": {
@@ -16052,16 +16052,16 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetFollowerChangelogsResponseResponseJson2DataItem"
+              "$ref": "#/components/schemas/GetOrganizationFollowersChangelog200ResponseDataItem"
             },
             "description": "Follower changelogs array"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetFollowerChangelogsResponseResponseJson2AdditionalData"
+            "$ref": "#/components/schemas/GetOrganizationFollowersChangelog200ResponseAdditionalData"
           }
         }
       },
-      "DeleteFollowerResponseResponseJson2": {
+      "DeleteOrganizationFollower200Response": {
         "title": "DeleteFollowerResponse",
         "type": "object",
         "properties": {
@@ -16070,7 +16070,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/DeleteFollowerResponseResponseJson2Data"
+            "$ref": "#/components/schemas/DeleteOrganizationFollower200ResponseData"
           }
         }
       },
@@ -16352,7 +16352,7 @@
           }
         }
       },
-      "GetProductResponse": {
+      "AddProduct201Response": {
         "title": "GetProductResponse",
         "type": "object",
         "properties": {
@@ -16361,11 +16361,11 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/GetProductResponseData"
+            "$ref": "#/components/schemas/AddProduct201ResponseData"
           }
         }
       },
-      "GetFollowersResponseResponseJson3": {
+      "GetProductFollowers200Response": {
         "title": "GetFollowersResponse",
         "type": "object",
         "properties": {
@@ -16376,12 +16376,12 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetFollowersResponseResponseJson3DataItem"
+              "$ref": "#/components/schemas/GetProductFollowers200ResponseDataItem"
             },
             "description": "Followers array"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetFollowersResponseResponseJson3AdditionalData"
+            "$ref": "#/components/schemas/GetProductFollowers200ResponseAdditionalData"
           }
         }
       },
@@ -16397,7 +16397,7 @@
           }
         }
       },
-      "AddFollowerResponseResponseJson3": {
+      "AddProductFollower201Response": {
         "title": "AddFollowerResponse",
         "type": "object",
         "properties": {
@@ -16406,11 +16406,11 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/AddFollowerResponseResponseJson3Data"
+            "$ref": "#/components/schemas/AddProductFollower201ResponseData"
           }
         }
       },
-      "GetFollowerChangelogsResponseResponseJson3": {
+      "GetProductFollowersChangelog200Response": {
         "title": "GetFollowerChangelogsResponse",
         "type": "object",
         "properties": {
@@ -16421,16 +16421,16 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetFollowerChangelogsResponseResponseJson3DataItem"
+              "$ref": "#/components/schemas/GetProductFollowersChangelog200ResponseDataItem"
             },
             "description": "Follower changelogs array"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetFollowerChangelogsResponseResponseJson3AdditionalData"
+            "$ref": "#/components/schemas/GetProductFollowersChangelog200ResponseAdditionalData"
           }
         }
       },
-      "DeleteFollowerResponseResponseJson3": {
+      "DeleteProductFollower200Response": {
         "title": "DeleteFollowerResponse",
         "type": "object",
         "properties": {
@@ -16439,7 +16439,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/DeleteFollowerResponseResponseJson3Data"
+            "$ref": "#/components/schemas/DeleteProductFollower200ResponseData"
           }
         }
       },
@@ -16472,7 +16472,7 @@
           }
         }
       },
-      "GetProductResponseResponseJson": {
+      "GetProduct200Response": {
         "title": "GetProductResponse",
         "type": "object",
         "properties": {
@@ -16481,7 +16481,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/GetProductResponseResponseJsonData"
+            "$ref": "#/components/schemas/GetProduct200ResponseData"
           }
         }
       },
@@ -16559,7 +16559,7 @@
           }
         }
       },
-      "GetProductResponseResponseJson2": {
+      "DuplicateProduct201Response": {
         "title": "GetProductResponse",
         "type": "object",
         "properties": {
@@ -16568,7 +16568,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/GetProductResponseResponseJson2Data"
+            "$ref": "#/components/schemas/DuplicateProduct201ResponseData"
           }
         }
       },
@@ -16612,7 +16612,7 @@
           }
         }
       },
-      "GetProductVariationResponse": {
+      "AddProductVariation201Response": {
         "title": "GetProductVariationResponse",
         "type": "object",
         "properties": {
@@ -16621,7 +16621,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/GetProductVariationResponseData"
+            "$ref": "#/components/schemas/AddProductVariation201ResponseData"
           }
         }
       },
@@ -16642,7 +16642,7 @@
           }
         }
       },
-      "GetProductVariationResponseResponseJson": {
+      "UpdateProductVariation200Response": {
         "title": "GetProductVariationResponse",
         "type": "object",
         "properties": {
@@ -16651,7 +16651,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/GetProductVariationResponseResponseJsonData"
+            "$ref": "#/components/schemas/UpdateProductVariation200ResponseData"
           }
         }
       },
@@ -16974,7 +16974,7 @@
           }
         }
       },
-      "GetConvertResponseResponseJson3": {
+      "ConvertLeadToDeal404Response": {
         "title": "GetConvertResponse",
         "type": "object",
         "properties": {
@@ -16991,14 +16991,14 @@
             "description": "A message describing how to solve the problem"
           },
           "data": {
-            "$ref": "#/components/schemas/GetConvertResponseResponseJson3Data"
+            "$ref": "#/components/schemas/ConvertLeadToDeal404ResponseData"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetConvertResponseResponseJson3AdditionalData"
+            "$ref": "#/components/schemas/ConvertLeadToDeal404ResponseAdditionalData"
           }
         }
       },
-      "GetConvertResponseResponseJson4": {
+      "GetLeadConversionStatus200Response": {
         "title": "GetConvertResponse",
         "required": [
           "success",
@@ -17010,14 +17010,14 @@
             "type": "boolean"
           },
           "data": {
-            "$ref": "#/components/schemas/GetConvertResponseResponseJson4Data"
+            "$ref": "#/components/schemas/GetLeadConversionStatus200ResponseData"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetConvertResponseResponseJson4AdditionalData"
+            "$ref": "#/components/schemas/GetLeadConversionStatus200ResponseAdditionalData"
           }
         }
       },
-      "GetConvertResponseResponseJson5": {
+      "GetLeadConversionStatus404Response": {
         "title": "GetConvertResponse",
         "type": "object",
         "properties": {
@@ -17034,10 +17034,10 @@
             "description": "A message describing how to solve the problem"
           },
           "data": {
-            "$ref": "#/components/schemas/GetConvertResponseResponseJson5Data"
+            "$ref": "#/components/schemas/GetLeadConversionStatus404ResponseData"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetConvertResponseResponseJson5AdditionalData"
+            "$ref": "#/components/schemas/GetLeadConversionStatus404ResponseAdditionalData"
           }
         }
       },
@@ -17159,7 +17159,7 @@
           }
         }
       },
-      "UpsertStageResponse": {
+      "AddStage200Response": {
         "title": "UpsertStageResponse",
         "type": "object",
         "properties": {
@@ -17168,7 +17168,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertStageResponseData"
+            "$ref": "#/components/schemas/AddStage200ResponseData"
           }
         }
       },
@@ -17185,7 +17185,7 @@
           }
         }
       },
-      "UpsertStageResponseResponseJson": {
+      "GetStage200Response": {
         "title": "UpsertStageResponse",
         "type": "object",
         "properties": {
@@ -17194,7 +17194,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertStageResponseResponseJsonData"
+            "$ref": "#/components/schemas/GetStage200ResponseData"
           }
         }
       },
@@ -17224,7 +17224,7 @@
           }
         }
       },
-      "UpsertStageResponseResponseJson2": {
+      "UpdateStage200Response": {
         "title": "UpsertStageResponse",
         "type": "object",
         "properties": {
@@ -17233,7 +17233,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertStageResponseResponseJson2Data"
+            "$ref": "#/components/schemas/UpdateStage200ResponseData"
           }
         }
       },
@@ -17274,7 +17274,7 @@
           }
         }
       },
-      "UpsertPipelineResponse": {
+      "AddPipeline200Response": {
         "title": "UpsertPipelineResponse",
         "type": "object",
         "properties": {
@@ -17283,7 +17283,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertPipelineResponseData"
+            "$ref": "#/components/schemas/AddPipeline200ResponseData"
           }
         }
       },
@@ -17300,7 +17300,7 @@
           }
         }
       },
-      "UpsertPipelineResponseResponseJson": {
+      "GetPipeline200Response": {
         "title": "UpsertPipelineResponse",
         "type": "object",
         "properties": {
@@ -17309,7 +17309,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertPipelineResponseResponseJsonData"
+            "$ref": "#/components/schemas/GetPipeline200ResponseData"
           }
         }
       },
@@ -17327,7 +17327,7 @@
           }
         }
       },
-      "UpsertPipelineResponseResponseJson2": {
+      "UpdatePipeline200Response": {
         "title": "UpsertPipelineResponse",
         "type": "object",
         "properties": {
@@ -17336,7 +17336,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertPipelineResponseResponseJson2Data"
+            "$ref": "#/components/schemas/UpdatePipeline200ResponseData"
           }
         }
       },
@@ -17533,7 +17533,7 @@
           }
         }
       },
-      "GetProjectsResponse": {
+      "GetProjects200Response": {
         "title": "GetProjectsResponse",
         "type": "object",
         "properties": {
@@ -17544,12 +17544,12 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetProjectsResponseDataItem"
+              "$ref": "#/components/schemas/GetProjects200ResponseDataItem"
             },
             "description": "Projects array"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetProjectsResponseAdditionalData"
+            "$ref": "#/components/schemas/GetProjects200ResponseAdditionalData"
           }
         }
       },
@@ -17634,7 +17634,7 @@
           }
         }
       },
-      "UpsertProjectResponse": {
+      "AddProject201Response": {
         "title": "UpsertProjectResponse",
         "type": "object",
         "properties": {
@@ -17643,11 +17643,11 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertProjectResponseData"
+            "$ref": "#/components/schemas/AddProject201ResponseData"
           }
         }
       },
-      "GetProjectsResponseResponseJson": {
+      "GetArchivedProjects200Response": {
         "title": "GetProjectsResponse",
         "type": "object",
         "properties": {
@@ -17658,16 +17658,16 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetProjectsResponseResponseJsonDataItem"
+              "$ref": "#/components/schemas/GetArchivedProjects200ResponseDataItem"
             },
             "description": "Projects array"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetProjectsResponseResponseJsonAdditionalData"
+            "$ref": "#/components/schemas/GetArchivedProjects200ResponseAdditionalData"
           }
         }
       },
-      "UpsertProjectResponseResponseJson": {
+      "GetProject200Response": {
         "title": "UpsertProjectResponse",
         "type": "object",
         "properties": {
@@ -17676,7 +17676,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertProjectResponseResponseJsonData"
+            "$ref": "#/components/schemas/GetProject200ResponseData"
           }
         }
       },
@@ -17758,7 +17758,7 @@
           }
         }
       },
-      "UpsertProjectResponseResponseJson2": {
+      "UpdateProject200Response": {
         "title": "UpsertProjectResponse",
         "type": "object",
         "properties": {
@@ -17767,7 +17767,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertProjectResponseResponseJson2Data"
+            "$ref": "#/components/schemas/UpdateProject200ResponseData"
           }
         }
       },
@@ -17835,7 +17835,7 @@
           }
         }
       },
-      "UpsertProjectResponseResponseJson3": {
+      "ArchiveProject200Response": {
         "title": "UpsertProjectResponse",
         "type": "object",
         "properties": {
@@ -17844,7 +17844,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertProjectResponseResponseJson3Data"
+            "$ref": "#/components/schemas/ArchiveProject200ResponseData"
           }
         }
       },
@@ -18135,7 +18135,7 @@
           }
         }
       },
-      "UpsertProjectBoardResponse": {
+      "AddProjectBoard200Response": {
         "title": "UpsertProjectBoardResponse",
         "type": "object",
         "properties": {
@@ -18144,11 +18144,11 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertProjectBoardResponseData"
+            "$ref": "#/components/schemas/AddProjectBoard200ResponseData"
           }
         }
       },
-      "UpsertProjectBoardResponseResponseJson": {
+      "GetProjectsBoard200Response": {
         "title": "UpsertProjectBoardResponse",
         "type": "object",
         "properties": {
@@ -18157,7 +18157,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertProjectBoardResponseResponseJsonData"
+            "$ref": "#/components/schemas/GetProjectsBoard200ResponseData"
           }
         }
       },
@@ -18176,7 +18176,7 @@
           }
         }
       },
-      "UpsertProjectBoardResponseResponseJson2": {
+      "UpdateProjectBoard200Response": {
         "title": "UpsertProjectBoardResponse",
         "type": "object",
         "properties": {
@@ -18185,7 +18185,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertProjectBoardResponseResponseJson2Data"
+            "$ref": "#/components/schemas/UpdateProjectBoard200ResponseData"
           }
         }
       },
@@ -18245,7 +18245,7 @@
           }
         }
       },
-      "UpsertProjectPhaseResponse": {
+      "AddProjectPhase200Response": {
         "title": "UpsertProjectPhaseResponse",
         "type": "object",
         "properties": {
@@ -18254,11 +18254,11 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertProjectPhaseResponseData"
+            "$ref": "#/components/schemas/AddProjectPhase200ResponseData"
           }
         }
       },
-      "UpsertProjectPhaseResponseResponseJson": {
+      "GetProjectsPhase200Response": {
         "title": "UpsertProjectPhaseResponse",
         "type": "object",
         "properties": {
@@ -18267,7 +18267,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertProjectPhaseResponseResponseJsonData"
+            "$ref": "#/components/schemas/GetProjectsPhase200ResponseData"
           }
         }
       },
@@ -18290,7 +18290,7 @@
           }
         }
       },
-      "UpsertProjectPhaseResponseResponseJson2": {
+      "UpdateProjectPhase200Response": {
         "title": "UpsertProjectPhaseResponse",
         "type": "object",
         "properties": {
@@ -18299,7 +18299,7 @@
             "description": "If the response is successful or not"
           },
           "data": {
-            "$ref": "#/components/schemas/UpsertProjectPhaseResponseResponseJson2Data"
+            "$ref": "#/components/schemas/UpdateProjectPhase200ResponseData"
           }
         }
       },
@@ -18316,7 +18316,7 @@
           }
         }
       },
-      "GetFollowersResponseResponseJson4": {
+      "GetUserFollowers200Response": {
         "title": "GetFollowersResponse",
         "type": "object",
         "properties": {
@@ -18327,12 +18327,12 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetFollowersResponseResponseJson4DataItem"
+              "$ref": "#/components/schemas/GetUserFollowers200ResponseDataItem"
             },
             "description": "Followers array"
           },
           "additional_data": {
-            "$ref": "#/components/schemas/GetFollowersResponseResponseJson4AdditionalData"
+            "$ref": "#/components/schemas/GetUserFollowers200ResponseAdditionalData"
           }
         }
       },
@@ -18941,7 +18941,7 @@
           }
         }
       },
-      "UpsertActivityResponseData": {
+      "AddActivity200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -19021,19 +19021,19 @@
             "description": "The date and time when the activity was marked as done"
           },
           "location": {
-            "$ref": "#/components/schemas/UpsertActivityResponseDataLocation"
+            "$ref": "#/components/schemas/AddActivity200ResponseDataLocation"
           },
           "participants": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpsertActivityResponseDataParticipantsItem"
+              "$ref": "#/components/schemas/AddActivity200ResponseDataParticipantsItem"
             },
             "description": "The participants of the activity"
           },
           "attendees": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpsertActivityResponseDataAttendeesItem"
+              "$ref": "#/components/schemas/AddActivity200ResponseDataAttendeesItem"
             },
             "description": "The attendees of the activity"
           },
@@ -19072,7 +19072,7 @@
           }
         }
       },
-      "UpsertActivityResponseResponseJsonData": {
+      "GetActivity200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -19152,19 +19152,19 @@
             "description": "The date and time when the activity was marked as done"
           },
           "location": {
-            "$ref": "#/components/schemas/UpsertActivityResponseResponseJsonDataLocation"
+            "$ref": "#/components/schemas/GetActivity200ResponseDataLocation"
           },
           "participants": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpsertActivityResponseResponseJsonDataParticipantsItem"
+              "$ref": "#/components/schemas/GetActivity200ResponseDataParticipantsItem"
             },
             "description": "The participants of the activity"
           },
           "attendees": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpsertActivityResponseResponseJsonDataAttendeesItem"
+              "$ref": "#/components/schemas/GetActivity200ResponseDataAttendeesItem"
             },
             "description": "The attendees of the activity"
           },
@@ -19282,7 +19282,7 @@
           }
         }
       },
-      "UpsertActivityResponseResponseJson2Data": {
+      "UpdateActivity200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -19362,19 +19362,19 @@
             "description": "The date and time when the activity was marked as done"
           },
           "location": {
-            "$ref": "#/components/schemas/UpsertActivityResponseResponseJson2DataLocation"
+            "$ref": "#/components/schemas/UpdateActivity200ResponseDataLocation"
           },
           "participants": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpsertActivityResponseResponseJson2DataParticipantsItem"
+              "$ref": "#/components/schemas/UpdateActivity200ResponseDataParticipantsItem"
             },
             "description": "The participants of the activity"
           },
           "attendees": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpsertActivityResponseResponseJson2DataAttendeesItem"
+              "$ref": "#/components/schemas/UpdateActivity200ResponseDataAttendeesItem"
             },
             "description": "The attendees of the activity"
           },
@@ -19514,7 +19514,7 @@
           }
         }
       },
-      "GetDealsResponseDataItem": {
+      "GetDeals200ResponseDataItem": {
         "type": "object",
         "properties": {
           "id": {
@@ -19657,11 +19657,11 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/GetDealsResponseDataItemCustomFields"
+            "$ref": "#/components/schemas/GetDeals200ResponseDataItemCustomFields"
           }
         }
       },
-      "GetDealsResponseAdditionalData": {
+      "GetDeals200ResponseAdditionalData": {
         "type": "object",
         "properties": {
           "next_cursor": {
@@ -19675,7 +19675,7 @@
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertDealResponseData": {
+      "AddDeal200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -19818,11 +19818,11 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/UpsertDealResponseDataCustomFields"
+            "$ref": "#/components/schemas/AddDeal200ResponseDataCustomFields"
           }
         }
       },
-      "GetDealsResponseResponseJsonDataItem": {
+      "GetArchivedDeals200ResponseDataItem": {
         "type": "object",
         "properties": {
           "id": {
@@ -19965,11 +19965,11 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/GetDealsResponseResponseJsonDataItemCustomFields"
+            "$ref": "#/components/schemas/GetArchivedDeals200ResponseDataItemCustomFields"
           }
         }
       },
-      "GetDealsResponseResponseJsonAdditionalData": {
+      "GetArchivedDeals200ResponseAdditionalData": {
         "type": "object",
         "properties": {
           "next_cursor": {
@@ -19988,7 +19988,7 @@
           }
         }
       },
-      "UpsertDealResponseResponseJsonData": {
+      "GetDeal200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -20131,7 +20131,7 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/UpsertDealResponseResponseJsonDataCustomFields"
+            "$ref": "#/components/schemas/GetDeal200ResponseDataCustomFields"
           }
         }
       },
@@ -20139,7 +20139,7 @@
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertDealResponseResponseJson2Data": {
+      "UpdateDeal200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -20282,11 +20282,11 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/UpsertDealResponseResponseJson2DataCustomFields"
+            "$ref": "#/components/schemas/UpdateDeal200ResponseDataCustomFields"
           }
         }
       },
-      "GetFollowersResponseDataItem": {
+      "GetDealFollowers200ResponseDataItem": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -20299,7 +20299,7 @@
           }
         }
       },
-      "GetFollowersResponseAdditionalData": {
+      "GetDealFollowers200ResponseAdditionalData": {
         "type": "object",
         "properties": {
           "next_cursor": {
@@ -20309,7 +20309,7 @@
         },
         "description": "The additional data of the list"
       },
-      "AddFollowerResponseData": {
+      "AddDealFollower201ResponseData": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -20322,7 +20322,7 @@
           }
         }
       },
-      "GetFollowerChangelogsResponseDataItem": {
+      "GetDealFollowersChangelog200ResponseDataItem": {
         "title": "FollowerChangelogItem",
         "type": "object",
         "properties": {
@@ -20344,7 +20344,7 @@
           }
         }
       },
-      "GetFollowerChangelogsResponseAdditionalData": {
+      "GetDealFollowersChangelog200ResponseAdditionalData": {
         "type": "object",
         "properties": {
           "next_cursor": {
@@ -20354,7 +20354,7 @@
         },
         "description": "The additional data of the list"
       },
-      "DeleteFollowerResponseData": {
+      "DeleteDealFollower200ResponseData": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -20363,7 +20363,7 @@
           }
         }
       },
-      "GetDealsProductsResponseDataItem": {
+      "GetDealsProducts200ResponseDataItem": {
         "type": "object",
         "properties": {
           "id": {
@@ -20422,7 +20422,7 @@
             "default": 0
           },
           "discount_type": {
-            "$ref": "#/components/schemas/GetDealsProductsResponseDataItemDiscountType"
+            "$ref": "#/components/schemas/GetDealsProducts200ResponseDataItemDiscountType"
           },
           "quantity": {
             "type": "number",
@@ -20433,7 +20433,7 @@
             "description": "The price value of the product"
           },
           "tax_method": {
-            "$ref": "#/components/schemas/GetDealsProductsResponseDataItemTaxMethod"
+            "$ref": "#/components/schemas/GetDealsProducts200ResponseDataItemTaxMethod"
           },
           "is_enabled": {
             "type": "boolean",
@@ -20441,7 +20441,7 @@
             "default": true
           },
           "billing_frequency": {
-            "$ref": "#/components/schemas/GetDealsProductsResponseDataItemBillingFrequency"
+            "$ref": "#/components/schemas/GetDealsProducts200ResponseDataItemBillingFrequency"
           },
           "billing_frequency_cycles": {
             "type": "integer",
@@ -20458,7 +20458,7 @@
           }
         }
       },
-      "GetDealsProductsResponseAdditionalData": {
+      "GetDealsProducts200ResponseAdditionalData": {
         "type": "object",
         "properties": {
           "next_cursor": {
@@ -20490,7 +20490,7 @@
         },
         "description": "Pagination related data"
       },
-      "GetDealsProductsResponseResponseJsonDataItem": {
+      "GetDealProducts200ResponseDataItem": {
         "type": "object",
         "properties": {
           "id": {
@@ -20549,7 +20549,7 @@
             "default": 0
           },
           "discount_type": {
-            "$ref": "#/components/schemas/GetDealsProductsResponseResponseJsonDataItemDiscountType"
+            "$ref": "#/components/schemas/GetDealProducts200ResponseDataItemDiscountType"
           },
           "quantity": {
             "type": "number",
@@ -20560,7 +20560,7 @@
             "description": "The price value of the product"
           },
           "tax_method": {
-            "$ref": "#/components/schemas/GetDealsProductsResponseResponseJsonDataItemTaxMethod"
+            "$ref": "#/components/schemas/GetDealProducts200ResponseDataItemTaxMethod"
           },
           "is_enabled": {
             "type": "boolean",
@@ -20568,7 +20568,7 @@
             "default": true
           },
           "billing_frequency": {
-            "$ref": "#/components/schemas/GetDealsProductsResponseResponseJsonDataItemBillingFrequency"
+            "$ref": "#/components/schemas/GetDealProducts200ResponseDataItemBillingFrequency"
           },
           "billing_frequency_cycles": {
             "type": "integer",
@@ -20585,7 +20585,7 @@
           }
         }
       },
-      "GetDealsProductsResponseResponseJsonAdditionalData": {
+      "GetDealProducts200ResponseAdditionalData": {
         "type": "object",
         "properties": {
           "next_cursor": {
@@ -20595,7 +20595,7 @@
         },
         "description": "Pagination related data"
       },
-      "AddDealProductResponseData": {
+      "AddDealProduct201ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -20654,7 +20654,7 @@
             "default": 0
           },
           "discount_type": {
-            "$ref": "#/components/schemas/AddDealProductResponseDataDiscountType"
+            "$ref": "#/components/schemas/AddDealProduct201ResponseDataDiscountType"
           },
           "quantity": {
             "type": "number",
@@ -20665,7 +20665,7 @@
             "description": "The price value of the product"
           },
           "tax_method": {
-            "$ref": "#/components/schemas/AddDealProductResponseDataTaxMethod"
+            "$ref": "#/components/schemas/AddDealProduct201ResponseDataTaxMethod"
           },
           "is_enabled": {
             "type": "boolean",
@@ -20673,7 +20673,7 @@
             "default": true
           },
           "billing_frequency": {
-            "$ref": "#/components/schemas/AddDealProductResponseDataBillingFrequency"
+            "$ref": "#/components/schemas/AddDealProduct201ResponseDataBillingFrequency"
           },
           "billing_frequency_cycles": {
             "type": "integer",
@@ -20712,7 +20712,7 @@
         },
         "nullable": true
       },
-      "AddDealProductResponseResponseJsonData": {
+      "UpdateDealProduct200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -20771,7 +20771,7 @@
             "default": 0
           },
           "discount_type": {
-            "$ref": "#/components/schemas/AddDealProductResponseResponseJsonDataDiscountType"
+            "$ref": "#/components/schemas/UpdateDealProduct200ResponseDataDiscountType"
           },
           "quantity": {
             "type": "number",
@@ -20782,7 +20782,7 @@
             "description": "The price value of the product"
           },
           "tax_method": {
-            "$ref": "#/components/schemas/AddDealProductResponseResponseJsonDataTaxMethod"
+            "$ref": "#/components/schemas/UpdateDealProduct200ResponseDataTaxMethod"
           },
           "is_enabled": {
             "type": "boolean",
@@ -20790,7 +20790,7 @@
             "default": true
           },
           "billing_frequency": {
-            "$ref": "#/components/schemas/AddDealProductResponseResponseJsonDataBillingFrequency"
+            "$ref": "#/components/schemas/UpdateDealProduct200ResponseDataBillingFrequency"
           },
           "billing_frequency_cycles": {
             "type": "integer",
@@ -21212,12 +21212,12 @@
         "nullable": true,
         "example": null
       },
-      "GetConvertResponseData": {
+      "ConvertDealToLead404ResponseData": {
         "type": "object",
         "nullable": true,
         "example": null
       },
-      "GetConvertResponseAdditionalData": {
+      "ConvertDealToLead404ResponseAdditionalData": {
         "type": "object",
         "nullable": true,
         "example": null
@@ -21774,7 +21774,7 @@
         "type": "object",
         "nullable": true
       },
-      "GetConvertResponseResponseJsonData": {
+      "GetDealConversionStatus200ResponseData": {
         "required": [
           "conversion_id",
           "status"
@@ -21796,22 +21796,22 @@
             "format": "uuid"
           },
           "status": {
-            "$ref": "#/components/schemas/GetConvertResponseResponseJsonDataStatus"
+            "$ref": "#/components/schemas/GetDealConversionStatus200ResponseDataStatus"
           }
         },
         "description": "An object containing conversion status. After successful conversion the converted entity ID is also present."
       },
-      "GetConvertResponseResponseJsonAdditionalData": {
+      "GetDealConversionStatus200ResponseAdditionalData": {
         "type": "object",
         "nullable": true,
         "example": null
       },
-      "GetConvertResponseResponseJson2Data": {
+      "GetDealConversionStatus404ResponseData": {
         "type": "object",
         "nullable": true,
         "example": null
       },
-      "GetConvertResponseResponseJson2AdditionalData": {
+      "GetDealConversionStatus404ResponseAdditionalData": {
         "type": "object",
         "nullable": true,
         "example": null
@@ -21959,7 +21959,7 @@
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertPersonResponseData": {
+      "AddPerson200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -21997,14 +21997,14 @@
           "emails": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpsertPersonResponseDataEmailsItem"
+              "$ref": "#/components/schemas/AddPerson200ResponseDataEmailsItem"
             },
             "description": "The emails of the person"
           },
           "phones": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpsertPersonResponseDataPhonesItem"
+              "$ref": "#/components/schemas/AddPerson200ResponseDataPhonesItem"
             },
             "description": "The phones of the person"
           },
@@ -22028,7 +22028,7 @@
             "description": "The ID of the picture associated with the person"
           },
           "postal_address": {
-            "$ref": "#/components/schemas/UpsertPersonResponseDataPostalAddress"
+            "$ref": "#/components/schemas/AddPerson200ResponseDataPostalAddress"
           },
           "notes": {
             "type": "string",
@@ -22037,7 +22037,7 @@
           "im": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpsertPersonResponseDataImItem"
+              "$ref": "#/components/schemas/AddPerson200ResponseDataImItem"
             },
             "description": "The instant messaging accounts of the person, included if contact sync is enabled for the company"
           },
@@ -22050,7 +22050,7 @@
             "description": "The job title of the person, included if contact sync is enabled for the company"
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/UpsertPersonResponseDataCustomFields"
+            "$ref": "#/components/schemas/AddPerson200ResponseDataCustomFields"
           }
         }
       },
@@ -22063,7 +22063,7 @@
           }
         }
       },
-      "UpsertPersonResponseResponseJsonData": {
+      "GetPerson200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -22101,14 +22101,14 @@
           "emails": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpsertPersonResponseResponseJsonDataEmailsItem"
+              "$ref": "#/components/schemas/GetPerson200ResponseDataEmailsItem"
             },
             "description": "The emails of the person"
           },
           "phones": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpsertPersonResponseResponseJsonDataPhonesItem"
+              "$ref": "#/components/schemas/GetPerson200ResponseDataPhonesItem"
             },
             "description": "The phones of the person"
           },
@@ -22132,7 +22132,7 @@
             "description": "The ID of the picture associated with the person"
           },
           "postal_address": {
-            "$ref": "#/components/schemas/UpsertPersonResponseResponseJsonDataPostalAddress"
+            "$ref": "#/components/schemas/GetPerson200ResponseDataPostalAddress"
           },
           "notes": {
             "type": "string",
@@ -22141,7 +22141,7 @@
           "im": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpsertPersonResponseResponseJsonDataImItem"
+              "$ref": "#/components/schemas/GetPerson200ResponseDataImItem"
             },
             "description": "The instant messaging accounts of the person, included if contact sync is enabled for the company"
           },
@@ -22154,7 +22154,7 @@
             "description": "The job title of the person, included if contact sync is enabled for the company"
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/UpsertPersonResponseResponseJsonDataCustomFields"
+            "$ref": "#/components/schemas/GetPerson200ResponseDataCustomFields"
           }
         }
       },
@@ -22196,7 +22196,7 @@
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertPersonResponseResponseJson2Data": {
+      "UpdatePerson200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -22234,14 +22234,14 @@
           "emails": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpsertPersonResponseResponseJson2DataEmailsItem"
+              "$ref": "#/components/schemas/UpdatePerson200ResponseDataEmailsItem"
             },
             "description": "The emails of the person"
           },
           "phones": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpsertPersonResponseResponseJson2DataPhonesItem"
+              "$ref": "#/components/schemas/UpdatePerson200ResponseDataPhonesItem"
             },
             "description": "The phones of the person"
           },
@@ -22265,7 +22265,7 @@
             "description": "The ID of the picture associated with the person"
           },
           "postal_address": {
-            "$ref": "#/components/schemas/UpsertPersonResponseResponseJson2DataPostalAddress"
+            "$ref": "#/components/schemas/UpdatePerson200ResponseDataPostalAddress"
           },
           "notes": {
             "type": "string",
@@ -22274,7 +22274,7 @@
           "im": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpsertPersonResponseResponseJson2DataImItem"
+              "$ref": "#/components/schemas/UpdatePerson200ResponseDataImItem"
             },
             "description": "The instant messaging accounts of the person, included if contact sync is enabled for the company"
           },
@@ -22287,11 +22287,11 @@
             "description": "The job title of the person, included if contact sync is enabled for the company"
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/UpsertPersonResponseResponseJson2DataCustomFields"
+            "$ref": "#/components/schemas/UpdatePerson200ResponseDataCustomFields"
           }
         }
       },
-      "GetFollowersResponseResponseJsonDataItem": {
+      "GetPersonFollowers200ResponseDataItem": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -22304,7 +22304,7 @@
           }
         }
       },
-      "GetFollowersResponseResponseJsonAdditionalData": {
+      "GetPersonFollowers200ResponseAdditionalData": {
         "type": "object",
         "properties": {
           "next_cursor": {
@@ -22314,7 +22314,7 @@
         },
         "description": "The additional data of the list"
       },
-      "AddFollowerResponseResponseJsonData": {
+      "AddPersonFollower201ResponseData": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -22327,7 +22327,7 @@
           }
         }
       },
-      "GetFollowerChangelogsResponseResponseJsonDataItem": {
+      "GetPersonFollowersChangelog200ResponseDataItem": {
         "title": "FollowerChangelogItem",
         "type": "object",
         "properties": {
@@ -22349,7 +22349,7 @@
           }
         }
       },
-      "GetFollowerChangelogsResponseResponseJsonAdditionalData": {
+      "GetPersonFollowersChangelog200ResponseAdditionalData": {
         "type": "object",
         "properties": {
           "next_cursor": {
@@ -22359,7 +22359,7 @@
         },
         "description": "The additional data of the list"
       },
-      "DeleteFollowerResponseResponseJsonData": {
+      "DeletePersonFollower200ResponseData": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -23032,7 +23032,7 @@
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertOrganizationResponseData": {
+      "AddOrganization200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -23064,7 +23064,7 @@
             "description": "The visibility of the organization"
           },
           "address": {
-            "$ref": "#/components/schemas/UpsertOrganizationResponseDataAddress"
+            "$ref": "#/components/schemas/AddOrganization200ResponseDataAddress"
           },
           "label_ids": {
             "type": "array",
@@ -23099,7 +23099,7 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/UpsertOrganizationResponseDataCustomFields"
+            "$ref": "#/components/schemas/AddOrganization200ResponseDataCustomFields"
           }
         }
       },
@@ -23112,7 +23112,7 @@
           }
         }
       },
-      "UpsertOrganizationResponseResponseJsonData": {
+      "GetOrganization200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -23144,7 +23144,7 @@
             "description": "The visibility of the organization"
           },
           "address": {
-            "$ref": "#/components/schemas/UpsertOrganizationResponseResponseJsonDataAddress"
+            "$ref": "#/components/schemas/GetOrganization200ResponseDataAddress"
           },
           "label_ids": {
             "type": "array",
@@ -23179,7 +23179,7 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/UpsertOrganizationResponseResponseJsonDataCustomFields"
+            "$ref": "#/components/schemas/GetOrganization200ResponseDataCustomFields"
           }
         }
       },
@@ -23234,7 +23234,7 @@
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertOrganizationResponseResponseJson2Data": {
+      "UpdateOrganization200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -23266,7 +23266,7 @@
             "description": "The visibility of the organization"
           },
           "address": {
-            "$ref": "#/components/schemas/UpsertOrganizationResponseResponseJson2DataAddress"
+            "$ref": "#/components/schemas/UpdateOrganization200ResponseDataAddress"
           },
           "label_ids": {
             "type": "array",
@@ -23301,11 +23301,11 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/UpsertOrganizationResponseResponseJson2DataCustomFields"
+            "$ref": "#/components/schemas/UpdateOrganization200ResponseDataCustomFields"
           }
         }
       },
-      "GetFollowersResponseResponseJson2DataItem": {
+      "GetOrganizationFollowers200ResponseDataItem": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -23318,7 +23318,7 @@
           }
         }
       },
-      "GetFollowersResponseResponseJson2AdditionalData": {
+      "GetOrganizationFollowers200ResponseAdditionalData": {
         "type": "object",
         "properties": {
           "next_cursor": {
@@ -23328,7 +23328,7 @@
         },
         "description": "The additional data of the list"
       },
-      "AddFollowerResponseResponseJson2Data": {
+      "AddOrganizationFollower201ResponseData": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -23341,7 +23341,7 @@
           }
         }
       },
-      "GetFollowerChangelogsResponseResponseJson2DataItem": {
+      "GetOrganizationFollowersChangelog200ResponseDataItem": {
         "title": "FollowerChangelogItem",
         "type": "object",
         "properties": {
@@ -23363,7 +23363,7 @@
           }
         }
       },
-      "GetFollowerChangelogsResponseResponseJson2AdditionalData": {
+      "GetOrganizationFollowersChangelog200ResponseAdditionalData": {
         "type": "object",
         "properties": {
           "next_cursor": {
@@ -23373,7 +23373,7 @@
         },
         "description": "The additional data of the list"
       },
-      "DeleteFollowerResponseResponseJson2Data": {
+      "DeleteOrganizationFollower200ResponseData": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -23984,7 +23984,7 @@
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "GetProductResponseData": {
+      "AddProduct201ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -24019,7 +24019,7 @@
             "default": true
           },
           "visible_to": {
-            "$ref": "#/components/schemas/GetProductResponseDataVisibleTo"
+            "$ref": "#/components/schemas/AddProduct201ResponseDataVisibleTo"
           },
           "owner_id": {
             "type": "integer",
@@ -24043,10 +24043,10 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/GetProductResponseDataCustomFields"
+            "$ref": "#/components/schemas/AddProduct201ResponseDataCustomFields"
           },
           "billing_frequency": {
-            "$ref": "#/components/schemas/GetProductResponseDataBillingFrequency"
+            "$ref": "#/components/schemas/AddProduct201ResponseDataBillingFrequency"
           },
           "billing_frequency_cycles": {
             "type": "integer",
@@ -24057,13 +24057,13 @@
           "prices": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetProductResponseDataPricesItem"
+              "$ref": "#/components/schemas/AddProduct201ResponseDataPricesItem"
             },
             "description": "The prices of the product in different currencies"
           }
         }
       },
-      "GetFollowersResponseResponseJson3DataItem": {
+      "GetProductFollowers200ResponseDataItem": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -24076,7 +24076,7 @@
           }
         }
       },
-      "GetFollowersResponseResponseJson3AdditionalData": {
+      "GetProductFollowers200ResponseAdditionalData": {
         "type": "object",
         "properties": {
           "next_cursor": {
@@ -24086,7 +24086,7 @@
         },
         "description": "The additional data of the list"
       },
-      "AddFollowerResponseResponseJson3Data": {
+      "AddProductFollower201ResponseData": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -24099,7 +24099,7 @@
           }
         }
       },
-      "GetFollowerChangelogsResponseResponseJson3DataItem": {
+      "GetProductFollowersChangelog200ResponseDataItem": {
         "title": "FollowerChangelogItem",
         "type": "object",
         "properties": {
@@ -24121,7 +24121,7 @@
           }
         }
       },
-      "GetFollowerChangelogsResponseResponseJson3AdditionalData": {
+      "GetProductFollowersChangelog200ResponseAdditionalData": {
         "type": "object",
         "properties": {
           "next_cursor": {
@@ -24131,7 +24131,7 @@
         },
         "description": "The additional data of the list"
       },
-      "DeleteFollowerResponseResponseJson3Data": {
+      "DeleteProductFollower200ResponseData": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -24171,7 +24171,7 @@
           }
         }
       },
-      "GetProductResponseResponseJsonData": {
+      "GetProduct200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -24206,7 +24206,7 @@
             "default": true
           },
           "visible_to": {
-            "$ref": "#/components/schemas/GetProductResponseResponseJsonDataVisibleTo"
+            "$ref": "#/components/schemas/GetProduct200ResponseDataVisibleTo"
           },
           "owner_id": {
             "type": "integer",
@@ -24230,10 +24230,10 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/GetProductResponseResponseJsonDataCustomFields"
+            "$ref": "#/components/schemas/GetProduct200ResponseDataCustomFields"
           },
           "billing_frequency": {
-            "$ref": "#/components/schemas/GetProductResponseResponseJsonDataBillingFrequency"
+            "$ref": "#/components/schemas/GetProduct200ResponseDataBillingFrequency"
           },
           "billing_frequency_cycles": {
             "type": "integer",
@@ -24244,7 +24244,7 @@
           "prices": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetProductResponseResponseJsonDataPricesItem"
+              "$ref": "#/components/schemas/GetProduct200ResponseDataPricesItem"
             },
             "description": "The prices of the product in different currencies"
           }
@@ -24336,7 +24336,7 @@
           }
         }
       },
-      "GetProductResponseResponseJson2Data": {
+      "DuplicateProduct201ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -24371,7 +24371,7 @@
             "default": true
           },
           "visible_to": {
-            "$ref": "#/components/schemas/GetProductResponseResponseJson2DataVisibleTo"
+            "$ref": "#/components/schemas/DuplicateProduct201ResponseDataVisibleTo"
           },
           "owner_id": {
             "type": "integer",
@@ -24395,10 +24395,10 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/GetProductResponseResponseJson2DataCustomFields"
+            "$ref": "#/components/schemas/DuplicateProduct201ResponseDataCustomFields"
           },
           "billing_frequency": {
-            "$ref": "#/components/schemas/GetProductResponseResponseJson2DataBillingFrequency"
+            "$ref": "#/components/schemas/DuplicateProduct201ResponseDataBillingFrequency"
           },
           "billing_frequency_cycles": {
             "type": "integer",
@@ -24409,7 +24409,7 @@
           "prices": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetProductResponseResponseJson2DataPricesItem"
+              "$ref": "#/components/schemas/DuplicateProduct201ResponseDataPricesItem"
             },
             "description": "The prices of the product in different currencies"
           }
@@ -24452,7 +24452,7 @@
       "AddProductVariationRequestPricesItem": {
         "type": "object"
       },
-      "GetProductVariationResponseData": {
+      "AddProductVariation201ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -24470,7 +24470,7 @@
           "prices": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetProductVariationResponseDataPricesItem"
+              "$ref": "#/components/schemas/AddProductVariation201ResponseDataPricesItem"
             },
             "description": "\u0022Array of objects, each containing: product_variation_id (number), currency (string), price (number), cost (number), direct_cost (number) , notes (string)\u0022"
           }
@@ -24479,7 +24479,7 @@
       "UpdateProductVariationRequestPricesItem": {
         "type": "object"
       },
-      "GetProductVariationResponseResponseJsonData": {
+      "UpdateProductVariation200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -24497,7 +24497,7 @@
           "prices": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetProductVariationResponseResponseJsonDataPricesItem"
+              "$ref": "#/components/schemas/UpdateProductVariation200ResponseDataPricesItem"
             },
             "description": "\u0022Array of objects, each containing: product_variation_id (number), currency (string), price (number), cost (number), direct_cost (number) , notes (string)\u0022"
           }
@@ -25048,17 +25048,17 @@
         "nullable": true,
         "example": null
       },
-      "GetConvertResponseResponseJson3Data": {
+      "ConvertLeadToDeal404ResponseData": {
         "type": "object",
         "nullable": true,
         "example": null
       },
-      "GetConvertResponseResponseJson3AdditionalData": {
+      "ConvertLeadToDeal404ResponseAdditionalData": {
         "type": "object",
         "nullable": true,
         "example": null
       },
-      "GetConvertResponseResponseJson4Data": {
+      "GetLeadConversionStatus200ResponseData": {
         "required": [
           "conversion_id",
           "status"
@@ -25080,22 +25080,22 @@
             "format": "uuid"
           },
           "status": {
-            "$ref": "#/components/schemas/GetConvertResponseResponseJson4DataStatus"
+            "$ref": "#/components/schemas/GetLeadConversionStatus200ResponseDataStatus"
           }
         },
         "description": "An object containing conversion status. After successful conversion the converted entity ID is also present."
       },
-      "GetConvertResponseResponseJson4AdditionalData": {
+      "GetLeadConversionStatus200ResponseAdditionalData": {
         "type": "object",
         "nullable": true,
         "example": null
       },
-      "GetConvertResponseResponseJson5Data": {
+      "GetLeadConversionStatus404ResponseData": {
         "type": "object",
         "nullable": true,
         "example": null
       },
-      "GetConvertResponseResponseJson5AdditionalData": {
+      "GetLeadConversionStatus404ResponseAdditionalData": {
         "type": "object",
         "nullable": true,
         "example": null
@@ -25253,7 +25253,7 @@
         },
         "description": "The additional data of the list"
       },
-      "UpsertStageResponseData": {
+      "AddStage200ResponseData": {
         "title": "StageItem",
         "type": "object",
         "properties": {
@@ -25310,7 +25310,7 @@
           }
         }
       },
-      "UpsertStageResponseResponseJsonData": {
+      "GetStage200ResponseData": {
         "title": "StageItem",
         "type": "object",
         "properties": {
@@ -25358,7 +25358,7 @@
         },
         "description": "The stage object"
       },
-      "UpsertStageResponseResponseJson2Data": {
+      "UpdateStage200ResponseData": {
         "title": "StageItem",
         "type": "object",
         "properties": {
@@ -25449,7 +25449,7 @@
         },
         "description": "The additional data of the list"
       },
-      "UpsertPipelineResponseData": {
+      "AddPipeline200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -25492,7 +25492,7 @@
           }
         }
       },
-      "UpsertPipelineResponseResponseJsonData": {
+      "GetPipeline200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -25526,7 +25526,7 @@
         },
         "description": "The pipeline object"
       },
-      "UpsertPipelineResponseResponseJson2Data": {
+      "UpdatePipeline200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -26054,7 +26054,7 @@
         "type": "object",
         "nullable": true
       },
-      "GetProjectsResponseDataItem": {
+      "GetProjects200ResponseDataItem": {
         "title": "Project",
         "type": "object",
         "properties": {
@@ -26147,11 +26147,11 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/GetProjectsResponseDataItemCustomFields"
+            "$ref": "#/components/schemas/GetProjects200ResponseDataItemCustomFields"
           }
         }
       },
-      "GetProjectsResponseAdditionalData": {
+      "GetProjects200ResponseAdditionalData": {
         "type": "object",
         "properties": {
           "next_cursor": {
@@ -26165,7 +26165,7 @@
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertProjectResponseData": {
+      "AddProject201ResponseData": {
         "title": "Project",
         "type": "object",
         "properties": {
@@ -26258,11 +26258,11 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/UpsertProjectResponseDataCustomFields"
+            "$ref": "#/components/schemas/AddProject201ResponseDataCustomFields"
           }
         }
       },
-      "GetProjectsResponseResponseJsonDataItem": {
+      "GetArchivedProjects200ResponseDataItem": {
         "title": "Project",
         "type": "object",
         "properties": {
@@ -26355,11 +26355,11 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/GetProjectsResponseResponseJsonDataItemCustomFields"
+            "$ref": "#/components/schemas/GetArchivedProjects200ResponseDataItemCustomFields"
           }
         }
       },
-      "GetProjectsResponseResponseJsonAdditionalData": {
+      "GetArchivedProjects200ResponseAdditionalData": {
         "type": "object",
         "properties": {
           "next_cursor": {
@@ -26369,7 +26369,7 @@
         },
         "description": "The additional data of the list"
       },
-      "UpsertProjectResponseResponseJsonData": {
+      "GetProject200ResponseData": {
         "title": "Project",
         "type": "object",
         "properties": {
@@ -26462,7 +26462,7 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/UpsertProjectResponseResponseJsonDataCustomFields"
+            "$ref": "#/components/schemas/GetProject200ResponseDataCustomFields"
           }
         }
       },
@@ -26470,7 +26470,7 @@
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertProjectResponseResponseJson2Data": {
+      "UpdateProject200ResponseData": {
         "title": "Project",
         "type": "object",
         "properties": {
@@ -26563,7 +26563,7 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/UpsertProjectResponseResponseJson2DataCustomFields"
+            "$ref": "#/components/schemas/UpdateProject200ResponseDataCustomFields"
           }
         }
       },
@@ -26681,7 +26681,7 @@
         },
         "description": "The additional data of the list"
       },
-      "UpsertProjectResponseResponseJson3Data": {
+      "ArchiveProject200ResponseData": {
         "title": "Project",
         "type": "object",
         "properties": {
@@ -26774,7 +26774,7 @@
             "nullable": true
           },
           "custom_fields": {
-            "$ref": "#/components/schemas/UpsertProjectResponseResponseJson3DataCustomFields"
+            "$ref": "#/components/schemas/ArchiveProject200ResponseDataCustomFields"
           }
         }
       },
@@ -27201,7 +27201,7 @@
         "type": "object",
         "nullable": true
       },
-      "UpsertProjectBoardResponseData": {
+      "AddProjectBoard200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -27226,7 +27226,7 @@
           }
         }
       },
-      "UpsertProjectBoardResponseResponseJsonData": {
+      "GetProjectsBoard200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -27251,7 +27251,7 @@
           }
         }
       },
-      "UpsertProjectBoardResponseResponseJson2Data": {
+      "UpdateProjectBoard200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -27318,7 +27318,7 @@
         "type": "object",
         "nullable": true
       },
-      "UpsertProjectPhaseResponseData": {
+      "AddProjectPhase200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -27347,7 +27347,7 @@
           }
         }
       },
-      "UpsertProjectPhaseResponseResponseJsonData": {
+      "GetProjectsPhase200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -27376,7 +27376,7 @@
           }
         }
       },
-      "UpsertProjectPhaseResponseResponseJson2Data": {
+      "UpdateProjectPhase200ResponseData": {
         "type": "object",
         "properties": {
           "id": {
@@ -27414,7 +27414,7 @@
           }
         }
       },
-      "GetFollowersResponseResponseJson4DataItem": {
+      "GetUserFollowers200ResponseDataItem": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -27427,7 +27427,7 @@
           }
         }
       },
-      "GetFollowersResponseResponseJson4AdditionalData": {
+      "GetUserFollowers200ResponseAdditionalData": {
         "type": "object",
         "properties": {
           "next_cursor": {
@@ -27750,7 +27750,7 @@
           }
         }
       },
-      "UpsertActivityResponseDataLocation": {
+      "AddActivity200ResponseDataLocation": {
         "type": "object",
         "properties": {
           "value": {
@@ -27796,7 +27796,7 @@
         },
         "description": "Location of the activity"
       },
-      "UpsertActivityResponseDataParticipantsItem": {
+      "AddActivity200ResponseDataParticipantsItem": {
         "type": "object",
         "properties": {
           "person_id": {
@@ -27809,7 +27809,7 @@
           }
         }
       },
-      "UpsertActivityResponseDataAttendeesItem": {
+      "AddActivity200ResponseDataAttendeesItem": {
         "type": "object",
         "properties": {
           "email": {
@@ -27838,7 +27838,7 @@
           }
         }
       },
-      "UpsertActivityResponseResponseJsonDataLocation": {
+      "GetActivity200ResponseDataLocation": {
         "type": "object",
         "properties": {
           "value": {
@@ -27884,7 +27884,7 @@
         },
         "description": "Location of the activity"
       },
-      "UpsertActivityResponseResponseJsonDataParticipantsItem": {
+      "GetActivity200ResponseDataParticipantsItem": {
         "type": "object",
         "properties": {
           "person_id": {
@@ -27897,7 +27897,7 @@
           }
         }
       },
-      "UpsertActivityResponseResponseJsonDataAttendeesItem": {
+      "GetActivity200ResponseDataAttendeesItem": {
         "type": "object",
         "properties": {
           "email": {
@@ -27926,7 +27926,7 @@
           }
         }
       },
-      "UpsertActivityResponseResponseJson2DataLocation": {
+      "UpdateActivity200ResponseDataLocation": {
         "type": "object",
         "properties": {
           "value": {
@@ -27972,7 +27972,7 @@
         },
         "description": "Location of the activity"
       },
-      "UpsertActivityResponseResponseJson2DataParticipantsItem": {
+      "UpdateActivity200ResponseDataParticipantsItem": {
         "type": "object",
         "properties": {
           "person_id": {
@@ -27985,7 +27985,7 @@
           }
         }
       },
-      "UpsertActivityResponseResponseJson2DataAttendeesItem": {
+      "UpdateActivity200ResponseDataAttendeesItem": {
         "type": "object",
         "properties": {
           "email": {
@@ -28134,23 +28134,23 @@
         },
         "description": "UI visibility settings (only included when requested via include_fields parameter)"
       },
-      "GetDealsResponseDataItemCustomFields": {
+      "GetDeals200ResponseDataItemCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertDealResponseDataCustomFields": {
+      "AddDeal200ResponseDataCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "GetDealsResponseResponseJsonDataItemCustomFields": {
+      "GetArchivedDeals200ResponseDataItemCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertDealResponseResponseJsonDataCustomFields": {
+      "GetDeal200ResponseDataCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertDealResponseResponseJson2DataCustomFields": {
+      "UpdateDeal200ResponseDataCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
@@ -28745,7 +28745,7 @@
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertPersonResponseDataEmailsItem": {
+      "AddPerson200ResponseDataEmailsItem": {
         "type": "object",
         "properties": {
           "value": {
@@ -28762,7 +28762,7 @@
           }
         }
       },
-      "UpsertPersonResponseDataPhonesItem": {
+      "AddPerson200ResponseDataPhonesItem": {
         "type": "object",
         "properties": {
           "value": {
@@ -28779,7 +28779,7 @@
           }
         }
       },
-      "UpsertPersonResponseDataPostalAddress": {
+      "AddPerson200ResponseDataPostalAddress": {
         "type": "object",
         "properties": {
           "value": {
@@ -28825,7 +28825,7 @@
         },
         "description": "Postal address of the person, included if contact sync is enabled for the company"
       },
-      "UpsertPersonResponseDataImItem": {
+      "AddPerson200ResponseDataImItem": {
         "type": "object",
         "properties": {
           "value": {
@@ -28842,11 +28842,11 @@
           }
         }
       },
-      "UpsertPersonResponseDataCustomFields": {
+      "AddPerson200ResponseDataCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertPersonResponseResponseJsonDataEmailsItem": {
+      "GetPerson200ResponseDataEmailsItem": {
         "type": "object",
         "properties": {
           "value": {
@@ -28863,7 +28863,7 @@
           }
         }
       },
-      "UpsertPersonResponseResponseJsonDataPhonesItem": {
+      "GetPerson200ResponseDataPhonesItem": {
         "type": "object",
         "properties": {
           "value": {
@@ -28880,7 +28880,7 @@
           }
         }
       },
-      "UpsertPersonResponseResponseJsonDataPostalAddress": {
+      "GetPerson200ResponseDataPostalAddress": {
         "type": "object",
         "properties": {
           "value": {
@@ -28926,7 +28926,7 @@
         },
         "description": "Postal address of the person, included if contact sync is enabled for the company"
       },
-      "UpsertPersonResponseResponseJsonDataImItem": {
+      "GetPerson200ResponseDataImItem": {
         "type": "object",
         "properties": {
           "value": {
@@ -28943,11 +28943,11 @@
           }
         }
       },
-      "UpsertPersonResponseResponseJsonDataCustomFields": {
+      "GetPerson200ResponseDataCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertPersonResponseResponseJson2DataEmailsItem": {
+      "UpdatePerson200ResponseDataEmailsItem": {
         "type": "object",
         "properties": {
           "value": {
@@ -28964,7 +28964,7 @@
           }
         }
       },
-      "UpsertPersonResponseResponseJson2DataPhonesItem": {
+      "UpdatePerson200ResponseDataPhonesItem": {
         "type": "object",
         "properties": {
           "value": {
@@ -28981,7 +28981,7 @@
           }
         }
       },
-      "UpsertPersonResponseResponseJson2DataPostalAddress": {
+      "UpdatePerson200ResponseDataPostalAddress": {
         "type": "object",
         "properties": {
           "value": {
@@ -29027,7 +29027,7 @@
         },
         "description": "Postal address of the person, included if contact sync is enabled for the company"
       },
-      "UpsertPersonResponseResponseJson2DataImItem": {
+      "UpdatePerson200ResponseDataImItem": {
         "type": "object",
         "properties": {
           "value": {
@@ -29044,7 +29044,7 @@
           }
         }
       },
-      "UpsertPersonResponseResponseJson2DataCustomFields": {
+      "UpdatePerson200ResponseDataCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
@@ -29513,7 +29513,7 @@
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertOrganizationResponseDataAddress": {
+      "AddOrganization200ResponseDataAddress": {
         "title": "OrganizationItemAddress",
         "type": "object",
         "properties": {
@@ -29560,11 +29560,11 @@
         },
         "description": "The address of the organization"
       },
-      "UpsertOrganizationResponseDataCustomFields": {
+      "AddOrganization200ResponseDataCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertOrganizationResponseResponseJsonDataAddress": {
+      "GetOrganization200ResponseDataAddress": {
         "title": "OrganizationItemAddress",
         "type": "object",
         "properties": {
@@ -29611,11 +29611,11 @@
         },
         "description": "The address of the organization"
       },
-      "UpsertOrganizationResponseResponseJsonDataCustomFields": {
+      "GetOrganization200ResponseDataCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertOrganizationResponseResponseJson2DataAddress": {
+      "UpdateOrganization200ResponseDataAddress": {
         "title": "OrganizationItemAddress",
         "type": "object",
         "properties": {
@@ -29662,7 +29662,7 @@
         },
         "description": "The address of the organization"
       },
-      "UpsertOrganizationResponseResponseJson2DataCustomFields": {
+      "UpdateOrganization200ResponseDataCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
@@ -30194,11 +30194,11 @@
           }
         }
       },
-      "GetProductResponseDataCustomFields": {
+      "AddProduct201ResponseDataCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "GetProductResponseDataPricesItem": {
+      "AddProduct201ResponseDataPricesItem": {
         "type": "object",
         "properties": {
           "product_id": {
@@ -30240,11 +30240,11 @@
           }
         }
       },
-      "GetProductResponseResponseJsonDataCustomFields": {
+      "GetProduct200ResponseDataCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "GetProductResponseResponseJsonDataPricesItem": {
+      "GetProduct200ResponseDataPricesItem": {
         "type": "object",
         "properties": {
           "product_id": {
@@ -30308,11 +30308,11 @@
           }
         }
       },
-      "GetProductResponseResponseJson2DataCustomFields": {
+      "DuplicateProduct201ResponseDataCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "GetProductResponseResponseJson2DataPricesItem": {
+      "DuplicateProduct201ResponseDataPricesItem": {
         "type": "object",
         "properties": {
           "product_id": {
@@ -30345,10 +30345,10 @@
       "GetProductVariationsResponseDataItemPricesItem": {
         "type": "object"
       },
-      "GetProductVariationResponseDataPricesItem": {
+      "AddProductVariation201ResponseDataPricesItem": {
         "type": "object"
       },
-      "GetProductVariationResponseResponseJsonDataPricesItem": {
+      "UpdateProductVariation200ResponseDataPricesItem": {
         "type": "object"
       },
       "GetProductFields200ResponseDataItemOptionsItem": {
@@ -31018,23 +31018,23 @@
       "DeleteProjectField200ResponseDataSubfieldsItem": {
         "type": "object"
       },
-      "GetProjectsResponseDataItemCustomFields": {
+      "GetProjects200ResponseDataItemCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertProjectResponseDataCustomFields": {
+      "AddProject201ResponseDataCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "GetProjectsResponseResponseJsonDataItemCustomFields": {
+      "GetArchivedProjects200ResponseDataItemCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertProjectResponseResponseJsonDataCustomFields": {
+      "GetProject200ResponseDataCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
-      "UpsertProjectResponseResponseJson2DataCustomFields": {
+      "UpdateProject200ResponseDataCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
@@ -31050,7 +31050,7 @@
           }
         }
       },
-      "UpsertProjectResponseResponseJson3DataCustomFields": {
+      "ArchiveProject200ResponseDataCustomFields": {
         "type": "object",
         "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
@@ -33155,7 +33155,7 @@
           ]
         }
       },
-      "GetDealsProductsResponseDataItemDiscountType": {
+      "GetDealsProducts200ResponseDataItemDiscountType": {
         "enum": [
           "percentage",
           "amount"
@@ -33164,7 +33164,7 @@
         "additionalProperties": false,
         "description": "The type of the discount\u0027s value",
         "x-ms-enum": {
-          "name": "GetDealsProductsResponseDataItemDiscountType",
+          "name": "GetDealsProducts200ResponseDataItemDiscountType",
           "modelAsString": false,
           "values": [
             {
@@ -33178,7 +33178,7 @@
           ]
         }
       },
-      "GetDealsProductsResponseDataItemTaxMethod": {
+      "GetDealsProducts200ResponseDataItemTaxMethod": {
         "enum": [
           "exclusive",
           "inclusive",
@@ -33188,7 +33188,7 @@
         "additionalProperties": false,
         "description": "The tax option to be applied to the products. When using \u0060inclusive\u0060, the tax percentage will already be included in the price. When using \u0060exclusive\u0060, the tax will not be included in the price. When using \u0060none\u0060, no tax will be added. Use the \u0060tax\u0060 field for defining the tax percentage amount. By default, the user setting value for tax options will be used. Changing this in one product affects the rest of the products attached to the deal",
         "x-ms-enum": {
-          "name": "GetDealsProductsResponseDataItemTaxMethod",
+          "name": "GetDealsProducts200ResponseDataItemTaxMethod",
           "modelAsString": false,
           "values": [
             {
@@ -33206,7 +33206,7 @@
           ]
         }
       },
-      "GetDealsProductsResponseDataItemBillingFrequency": {
+      "GetDealsProducts200ResponseDataItemBillingFrequency": {
         "enum": [
           "one-time",
           "annually",
@@ -33219,7 +33219,7 @@
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
         "x-ms-enum": {
-          "name": "GetDealsProductsResponseDataItemBillingFrequency",
+          "name": "GetDealsProducts200ResponseDataItemBillingFrequency",
           "modelAsString": false,
           "values": [
             {
@@ -33249,7 +33249,7 @@
           ]
         }
       },
-      "GetDealsProductsResponseResponseJsonDataItemDiscountType": {
+      "GetDealProducts200ResponseDataItemDiscountType": {
         "enum": [
           "percentage",
           "amount"
@@ -33258,7 +33258,7 @@
         "additionalProperties": false,
         "description": "The type of the discount\u0027s value",
         "x-ms-enum": {
-          "name": "GetDealsProductsResponseResponseJsonDataItemDiscountType",
+          "name": "GetDealProducts200ResponseDataItemDiscountType",
           "modelAsString": false,
           "values": [
             {
@@ -33272,7 +33272,7 @@
           ]
         }
       },
-      "GetDealsProductsResponseResponseJsonDataItemTaxMethod": {
+      "GetDealProducts200ResponseDataItemTaxMethod": {
         "enum": [
           "exclusive",
           "inclusive",
@@ -33282,7 +33282,7 @@
         "additionalProperties": false,
         "description": "The tax option to be applied to the products. When using \u0060inclusive\u0060, the tax percentage will already be included in the price. When using \u0060exclusive\u0060, the tax will not be included in the price. When using \u0060none\u0060, no tax will be added. Use the \u0060tax\u0060 field for defining the tax percentage amount. By default, the user setting value for tax options will be used. Changing this in one product affects the rest of the products attached to the deal",
         "x-ms-enum": {
-          "name": "GetDealsProductsResponseResponseJsonDataItemTaxMethod",
+          "name": "GetDealProducts200ResponseDataItemTaxMethod",
           "modelAsString": false,
           "values": [
             {
@@ -33300,7 +33300,7 @@
           ]
         }
       },
-      "GetDealsProductsResponseResponseJsonDataItemBillingFrequency": {
+      "GetDealProducts200ResponseDataItemBillingFrequency": {
         "enum": [
           "one-time",
           "annually",
@@ -33313,7 +33313,7 @@
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
         "x-ms-enum": {
-          "name": "GetDealsProductsResponseResponseJsonDataItemBillingFrequency",
+          "name": "GetDealProducts200ResponseDataItemBillingFrequency",
           "modelAsString": false,
           "values": [
             {
@@ -33343,7 +33343,7 @@
           ]
         }
       },
-      "AddDealProductResponseDataDiscountType": {
+      "AddDealProduct201ResponseDataDiscountType": {
         "enum": [
           "percentage",
           "amount"
@@ -33352,7 +33352,7 @@
         "additionalProperties": false,
         "description": "The type of the discount\u0027s value",
         "x-ms-enum": {
-          "name": "AddDealProductResponseDataDiscountType",
+          "name": "AddDealProduct201ResponseDataDiscountType",
           "modelAsString": false,
           "values": [
             {
@@ -33366,7 +33366,7 @@
           ]
         }
       },
-      "AddDealProductResponseDataTaxMethod": {
+      "AddDealProduct201ResponseDataTaxMethod": {
         "enum": [
           "exclusive",
           "inclusive",
@@ -33376,7 +33376,7 @@
         "additionalProperties": false,
         "description": "The tax option to be applied to the products. When using \u0060inclusive\u0060, the tax percentage will already be included in the price. When using \u0060exclusive\u0060, the tax will not be included in the price. When using \u0060none\u0060, no tax will be added. Use the \u0060tax\u0060 field for defining the tax percentage amount. By default, the user setting value for tax options will be used. Changing this in one product affects the rest of the products attached to the deal",
         "x-ms-enum": {
-          "name": "AddDealProductResponseDataTaxMethod",
+          "name": "AddDealProduct201ResponseDataTaxMethod",
           "modelAsString": false,
           "values": [
             {
@@ -33394,7 +33394,7 @@
           ]
         }
       },
-      "AddDealProductResponseDataBillingFrequency": {
+      "AddDealProduct201ResponseDataBillingFrequency": {
         "enum": [
           "one-time",
           "annually",
@@ -33407,7 +33407,7 @@
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
         "x-ms-enum": {
-          "name": "AddDealProductResponseDataBillingFrequency",
+          "name": "AddDealProduct201ResponseDataBillingFrequency",
           "modelAsString": false,
           "values": [
             {
@@ -33437,7 +33437,7 @@
           ]
         }
       },
-      "AddDealProductResponseResponseJsonDataDiscountType": {
+      "UpdateDealProduct200ResponseDataDiscountType": {
         "enum": [
           "percentage",
           "amount"
@@ -33446,7 +33446,7 @@
         "additionalProperties": false,
         "description": "The type of the discount\u0027s value",
         "x-ms-enum": {
-          "name": "AddDealProductResponseResponseJsonDataDiscountType",
+          "name": "UpdateDealProduct200ResponseDataDiscountType",
           "modelAsString": false,
           "values": [
             {
@@ -33460,7 +33460,7 @@
           ]
         }
       },
-      "AddDealProductResponseResponseJsonDataTaxMethod": {
+      "UpdateDealProduct200ResponseDataTaxMethod": {
         "enum": [
           "exclusive",
           "inclusive",
@@ -33470,7 +33470,7 @@
         "additionalProperties": false,
         "description": "The tax option to be applied to the products. When using \u0060inclusive\u0060, the tax percentage will already be included in the price. When using \u0060exclusive\u0060, the tax will not be included in the price. When using \u0060none\u0060, no tax will be added. Use the \u0060tax\u0060 field for defining the tax percentage amount. By default, the user setting value for tax options will be used. Changing this in one product affects the rest of the products attached to the deal",
         "x-ms-enum": {
-          "name": "AddDealProductResponseResponseJsonDataTaxMethod",
+          "name": "UpdateDealProduct200ResponseDataTaxMethod",
           "modelAsString": false,
           "values": [
             {
@@ -33488,7 +33488,7 @@
           ]
         }
       },
-      "AddDealProductResponseResponseJsonDataBillingFrequency": {
+      "UpdateDealProduct200ResponseDataBillingFrequency": {
         "enum": [
           "one-time",
           "annually",
@@ -33501,7 +33501,7 @@
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
         "x-ms-enum": {
-          "name": "AddDealProductResponseResponseJsonDataBillingFrequency",
+          "name": "UpdateDealProduct200ResponseDataBillingFrequency",
           "modelAsString": false,
           "values": [
             {
@@ -34500,7 +34500,7 @@
           ]
         }
       },
-      "GetConvertResponseResponseJsonDataStatus": {
+      "GetDealConversionStatus200ResponseDataStatus": {
         "enum": [
           "not_started",
           "running",
@@ -34512,7 +34512,7 @@
         "additionalProperties": false,
         "description": "Status of the conversion job.",
         "x-ms-enum": {
-          "name": "GetConvertResponseResponseJsonDataStatus",
+          "name": "GetDealConversionStatus200ResponseDataStatus",
           "modelAsString": false,
           "values": [
             {
@@ -36016,7 +36016,7 @@
           ]
         }
       },
-      "GetProductResponseDataVisibleTo": {
+      "AddProduct201ResponseDataVisibleTo": {
         "enum": [
           1,
           3,
@@ -36027,7 +36027,7 @@
         "additionalProperties": false,
         "description": "Visibility of the product"
       },
-      "GetProductResponseDataBillingFrequency": {
+      "AddProduct201ResponseDataBillingFrequency": {
         "enum": [
           "one-time",
           "annually",
@@ -36040,7 +36040,7 @@
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n",
         "x-ms-enum": {
-          "name": "GetProductResponseDataBillingFrequency",
+          "name": "AddProduct201ResponseDataBillingFrequency",
           "modelAsString": false,
           "values": [
             {
@@ -36070,7 +36070,7 @@
           ]
         }
       },
-      "GetProductResponseResponseJsonDataVisibleTo": {
+      "GetProduct200ResponseDataVisibleTo": {
         "enum": [
           1,
           3,
@@ -36081,7 +36081,7 @@
         "additionalProperties": false,
         "description": "Visibility of the product"
       },
-      "GetProductResponseResponseJsonDataBillingFrequency": {
+      "GetProduct200ResponseDataBillingFrequency": {
         "enum": [
           "one-time",
           "annually",
@@ -36094,7 +36094,7 @@
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n",
         "x-ms-enum": {
-          "name": "GetProductResponseResponseJsonDataBillingFrequency",
+          "name": "GetProduct200ResponseDataBillingFrequency",
           "modelAsString": false,
           "values": [
             {
@@ -36178,7 +36178,7 @@
           ]
         }
       },
-      "GetProductResponseResponseJson2DataVisibleTo": {
+      "DuplicateProduct201ResponseDataVisibleTo": {
         "enum": [
           1,
           3,
@@ -36189,7 +36189,7 @@
         "additionalProperties": false,
         "description": "Visibility of the product"
       },
-      "GetProductResponseResponseJson2DataBillingFrequency": {
+      "DuplicateProduct201ResponseDataBillingFrequency": {
         "enum": [
           "one-time",
           "annually",
@@ -36202,7 +36202,7 @@
         "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n",
         "x-ms-enum": {
-          "name": "GetProductResponseResponseJson2DataBillingFrequency",
+          "name": "DuplicateProduct201ResponseDataBillingFrequency",
           "modelAsString": false,
           "values": [
             {
@@ -36944,7 +36944,7 @@
           ]
         }
       },
-      "GetConvertResponseResponseJson4DataStatus": {
+      "GetLeadConversionStatus200ResponseDataStatus": {
         "enum": [
           "not_started",
           "running",
@@ -36956,7 +36956,7 @@
         "additionalProperties": false,
         "description": "Status of the conversion job.",
         "x-ms-enum": {
-          "name": "GetConvertResponseResponseJson4DataStatus",
+          "name": "GetLeadConversionStatus200ResponseDataStatus",
           "modelAsString": false,
           "values": [
             {
