@@ -22,6 +22,14 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #else
         public string AddTime { get; set; }
 #endif
+        /// <summary>The birthday of the person, included if contact sync is enabled for the company</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Birthday { get; set; }
+#nullable restore
+#else
+        public string Birthday { get; set; }
+#endif
         /// <summary>An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -37,6 +45,22 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #nullable restore
 #else
         public List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestEmailsItem> Emails { get; set; }
+#endif
+        /// <summary>The instant messaging accounts of the person, included if contact sync is enabled for the company</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestImItem>? Im { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestImItem> Im { get; set; }
+#endif
+        /// <summary>The job title of the person, included if contact sync is enabled for the company</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? JobTitle { get; set; }
+#nullable restore
+#else
+        public string JobTitle { get; set; }
 #endif
         /// <summary>The IDs of labels assigned to the person</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,6 +80,14 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
+        /// <summary>Contact sync notes of the person, maximum 10 000 characters, included if contact sync is enabled for the company</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Notes { get; set; }
+#nullable restore
+#else
+        public string Notes { get; set; }
+#endif
         /// <summary>The ID of the organization linked to the person</summary>
         public int? OrgId { get; set; }
         /// <summary>The ID of the user who owns the person</summary>
@@ -68,13 +100,13 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #else
         public List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestPhonesItem> Phones { get; set; }
 #endif
-        /// <summary>The last updated date and time of the person</summary>
+        /// <summary>Postal address of the person, included if contact sync is enabled for the company</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdateTime { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestPostalAddress? PostalAddress { get; set; }
 #nullable restore
 #else
-        public string UpdateTime { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestPostalAddress PostalAddress { get; set; }
 #endif
         /// <summary>The visibility of the person</summary>
         public int? VisibleTo { get; set; }
@@ -104,15 +136,19 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "add_time", n => { AddTime = n.GetStringValue(); } },
+                { "birthday", n => { Birthday = n.GetStringValue(); } },
                 { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestCustomFields>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestCustomFields.CreateFromDiscriminatorValue); } },
                 { "emails", n => { Emails = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestEmailsItem>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestEmailsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "im", n => { Im = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestImItem>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestImItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "job_title", n => { JobTitle = n.GetStringValue(); } },
                 { "label_ids", n => { LabelIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "marketing_status", n => { MarketingStatus = n.GetEnumValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestMarketingStatus>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "notes", n => { Notes = n.GetStringValue(); } },
                 { "org_id", n => { OrgId = n.GetIntValue(); } },
                 { "owner_id", n => { OwnerId = n.GetIntValue(); } },
                 { "phones", n => { Phones = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestPhonesItem>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestPhonesItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "update_time", n => { UpdateTime = n.GetStringValue(); } },
+                { "postal_address", n => { PostalAddress = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestPostalAddress>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestPostalAddress.CreateFromDiscriminatorValue); } },
                 { "visible_to", n => { VisibleTo = n.GetIntValue(); } },
             };
         }
@@ -124,15 +160,19 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("add_time", AddTime);
+            writer.WriteStringValue("birthday", Birthday);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestCustomFields>("custom_fields", CustomFields);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestEmailsItem>("emails", Emails);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestImItem>("im", Im);
+            writer.WriteStringValue("job_title", JobTitle);
             writer.WriteCollectionOfPrimitiveValues<int?>("label_ids", LabelIds);
             writer.WriteEnumValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestMarketingStatus>("marketing_status", MarketingStatus);
             writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("notes", Notes);
             writer.WriteIntValue("org_id", OrgId);
             writer.WriteIntValue("owner_id", OwnerId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestPhonesItem>("phones", Phones);
-            writer.WriteStringValue("update_time", UpdateTime);
+            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestPostalAddress>("postal_address", PostalAddress);
             writer.WriteIntValue("visible_to", VisibleTo);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -82,7 +82,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetPerson200Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetPerson200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates the properties of a person. &lt;br&gt;If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field.
+        /// Updates the properties of a person. &lt;br&gt;If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field. &lt;br&gt;The `im`, `postal_address`, `notes`, `birthday` and `job_title` fields don’t exist by default in Pipedrive and are only created when you set up your contact sync.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePerson200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -140,7 +140,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item
             return requestInfo;
         }
         /// <summary>
-        /// Updates the properties of a person. &lt;br&gt;If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field.
+        /// Updates the properties of a person. &lt;br&gt;If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field. &lt;br&gt;The `im`, `postal_address`, `notes`, `birthday` and `job_title` fields don’t exist by default in Pipedrive and are only created when you set up your contact sync.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
