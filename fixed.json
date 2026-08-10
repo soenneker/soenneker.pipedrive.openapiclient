@@ -180,9 +180,9 @@
                         "locality": "Sunnyvale",
                         "sublocality": "Downtown",
                         "route": "Main St",
-                        "street_number": 123,
+                        "street_number": "123",
                         "subpremise": "Apt 1",
-                        "postal_code": 94085
+                        "postal_code": "94085"
                       },
                       "participants": [
                         {
@@ -282,9 +282,9 @@
                       "locality": "Sunnyvale",
                       "sublocality": "Downtown",
                       "route": "Main St",
-                      "street_number": 123,
+                      "street_number": "123",
                       "subpremise": "Apt 1",
-                      "postal_code": 94085
+                      "postal_code": "94085"
                     },
                     "participants": [
                       {
@@ -438,9 +438,9 @@
                       "locality": "Sunnyvale",
                       "sublocality": "Downtown",
                       "route": "Main St",
-                      "street_number": 123,
+                      "street_number": "123",
                       "subpremise": "Apt 1",
-                      "postal_code": 94085
+                      "postal_code": "94085"
                     },
                     "participants": [
                       {
@@ -547,9 +547,9 @@
                       "locality": "Sunnyvale",
                       "sublocality": "Downtown",
                       "route": "Main St",
-                      "street_number": 123,
+                      "street_number": "123",
                       "subpremise": "Apt 1",
-                      "postal_code": 94085
+                      "postal_code": "94085"
                     },
                     "participants": [
                       {
@@ -4216,12 +4216,12 @@
                       ],
                       "phones": [
                         {
-                          "value": 12345,
+                          "value": "12345",
                           "primary": true,
                           "label": "work"
                         },
                         {
-                          "value": 54321,
+                          "value": "54321",
                           "primary": false,
                           "label": "home"
                         }
@@ -4258,9 +4258,9 @@
                         "locality": "Sunnyvale",
                         "sublocality": "Downtown",
                         "route": "Main St",
-                        "street_number": 123,
+                        "street_number": "123",
                         "subpremise": "Apt 1",
-                        "postal_code": 94085
+                        "postal_code": "94085"
                       }
                     }
                   ],
@@ -4333,12 +4333,12 @@
                     ],
                     "phones": [
                       {
-                        "value": 12345,
+                        "value": "12345",
                         "primary": true,
                         "label": "work"
                       },
                       {
-                        "value": 54321,
+                        "value": "54321",
                         "primary": false,
                         "label": "home"
                       }
@@ -4375,9 +4375,9 @@
                       "locality": "Sunnyvale",
                       "sublocality": "Downtown",
                       "route": "Main St",
-                      "street_number": 123,
+                      "street_number": "123",
                       "subpremise": "Apt 1",
-                      "postal_code": 94085
+                      "postal_code": "94085"
                     }
                   }
                 }
@@ -4528,12 +4528,12 @@
                     ],
                     "phones": [
                       {
-                        "value": 12345,
+                        "value": "12345",
                         "primary": true,
                         "label": "work"
                       },
                       {
-                        "value": 54321,
+                        "value": "54321",
                         "primary": false,
                         "label": "home"
                       }
@@ -4570,9 +4570,9 @@
                       "locality": "Sunnyvale",
                       "sublocality": "Downtown",
                       "route": "Main St",
-                      "street_number": 123,
+                      "street_number": "123",
                       "subpremise": "Apt 1",
-                      "postal_code": 94085
+                      "postal_code": "94085"
                     }
                   }
                 }
@@ -4652,12 +4652,12 @@
                     ],
                     "phones": [
                       {
-                        "value": 12345,
+                        "value": "12345",
                         "primary": true,
                         "label": "work"
                       },
                       {
-                        "value": 54321,
+                        "value": "54321",
                         "primary": false,
                         "label": "home"
                       }
@@ -4694,9 +4694,9 @@
                       "locality": "Sunnyvale",
                       "sublocality": "Downtown",
                       "route": "Main St",
-                      "street_number": 123,
+                      "street_number": "123",
                       "subpremise": "Apt 1",
-                      "postal_code": 94085
+                      "postal_code": "94085"
                     }
                   }
                 }
@@ -5819,9 +5819,9 @@
                         "locality": "Sunnyvale",
                         "sublocality": "Downtown",
                         "route": "Main St",
-                        "street_number": 123,
+                        "street_number": "123",
                         "subpremise": "123A",
-                        "postal_code": 94085
+                        "postal_code": "94085"
                       },
                       "is_deleted": false,
                       "visible_to": 7,
@@ -5899,9 +5899,9 @@
                       "locality": "Sunnyvale",
                       "sublocality": "Downtown",
                       "route": "Main St",
-                      "street_number": 123,
+                      "street_number": "123",
                       "subpremise": "123A",
-                      "postal_code": 94085
+                      "postal_code": "94085"
                     },
                     "is_deleted": false,
                     "visible_to": 7,
@@ -6057,9 +6057,9 @@
                       "locality": "Sunnyvale",
                       "sublocality": "Downtown",
                       "route": "Main St",
-                      "street_number": 123,
+                      "street_number": "123",
                       "subpremise": "123A",
-                      "postal_code": 94085
+                      "postal_code": "94085"
                     },
                     "is_deleted": false,
                     "visible_to": 7,
@@ -6144,9 +6144,9 @@
                       "locality": "Sunnyvale",
                       "sublocality": "Downtown",
                       "route": "Main St",
-                      "street_number": 123,
+                      "street_number": "123",
                       "subpremise": "123A",
-                      "postal_code": 94085
+                      "postal_code": "94085"
                     },
                     "is_deleted": false,
                     "visible_to": 7,
@@ -8443,7 +8443,7 @@
                   "data": {
                     "id": 1,
                     "product_id": 1,
-                    "company_id": 1,
+                    "company_id": "1",
                     "public_url": "http://my-server.com/images/b0369d1d-6b6a-4293-88b9-e2924782d47e.png",
                     "add_time": "2025-03-10",
                     "mime_type": "image/png",
@@ -8506,7 +8506,7 @@
                   "data": {
                     "id": 1,
                     "product_id": 1,
-                    "company_id": 1,
+                    "company_id": "1",
                     "add_time": "2025-03-10"
                   }
                 }
@@ -8565,7 +8565,7 @@
                   "data": {
                     "id": 1,
                     "product_id": 1,
-                    "company_id": 1,
+                    "company_id": "1",
                     "add_time": "2025-03-10"
                   }
                 }
@@ -9890,9 +9890,9 @@
                           "type": "person",
                           "name": "Sample Person",
                           "phones": [
-                            555123123,
+                            "555123123",
                             "\u002B372 (55) 123468",
-                            231632772
+                            "0231632772"
                           ],
                           "emails": [
                             "primary@email.com",
