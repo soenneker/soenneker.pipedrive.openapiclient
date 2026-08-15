@@ -22,7 +22,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>&quot;Array of objects, each containing: currency (string), price (number), cost (number, optional), direct_cost (number, optional), notes (string, optional). When prices is omitted altogether, a default price of 0, a default cost of 0, a default direct_cost of 0 and the user&apos;s default currency will be assigned.&quot;</summary>
+        /// <summary>Array of objects, each containing: currency (string), price (number), cost (number, optional), direct_cost (number, optional), notes (string, optional). When prices is omitted altogether, a default price of 0, a default cost of 0, a default direct_cost of 0 and the user&apos;s default currency will be assigned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductVariationRequestPricesItem>? Prices { get; set; }

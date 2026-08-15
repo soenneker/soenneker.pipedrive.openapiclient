@@ -171,7 +171,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities
 #endif
             /// <summary>Optional comma separated string array of additional fields to include</summary>
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivitiesIncludeFieldsParameter? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.AttendeesIncludeFields? IncludeFields { get; set; }
             /// <summary>If supplied, only activities linked to the specified lead are returned. If filter_id is provided, this is ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -194,10 +194,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities
             /// <summary>If supplied, only activities whose primary participant is the given person are returned. If filter_id is provided, this is ignored.</summary>
             [QueryParameter("person_id")]
             public int? PersonId { get; set; }
-            /// <summary>&quot;The field to sort by. Supported fields: `id`, `update_time`, `add_time`, `due_date`.&quot;</summary>
+            /// <summary>The field to sort by. Supported fields: `id`, `update_time`, `add_time`, `due_date`.</summary>
             [QueryParameter("sort_by")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivitiesSortByParameter? SortBy { get; set; }
-            /// <summary>&quot;The sorting direction. Supported values: `asc`, `desc`.&quot;</summary>
+            /// <summary>The sorting direction. Supported values: `asc`, `desc`.</summary>
             [QueryParameter("sort_direction")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivitiesSortDirectionParameter? SortDirection { get; set; }
             /// <summary>If set, only activities with an `update_time` later than or equal to this time are returned. In RFC3339 format, e.g. 2025-01-01T10:20:00Z.</summary>

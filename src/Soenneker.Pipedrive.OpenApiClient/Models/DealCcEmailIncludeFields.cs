@@ -5,12 +5,12 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum GetActivityIncludeFieldsParameter
+    public enum DealCcEmailIncludeFields
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "attendees")]
+        [EnumMember(Value = "deal.cc_email")]
         #pragma warning disable CS1591
-        Attendees,
+        DealCcEmail,
         #pragma warning restore CS1591
     }
 }

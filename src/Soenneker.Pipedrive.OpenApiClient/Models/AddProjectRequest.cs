@@ -41,7 +41,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>&quot;The end date of the project. Format: YYYY-MM-DD&quot;</summary>
+        /// <summary>The end date of the project. Format: YYYY-MM-DD</summary>
         public Date? EndDate { get; set; }
         /// <summary>The health status of the project</summary>
         public int? HealthStatus { get; set; }
@@ -73,7 +73,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #endif
         /// <summary>The ID of the phase this project is associated with</summary>
         public int? PhaseId { get; set; }
-        /// <summary>&quot;The start date of the project. Format: YYYY-MM-DD&quot;</summary>
+        /// <summary>The start date of the project. Format: YYYY-MM-DD</summary>
         public Date? StartDate { get; set; }
         /// <summary>The status of the project</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

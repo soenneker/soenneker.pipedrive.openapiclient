@@ -98,12 +98,12 @@ namespace Soenneker.Pipedrive.OpenApiClient.Products.Search
             /// <summary>When enabled, only full exact matches against the given term are returned. It is &lt;b&gt;not&lt;/b&gt; case sensitive.</summary>
             [QueryParameter("exact_match")]
             public bool? ExactMatch { get; set; }
-            /// <summary>&quot;A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: `address`, `varchar`, `text`, `varchar_auto`, `double`, `monetary` and `phone`. Read more about searching by custom fields &lt;a href=\&quot;https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\&quot; target=\&quot;_blank\&quot; rel=\&quot;noopener noreferrer\&quot;&gt;here&lt;/a&gt;.&quot;</summary>
+            /// <summary>A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: `address`, `varchar`, `text`, `varchar_auto`, `double`, `monetary` and `phone`. Read more about searching by custom fields &lt;a href=&quot;https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;here&lt;/a&gt;.</summary>
             [QueryParameter("fields")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchProductsFieldsParameter? Fields { get; set; }
             /// <summary>Supports including optional fields in the results which are not provided by default</summary>
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchProductsIncludeFieldsParameter? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.ProductPriceIncludeFields? IncludeFields { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }

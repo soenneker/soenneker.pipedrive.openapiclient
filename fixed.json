@@ -102,7 +102,7 @@
           {
             "name": "sort_by",
             "in": "query",
-            "description": "\u0022The field to sort by. Supported fields: \u0060id\u0060, \u0060update_time\u0060, \u0060add_time\u0060, \u0060due_date\u0060.\u0022",
+            "description": "The field to sort by. Supported fields: \u0060id\u0060, \u0060update_time\u0060, \u0060add_time\u0060, \u0060due_date\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetActivitiesSortByParameter"
             }
@@ -110,7 +110,7 @@
           {
             "name": "sort_direction",
             "in": "query",
-            "description": "\u0022The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.\u0022",
+            "description": "The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetActivitiesSortDirectionParameter"
             }
@@ -120,7 +120,7 @@
             "in": "query",
             "description": "Optional comma separated string array of additional fields to include",
             "schema": {
-              "$ref": "#/components/schemas/GetActivitiesIncludeFieldsParameter"
+              "$ref": "#/components/schemas/AttendeesIncludeFields"
             }
           },
           {
@@ -396,7 +396,7 @@
             "in": "query",
             "description": "Optional comma separated string array of additional fields to include",
             "schema": {
-              "$ref": "#/components/schemas/GetActivityIncludeFieldsParameter"
+              "$ref": "#/components/schemas/AttendeesIncludeFields"
             }
           }
         ],
@@ -605,7 +605,7 @@
             "in": "query",
             "description": "Optional comma separated string array of additional data namespaces to include in response",
             "schema": {
-              "$ref": "#/components/schemas/GetActivityFieldsIncludeFieldsParameter"
+              "$ref": "#/components/schemas/UiVisibilityIncludeFields"
             }
           },
           {
@@ -787,7 +787,7 @@
             "in": "query",
             "description": "Optional comma separated string array of additional data namespaces to include in response",
             "schema": {
-              "$ref": "#/components/schemas/GetActivityFieldIncludeFieldsParameter"
+              "$ref": "#/components/schemas/UiVisibilityIncludeFields"
             }
           }
         ],
@@ -924,7 +924,7 @@
           {
             "name": "sort_by",
             "in": "query",
-            "description": "\u0022The field to sort by. Supported fields: \u0060id\u0060, \u0060update_time\u0060, \u0060add_time\u0060.\u0022",
+            "description": "The field to sort by. Supported fields: \u0060id\u0060, \u0060update_time\u0060, \u0060add_time\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetDealsSortByParameter"
             }
@@ -932,7 +932,7 @@
           {
             "name": "sort_direction",
             "in": "query",
-            "description": "\u0022The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.\u0022",
+            "description": "The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetDealsSortDirectionParameter"
             }
@@ -956,7 +956,7 @@
           {
             "name": "include_option_labels",
             "in": "query",
-            "description": "\u0022When provided with a \u0027true\u0027 value, single option and multiple option custom fields values contain objects in the form of \u0027{ id: number, label: string }\u0027 instead of plain id\u0022",
+            "description": "When provided with a \u0027true\u0027 value, single option and multiple option custom fields values contain objects in the form of \u0027{ id: number, label: string }\u0027 instead of plain id",
             "schema": {
               "type": "boolean"
             }
@@ -964,7 +964,7 @@
           {
             "name": "include_labels",
             "in": "query",
-            "description": "\u0022When provided with \u0027true\u0027 value, response will include an array of label objects in the form of \u0027{ id: number, label: string }\u0027\u0022",
+            "description": "When provided with \u0027true\u0027 value, response will include an array of label objects in the form of \u0027{ id: number, label: string }\u0027",
             "schema": {
               "type": "boolean"
             }
@@ -1240,7 +1240,7 @@
           {
             "name": "sort_by",
             "in": "query",
-            "description": "\u0022The field to sort by. Supported fields: \u0060id\u0060, \u0060update_time\u0060, \u0060add_time\u0060.\u0022",
+            "description": "The field to sort by. Supported fields: \u0060id\u0060, \u0060update_time\u0060, \u0060add_time\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetArchivedDealsSortByParameter"
             }
@@ -1248,7 +1248,7 @@
           {
             "name": "sort_direction",
             "in": "query",
-            "description": "\u0022The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.\u0022",
+            "description": "The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetArchivedDealsSortDirectionParameter"
             }
@@ -1447,7 +1447,7 @@
           {
             "name": "include_option_labels",
             "in": "query",
-            "description": "\u0022When provided with a \u0027true\u0027 value, single option and multiple option custom fields values contain objects in the form of \u0027{ id: number, label: string }\u0027 instead of plain id\u0022",
+            "description": "When provided with a \u0027true\u0027 value, single option and multiple option custom fields values contain objects in the form of \u0027{ id: number, label: string }\u0027 instead of plain id",
             "schema": {
               "type": "boolean"
             }
@@ -1455,7 +1455,7 @@
           {
             "name": "include_labels",
             "in": "query",
-            "description": "\u0022When provided with \u0027true\u0027 value, response will include an array of label objects in the form of \u0027{ id: number, label: string }\u0027\u0022",
+            "description": "When provided with \u0027true\u0027 value, response will include an array of label objects in the form of \u0027{ id: number, label: string }\u0027",
             "schema": {
               "type": "boolean"
             }
@@ -1933,7 +1933,7 @@
           {
             "name": "sort_by",
             "in": "query",
-            "description": "\u0022The field to sort by. Supported fields: \u0060id\u0060, \u0060deal_id\u0060, \u0060add_time\u0060, \u0060update_time\u0060, \u0060order_nr\u0060.\u0022",
+            "description": "The field to sort by. Supported fields: \u0060id\u0060, \u0060deal_id\u0060, \u0060add_time\u0060, \u0060update_time\u0060, \u0060order_nr\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetDealsProductsSortByParameter"
             }
@@ -1941,7 +1941,7 @@
           {
             "name": "sort_direction",
             "in": "query",
-            "description": "\u0022The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.\u0022",
+            "description": "The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetDealsProductsSortDirectionParameter"
             }
@@ -2026,7 +2026,7 @@
           {
             "name": "fields",
             "in": "query",
-            "description": "\u0022A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\\\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\\\u0022 target=\\\u0022_blank\\\u0022 rel=\\\u0022noopener noreferrer\\\u0022\u003Ehere\u003C/a\u003E.\u0022",
+            "description": "A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.",
             "schema": {
               "$ref": "#/components/schemas/SearchDealsFieldsParameter"
             }
@@ -2068,7 +2068,7 @@
             "in": "query",
             "description": "Supports including optional fields in the results which are not provided by default",
             "schema": {
-              "$ref": "#/components/schemas/SearchDealsIncludeFieldsParameter"
+              "$ref": "#/components/schemas/DealCcEmailIncludeFields"
             }
           },
           {
@@ -2190,7 +2190,7 @@
           {
             "name": "sort_by",
             "in": "query",
-            "description": "\u0022The field to sort by. Supported fields: \u0060id\u0060, \u0060add_time\u0060, \u0060update_time\u0060, \u0060order_nr\u0060.\u0022",
+            "description": "The field to sort by. Supported fields: \u0060id\u0060, \u0060add_time\u0060, \u0060update_time\u0060, \u0060order_nr\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetDealProductsSortByParameter"
             }
@@ -2198,7 +2198,7 @@
           {
             "name": "sort_direction",
             "in": "query",
-            "description": "\u0022The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.\u0022",
+            "description": "The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetDealProductsSortDirectionParameter"
             }
@@ -2953,7 +2953,7 @@
           {
             "name": "sort_by",
             "in": "query",
-            "description": "\u0022The field to sort by. Supported fields: \u0060id\u0060, \u0060billing_date\u0060, \u0060deal_id\u0060.\u0022",
+            "description": "The field to sort by. Supported fields: \u0060id\u0060, \u0060billing_date\u0060, \u0060deal_id\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetInstallmentsSortByParameter"
             }
@@ -2961,7 +2961,7 @@
           {
             "name": "sort_direction",
             "in": "query",
-            "description": "\u0022The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.\u0022",
+            "description": "The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetInstallmentsSortDirectionParameter"
             }
@@ -3478,7 +3478,8 @@
                 "$ref": "#/components/schemas/AddDealFieldRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -3669,7 +3670,8 @@
                 "$ref": "#/components/schemas/UpdateDealFieldRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -3809,7 +3811,8 @@
                 "$ref": "#/components/schemas/AddDealFieldOptionsRequestRequestBody"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -3871,7 +3874,8 @@
                 "$ref": "#/components/schemas/DeleteDealFieldOptionsRequestRequestBody"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -3933,7 +3937,8 @@
                 "$ref": "#/components/schemas/UpdateDealFieldOptionsRequestRequestBody"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -4119,7 +4124,7 @@
           {
             "name": "sort_by",
             "in": "query",
-            "description": "\u0022The field to sort by. Supported fields: \u0060id\u0060, \u0060update_time\u0060, \u0060add_time\u0060.\u0022",
+            "description": "The field to sort by. Supported fields: \u0060id\u0060, \u0060update_time\u0060, \u0060add_time\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetPersonsSortByParameter"
             }
@@ -4127,7 +4132,7 @@
           {
             "name": "sort_direction",
             "in": "query",
-            "description": "\u0022The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.\u0022",
+            "description": "The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetPersonsSortDirectionParameter"
             }
@@ -4151,7 +4156,7 @@
           {
             "name": "include_option_labels",
             "in": "query",
-            "description": "\u0022When provided with a \u0027true\u0027 value, single option and multiple option custom fields values contain objects in the form of \u0027{ id: number, label: string }\u0027 instead of plain id\u0022",
+            "description": "When provided with a \u0027true\u0027 value, single option and multiple option custom fields values contain objects in the form of \u0027{ id: number, label: string }\u0027 instead of plain id",
             "schema": {
               "type": "boolean"
             }
@@ -4159,7 +4164,7 @@
           {
             "name": "include_labels",
             "in": "query",
-            "description": "\u0022When provided with \u0027true\u0027 value, response will include an array of label objects in the form of \u0027{ id: number, label: string }\u0027\u0022",
+            "description": "When provided with \u0027true\u0027 value, response will include an array of label objects in the form of \u0027{ id: number, label: string }\u0027",
             "schema": {
               "type": "boolean"
             }
@@ -4481,7 +4486,7 @@
           {
             "name": "include_option_labels",
             "in": "query",
-            "description": "\u0022When provided with a \u0027true\u0027 value, single option and multiple option custom fields values contain objects in the form of \u0027{ id: number, label: string }\u0027 instead of plain id\u0022",
+            "description": "When provided with a \u0027true\u0027 value, single option and multiple option custom fields values contain objects in the form of \u0027{ id: number, label: string }\u0027 instead of plain id",
             "schema": {
               "type": "boolean"
             }
@@ -4489,7 +4494,7 @@
           {
             "name": "include_labels",
             "in": "query",
-            "description": "\u0022When provided with \u0027true\u0027 value, response will include an array of label objects in the form of \u0027{ id: number, label: string }\u0027\u0022",
+            "description": "When provided with \u0027true\u0027 value, response will include an array of label objects in the form of \u0027{ id: number, label: string }\u0027",
             "schema": {
               "type": "boolean"
             }
@@ -5209,7 +5214,8 @@
                 "$ref": "#/components/schemas/AddPersonFieldRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -5379,7 +5385,8 @@
                 "$ref": "#/components/schemas/UpdatePersonFieldRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -5516,7 +5523,8 @@
                 "$ref": "#/components/schemas/AddPersonFieldOptionsRequestRequestBody"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -5578,7 +5586,8 @@
                 "$ref": "#/components/schemas/DeletePersonFieldOptionsRequestRequestBody"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -5640,7 +5649,8 @@
                 "$ref": "#/components/schemas/UpdatePersonFieldOptionsRequestRequestBody"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -5730,7 +5740,7 @@
           {
             "name": "sort_by",
             "in": "query",
-            "description": "\u0022The field to sort by. Supported fields: \u0060id\u0060, \u0060update_time\u0060, \u0060add_time\u0060.\u0022",
+            "description": "The field to sort by. Supported fields: \u0060id\u0060, \u0060update_time\u0060, \u0060add_time\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetOrganizationsSortByParameter"
             }
@@ -5738,7 +5748,7 @@
           {
             "name": "sort_direction",
             "in": "query",
-            "description": "\u0022The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.\u0022",
+            "description": "The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetOrganizationsSortDirectionParameter"
             }
@@ -5762,7 +5772,7 @@
           {
             "name": "include_option_labels",
             "in": "query",
-            "description": "\u0022When provided with a \u0027true\u0027 value, single option and multiple option custom fields values contain objects in the form of \u0027{ id: number, label: string }\u0027 instead of plain id\u0022",
+            "description": "When provided with a \u0027true\u0027 value, single option and multiple option custom fields values contain objects in the form of \u0027{ id: number, label: string }\u0027 instead of plain id",
             "schema": {
               "type": "boolean"
             }
@@ -5770,7 +5780,7 @@
           {
             "name": "include_labels",
             "in": "query",
-            "description": "\u0022When provided with \u0027true\u0027 value, response will include an array of label objects in the form of \u0027{ id: number, label: string }\u0027\u0022",
+            "description": "When provided with \u0027true\u0027 value, response will include an array of label objects in the form of \u0027{ id: number, label: string }\u0027",
             "schema": {
               "type": "boolean"
             }
@@ -6018,7 +6028,7 @@
           {
             "name": "include_option_labels",
             "in": "query",
-            "description": "\u0022When provided with a \u0027true\u0027 value, single option and multiple option custom fields values contain objects in the form of \u0027{ id: number, label: string }\u0027 instead of plain id\u0022",
+            "description": "When provided with a \u0027true\u0027 value, single option and multiple option custom fields values contain objects in the form of \u0027{ id: number, label: string }\u0027 instead of plain id",
             "schema": {
               "type": "boolean"
             }
@@ -6026,7 +6036,7 @@
           {
             "name": "include_labels",
             "in": "query",
-            "description": "\u0022When provided with \u0027true\u0027 value, response will include an array of label objects in the form of \u0027{ id: number, label: string }\u0027\u0022",
+            "description": "When provided with \u0027true\u0027 value, response will include an array of label objects in the form of \u0027{ id: number, label: string }\u0027",
             "schema": {
               "type": "boolean"
             }
@@ -6685,7 +6695,8 @@
                 "$ref": "#/components/schemas/AddOrganizationFieldRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -6871,7 +6882,8 @@
                 "$ref": "#/components/schemas/UpdateOrganizationFieldRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -7013,7 +7025,8 @@
                 "$ref": "#/components/schemas/AddOrganizationFieldOptionsRequestRequestBody"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -7075,7 +7088,8 @@
                 "$ref": "#/components/schemas/DeleteOrganizationFieldOptionsRequestRequestBody"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -7137,7 +7151,8 @@
                 "$ref": "#/components/schemas/UpdateOrganizationFieldOptionsRequestRequestBody"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -7228,7 +7243,7 @@
           {
             "name": "sort_by",
             "in": "query",
-            "description": "\u0022The field to sort by. Supported fields: \u0060id\u0060, \u0060name\u0060, \u0060add_time\u0060, \u0060update_time\u0060.\u0022",
+            "description": "The field to sort by. Supported fields: \u0060id\u0060, \u0060name\u0060, \u0060add_time\u0060, \u0060update_time\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetProductsSortByParameter"
             }
@@ -7236,7 +7251,7 @@
           {
             "name": "sort_direction",
             "in": "query",
-            "description": "\u0022The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.\u0022",
+            "description": "The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetProductsSortDirectionParameter"
             }
@@ -7707,7 +7722,7 @@
           {
             "name": "fields",
             "in": "query",
-            "description": "\u0022A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\\\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\\\u0022 target=\\\u0022_blank\\\u0022 rel=\\\u0022noopener noreferrer\\\u0022\u003Ehere\u003C/a\u003E.\u0022",
+            "description": "A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.",
             "schema": {
               "$ref": "#/components/schemas/SearchProductsFieldsParameter"
             }
@@ -7725,7 +7740,7 @@
             "in": "query",
             "description": "Supports including optional fields in the results which are not provided by default",
             "schema": {
-              "$ref": "#/components/schemas/SearchProductsIncludeFieldsParameter"
+              "$ref": "#/components/schemas/ProductPriceIncludeFields"
             }
           },
           {
@@ -8646,7 +8661,7 @@
             "in": "query",
             "description": "Optional comma separated string array of additional data namespaces to include in response",
             "schema": {
-              "$ref": "#/components/schemas/GetProductFieldsIncludeFieldsParameter"
+              "$ref": "#/components/schemas/UiVisibilityIncludeFields"
             }
           },
           {
@@ -8780,7 +8795,8 @@
                 "$ref": "#/components/schemas/AddProductFieldRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -8862,7 +8878,7 @@
             "in": "query",
             "description": "Optional comma separated string array of additional data namespaces to include in response",
             "schema": {
-              "$ref": "#/components/schemas/GetProductFieldIncludeFieldsParameter"
+              "$ref": "#/components/schemas/UiVisibilityIncludeFields"
             }
           }
         ],
@@ -8932,7 +8948,8 @@
                 "$ref": "#/components/schemas/UpdateProductFieldRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -9055,7 +9072,8 @@
                 "$ref": "#/components/schemas/AddProductFieldOptionsRequestRequestBody"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -9116,7 +9134,8 @@
                 "$ref": "#/components/schemas/DeleteProductFieldOptionsRequestRequestBody"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -9177,7 +9196,8 @@
                 "$ref": "#/components/schemas/UpdateProductFieldOptionsRequestRequestBody"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -9269,7 +9289,7 @@
             "in": "query",
             "description": "Supports including optional fields in the results which are not provided by default",
             "schema": {
-              "$ref": "#/components/schemas/SearchLeadsIncludeFieldsParameter"
+              "$ref": "#/components/schemas/LeadWasSeenIncludeFields"
             }
           },
           {
@@ -9534,7 +9554,7 @@
           {
             "name": "fields",
             "in": "query",
-            "description": "\u0022A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\\\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\\\u0022 target=\\\u0022_blank\\\u0022 rel=\\\u0022noopener noreferrer\\\u0022\u003Ehere\u003C/a\u003E.\u0022",
+            "description": "A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.",
             "schema": {
               "$ref": "#/components/schemas/SearchOrganizationFieldsParameter"
             }
@@ -9637,7 +9657,7 @@
           {
             "name": "fields",
             "in": "query",
-            "description": "\u0022A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\\\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\\\u0022 target=\\\u0022_blank\\\u0022 rel=\\\u0022noopener noreferrer\\\u0022\u003Ehere\u003C/a\u003E.\u0022",
+            "description": "A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.",
             "schema": {
               "$ref": "#/components/schemas/SearchPersonsFieldsParameter"
             }
@@ -9663,7 +9683,7 @@
             "in": "query",
             "description": "Supports including optional fields in the results which are not provided by default",
             "schema": {
-              "$ref": "#/components/schemas/SearchPersonsIncludeFieldsParameter"
+              "$ref": "#/components/schemas/PersonPictureIncludeFields"
             }
           },
           {
@@ -9774,7 +9794,7 @@
           {
             "name": "fields",
             "in": "query",
-            "description": "\u0022A comma-separated string array. The fields to perform the search from. Defaults to all. Relevant for each item type are:\u003Cbr\u003E \u003Ctable\u003E \u003Ctr\u003E\u003Cth\u003E\u003Cb\u003EItem type\u003C/b\u003E\u003C/th\u003E\u003Cth\u003E\u003Cb\u003EField\u003C/b\u003E\u003C/th\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EDeal\u003C/td\u003E\u003Ctd\u003E\u0060custom_fields\u0060, \u0060notes\u0060, \u0060title\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EPerson\u003C/td\u003E\u003Ctd\u003E\u0060custom_fields\u0060, \u0060email\u0060, \u0060name\u0060, \u0060notes\u0060, \u0060phone\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EOrganization\u003C/td\u003E\u003Ctd\u003E\u0060address\u0060, \u0060custom_fields\u0060, \u0060name\u0060, \u0060notes\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EProduct\u003C/td\u003E\u003Ctd\u003E\u0060code\u0060, \u0060custom_fields\u0060, \u0060name\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003ELead\u003C/td\u003E\u003Ctd\u003E\u0060custom_fields\u0060, \u0060notes\u0060, \u0060title\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EFile\u003C/td\u003E\u003Ctd\u003E\u0060name\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EMail attachment\u003C/td\u003E\u003Ctd\u003E\u0060name\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EProject\u003C/td\u003E\u003Ctd\u003E \u0060custom_fields\u0060, \u0060notes\u0060, \u0060title\u0060, \u0060description\u0060 \u003C/td\u003E\u003C/tr\u003E \u003C/table\u003E \u003Cbr\u003E Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\\\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\\\u0022 target=\\\u0022_blank\\\u0022 rel=\\\u0022noopener noreferrer\\\u0022\u003Ehere\u003C/a\u003E.\u0022",
+            "description": "A comma-separated string array. The fields to perform the search from. Defaults to all. Relevant for each item type are:\u003Cbr\u003E \u003Ctable\u003E \u003Ctr\u003E\u003Cth\u003E\u003Cb\u003EItem type\u003C/b\u003E\u003C/th\u003E\u003Cth\u003E\u003Cb\u003EField\u003C/b\u003E\u003C/th\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EDeal\u003C/td\u003E\u003Ctd\u003E\u0060custom_fields\u0060, \u0060notes\u0060, \u0060title\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EPerson\u003C/td\u003E\u003Ctd\u003E\u0060custom_fields\u0060, \u0060email\u0060, \u0060name\u0060, \u0060notes\u0060, \u0060phone\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EOrganization\u003C/td\u003E\u003Ctd\u003E\u0060address\u0060, \u0060custom_fields\u0060, \u0060name\u0060, \u0060notes\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EProduct\u003C/td\u003E\u003Ctd\u003E\u0060code\u0060, \u0060custom_fields\u0060, \u0060name\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003ELead\u003C/td\u003E\u003Ctd\u003E\u0060custom_fields\u0060, \u0060notes\u0060, \u0060title\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EFile\u003C/td\u003E\u003Ctd\u003E\u0060name\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EMail attachment\u003C/td\u003E\u003Ctd\u003E\u0060name\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EProject\u003C/td\u003E\u003Ctd\u003E \u0060custom_fields\u0060, \u0060notes\u0060, \u0060title\u0060, \u0060description\u0060 \u003C/td\u003E\u003C/tr\u003E \u003C/table\u003E \u003Cbr\u003E Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.",
             "schema": {
               "$ref": "#/components/schemas/SearchItemFieldsParameter"
             }
@@ -10046,7 +10066,7 @@
           {
             "name": "field",
             "in": "query",
-            "description": "\u0022The key of the field to search from. The field key can be obtained by fetching the list of the fields using any of the fields\u0027 API GET methods (dealFields, personFields, etc.). Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\\\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\\\u0022 target=\\\u0022_blank\\\u0022 rel=\\\u0022noopener noreferrer\\\u0022\u003Ehere\u003C/a\u003E.\u0022",
+            "description": "The key of the field to search from. The field key can be obtained by fetching the list of the fields using any of the fields\u0027 API GET methods (dealFields, personFields, etc.). Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.",
             "required": true,
             "schema": {
               "type": "string"
@@ -10130,7 +10150,7 @@
           {
             "name": "sort_by",
             "in": "query",
-            "description": "\u0022The field to sort by. Supported fields: \u0060id\u0060, \u0060update_time\u0060, \u0060add_time\u0060, \u0060order_nr\u0060.\u0022",
+            "description": "The field to sort by. Supported fields: \u0060id\u0060, \u0060update_time\u0060, \u0060add_time\u0060, \u0060order_nr\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetStagesSortByParameter"
             }
@@ -10138,7 +10158,7 @@
           {
             "name": "sort_direction",
             "in": "query",
-            "description": "\u0022The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.\u0022",
+            "description": "The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetStagesSortDirectionParameter"
             }
@@ -10445,7 +10465,7 @@
           {
             "name": "sort_by",
             "in": "query",
-            "description": "\u0022The field to sort by. Supported fields: \u0060id\u0060, \u0060update_time\u0060, \u0060add_time\u0060.\u0022",
+            "description": "The field to sort by. Supported fields: \u0060id\u0060, \u0060update_time\u0060, \u0060add_time\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetPipelinesSortByParameter"
             }
@@ -10453,7 +10473,7 @@
           {
             "name": "sort_direction",
             "in": "query",
-            "description": "\u0022The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.\u0022",
+            "description": "The sorting direction. Supported values: \u0060asc\u0060, \u0060desc\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetPipelinesSortDirectionParameter"
             }
@@ -10865,7 +10885,8 @@
                 "$ref": "#/components/schemas/AddProjectFieldRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -11021,7 +11042,8 @@
                 "$ref": "#/components/schemas/UpdateProjectFieldRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -11151,7 +11173,8 @@
                 "$ref": "#/components/schemas/AddProjectFieldOptionsRequestRequestBody"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -11212,7 +11235,8 @@
                 "$ref": "#/components/schemas/DeleteProjectFieldOptionsRequestRequestBody"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -11273,7 +11297,8 @@
                 "$ref": "#/components/schemas/UpdateProjectFieldOptionsRequestRequestBody"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -11460,7 +11485,8 @@
                 "$ref": "#/components/schemas/AddProjectRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "201": {
@@ -11985,7 +12011,7 @@
           {
             "name": "fields",
             "in": "query",
-            "description": "\u0022A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\\\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\\\u0022 target=\\\u0022_blank\\\u0022 rel=\\\u0022noopener noreferrer\\\u0022\u003Ehere\u003C/a\u003E.\u0022",
+            "description": "A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.",
             "schema": {
               "$ref": "#/components/schemas/SearchProjectsFieldsParameter"
             }
@@ -12459,7 +12485,8 @@
                 "$ref": "#/components/schemas/AddTaskRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "201": {
@@ -12763,7 +12790,8 @@
                 "$ref": "#/components/schemas/AddProjectBoardRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -13037,7 +13065,8 @@
                 "$ref": "#/components/schemas/AddProjectPhaseRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -14353,7 +14382,7 @@
           },
           "archive_time": {
             "type": "string",
-            "description": "\u0022The optional date and time of archiving the deal in UTC. Format: YYYY-MM-DD HH:MM:SS. If omitted and \u0060is_archived\u0060 is true, it will be set to the current date and time.\u0022"
+            "description": "The optional date and time of archiving the deal in UTC. Format: YYYY-MM-DD HH:MM:SS. If omitted and \u0060is_archived\u0060 is true, it will be set to the current date and time."
           },
           "status": {
             "type": "string",
@@ -14507,7 +14536,7 @@
           },
           "archive_time": {
             "type": "string",
-            "description": "\u0022The optional date and time of archiving the deal in UTC. Format: YYYY-MM-DD HH:MM:SS. If omitted and \u0060is_archived\u0060 is true, it will be set to the current date and time.\u0022"
+            "description": "The optional date and time of archiving the deal in UTC. Format: YYYY-MM-DD HH:MM:SS. If omitted and \u0060is_archived\u0060 is true, it will be set to the current date and time."
           },
           "status": {
             "type": "string",
@@ -16430,7 +16459,7 @@
             "items": {
               "$ref": "#/components/schemas/AddProductRequestPricesItem"
             },
-            "description": "\u0022An array of objects, each containing: \u0060currency\u0060 (string), \u0060price\u0060 (number), \u0060cost\u0060 (number, optional), \u0060direct_cost\u0060 (number, optional). Note that there can only be one price per product per currency. When \u0060prices\u0060 is omitted altogether, a default price of 0 and the user\u0027s default currency will be assigned.\u0022"
+            "description": "An array of objects, each containing: \u0060currency\u0060 (string), \u0060price\u0060 (number), \u0060cost\u0060 (number, optional), \u0060direct_cost\u0060 (number, optional). Note that there can only be one price per product per currency. When \u0060prices\u0060 is omitted altogether, a default price of 0 and the user\u0027s default currency will be assigned."
           },
           "custom_fields": {
             "$ref": "#/components/schemas/AddProductRequestCustomFields"
@@ -16625,7 +16654,7 @@
             "items": {
               "$ref": "#/components/schemas/UpdateProductRequestPricesItem"
             },
-            "description": "\u0022An array of objects, each containing: \u0060currency\u0060 (string), \u0060price\u0060 (number), \u0060cost\u0060 (number, optional), \u0060direct_cost\u0060 (number, optional). Note that there can only be one price per product per currency. When \u0060prices\u0060 is omitted altogether, a default price of 0 and the user\u0027s default currency will be assigned.\u0022"
+            "description": "An array of objects, each containing: \u0060currency\u0060 (string), \u0060price\u0060 (number), \u0060cost\u0060 (number, optional), \u0060direct_cost\u0060 (number, optional). Note that there can only be one price per product per currency. When \u0060prices\u0060 is omitted altogether, a default price of 0 and the user\u0027s default currency will be assigned."
           },
           "custom_fields": {
             "$ref": "#/components/schemas/UpdateProductRequestCustomFields"
@@ -16702,7 +16731,7 @@
             "items": {
               "$ref": "#/components/schemas/AddProductVariationRequestPricesItem"
             },
-            "description": "\u0022Array of objects, each containing: currency (string), price (number), cost (number, optional), direct_cost (number, optional), notes (string, optional). When prices is omitted altogether, a default price of 0, a default cost of 0, a default direct_cost of 0 and the user\u0027s default currency will be assigned.\u0022"
+            "description": "Array of objects, each containing: currency (string), price (number), cost (number, optional), direct_cost (number, optional), notes (string, optional). When prices is omitted altogether, a default price of 0, a default cost of 0, a default direct_cost of 0 and the user\u0027s default currency will be assigned."
           }
         }
       },
@@ -16732,7 +16761,7 @@
             "items": {
               "$ref": "#/components/schemas/UpdateProductVariationRequestPricesItem"
             },
-            "description": "\u0022Array of objects, each containing: currency (string), price (number), cost (number, optional), direct_cost (number, optional), notes (string, optional). When prices is omitted altogether, a default price of 0, a default cost of 0, a default direct_cost of 0 and the user\u0027s default currency will be assigned.\u0022"
+            "description": "Array of objects, each containing: currency (string), price (number), cost (number, optional), direct_cost (number, optional), notes (string, optional). When prices is omitted altogether, a default price of 0, a default cost of 0, a default direct_cost of 0 and the user\u0027s default currency will be assigned."
           }
         }
       },
@@ -17679,12 +17708,12 @@
           },
           "start_date": {
             "type": "string",
-            "description": "\u0022The start date of the project. Format: YYYY-MM-DD\u0022",
+            "description": "The start date of the project. Format: YYYY-MM-DD",
             "format": "date"
           },
           "end_date": {
             "type": "string",
-            "description": "\u0022The end date of the project. Format: YYYY-MM-DD\u0022",
+            "description": "The end date of the project. Format: YYYY-MM-DD",
             "format": "date"
           },
           "deal_ids": {
@@ -17803,12 +17832,12 @@
           },
           "start_date": {
             "type": "string",
-            "description": "\u0022The start date of the project. Format: YYYY-MM-DD\u0022",
+            "description": "The start date of the project. Format: YYYY-MM-DD",
             "format": "date"
           },
           "end_date": {
             "type": "string",
-            "description": "\u0022The end date of the project. Format: YYYY-MM-DD\u0022",
+            "description": "The end date of the project. Format: YYYY-MM-DD",
             "format": "date"
           },
           "deal_ids": {
@@ -18033,13 +18062,13 @@
           },
           "due_date": {
             "type": "string",
-            "description": "\u0022The due date of the task. Format: YYYY-MM-DD.\u0022",
+            "description": "The due date of the task. Format: YYYY-MM-DD.",
             "format": "date",
             "nullable": true
           },
           "start_date": {
             "type": "string",
-            "description": "\u0022The start date of the task. Format: YYYY-MM-DD.\u0022",
+            "description": "The start date of the task. Format: YYYY-MM-DD.",
             "format": "date",
             "nullable": true
           },
@@ -18128,13 +18157,13 @@
           },
           "due_date": {
             "type": "string",
-            "description": "\u0022The due date of the task. Format: YYYY-MM-DD.\u0022",
+            "description": "The due date of the task. Format: YYYY-MM-DD.",
             "format": "date",
             "nullable": true
           },
           "start_date": {
             "type": "string",
-            "description": "\u0022The start date of the task. Format: YYYY-MM-DD.\u0022",
+            "description": "The start date of the task. Format: YYYY-MM-DD.",
             "format": "date",
             "nullable": true
           },
@@ -24399,7 +24428,7 @@
             "items": {
               "$ref": "#/components/schemas/GetProductVariationsResponseDataItemPricesItem"
             },
-            "description": "\u0022Array of objects, each containing: product_variation_id (number), currency (string), price (number), cost (number), direct_cost (number) , notes (string)\u0022"
+            "description": "Array of objects, each containing: product_variation_id (number), currency (string), price (number), cost (number), direct_cost (number) , notes (string)"
           }
         }
       },
@@ -24436,7 +24465,7 @@
             "items": {
               "$ref": "#/components/schemas/AddProductVariation201ResponseDataPricesItem"
             },
-            "description": "\u0022Array of objects, each containing: product_variation_id (number), currency (string), price (number), cost (number), direct_cost (number) , notes (string)\u0022"
+            "description": "Array of objects, each containing: product_variation_id (number), currency (string), price (number), cost (number), direct_cost (number) , notes (string)"
           }
         }
       },
@@ -24463,7 +24492,7 @@
             "items": {
               "$ref": "#/components/schemas/UpdateProductVariation200ResponseDataPricesItem"
             },
-            "description": "\u0022Array of objects, each containing: product_variation_id (number), currency (string), price (number), cost (number), direct_cost (number) , notes (string)\u0022"
+            "description": "Array of objects, each containing: product_variation_id (number), currency (string), price (number), cost (number), direct_cost (number) , notes (string)"
           }
         }
       },
@@ -26052,12 +26081,12 @@
           },
           "start_date": {
             "type": "string",
-            "description": "\u0022The start date of the project. Format: YYYY-MM-DD\u0022",
+            "description": "The start date of the project. Format: YYYY-MM-DD",
             "format": "date"
           },
           "end_date": {
             "type": "string",
-            "description": "\u0022The end date of the project. Format: YYYY-MM-DD\u0022",
+            "description": "The end date of the project. Format: YYYY-MM-DD",
             "format": "date"
           },
           "deal_ids": {
@@ -26163,12 +26192,12 @@
           },
           "start_date": {
             "type": "string",
-            "description": "\u0022The start date of the project. Format: YYYY-MM-DD\u0022",
+            "description": "The start date of the project. Format: YYYY-MM-DD",
             "format": "date"
           },
           "end_date": {
             "type": "string",
-            "description": "\u0022The end date of the project. Format: YYYY-MM-DD\u0022",
+            "description": "The end date of the project. Format: YYYY-MM-DD",
             "format": "date"
           },
           "deal_ids": {
@@ -26260,12 +26289,12 @@
           },
           "start_date": {
             "type": "string",
-            "description": "\u0022The start date of the project. Format: YYYY-MM-DD\u0022",
+            "description": "The start date of the project. Format: YYYY-MM-DD",
             "format": "date"
           },
           "end_date": {
             "type": "string",
-            "description": "\u0022The end date of the project. Format: YYYY-MM-DD\u0022",
+            "description": "The end date of the project. Format: YYYY-MM-DD",
             "format": "date"
           },
           "deal_ids": {
@@ -26367,12 +26396,12 @@
           },
           "start_date": {
             "type": "string",
-            "description": "\u0022The start date of the project. Format: YYYY-MM-DD\u0022",
+            "description": "The start date of the project. Format: YYYY-MM-DD",
             "format": "date"
           },
           "end_date": {
             "type": "string",
-            "description": "\u0022The end date of the project. Format: YYYY-MM-DD\u0022",
+            "description": "The end date of the project. Format: YYYY-MM-DD",
             "format": "date"
           },
           "deal_ids": {
@@ -26468,12 +26497,12 @@
           },
           "start_date": {
             "type": "string",
-            "description": "\u0022The start date of the project. Format: YYYY-MM-DD\u0022",
+            "description": "The start date of the project. Format: YYYY-MM-DD",
             "format": "date"
           },
           "end_date": {
             "type": "string",
-            "description": "\u0022The end date of the project. Format: YYYY-MM-DD\u0022",
+            "description": "The end date of the project. Format: YYYY-MM-DD",
             "format": "date"
           },
           "deal_ids": {
@@ -26679,12 +26708,12 @@
           },
           "start_date": {
             "type": "string",
-            "description": "\u0022The start date of the project. Format: YYYY-MM-DD\u0022",
+            "description": "The start date of the project. Format: YYYY-MM-DD",
             "format": "date"
           },
           "end_date": {
             "type": "string",
-            "description": "\u0022The end date of the project. Format: YYYY-MM-DD\u0022",
+            "description": "The end date of the project. Format: YYYY-MM-DD",
             "format": "date"
           },
           "deal_ids": {
@@ -26817,13 +26846,13 @@
           },
           "due_date": {
             "type": "string",
-            "description": "\u0022The due date of the task. Format: YYYY-MM-DD.\u0022",
+            "description": "The due date of the task. Format: YYYY-MM-DD.",
             "format": "date",
             "nullable": true
           },
           "start_date": {
             "type": "string",
-            "description": "\u0022The start date of the task. Format: YYYY-MM-DD.\u0022",
+            "description": "The start date of the task. Format: YYYY-MM-DD.",
             "format": "date",
             "nullable": true
           },
@@ -26906,13 +26935,13 @@
           },
           "due_date": {
             "type": "string",
-            "description": "\u0022The due date of the task. Format: YYYY-MM-DD.\u0022",
+            "description": "The due date of the task. Format: YYYY-MM-DD.",
             "format": "date",
             "nullable": true
           },
           "start_date": {
             "type": "string",
-            "description": "\u0022The start date of the task. Format: YYYY-MM-DD.\u0022",
+            "description": "The start date of the task. Format: YYYY-MM-DD.",
             "format": "date",
             "nullable": true
           },
@@ -26990,13 +27019,13 @@
           },
           "due_date": {
             "type": "string",
-            "description": "\u0022The due date of the task. Format: YYYY-MM-DD.\u0022",
+            "description": "The due date of the task. Format: YYYY-MM-DD.",
             "format": "date",
             "nullable": true
           },
           "start_date": {
             "type": "string",
-            "description": "\u0022The start date of the task. Format: YYYY-MM-DD.\u0022",
+            "description": "The start date of the task. Format: YYYY-MM-DD.",
             "format": "date",
             "nullable": true
           },
@@ -27074,13 +27103,13 @@
           },
           "due_date": {
             "type": "string",
-            "description": "\u0022The due date of the task. Format: YYYY-MM-DD.\u0022",
+            "description": "The due date of the task. Format: YYYY-MM-DD.",
             "format": "date",
             "nullable": true
           },
           "start_date": {
             "type": "string",
-            "description": "\u0022The start date of the task. Format: YYYY-MM-DD.\u0022",
+            "description": "The start date of the task. Format: YYYY-MM-DD.",
             "format": "date",
             "nullable": true
           },
@@ -32634,7 +32663,7 @@
         ],
         "type": "number",
         "additionalProperties": false,
-        "description": "\u0022The visibility of the product. If omitted, the visibility will be set to the default visibility setting of this item type for the authorized user. Read more about visibility groups \u003Ca href=\\\u0022https://support.pipedrive.com/en/article/visibility-groups\\\u0022 target=\\\u0022_blank\\\u0022 rel=\\\u0022noopener noreferrer\\\u0022\u003Ehere\u003C/a\u003E.\u003Ch4\u003ELight / Growth and Professional plans\u003C/h4\u003E\u003Ctable\u003E\u003Ctr\u003E\u003Cth style=\\\u0022width: 40px\\\u0022\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00601\u0060\u003C/td\u003E\u003Ctd\u003EOwner \u0026amp; followers\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u00603\u0060\u003C/td\u003E\u003Ctd\u003EEntire company\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E\u003Ch4\u003EPremium / Ultimate plan\u003C/h4\u003E\u003Ctable\u003E\u003Ctr\u003E\u003Cth style=\\\u0022width: 40px\\\u0022\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00601\u0060\u003C/td\u003E\u003Ctd\u003EOwner only\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u00603\u0060\u003C/td\u003E\u003Ctd\u003EOwner\u0027s visibility group\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00605\u0060\u003C/td\u003E\u003Ctd\u003EOwner\u0027s visibility group and sub-groups\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00607\u0060\u003C/td\u003E\u003Ctd\u003EEntire company\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E\u0022"
+        "description": "The visibility of the product. If omitted, the visibility will be set to the default visibility setting of this item type for the authorized user. Read more about visibility groups \u003Ca href=\u0022https://support.pipedrive.com/en/article/visibility-groups\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.\u003Ch4\u003ELight / Growth and Professional plans\u003C/h4\u003E\u003Ctable\u003E\u003Ctr\u003E\u003Cth style=\u0022width: 40px\u0022\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00601\u0060\u003C/td\u003E\u003Ctd\u003EOwner \u0026amp; followers\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u00603\u0060\u003C/td\u003E\u003Ctd\u003EEntire company\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E\u003Ch4\u003EPremium / Ultimate plan\u003C/h4\u003E\u003Ctable\u003E\u003Ctr\u003E\u003Cth style=\u0022width: 40px\u0022\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00601\u0060\u003C/td\u003E\u003Ctd\u003EOwner only\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u00603\u0060\u003C/td\u003E\u003Ctd\u003EOwner\u0027s visibility group\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00605\u0060\u003C/td\u003E\u003Ctd\u003EOwner\u0027s visibility group and sub-groups\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00607\u0060\u003C/td\u003E\u003Ctd\u003EEntire company\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E"
       },
       "AddProductRequestBillingFrequency": {
         "enum": [
@@ -32688,7 +32717,7 @@
         ],
         "type": "number",
         "additionalProperties": false,
-        "description": "\u0022The visibility of the product. If omitted, the visibility will be set to the default visibility setting of this item type for the authorized user. Read more about visibility groups \u003Ca href=\\\u0022https://support.pipedrive.com/en/article/visibility-groups\\\u0022 target=\\\u0022_blank\\\u0022 rel=\\\u0022noopener noreferrer\\\u0022\u003Ehere\u003C/a\u003E.\u003Ch4\u003ELight / Growth and Professional plans\u003C/h4\u003E\u003Ctable\u003E\u003Ctr\u003E\u003Cth style=\\\u0022width: 40px\\\u0022\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00601\u0060\u003C/td\u003E\u003Ctd\u003EOwner \u0026amp; followers\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u00603\u0060\u003C/td\u003E\u003Ctd\u003EEntire company\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E\u003Ch4\u003EPremium / Ultimate plan\u003C/h4\u003E\u003Ctable\u003E\u003Ctr\u003E\u003Cth style=\\\u0022width: 40px\\\u0022\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00601\u0060\u003C/td\u003E\u003Ctd\u003EOwner only\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u00603\u0060\u003C/td\u003E\u003Ctd\u003EOwner\u0027s visibility group\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00605\u0060\u003C/td\u003E\u003Ctd\u003EOwner\u0027s visibility group and sub-groups\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00607\u0060\u003C/td\u003E\u003Ctd\u003EEntire company\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E\u0022"
+        "description": "The visibility of the product. If omitted, the visibility will be set to the default visibility setting of this item type for the authorized user. Read more about visibility groups \u003Ca href=\u0022https://support.pipedrive.com/en/article/visibility-groups\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.\u003Ch4\u003ELight / Growth and Professional plans\u003C/h4\u003E\u003Ctable\u003E\u003Ctr\u003E\u003Cth style=\u0022width: 40px\u0022\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00601\u0060\u003C/td\u003E\u003Ctd\u003EOwner \u0026amp; followers\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u00603\u0060\u003C/td\u003E\u003Ctd\u003EEntire company\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E\u003Ch4\u003EPremium / Ultimate plan\u003C/h4\u003E\u003Ctable\u003E\u003Ctr\u003E\u003Cth style=\u0022width: 40px\u0022\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00601\u0060\u003C/td\u003E\u003Ctd\u003EOwner only\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u00603\u0060\u003C/td\u003E\u003Ctd\u003EOwner\u0027s visibility group\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00605\u0060\u003C/td\u003E\u003Ctd\u003EOwner\u0027s visibility group and sub-groups\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00607\u0060\u003C/td\u003E\u003Ctd\u003EEntire company\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E"
       },
       "UpdateProductRequestBillingFrequency": {
         "enum": [
@@ -38036,14 +38065,14 @@
           ]
         }
       },
-      "GetActivitiesIncludeFieldsParameter": {
+      "AttendeesIncludeFields": {
         "enum": [
           "attendees"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetActivitiesIncludeFieldsParameter",
+          "name": "AttendeesIncludeFields",
           "modelAsString": false,
           "values": [
             {
@@ -38053,48 +38082,14 @@
           ]
         }
       },
-      "GetActivityIncludeFieldsParameter": {
-        "enum": [
-          "attendees"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "x-ms-enum": {
-          "name": "GetActivityIncludeFieldsParameter",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "attendees",
-              "name": "Attendees"
-            }
-          ]
-        }
-      },
-      "GetActivityFieldsIncludeFieldsParameter": {
+      "UiVisibilityIncludeFields": {
         "enum": [
           "ui_visibility"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetActivityFieldsIncludeFieldsParameter",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "ui_visibility",
-              "name": "UiVisibility"
-            }
-          ]
-        }
-      },
-      "GetActivityFieldIncludeFieldsParameter": {
-        "enum": [
-          "ui_visibility"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "x-ms-enum": {
-          "name": "GetActivityFieldIncludeFieldsParameter",
+          "name": "UiVisibilityIncludeFields",
           "modelAsString": false,
           "values": [
             {
@@ -38655,14 +38650,14 @@
           ]
         }
       },
-      "SearchDealsIncludeFieldsParameter": {
+      "DealCcEmailIncludeFields": {
         "enum": [
           "deal.cc_email"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "SearchDealsIncludeFieldsParameter",
+          "name": "DealCcEmailIncludeFields",
           "modelAsString": false,
           "values": [
             {
@@ -39714,53 +39709,19 @@
           ]
         }
       },
-      "SearchProductsIncludeFieldsParameter": {
+      "ProductPriceIncludeFields": {
         "enum": [
           "product.price"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "SearchProductsIncludeFieldsParameter",
+          "name": "ProductPriceIncludeFields",
           "modelAsString": false,
           "values": [
             {
               "value": "product.price",
               "name": "ProductPrice"
-            }
-          ]
-        }
-      },
-      "GetProductFieldsIncludeFieldsParameter": {
-        "enum": [
-          "ui_visibility"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "x-ms-enum": {
-          "name": "GetProductFieldsIncludeFieldsParameter",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "ui_visibility",
-              "name": "UiVisibility"
-            }
-          ]
-        }
-      },
-      "GetProductFieldIncludeFieldsParameter": {
-        "enum": [
-          "ui_visibility"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "x-ms-enum": {
-          "name": "GetProductFieldIncludeFieldsParameter",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "ui_visibility",
-              "name": "UiVisibility"
             }
           ]
         }
@@ -39792,14 +39753,14 @@
           ]
         }
       },
-      "SearchLeadsIncludeFieldsParameter": {
+      "LeadWasSeenIncludeFields": {
         "enum": [
           "lead.was_seen"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "SearchLeadsIncludeFieldsParameter",
+          "name": "LeadWasSeenIncludeFields",
           "modelAsString": false,
           "values": [
             {
@@ -39878,14 +39839,14 @@
           ]
         }
       },
-      "SearchPersonsIncludeFieldsParameter": {
+      "PersonPictureIncludeFields": {
         "enum": [
           "person.picture"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "SearchPersonsIncludeFieldsParameter",
+          "name": "PersonPictureIncludeFields",
           "modelAsString": false,
           "values": [
             {
@@ -40287,12 +40248,6 @@
             }
           }
         }
-      },
-      "assets_jwt": {
-        "type": "http",
-        "description": "JWT used for assets upload",
-        "scheme": "bearer",
-        "bearerFormat": "JWT"
       }
     }
   },

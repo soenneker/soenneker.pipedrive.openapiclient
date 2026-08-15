@@ -41,7 +41,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>&quot;The due date of the task. Format: YYYY-MM-DD.&quot;</summary>
+        /// <summary>The due date of the task. Format: YYYY-MM-DD.</summary>
         public Date? DueDate { get; set; }
         /// <summary>The ID of the task</summary>
         public int? Id { get; set; }
@@ -63,7 +63,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public int? Priority { get; set; }
         /// <summary>The ID of the project this task is associated with</summary>
         public int? ProjectId { get; set; }
-        /// <summary>&quot;The start date of the task. Format: YYYY-MM-DD.&quot;</summary>
+        /// <summary>The start date of the task. Format: YYYY-MM-DD.</summary>
         public Date? StartDate { get; set; }
         /// <summary>The title of the task</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -185,10 +185,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Products
             /// <summary>If supplied, only products owned by the given user will be returned</summary>
             [QueryParameter("owner_id")]
             public int? OwnerId { get; set; }
-            /// <summary>&quot;The field to sort by. Supported fields: `id`, `name`, `add_time`, `update_time`.&quot;</summary>
+            /// <summary>The field to sort by. Supported fields: `id`, `name`, `add_time`, `update_time`.</summary>
             [QueryParameter("sort_by")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductsSortByParameter? SortBy { get; set; }
-            /// <summary>&quot;The sorting direction. Supported values: `asc`, `desc`.&quot;</summary>
+            /// <summary>The sorting direction. Supported values: `asc`, `desc`.</summary>
             [QueryParameter("sort_direction")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductsSortDirectionParameter? SortDirection { get; set; }
             /// <summary>If set, only products with an `update_time` later than or equal to this time are returned. In RFC3339 format, e.g. 2025-01-01T10:20:00Z.</summary>

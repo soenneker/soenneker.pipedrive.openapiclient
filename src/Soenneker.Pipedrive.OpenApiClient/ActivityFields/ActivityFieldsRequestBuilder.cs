@@ -110,7 +110,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.ActivityFields
 #endif
             /// <summary>Optional comma separated string array of additional data namespaces to include in response</summary>
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFieldsIncludeFieldsParameter? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.UiVisibilityIncludeFields? IncludeFields { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }

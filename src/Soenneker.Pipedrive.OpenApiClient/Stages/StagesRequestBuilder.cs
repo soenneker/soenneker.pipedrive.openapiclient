@@ -156,10 +156,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Stages
             /// <summary>The ID of the pipeline to fetch stages for. If omitted, stages for all pipelines will be fetched.</summary>
             [QueryParameter("pipeline_id")]
             public int? PipelineId { get; set; }
-            /// <summary>&quot;The field to sort by. Supported fields: `id`, `update_time`, `add_time`, `order_nr`.&quot;</summary>
+            /// <summary>The field to sort by. Supported fields: `id`, `update_time`, `add_time`, `order_nr`.</summary>
             [QueryParameter("sort_by")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.GetStagesSortByParameter? SortBy { get; set; }
-            /// <summary>&quot;The sorting direction. Supported values: `asc`, `desc`.&quot;</summary>
+            /// <summary>The sorting direction. Supported values: `asc`, `desc`.</summary>
             [QueryParameter("sort_direction")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.GetStagesSortDirectionParameter? SortDirection { get; set; }
         }

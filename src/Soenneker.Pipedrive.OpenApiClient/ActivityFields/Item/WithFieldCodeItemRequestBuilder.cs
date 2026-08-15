@@ -87,7 +87,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item
         {
             /// <summary>Optional comma separated string array of additional data namespaces to include in response</summary>
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFieldIncludeFieldsParameter? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.UiVisibilityIncludeFields? IncludeFields { get; set; }
         }
     }
 }

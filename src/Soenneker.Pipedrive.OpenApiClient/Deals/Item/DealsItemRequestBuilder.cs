@@ -207,10 +207,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item
             /// <summary>Optional comma separated string array of additional fields to include</summary>
             [QueryParameter("include_fields")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealIncludeFieldsParameter? IncludeFields { get; set; }
-            /// <summary>&quot;When provided with &apos;true&apos; value, response will include an array of label objects in the form of &apos;{ id: number, label: string }&apos;&quot;</summary>
+            /// <summary>When provided with &apos;true&apos; value, response will include an array of label objects in the form of &apos;{ id: number, label: string }&apos;</summary>
             [QueryParameter("include_labels")]
             public bool? IncludeLabels { get; set; }
-            /// <summary>&quot;When provided with a &apos;true&apos; value, single option and multiple option custom fields values contain objects in the form of &apos;{ id: number, label: string }&apos; instead of plain id&quot;</summary>
+            /// <summary>When provided with a &apos;true&apos; value, single option and multiple option custom fields values contain objects in the form of &apos;{ id: number, label: string }&apos; instead of plain id</summary>
             [QueryParameter("include_option_labels")]
             public bool? IncludeOptionLabels { get; set; }
         }

@@ -108,10 +108,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Products
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>&quot;The field to sort by. Supported fields: `id`, `deal_id`, `add_time`, `update_time`, `order_nr`.&quot;</summary>
+            /// <summary>The field to sort by. Supported fields: `id`, `deal_id`, `add_time`, `update_time`, `order_nr`.</summary>
             [QueryParameter("sort_by")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsProductsSortByParameter? SortBy { get; set; }
-            /// <summary>&quot;The sorting direction. Supported values: `asc`, `desc`.&quot;</summary>
+            /// <summary>The sorting direction. Supported values: `asc`, `desc`.</summary>
             [QueryParameter("sort_direction")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealsProductsSortDirectionParameter? SortDirection { get; set; }
         }

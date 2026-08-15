@@ -98,7 +98,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.ItemSearch.Field
             /// <summary>The type of the field to perform the search from</summary>
             [QueryParameter("entity_type")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchItemByFieldEntityTypeParameter? EntityType { get; set; }
-            /// <summary>&quot;The key of the field to search from. The field key can be obtained by fetching the list of the fields using any of the fields&apos; API GET methods (dealFields, personFields, etc.). Only the following custom field types are searchable: `address`, `varchar`, `text`, `varchar_auto`, `double`, `monetary` and `phone`. Read more about searching by custom fields &lt;a href=\&quot;https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\&quot; target=\&quot;_blank\&quot; rel=\&quot;noopener noreferrer\&quot;&gt;here&lt;/a&gt;.&quot;</summary>
+            /// <summary>The key of the field to search from. The field key can be obtained by fetching the list of the fields using any of the fields&apos; API GET methods (dealFields, personFields, etc.). Only the following custom field types are searchable: `address`, `varchar`, `text`, `varchar_auto`, `double`, `monetary` and `phone`. Read more about searching by custom fields &lt;a href=&quot;https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;here&lt;/a&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("field")]

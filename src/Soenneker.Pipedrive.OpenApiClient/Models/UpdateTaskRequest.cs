@@ -35,7 +35,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #endif
         /// <summary>Whether the task is done or not. `0` = Not done, `1` = Done.</summary>
         public int? Done { get; set; }
-        /// <summary>&quot;The due date of the task. Format: YYYY-MM-DD.&quot;</summary>
+        /// <summary>The due date of the task. Format: YYYY-MM-DD.</summary>
         public Date? DueDate { get; set; }
         /// <summary>Whether the task is a milestone or not. `0` = Not a milestone, `1` = Milestone.</summary>
         public int? Milestone { get; set; }
@@ -45,7 +45,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public int? Priority { get; set; }
         /// <summary>The ID of the project this task is associated with</summary>
         public int? ProjectId { get; set; }
-        /// <summary>&quot;The start date of the task. Format: YYYY-MM-DD.&quot;</summary>
+        /// <summary>The start date of the task. Format: YYYY-MM-DD.</summary>
         public Date? StartDate { get; set; }
         /// <summary>The title of the task</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

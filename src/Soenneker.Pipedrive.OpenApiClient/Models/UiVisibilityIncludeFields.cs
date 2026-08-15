@@ -5,12 +5,12 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum SearchProductsIncludeFieldsParameter
+    public enum UiVisibilityIncludeFields
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "product.price")]
+        [EnumMember(Value = "ui_visibility")]
         #pragma warning disable CS1591
-        ProductPrice,
+        UiVisibility,
         #pragma warning restore CS1591
     }
 }

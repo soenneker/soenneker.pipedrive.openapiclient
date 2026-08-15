@@ -103,7 +103,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Leads.Search
             public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchLeadsFieldsParameter? Fields { get; set; }
             /// <summary>Supports including optional fields in the results which are not provided by default</summary>
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchLeadsIncludeFieldsParameter? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.LeadWasSeenIncludeFields? IncludeFields { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }

@@ -24,7 +24,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>&quot;Array of objects, each containing: product_variation_id (number), currency (string), price (number), cost (number), direct_cost (number) , notes (string)&quot;</summary>
+        /// <summary>Array of objects, each containing: product_variation_id (number), currency (string), price (number), cost (number), direct_cost (number) , notes (string)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductVariation201ResponseDataPricesItem>? Prices { get; set; }

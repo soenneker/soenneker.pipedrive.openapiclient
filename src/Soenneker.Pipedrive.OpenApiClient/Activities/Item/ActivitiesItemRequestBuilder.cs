@@ -166,7 +166,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities.Item
         {
             /// <summary>Optional comma separated string array of additional fields to include</summary>
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityIncludeFieldsParameter? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.AttendeesIncludeFields? IncludeFields { get; set; }
         }
     }
 }

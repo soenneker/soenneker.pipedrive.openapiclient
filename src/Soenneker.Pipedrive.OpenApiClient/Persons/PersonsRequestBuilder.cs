@@ -185,10 +185,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
             /// <summary>Optional comma separated string array of additional fields to include. `marketing_status` and `doi_status` can only be included if the company has marketing app enabled.</summary>
             [QueryParameter("include_fields")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonsIncludeFieldsParameter? IncludeFields { get; set; }
-            /// <summary>&quot;When provided with &apos;true&apos; value, response will include an array of label objects in the form of &apos;{ id: number, label: string }&apos;&quot;</summary>
+            /// <summary>When provided with &apos;true&apos; value, response will include an array of label objects in the form of &apos;{ id: number, label: string }&apos;</summary>
             [QueryParameter("include_labels")]
             public bool? IncludeLabels { get; set; }
-            /// <summary>&quot;When provided with a &apos;true&apos; value, single option and multiple option custom fields values contain objects in the form of &apos;{ id: number, label: string }&apos; instead of plain id&quot;</summary>
+            /// <summary>When provided with a &apos;true&apos; value, single option and multiple option custom fields values contain objects in the form of &apos;{ id: number, label: string }&apos; instead of plain id</summary>
             [QueryParameter("include_option_labels")]
             public bool? IncludeOptionLabels { get; set; }
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
@@ -200,10 +200,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
             /// <summary>If supplied, only persons owned by the specified user are returned. If filter_id is provided, this is ignored.</summary>
             [QueryParameter("owner_id")]
             public int? OwnerId { get; set; }
-            /// <summary>&quot;The field to sort by. Supported fields: `id`, `update_time`, `add_time`.&quot;</summary>
+            /// <summary>The field to sort by. Supported fields: `id`, `update_time`, `add_time`.</summary>
             [QueryParameter("sort_by")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonsSortByParameter? SortBy { get; set; }
-            /// <summary>&quot;The sorting direction. Supported values: `asc`, `desc`.&quot;</summary>
+            /// <summary>The sorting direction. Supported values: `asc`, `desc`.</summary>
             [QueryParameter("sort_direction")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonsSortDirectionParameter? SortDirection { get; set; }
             /// <summary>If set, only persons with an `update_time` later than or equal to this time are returned. In RFC3339 format, e.g. 2025-01-01T10:20:00Z.</summary>

@@ -136,10 +136,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Archived
             /// <summary>If supplied, only deals in the specified pipeline are returned. If filter_id is provided, this is ignored.</summary>
             [QueryParameter("pipeline_id")]
             public int? PipelineId { get; set; }
-            /// <summary>&quot;The field to sort by. Supported fields: `id`, `update_time`, `add_time`.&quot;</summary>
+            /// <summary>The field to sort by. Supported fields: `id`, `update_time`, `add_time`.</summary>
             [QueryParameter("sort_by")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.GetArchivedDealsSortByParameter? SortBy { get; set; }
-            /// <summary>&quot;The sorting direction. Supported values: `asc`, `desc`.&quot;</summary>
+            /// <summary>The sorting direction. Supported values: `asc`, `desc`.</summary>
             [QueryParameter("sort_direction")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.GetArchivedDealsSortDirectionParameter? SortDirection { get; set; }
             /// <summary>If supplied, only deals in the specified stage are returned. If filter_id is provided, this is ignored.</summary>
