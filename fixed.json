@@ -16459,7 +16459,7 @@
             "items": {
               "$ref": "#/components/schemas/AddProductRequestPricesItem"
             },
-            "description": "An array of objects, each containing: \u0060currency\u0060 (string), \u0060price\u0060 (number), \u0060cost\u0060 (number, optional), \u0060direct_cost\u0060 (number, optional). Note that there can only be one price per product per currency. When \u0060prices\u0060 is omitted altogether, a default price of 0 and the user\u0027s default currency will be assigned."
+            "description": "The prices of the product in different currencies. Note that there can only be one price per product per currency. When \u0060prices\u0060 is omitted altogether, a default price of 0 and the user\u0027s default currency will be assigned."
           },
           "custom_fields": {
             "$ref": "#/components/schemas/AddProductRequestCustomFields"
@@ -16654,7 +16654,7 @@
             "items": {
               "$ref": "#/components/schemas/UpdateProductRequestPricesItem"
             },
-            "description": "An array of objects, each containing: \u0060currency\u0060 (string), \u0060price\u0060 (number), \u0060cost\u0060 (number, optional), \u0060direct_cost\u0060 (number, optional). Note that there can only be one price per product per currency. When \u0060prices\u0060 is omitted altogether, a default price of 0 and the user\u0027s default currency will be assigned."
+            "description": "The prices of the product in different currencies. Note that there can only be one price per product per currency. When \u0060prices\u0060 is omitted altogether, a default price of 0 and the user\u0027s default currency will be assigned."
           },
           "custom_fields": {
             "$ref": "#/components/schemas/UpdateProductRequestCustomFields"
@@ -23971,7 +23971,33 @@
         "description": "Pagination related data"
       },
       "AddProductRequestPricesItem": {
-        "type": "object"
+        "required": [
+          "price",
+          "currency"
+        ],
+        "type": "object",
+        "properties": {
+          "price": {
+            "type": "number",
+            "description": "The price of the product"
+          },
+          "cost": {
+            "type": "number",
+            "description": "The cost of the product"
+          },
+          "currency": {
+            "type": "string",
+            "description": "The currency of the price"
+          },
+          "direct_cost": {
+            "type": "number",
+            "description": "The direct cost of the product"
+          },
+          "notes": {
+            "type": "string",
+            "description": "The notes about the price"
+          }
+        }
       },
       "AddProductRequestCustomFields": {
         "type": "object",
@@ -24244,7 +24270,33 @@
         }
       },
       "UpdateProductRequestPricesItem": {
-        "type": "object"
+        "required": [
+          "price",
+          "currency"
+        ],
+        "type": "object",
+        "properties": {
+          "price": {
+            "type": "number",
+            "description": "The price of the product"
+          },
+          "cost": {
+            "type": "number",
+            "description": "The cost of the product"
+          },
+          "currency": {
+            "type": "string",
+            "description": "The currency of the price"
+          },
+          "direct_cost": {
+            "type": "number",
+            "description": "The direct cost of the product"
+          },
+          "notes": {
+            "type": "string",
+            "description": "The notes about the price"
+          }
+        }
       },
       "UpdateProductRequestCustomFields": {
         "type": "object",
@@ -30288,21 +30340,23 @@
       "GetProductsResponseDataItemPricesItem": {
         "type": "object",
         "properties": {
-          "product_id": {
-            "type": "integer",
-            "description": "The ID of the product"
-          },
           "price": {
             "type": "number",
             "description": "The price of the product"
           },
-          "currency": {
-            "type": "string",
-            "description": "The currency of the price"
-          },
           "cost": {
             "type": "number",
             "description": "The cost of the product"
+          },
+          "product_id": {
+            "type": "integer",
+            "description": "The ID of the product",
+            "nullable": true
+          },
+          "currency": {
+            "type": "string",
+            "description": "The currency of the price",
+            "nullable": true
           },
           "direct_cost": {
             "type": "number",
@@ -30322,21 +30376,23 @@
       "AddProduct201ResponseDataPricesItem": {
         "type": "object",
         "properties": {
-          "product_id": {
-            "type": "integer",
-            "description": "The ID of the product"
-          },
           "price": {
             "type": "number",
             "description": "The price of the product"
           },
-          "currency": {
-            "type": "string",
-            "description": "The currency of the price"
-          },
           "cost": {
             "type": "number",
             "description": "The cost of the product"
+          },
+          "product_id": {
+            "type": "integer",
+            "description": "The ID of the product",
+            "nullable": true
+          },
+          "currency": {
+            "type": "string",
+            "description": "The currency of the price",
+            "nullable": true
           },
           "direct_cost": {
             "type": "number",
@@ -30368,21 +30424,23 @@
       "GetProduct200ResponseDataPricesItem": {
         "type": "object",
         "properties": {
-          "product_id": {
-            "type": "integer",
-            "description": "The ID of the product"
-          },
           "price": {
             "type": "number",
             "description": "The price of the product"
           },
-          "currency": {
-            "type": "string",
-            "description": "The currency of the price"
-          },
           "cost": {
             "type": "number",
             "description": "The cost of the product"
+          },
+          "product_id": {
+            "type": "integer",
+            "description": "The ID of the product",
+            "nullable": true
+          },
+          "currency": {
+            "type": "string",
+            "description": "The currency of the price",
+            "nullable": true
           },
           "direct_cost": {
             "type": "number",
@@ -30402,21 +30460,23 @@
       "UpdateProductResponseDataPricesItem": {
         "type": "object",
         "properties": {
-          "product_id": {
-            "type": "integer",
-            "description": "The ID of the product"
-          },
           "price": {
             "type": "number",
             "description": "The price of the product"
           },
-          "currency": {
-            "type": "string",
-            "description": "The currency of the price"
-          },
           "cost": {
             "type": "number",
             "description": "The cost of the product"
+          },
+          "product_id": {
+            "type": "integer",
+            "description": "The ID of the product",
+            "nullable": true
+          },
+          "currency": {
+            "type": "string",
+            "description": "The currency of the price",
+            "nullable": true
           },
           "direct_cost": {
             "type": "number",
@@ -30436,21 +30496,23 @@
       "DuplicateProduct201ResponseDataPricesItem": {
         "type": "object",
         "properties": {
-          "product_id": {
-            "type": "integer",
-            "description": "The ID of the product"
-          },
           "price": {
             "type": "number",
             "description": "The price of the product"
           },
-          "currency": {
-            "type": "string",
-            "description": "The currency of the price"
-          },
           "cost": {
             "type": "number",
             "description": "The cost of the product"
+          },
+          "product_id": {
+            "type": "integer",
+            "description": "The ID of the product",
+            "nullable": true
+          },
+          "currency": {
+            "type": "string",
+            "description": "The currency of the price",
+            "nullable": true
           },
           "direct_cost": {
             "type": "number",

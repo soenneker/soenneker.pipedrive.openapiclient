@@ -56,7 +56,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #endif
         /// <summary>The ID of the user who will be marked as the owner of this product. When omitted, the authorized user ID will be used</summary>
         public int? OwnerId { get; set; }
-        /// <summary>An array of objects, each containing: `currency` (string), `price` (number), `cost` (number, optional), `direct_cost` (number, optional). Note that there can only be one price per product per currency. When `prices` is omitted altogether, a default price of 0 and the user&apos;s default currency will be assigned.</summary>
+        /// <summary>The prices of the product in different currencies. Note that there can only be one price per product per currency. When `prices` is omitted altogether, a default price of 0 and the user&apos;s default currency will be assigned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProductRequestPricesItem>? Prices { get; set; }

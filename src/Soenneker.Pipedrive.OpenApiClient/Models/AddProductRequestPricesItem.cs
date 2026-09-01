@@ -14,6 +14,28 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The cost of the product</summary>
+        public double? Cost { get; set; }
+        /// <summary>The currency of the price</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Currency { get; set; }
+#nullable restore
+#else
+        public string Currency { get; set; }
+#endif
+        /// <summary>The direct cost of the product</summary>
+        public double? DirectCost { get; set; }
+        /// <summary>The notes about the price</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Notes { get; set; }
+#nullable restore
+#else
+        public string Notes { get; set; }
+#endif
+        /// <summary>The price of the product</summary>
+        public double? Price { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductRequestPricesItem"/> and sets the default values.
         /// </summary>
@@ -39,6 +61,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "cost", n => { Cost = n.GetDoubleValue(); } },
+                { "currency", n => { Currency = n.GetStringValue(); } },
+                { "direct_cost", n => { DirectCost = n.GetDoubleValue(); } },
+                { "notes", n => { Notes = n.GetStringValue(); } },
+                { "price", n => { Price = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
@@ -48,6 +75,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteDoubleValue("cost", Cost);
+            writer.WriteStringValue("currency", Currency);
+            writer.WriteDoubleValue("direct_cost", DirectCost);
+            writer.WriteStringValue("notes", Notes);
+            writer.WriteDoubleValue("price", Price);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
