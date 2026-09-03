@@ -1971,9 +1971,11 @@ paths:
                               description: The ID of the user who owns the deal
                             person_id:
                               type: integer
+                              nullable: true
                               description: The ID of the person linked to the deal
                             org_id:
                               type: integer
+                              nullable: true
                               description: The ID of the organization linked to the deal
                             pipeline_id:
                               type: integer
@@ -1995,6 +1997,7 @@ paths:
                               description: The last updated date and time of the deal
                             stage_change_time:
                               type: string
+                              nullable: true
                               description: The last updated date and time of the deal stage
                             is_deleted:
                               type: boolean
@@ -2022,13 +2025,16 @@ paths:
                               description: The date and time of closing the deal
                             won_time:
                               type: string
+                              nullable: true
                               description: The date and time of changing the deal status as won
                             lost_time:
                               type: string
+                              nullable: true
                               description: The date and time of changing the deal status as lost
                             expected_close_date:
                               type: string
                               format: date
+                              nullable: true
                               description: The expected close date of the deal
                             label_ids:
                               type: array
@@ -2166,9 +2172,11 @@ paths:
                   description: The ID of the user who owns the deal
                 person_id:
                   type: integer
+                  nullable: true
                   description: The ID of the person linked to the deal
                 org_id:
                   type: integer
+                  nullable: true
                   description: The ID of the organization linked to the deal
                 pipeline_id:
                   type: integer
@@ -2190,24 +2198,22 @@ paths:
                   description: Whether the deal is archived or not
                 archive_time:
                   type: string
+                  nullable: true
                   description: 'The optional date and time of archiving the deal in UTC. Format: YYYY-MM-DD HH:MM:SS. If omitted and `is_archived` is true, it will be set to the current date and time.'
                 status:
                   type: string
                   description: The status of the deal
                 probability:
                   type: number
-                  nullable: true
                   description: The success probability percentage of the deal
                 lost_reason:
                   type: string
-                  nullable: true
                   description: The reason for losing the deal. Can only be set if deal status is lost.
                 visible_to:
                   type: integer
                   description: The visibility of the deal
                 close_time:
                   type: string
-                  nullable: true
                   description: The date and time of closing the deal. Can only be set if deal status is won or lost.
                 won_time:
                   type: string
@@ -2260,9 +2266,11 @@ paths:
                             description: The ID of the user who owns the deal
                           person_id:
                             type: integer
+                            nullable: true
                             description: The ID of the person linked to the deal
                           org_id:
                             type: integer
+                            nullable: true
                             description: The ID of the organization linked to the deal
                           pipeline_id:
                             type: integer
@@ -2284,6 +2292,7 @@ paths:
                             description: The last updated date and time of the deal
                           stage_change_time:
                             type: string
+                            nullable: true
                             description: The last updated date and time of the deal stage
                           is_deleted:
                             type: boolean
@@ -2311,13 +2320,16 @@ paths:
                             description: The date and time of closing the deal
                           won_time:
                             type: string
+                            nullable: true
                             description: The date and time of changing the deal status as won
                           lost_time:
                             type: string
+                            nullable: true
                             description: The date and time of changing the deal status as lost
                           expected_close_date:
                             type: string
                             format: date
+                            nullable: true
                             description: The expected close date of the deal
                           label_ids:
                             type: array
@@ -2580,9 +2592,11 @@ paths:
                               description: The ID of the user who owns the deal
                             person_id:
                               type: integer
+                              nullable: true
                               description: The ID of the person linked to the deal
                             org_id:
                               type: integer
+                              nullable: true
                               description: The ID of the organization linked to the deal
                             pipeline_id:
                               type: integer
@@ -2604,6 +2618,7 @@ paths:
                               description: The last updated date and time of the deal
                             stage_change_time:
                               type: string
+                              nullable: true
                               description: The last updated date and time of the deal stage
                             is_deleted:
                               type: boolean
@@ -2631,13 +2646,16 @@ paths:
                               description: The date and time of closing the deal
                             won_time:
                               type: string
+                              nullable: true
                               description: The date and time of changing the deal status as won
                             lost_time:
                               type: string
+                              nullable: true
                               description: The date and time of changing the deal status as lost
                             expected_close_date:
                               type: string
                               format: date
+                              nullable: true
                               description: The expected close date of the deal
                             label_ids:
                               type: array
@@ -2878,9 +2896,11 @@ paths:
                             description: The ID of the user who owns the deal
                           person_id:
                             type: integer
+                            nullable: true
                             description: The ID of the person linked to the deal
                           org_id:
                             type: integer
+                            nullable: true
                             description: The ID of the organization linked to the deal
                           pipeline_id:
                             type: integer
@@ -2902,6 +2922,7 @@ paths:
                             description: The last updated date and time of the deal
                           stage_change_time:
                             type: string
+                            nullable: true
                             description: The last updated date and time of the deal stage
                           is_deleted:
                             type: boolean
@@ -2929,13 +2950,16 @@ paths:
                             description: The date and time of closing the deal
                           won_time:
                             type: string
+                            nullable: true
                             description: The date and time of changing the deal status as won
                           lost_time:
                             type: string
+                            nullable: true
                             description: The date and time of changing the deal status as lost
                           expected_close_date:
                             type: string
                             format: date
+                            nullable: true
                             description: The expected close date of the deal
                           label_ids:
                             type: array
@@ -3069,9 +3093,11 @@ paths:
                   description: The ID of the user who owns the deal
                 person_id:
                   type: integer
+                  nullable: true
                   description: The ID of the person linked to the deal
                 org_id:
                   type: integer
+                  nullable: true
                   description: The ID of the organization linked to the deal
                 pipeline_id:
                   type: integer
@@ -3093,24 +3119,22 @@ paths:
                   description: Whether the deal is archived or not
                 archive_time:
                   type: string
+                  nullable: true
                   description: 'The optional date and time of archiving the deal in UTC. Format: YYYY-MM-DD HH:MM:SS. If omitted and `is_archived` is true, it will be set to the current date and time.'
                 status:
                   type: string
                   description: The status of the deal
                 probability:
                   type: number
-                  nullable: true
                   description: The success probability percentage of the deal
                 lost_reason:
                   type: string
-                  nullable: true
                   description: The reason for losing the deal. Can only be set if deal status is lost.
                 visible_to:
                   type: integer
                   description: The visibility of the deal
                 close_time:
                   type: string
-                  nullable: true
                   description: The date and time of closing the deal. Can only be set if deal status is won or lost.
                 won_time:
                   type: string
@@ -3163,9 +3187,11 @@ paths:
                             description: The ID of the user who owns the deal
                           person_id:
                             type: integer
+                            nullable: true
                             description: The ID of the person linked to the deal
                           org_id:
                             type: integer
+                            nullable: true
                             description: The ID of the organization linked to the deal
                           pipeline_id:
                             type: integer
@@ -3187,6 +3213,7 @@ paths:
                             description: The last updated date and time of the deal
                           stage_change_time:
                             type: string
+                            nullable: true
                             description: The last updated date and time of the deal stage
                           is_deleted:
                             type: boolean
@@ -3214,13 +3241,16 @@ paths:
                             description: The date and time of closing the deal
                           won_time:
                             type: string
+                            nullable: true
                             description: The date and time of changing the deal status as won
                           lost_time:
                             type: string
+                            nullable: true
                             description: The date and time of changing the deal status as lost
                           expected_close_date:
                             type: string
                             format: date
+                            nullable: true
                             description: The expected close date of the deal
                           label_ids:
                             type: array
@@ -17844,6 +17874,7 @@ paths:
                   description: Whether deals in this stage can become rotten
                 days_to_rotten:
                   type: integer
+                  nullable: true
                   description: The number of days the deals not updated in this stage would become rotten. Applies only if the `is_deal_rot_enabled` is set.
       responses:
         '200':
@@ -18067,6 +18098,7 @@ paths:
                   description: Whether deals in this stage can become rotten
                 days_to_rotten:
                   type: integer
+                  nullable: true
                   description: The number of days the deals not updated in this stage would become rotten. Applies only if the `is_deal_rot_enabled` is set.
       responses:
         '200':
@@ -22818,9 +22850,11 @@ components:
           description: The ID of the user who owns the deal
         person_id:
           type: integer
+          nullable: true
           description: The ID of the person linked to the deal
         org_id:
           type: integer
+          nullable: true
           description: The ID of the organization linked to the deal
         pipeline_id:
           type: integer
@@ -22842,6 +22876,7 @@ components:
           description: The last updated date and time of the deal
         stage_change_time:
           type: string
+          nullable: true
           description: The last updated date and time of the deal stage
         is_deleted:
           type: boolean
@@ -22869,13 +22904,16 @@ components:
           description: The date and time of closing the deal
         won_time:
           type: string
+          nullable: true
           description: The date and time of changing the deal status as won
         lost_time:
           type: string
+          nullable: true
           description: The date and time of changing the deal status as lost
         expected_close_date:
           type: string
           format: date
+          nullable: true
           description: The expected close date of the deal
         label_ids:
           type: array

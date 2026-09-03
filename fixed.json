@@ -13483,11 +13483,13 @@
           },
           "person_id": {
             "type": "integer",
-            "description": "The ID of the person linked to the deal"
+            "description": "The ID of the person linked to the deal",
+            "nullable": true
           },
           "org_id": {
             "type": "integer",
-            "description": "The ID of the organization linked to the deal"
+            "description": "The ID of the organization linked to the deal",
+            "nullable": true
           },
           "pipeline_id": {
             "type": "integer",
@@ -13515,7 +13517,8 @@
           },
           "stage_change_time": {
             "type": "string",
-            "description": "The last updated date and time of the deal stage"
+            "description": "The last updated date and time of the deal stage",
+            "nullable": true
           },
           "is_deleted": {
             "type": "boolean",
@@ -13550,16 +13553,19 @@
           },
           "won_time": {
             "type": "string",
-            "description": "The date and time of changing the deal status as won"
+            "description": "The date and time of changing the deal status as won",
+            "nullable": true
           },
           "lost_time": {
             "type": "string",
-            "description": "The date and time of changing the deal status as lost"
+            "description": "The date and time of changing the deal status as lost",
+            "nullable": true
           },
           "expected_close_date": {
             "type": "string",
             "description": "The expected close date of the deal",
-            "format": "date"
+            "format": "date",
+            "nullable": true
           },
           "label_ids": {
             "type": "array",
@@ -14350,11 +14356,13 @@
           },
           "person_id": {
             "type": "integer",
-            "description": "The ID of the person linked to the deal"
+            "description": "The ID of the person linked to the deal",
+            "nullable": true
           },
           "org_id": {
             "type": "integer",
-            "description": "The ID of the organization linked to the deal"
+            "description": "The ID of the organization linked to the deal",
+            "nullable": true
           },
           "pipeline_id": {
             "type": "integer",
@@ -14382,7 +14390,8 @@
           },
           "archive_time": {
             "type": "string",
-            "description": "The optional date and time of archiving the deal in UTC. Format: YYYY-MM-DD HH:MM:SS. If omitted and \u0060is_archived\u0060 is true, it will be set to the current date and time."
+            "description": "The optional date and time of archiving the deal in UTC. Format: YYYY-MM-DD HH:MM:SS. If omitted and \u0060is_archived\u0060 is true, it will be set to the current date and time.",
+            "nullable": true
           },
           "status": {
             "type": "string",
@@ -14390,13 +14399,11 @@
           },
           "probability": {
             "type": "number",
-            "description": "The success probability percentage of the deal",
-            "nullable": true
+            "description": "The success probability percentage of the deal"
           },
           "lost_reason": {
             "type": "string",
-            "description": "The reason for losing the deal. Can only be set if deal status is lost.",
-            "nullable": true
+            "description": "The reason for losing the deal. Can only be set if deal status is lost."
           },
           "visible_to": {
             "type": "integer",
@@ -14404,8 +14411,7 @@
           },
           "close_time": {
             "type": "string",
-            "description": "The date and time of closing the deal. Can only be set if deal status is won or lost.",
-            "nullable": true
+            "description": "The date and time of closing the deal. Can only be set if deal status is won or lost."
           },
           "won_time": {
             "type": "string",
@@ -14504,11 +14510,13 @@
           },
           "person_id": {
             "type": "integer",
-            "description": "The ID of the person linked to the deal"
+            "description": "The ID of the person linked to the deal",
+            "nullable": true
           },
           "org_id": {
             "type": "integer",
-            "description": "The ID of the organization linked to the deal"
+            "description": "The ID of the organization linked to the deal",
+            "nullable": true
           },
           "pipeline_id": {
             "type": "integer",
@@ -14536,7 +14544,8 @@
           },
           "archive_time": {
             "type": "string",
-            "description": "The optional date and time of archiving the deal in UTC. Format: YYYY-MM-DD HH:MM:SS. If omitted and \u0060is_archived\u0060 is true, it will be set to the current date and time."
+            "description": "The optional date and time of archiving the deal in UTC. Format: YYYY-MM-DD HH:MM:SS. If omitted and \u0060is_archived\u0060 is true, it will be set to the current date and time.",
+            "nullable": true
           },
           "status": {
             "type": "string",
@@ -14544,13 +14553,11 @@
           },
           "probability": {
             "type": "number",
-            "description": "The success probability percentage of the deal",
-            "nullable": true
+            "description": "The success probability percentage of the deal"
           },
           "lost_reason": {
             "type": "string",
-            "description": "The reason for losing the deal. Can only be set if deal status is lost.",
-            "nullable": true
+            "description": "The reason for losing the deal. Can only be set if deal status is lost."
           },
           "visible_to": {
             "type": "integer",
@@ -14558,8 +14565,7 @@
           },
           "close_time": {
             "type": "string",
-            "description": "The date and time of closing the deal. Can only be set if deal status is won or lost.",
-            "nullable": true
+            "description": "The date and time of closing the deal. Can only be set if deal status is won or lost."
           },
           "won_time": {
             "type": "string",
@@ -17278,7 +17284,8 @@
           },
           "days_to_rotten": {
             "type": "integer",
-            "description": "The number of days the deals not updated in this stage would become rotten. Applies only if the \u0060is_deal_rot_enabled\u0060 is set."
+            "description": "The number of days the deals not updated in this stage would become rotten. Applies only if the \u0060is_deal_rot_enabled\u0060 is set.",
+            "nullable": true
           }
         }
       },
@@ -17343,7 +17350,8 @@
           },
           "days_to_rotten": {
             "type": "integer",
-            "description": "The number of days the deals not updated in this stage would become rotten. Applies only if the \u0060is_deal_rot_enabled\u0060 is set."
+            "description": "The number of days the deals not updated in this stage would become rotten. Applies only if the \u0060is_deal_rot_enabled\u0060 is set.",
+            "nullable": true
           }
         }
       },
@@ -19390,11 +19398,13 @@
           },
           "person_id": {
             "type": "integer",
-            "description": "The ID of the person linked to the deal"
+            "description": "The ID of the person linked to the deal",
+            "nullable": true
           },
           "org_id": {
             "type": "integer",
-            "description": "The ID of the organization linked to the deal"
+            "description": "The ID of the organization linked to the deal",
+            "nullable": true
           },
           "pipeline_id": {
             "type": "integer",
@@ -19422,7 +19432,8 @@
           },
           "stage_change_time": {
             "type": "string",
-            "description": "The last updated date and time of the deal stage"
+            "description": "The last updated date and time of the deal stage",
+            "nullable": true
           },
           "is_deleted": {
             "type": "boolean",
@@ -19457,16 +19468,19 @@
           },
           "won_time": {
             "type": "string",
-            "description": "The date and time of changing the deal status as won"
+            "description": "The date and time of changing the deal status as won",
+            "nullable": true
           },
           "lost_time": {
             "type": "string",
-            "description": "The date and time of changing the deal status as lost"
+            "description": "The date and time of changing the deal status as lost",
+            "nullable": true
           },
           "expected_close_date": {
             "type": "string",
             "description": "The expected close date of the deal",
-            "format": "date"
+            "format": "date",
+            "nullable": true
           },
           "label_ids": {
             "type": "array",
@@ -19551,11 +19565,13 @@
           },
           "person_id": {
             "type": "integer",
-            "description": "The ID of the person linked to the deal"
+            "description": "The ID of the person linked to the deal",
+            "nullable": true
           },
           "org_id": {
             "type": "integer",
-            "description": "The ID of the organization linked to the deal"
+            "description": "The ID of the organization linked to the deal",
+            "nullable": true
           },
           "pipeline_id": {
             "type": "integer",
@@ -19583,7 +19599,8 @@
           },
           "stage_change_time": {
             "type": "string",
-            "description": "The last updated date and time of the deal stage"
+            "description": "The last updated date and time of the deal stage",
+            "nullable": true
           },
           "is_deleted": {
             "type": "boolean",
@@ -19618,16 +19635,19 @@
           },
           "won_time": {
             "type": "string",
-            "description": "The date and time of changing the deal status as won"
+            "description": "The date and time of changing the deal status as won",
+            "nullable": true
           },
           "lost_time": {
             "type": "string",
-            "description": "The date and time of changing the deal status as lost"
+            "description": "The date and time of changing the deal status as lost",
+            "nullable": true
           },
           "expected_close_date": {
             "type": "string",
             "description": "The expected close date of the deal",
-            "format": "date"
+            "format": "date",
+            "nullable": true
           },
           "label_ids": {
             "type": "array",
@@ -19698,11 +19718,13 @@
           },
           "person_id": {
             "type": "integer",
-            "description": "The ID of the person linked to the deal"
+            "description": "The ID of the person linked to the deal",
+            "nullable": true
           },
           "org_id": {
             "type": "integer",
-            "description": "The ID of the organization linked to the deal"
+            "description": "The ID of the organization linked to the deal",
+            "nullable": true
           },
           "pipeline_id": {
             "type": "integer",
@@ -19730,7 +19752,8 @@
           },
           "stage_change_time": {
             "type": "string",
-            "description": "The last updated date and time of the deal stage"
+            "description": "The last updated date and time of the deal stage",
+            "nullable": true
           },
           "is_deleted": {
             "type": "boolean",
@@ -19765,16 +19788,19 @@
           },
           "won_time": {
             "type": "string",
-            "description": "The date and time of changing the deal status as won"
+            "description": "The date and time of changing the deal status as won",
+            "nullable": true
           },
           "lost_time": {
             "type": "string",
-            "description": "The date and time of changing the deal status as lost"
+            "description": "The date and time of changing the deal status as lost",
+            "nullable": true
           },
           "expected_close_date": {
             "type": "string",
             "description": "The expected close date of the deal",
-            "format": "date"
+            "format": "date",
+            "nullable": true
           },
           "label_ids": {
             "type": "array",
@@ -19864,11 +19890,13 @@
           },
           "person_id": {
             "type": "integer",
-            "description": "The ID of the person linked to the deal"
+            "description": "The ID of the person linked to the deal",
+            "nullable": true
           },
           "org_id": {
             "type": "integer",
-            "description": "The ID of the organization linked to the deal"
+            "description": "The ID of the organization linked to the deal",
+            "nullable": true
           },
           "pipeline_id": {
             "type": "integer",
@@ -19896,7 +19924,8 @@
           },
           "stage_change_time": {
             "type": "string",
-            "description": "The last updated date and time of the deal stage"
+            "description": "The last updated date and time of the deal stage",
+            "nullable": true
           },
           "is_deleted": {
             "type": "boolean",
@@ -19931,16 +19960,19 @@
           },
           "won_time": {
             "type": "string",
-            "description": "The date and time of changing the deal status as won"
+            "description": "The date and time of changing the deal status as won",
+            "nullable": true
           },
           "lost_time": {
             "type": "string",
-            "description": "The date and time of changing the deal status as lost"
+            "description": "The date and time of changing the deal status as lost",
+            "nullable": true
           },
           "expected_close_date": {
             "type": "string",
             "description": "The expected close date of the deal",
-            "format": "date"
+            "format": "date",
+            "nullable": true
           },
           "label_ids": {
             "type": "array",
@@ -20015,11 +20047,13 @@
           },
           "person_id": {
             "type": "integer",
-            "description": "The ID of the person linked to the deal"
+            "description": "The ID of the person linked to the deal",
+            "nullable": true
           },
           "org_id": {
             "type": "integer",
-            "description": "The ID of the organization linked to the deal"
+            "description": "The ID of the organization linked to the deal",
+            "nullable": true
           },
           "pipeline_id": {
             "type": "integer",
@@ -20047,7 +20081,8 @@
           },
           "stage_change_time": {
             "type": "string",
-            "description": "The last updated date and time of the deal stage"
+            "description": "The last updated date and time of the deal stage",
+            "nullable": true
           },
           "is_deleted": {
             "type": "boolean",
@@ -20082,16 +20117,19 @@
           },
           "won_time": {
             "type": "string",
-            "description": "The date and time of changing the deal status as won"
+            "description": "The date and time of changing the deal status as won",
+            "nullable": true
           },
           "lost_time": {
             "type": "string",
-            "description": "The date and time of changing the deal status as lost"
+            "description": "The date and time of changing the deal status as lost",
+            "nullable": true
           },
           "expected_close_date": {
             "type": "string",
             "description": "The expected close date of the deal",
-            "format": "date"
+            "format": "date",
+            "nullable": true
           },
           "label_ids": {
             "type": "array",
