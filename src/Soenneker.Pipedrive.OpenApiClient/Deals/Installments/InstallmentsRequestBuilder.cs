@@ -22,7 +22,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Installments
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InstallmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/installments?deal_ids={deal_ids}{&cursor*,limit*,sort_by*,sort_direction*}", pathParameters)
+        public InstallmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/installments{?cursor*,limit*,sort_by*,sort_direction*,deal_ids*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Installments
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InstallmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/installments?deal_ids={deal_ids}{&cursor*,limit*,sort_by*,sort_direction*}", rawUrl)
+        public InstallmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/installments{?cursor*,limit*,sort_by*,sort_direction*,deal_ids*}", rawUrl)
         {
         }
         /// <summary>

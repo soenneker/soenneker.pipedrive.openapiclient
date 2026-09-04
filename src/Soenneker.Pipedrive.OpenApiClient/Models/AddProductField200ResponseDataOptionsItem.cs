@@ -112,6 +112,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             public static global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductField200ResponseDataOptionsItem.AddProductField200ResponseDataOptionsItem_id CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
                 var result = new global::Soenneker.Pipedrive.OpenApiClient.Models.AddProductField200ResponseDataOptionsItem.AddProductField200ResponseDataOptionsItem_id();
                 if(parseNode.GetIntValue() is int integerValue)
                 {
