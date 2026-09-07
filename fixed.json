@@ -205,6 +205,7 @@
                       "conference_meeting_id": "abc-xyz",
                       "public_description": "Public Description",
                       "priority": 263,
+                      "outcome": 101,
                       "note": "Note"
                     }
                   ],
@@ -307,6 +308,7 @@
                     "conference_meeting_id": "abc-xyz",
                     "public_description": "Public Description",
                     "priority": 263,
+                    "outcome": 101,
                     "note": "Note"
                   }
                 }
@@ -463,6 +465,7 @@
                     "conference_meeting_id": "abc-xyz",
                     "public_description": "Public Description",
                     "priority": 263,
+                    "outcome": 101,
                     "note": "Note"
                   }
                 }
@@ -572,6 +575,7 @@
                     "conference_meeting_id": "abc-xyz",
                     "public_description": "Public Description",
                     "priority": 263,
+                    "outcome": 101,
                     "note": "Note"
                   }
                 }
@@ -13460,6 +13464,11 @@
             "type": "integer",
             "description": "The priority of the activity. Mappable to a specific string using activityFields API."
           },
+          "outcome": {
+            "type": "integer",
+            "description": "The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API.",
+            "nullable": true
+          },
           "note": {
             "type": "string",
             "description": "The note of the activity"
@@ -14146,6 +14155,11 @@
             "type": "integer",
             "description": "The priority of the activity. Mappable to a specific string using activityFields API."
           },
+          "outcome": {
+            "type": "integer",
+            "description": "The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API. Set to \u0060null\u0060 to clear the Outcome.",
+            "nullable": true
+          },
           "note": {
             "type": "string",
             "description": "The note of the activity"
@@ -14270,6 +14284,11 @@
           "priority": {
             "type": "integer",
             "description": "The priority of the activity. Mappable to a specific string using activityFields API."
+          },
+          "outcome": {
+            "type": "integer",
+            "description": "The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API. Set to \u0060null\u0060 to clear the Outcome.",
+            "nullable": true
           },
           "note": {
             "type": "string",
@@ -18704,6 +18723,11 @@
             "type": "integer",
             "description": "The priority of the activity. Mappable to a specific string using activityFields API."
           },
+          "outcome": {
+            "type": "integer",
+            "description": "The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API.",
+            "nullable": true
+          },
           "note": {
             "type": "string",
             "description": "The note of the activity"
@@ -18924,6 +18948,11 @@
             "type": "integer",
             "description": "The priority of the activity. Mappable to a specific string using activityFields API."
           },
+          "outcome": {
+            "type": "integer",
+            "description": "The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API.",
+            "nullable": true
+          },
           "note": {
             "type": "string",
             "description": "The note of the activity"
@@ -19054,6 +19083,11 @@
           "priority": {
             "type": "integer",
             "description": "The priority of the activity. Mappable to a specific string using activityFields API."
+          },
+          "outcome": {
+            "type": "integer",
+            "description": "The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API.",
+            "nullable": true
           },
           "note": {
             "type": "string",
@@ -19264,6 +19298,11 @@
           "priority": {
             "type": "integer",
             "description": "The priority of the activity. Mappable to a specific string using activityFields API."
+          },
+          "outcome": {
+            "type": "integer",
+            "description": "The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API.",
+            "nullable": true
           },
           "note": {
             "type": "string",

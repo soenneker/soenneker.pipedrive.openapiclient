@@ -346,6 +346,10 @@ paths:
                             priority:
                               type: integer
                               description: The priority of the activity. Mappable to a specific string using activityFields API.
+                            outcome:
+                              type: integer
+                              nullable: true
+                              description: The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API.
                             note:
                               type: string
                               description: The note of the activity
@@ -404,6 +408,7 @@ paths:
                     conference_meeting_id: abc-xyz
                     public_description: Public Description
                     priority: 263
+                    outcome: 101
                     note: Note
                 additional_data:
                   next_cursor: eyJmaWVsZCI6ImlkIiwiZmllbGRWYWx1ZSI6Nywic29ydERpcmVjdGlvbiI6ImFzYyIsImlkIjo3fQ
@@ -539,6 +544,10 @@ paths:
                 priority:
                   type: integer
                   description: The priority of the activity. Mappable to a specific string using activityFields API.
+                outcome:
+                  type: integer
+                  nullable: true
+                  description: The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API. Set to `null` to clear the Outcome.
                 note:
                   type: string
                   description: The note of the activity
@@ -705,6 +714,10 @@ paths:
                           priority:
                             type: integer
                             description: The priority of the activity. Mappable to a specific string using activityFields API.
+                          outcome:
+                            type: integer
+                            nullable: true
+                            description: The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API.
                           note:
                             type: string
                             description: The note of the activity
@@ -756,6 +769,7 @@ paths:
                   conference_meeting_id: abc-xyz
                   public_description: Public Description
                   priority: 263
+                  outcome: 101
                   note: Note
   '/activities/{id}':
     delete:
@@ -987,6 +1001,10 @@ paths:
                           priority:
                             type: integer
                             description: The priority of the activity. Mappable to a specific string using activityFields API.
+                          outcome:
+                            type: integer
+                            nullable: true
+                            description: The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API.
                           note:
                             type: string
                             description: The note of the activity
@@ -1038,6 +1056,7 @@ paths:
                   conference_meeting_id: abc-xyz
                   public_description: Public Description
                   priority: 263
+                  outcome: 101
                   note: Note
     patch:
       summary: Update an activity
@@ -1178,6 +1197,10 @@ paths:
                 priority:
                   type: integer
                   description: The priority of the activity. Mappable to a specific string using activityFields API.
+                outcome:
+                  type: integer
+                  nullable: true
+                  description: The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API. Set to `null` to clear the Outcome.
                 note:
                   type: string
                   description: The note of the activity
@@ -1344,6 +1367,10 @@ paths:
                           priority:
                             type: integer
                             description: The priority of the activity. Mappable to a specific string using activityFields API.
+                          outcome:
+                            type: integer
+                            nullable: true
+                            description: The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API.
                           note:
                             type: string
                             description: The note of the activity
@@ -1395,6 +1422,7 @@ paths:
                   conference_meeting_id: abc-xyz
                   public_description: Public Description
                   priority: 263
+                  outcome: 101
                   note: Note
   /activityFields:
     get:
@@ -22833,6 +22861,10 @@ components:
         priority:
           type: integer
           description: The priority of the activity. Mappable to a specific string using activityFields API.
+        outcome:
+          type: integer
+          nullable: true
+          description: The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API.
         note:
           type: string
           description: The note of the activity

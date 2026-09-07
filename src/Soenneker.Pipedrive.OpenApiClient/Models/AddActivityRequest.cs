@@ -78,6 +78,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #endif
         /// <summary>The ID of the organization linked to the activity</summary>
         public int? OrgId { get; set; }
+        /// <summary>The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API. Set to `null` to clear the Outcome.</summary>
+        public int? Outcome { get; set; }
         /// <summary>The ID of the user who owns the activity</summary>
         public int? OwnerId { get; set; }
         /// <summary>The participants of the activity</summary>
@@ -154,6 +156,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
                 { "location", n => { Location = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddActivityRequestLocation>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddActivityRequestLocation.CreateFromDiscriminatorValue); } },
                 { "note", n => { Note = n.GetStringValue(); } },
                 { "org_id", n => { OrgId = n.GetIntValue(); } },
+                { "outcome", n => { Outcome = n.GetIntValue(); } },
                 { "owner_id", n => { OwnerId = n.GetIntValue(); } },
                 { "participants", n => { Participants = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.AddActivityRequestParticipantsItem>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddActivityRequestParticipantsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "person_id", n => { PersonId = n.GetIntValue(); } },
@@ -182,6 +185,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddActivityRequestLocation>("location", Location);
             writer.WriteStringValue("note", Note);
             writer.WriteIntValue("org_id", OrgId);
+            writer.WriteIntValue("outcome", Outcome);
             writer.WriteIntValue("owner_id", OwnerId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.AddActivityRequestParticipantsItem>("participants", Participants);
             writer.WriteIntValue("person_id", PersonId);
