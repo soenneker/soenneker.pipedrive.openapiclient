@@ -5404,7 +5404,6 @@ paths:
       security:
         - api_key: []
         - oauth2:
-            - 'deals:read'
             - 'deals:full'
       parameters:
         - in: path
@@ -5504,7 +5503,6 @@ paths:
       security:
         - api_key: []
         - oauth2:
-            - 'deals:read'
             - 'deals:full'
       parameters:
         - in: path
@@ -5606,7 +5604,6 @@ paths:
       security:
         - api_key: []
         - oauth2:
-            - 'deals:read'
             - 'deals:full'
       parameters:
         - in: path
@@ -5760,7 +5757,6 @@ paths:
       security:
         - api_key: []
         - oauth2:
-            - 'deals:read'
             - 'deals:full'
       parameters:
         - in: path
@@ -5841,7 +5837,6 @@ paths:
       security:
         - api_key: []
         - oauth2:
-            - 'deals:read'
             - 'deals:full'
       parameters:
         - in: path
@@ -5923,7 +5918,6 @@ paths:
       security:
         - api_key: []
         - oauth2:
-            - 'deals:read'
             - 'deals:full'
       parameters:
         - in: path

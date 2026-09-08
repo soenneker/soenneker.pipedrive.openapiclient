@@ -2774,7 +2774,6 @@
           },
           {
             "oauth2": [
-              "deals:read",
               "deals:full"
             ]
           }
@@ -2851,7 +2850,6 @@
           },
           {
             "oauth2": [
-              "deals:read",
               "deals:full"
             ]
           }
@@ -2909,7 +2907,6 @@
           },
           {
             "oauth2": [
-              "deals:read",
               "deals:full"
             ]
           }
@@ -3064,7 +3061,6 @@
           },
           {
             "oauth2": [
-              "deals:read",
               "deals:full"
             ]
           }
@@ -3136,7 +3132,6 @@
           },
           {
             "oauth2": [
-              "deals:read",
               "deals:full"
             ]
           }
@@ -3193,7 +3188,6 @@
           },
           {
             "oauth2": [
-              "deals:read",
               "deals:full"
             ]
           }
