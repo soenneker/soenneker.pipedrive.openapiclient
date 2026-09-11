@@ -4292,7 +4292,7 @@
           "Persons"
         ],
         "summary": "Add a new person",
-        "description": "Adds a new person. \u003Cbr\u003EIf the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the \u0060marketing_status\u0060 field. \u003Cbr\u003EThe \u0060im\u0060, \u0060postal_address\u0060, \u0060notes\u0060, \u0060birthday\u0060 and \u0060job_title\u0060 fields don\u2019t exist by default in Pipedrive and are only created when you set up your contact sync.",
+        "description": "Adds a new person. \u003Cbr\u003EIf the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the \u0060marketing_status\u0060 field. \u003Cbr\u003EThe \u0060im\u0060, \u0060postal_address\u0060, \u0060notes\u0060, \u0060birthday\u0060 and \u0060job_title\u0060 fields don\u0027t exist by default in Pipedrive and are only created when you set up your contact sync \u2014 attempting to set any of them without contact sync enabled returns a 403.",
         "operationId": "AddPerson",
         "requestBody": {
           "content": {
@@ -4600,7 +4600,7 @@
           "Persons"
         ],
         "summary": "Update a person",
-        "description": "Updates the properties of a person. \u003Cbr\u003EIf the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the \u0060marketing_status\u0060 field. \u003Cbr\u003EThe \u0060im\u0060, \u0060postal_address\u0060, \u0060notes\u0060, \u0060birthday\u0060 and \u0060job_title\u0060 fields don\u2019t exist by default in Pipedrive and are only created when you set up your contact sync.",
+        "description": "Updates the properties of a person. \u003Cbr\u003EIf the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the \u0060marketing_status\u0060 field. \u003Cbr\u003EThe \u0060im\u0060, \u0060postal_address\u0060, \u0060notes\u0060, \u0060birthday\u0060 and \u0060job_title\u0060 fields don\u0027t exist by default in Pipedrive and are only created when you set up your contact sync \u2014 attempting to set any of them without contact sync enabled returns a 403.",
         "operationId": "UpdatePerson",
         "parameters": [
           {
@@ -14092,10 +14092,6 @@
             "type": "string",
             "description": "The ID of the lead linked to the activity"
           },
-          "person_id": {
-            "type": "integer",
-            "description": "The ID of the person linked to the activity"
-          },
           "org_id": {
             "type": "integer",
             "description": "The ID of the organization linked to the activity"
@@ -14132,7 +14128,7 @@
             "items": {
               "$ref": "#/components/schemas/AddActivityRequestParticipantsItem"
             },
-            "description": "The participants of the activity"
+            "description": "The participants of the activity. Use this to set the activity\u0027s person \u2014 a primary participant (\u0060primary: true\u0060) sets \u0060person_id\u0060 on the activity."
           },
           "attendees": {
             "type": "array",
@@ -14222,10 +14218,6 @@
             "type": "string",
             "description": "The ID of the lead linked to the activity"
           },
-          "person_id": {
-            "type": "integer",
-            "description": "The ID of the person linked to the activity"
-          },
           "org_id": {
             "type": "integer",
             "description": "The ID of the organization linked to the activity"
@@ -14262,7 +14254,7 @@
             "items": {
               "$ref": "#/components/schemas/UpdateActivityRequestParticipantsItem"
             },
-            "description": "The participants of the activity"
+            "description": "The participants of the activity. Use this to set the activity\u0027s person \u2014 a primary participant (\u0060primary: true\u0060) sets \u0060person_id\u0060 on the activity."
           },
           "attendees": {
             "type": "array",
@@ -15470,6 +15462,9 @@
         }
       },
       "AddPersonRequest": {
+        "required": [
+          "name"
+        ],
         "type": "object",
         "properties": {
           "name": {
@@ -15518,22 +15513,22 @@
           },
           "notes": {
             "type": "string",
-            "description": "Contact sync notes of the person, maximum 10 000 characters, included if contact sync is enabled for the company"
+            "description": "Contact sync notes of the person, maximum 10 000 characters. Only accepted when contact sync is enabled for the company; otherwise the request returns 403."
           },
           "im": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/AddPersonRequestImItem"
             },
-            "description": "The instant messaging accounts of the person, included if contact sync is enabled for the company"
+            "description": "The instant messaging accounts of the person. Only accepted when contact sync is enabled for the company; otherwise the request returns 403."
           },
           "birthday": {
             "type": "string",
-            "description": "The birthday of the person, included if contact sync is enabled for the company"
+            "description": "The birthday of the person. Only accepted when contact sync is enabled for the company; otherwise the request returns 403."
           },
           "job_title": {
             "type": "string",
-            "description": "The job title of the person, included if contact sync is enabled for the company"
+            "description": "The job title of the person. Only accepted when contact sync is enabled for the company; otherwise the request returns 403."
           },
           "marketing_status": {
             "$ref": "#/components/schemas/AddPersonRequestMarketingStatus"
@@ -15627,22 +15622,22 @@
           },
           "notes": {
             "type": "string",
-            "description": "Contact sync notes of the person, maximum 10 000 characters, included if contact sync is enabled for the company"
+            "description": "Contact sync notes of the person, maximum 10 000 characters. Only accepted when contact sync is enabled for the company; otherwise the request returns 403."
           },
           "im": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/UpdatePersonRequestImItem"
             },
-            "description": "The instant messaging accounts of the person, included if contact sync is enabled for the company"
+            "description": "The instant messaging accounts of the person. Only accepted when contact sync is enabled for the company; otherwise the request returns 403."
           },
           "birthday": {
             "type": "string",
-            "description": "The birthday of the person, included if contact sync is enabled for the company"
+            "description": "The birthday of the person. Only accepted when contact sync is enabled for the company; otherwise the request returns 403."
           },
           "job_title": {
             "type": "string",
-            "description": "The job title of the person, included if contact sync is enabled for the company"
+            "description": "The job title of the person. Only accepted when contact sync is enabled for the company; otherwise the request returns 403."
           },
           "marketing_status": {
             "$ref": "#/components/schemas/UpdatePersonRequestMarketingStatus"

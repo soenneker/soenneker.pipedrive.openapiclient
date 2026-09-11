@@ -22,7 +22,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #else
         public string AddTime { get; set; }
 #endif
-        /// <summary>The birthday of the person, included if contact sync is enabled for the company</summary>
+        /// <summary>The birthday of the person. Only accepted when contact sync is enabled for the company; otherwise the request returns 403.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Birthday { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #else
         public List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestEmailsItem> Emails { get; set; }
 #endif
-        /// <summary>The instant messaging accounts of the person, included if contact sync is enabled for the company</summary>
+        /// <summary>The instant messaging accounts of the person. Only accepted when contact sync is enabled for the company; otherwise the request returns 403.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestImItem>? Im { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #else
         public List<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonRequestImItem> Im { get; set; }
 #endif
-        /// <summary>The job title of the person, included if contact sync is enabled for the company</summary>
+        /// <summary>The job title of the person. Only accepted when contact sync is enabled for the company; otherwise the request returns 403.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? JobTitle { get; set; }
@@ -80,7 +80,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Contact sync notes of the person, maximum 10 000 characters, included if contact sync is enabled for the company</summary>
+        /// <summary>Contact sync notes of the person, maximum 10 000 characters. Only accepted when contact sync is enabled for the company; otherwise the request returns 403.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Notes { get; set; }

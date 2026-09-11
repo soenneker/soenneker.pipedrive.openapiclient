@@ -82,7 +82,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public int? Outcome { get; set; }
         /// <summary>The ID of the user who owns the activity</summary>
         public int? OwnerId { get; set; }
-        /// <summary>The participants of the activity</summary>
+        /// <summary>The participants of the activity. Use this to set the activity&apos;s person — a primary participant (`primary: true`) sets `person_id` on the activity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateActivityRequestParticipantsItem>? Participants { get; set; }
@@ -90,8 +90,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #else
         public List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateActivityRequestParticipantsItem> Participants { get; set; }
 #endif
-        /// <summary>The ID of the person linked to the activity</summary>
-        public int? PersonId { get; set; }
         /// <summary>The priority of the activity. Mappable to a specific string using activityFields API.</summary>
         public int? Priority { get; set; }
         /// <summary>The ID of the project linked to the activity</summary>
@@ -159,7 +157,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
                 { "outcome", n => { Outcome = n.GetIntValue(); } },
                 { "owner_id", n => { OwnerId = n.GetIntValue(); } },
                 { "participants", n => { Participants = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateActivityRequestParticipantsItem>(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateActivityRequestParticipantsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "person_id", n => { PersonId = n.GetIntValue(); } },
                 { "priority", n => { Priority = n.GetIntValue(); } },
                 { "project_id", n => { ProjectId = n.GetIntValue(); } },
                 { "public_description", n => { PublicDescription = n.GetStringValue(); } },
@@ -188,7 +185,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteIntValue("outcome", Outcome);
             writer.WriteIntValue("owner_id", OwnerId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateActivityRequestParticipantsItem>("participants", Participants);
-            writer.WriteIntValue("person_id", PersonId);
             writer.WriteIntValue("priority", Priority);
             writer.WriteIntValue("project_id", ProjectId);
             writer.WriteStringValue("public_description", PublicDescription);
