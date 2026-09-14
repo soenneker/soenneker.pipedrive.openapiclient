@@ -99,7 +99,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public string Type { get; set; }
 #endif
         /// <summary>The value of the deal</summary>
-        public int? Value { get; set; }
+        public double? Value { get; set; }
         /// <summary>The visibility of the deal</summary>
         public int? VisibleTo { get; set; }
         /// <summary>
@@ -139,7 +139,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetIntValue(); } },
+                { "value", n => { Value = n.GetDoubleValue(); } },
                 { "visible_to", n => { VisibleTo = n.GetIntValue(); } },
             };
         }
@@ -162,7 +162,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("type", Type);
-            writer.WriteIntValue("value", Value);
+            writer.WriteDoubleValue("value", Value);
             writer.WriteIntValue("visible_to", VisibleTo);
             writer.WriteAdditionalData(AdditionalData);
         }

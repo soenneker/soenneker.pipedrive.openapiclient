@@ -22,7 +22,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivitiesItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities/{id}{?include_fields*}", pathParameters)
+        public ActivitiesItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities/{id}{?include_fields}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivitiesItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities/{id}{?include_fields*}", rawUrl)
+        public ActivitiesItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities/{id}{?include_fields}", rawUrl)
         {
         }
         /// <summary>
@@ -165,8 +165,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities.Item
         public partial class ActivitiesItemRequestBuilderGetQueryParameters 
         {
             /// <summary>Optional comma separated string array of additional fields to include</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.AttendeesIncludeFields? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.AttendeesItem[]? IncludeFields { get; set; }
+#nullable restore
+#else
+            [QueryParameter("include_fields")]
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.AttendeesItem[] IncludeFields { get; set; }
+#endif
         }
     }
 }

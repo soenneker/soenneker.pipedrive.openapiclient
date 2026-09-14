@@ -28,7 +28,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFieldCodeItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizationFields/{fieldCode}{?include_fields*}", pathParameters)
+        public WithFieldCodeItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizationFields/{fieldCode}{?include_fields}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFieldCodeItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizationFields/{fieldCode}{?include_fields*}", rawUrl)
+        public WithFieldCodeItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizationFields/{fieldCode}{?include_fields}", rawUrl)
         {
         }
         /// <summary>
@@ -171,8 +171,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.OrganizationFields.Item
         public partial class WithFieldCodeItemRequestBuilderGetQueryParameters 
         {
             /// <summary>Optional comma separated string array of additional data namespaces to include in response</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFieldIncludeFieldsParameter? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFieldIncludeFieldsParameterItem[]? IncludeFields { get; set; }
+#nullable restore
+#else
+            [QueryParameter("include_fields")]
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFieldIncludeFieldsParameterItem[] IncludeFields { get; set; }
+#endif
         }
     }
 }

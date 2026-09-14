@@ -5,7 +5,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum GetPersonsIncludeFieldsParameter
+    public enum GetOrganizationIncludeFieldsParameterItem
     #pragma warning restore CS1591
     {
         [EnumMember(Value = "next_activity_id")]
@@ -32,17 +32,13 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         #pragma warning disable CS1591
         RelatedClosedDealsCount,
         #pragma warning restore CS1591
-        [EnumMember(Value = "participant_open_deals_count")]
-        #pragma warning disable CS1591
-        ParticipantOpenDealsCount,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "participant_closed_deals_count")]
-        #pragma warning disable CS1591
-        ParticipantClosedDealsCount,
-        #pragma warning restore CS1591
         [EnumMember(Value = "email_messages_count")]
         #pragma warning disable CS1591
         EmailMessagesCount,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "people_count")]
+        #pragma warning disable CS1591
+        PeopleCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "activities_count")]
         #pragma warning disable CS1591
@@ -83,22 +79,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         [EnumMember(Value = "related_lost_deals_count")]
         #pragma warning disable CS1591
         RelatedLostDealsCount,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "last_incoming_mail_time")]
-        #pragma warning disable CS1591
-        LastIncomingMailTime,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "last_outgoing_mail_time")]
-        #pragma warning disable CS1591
-        LastOutgoingMailTime,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "marketing_status")]
-        #pragma warning disable CS1591
-        MarketingStatus,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "doi_status")]
-        #pragma warning disable CS1591
-        DoiStatus,
         #pragma warning restore CS1591
         [EnumMember(Value = "smart_bcc_email")]
         #pragma warning disable CS1591

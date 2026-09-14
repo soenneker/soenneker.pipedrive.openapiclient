@@ -41,7 +41,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PersonsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/persons{?cursor*,custom_fields*,deal_id*,filter_id*,ids*,include_fields*,include_labels*,include_option_labels*,limit*,org_id*,owner_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", pathParameters)
+        public PersonsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/persons{?cursor*,custom_fields,deal_id*,filter_id*,ids,include_fields,include_labels*,include_option_labels*,limit*,org_id*,owner_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PersonsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/persons{?cursor*,custom_fields*,deal_id*,filter_id*,ids*,include_fields*,include_labels*,include_option_labels*,limit*,org_id*,owner_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", rawUrl)
+        public PersonsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/persons{?cursor*,custom_fields,deal_id*,filter_id*,ids,include_fields,include_labels*,include_option_labels*,limit*,org_id*,owner_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", rawUrl)
         {
         }
         /// <summary>
@@ -160,11 +160,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("custom_fields")]
-            public string? CustomFields { get; set; }
+            public string[]? CustomFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("custom_fields")]
-            public string CustomFields { get; set; }
+            public string[] CustomFields { get; set; }
 #endif
             /// <summary>If supplied, only persons linked to the specified deal are returned. If filter_id is provided, this is ignored.</summary>
             [QueryParameter("deal_id")]
@@ -176,15 +176,22 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ids")]
-            public string? Ids { get; set; }
+            public string[]? Ids { get; set; }
 #nullable restore
 #else
             [QueryParameter("ids")]
-            public string Ids { get; set; }
+            public string[] Ids { get; set; }
 #endif
             /// <summary>Optional comma separated string array of additional fields to include. `marketing_status` and `doi_status` can only be included if the company has marketing app enabled.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonsIncludeFieldsParameter? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonsIncludeFieldsParameterItem[]? IncludeFields { get; set; }
+#nullable restore
+#else
+            [QueryParameter("include_fields")]
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonsIncludeFieldsParameterItem[] IncludeFields { get; set; }
+#endif
             /// <summary>When provided with &apos;true&apos; value, response will include an array of label objects in the form of &apos;{ id: number, label: string }&apos;</summary>
             [QueryParameter("include_labels")]
             public bool? IncludeLabels { get; set; }

@@ -31,8 +31,14 @@
             "name": "ids",
             "in": "query",
             "description": "Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
+            "explode": false,
             "schema": {
-              "type": "string"
+              "maxItems": 100,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -119,8 +125,13 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional fields to include",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/AttendeesIncludeFields"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AttendeesItem"
+              }
             }
           },
           {
@@ -397,8 +408,13 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional fields to include",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/AttendeesIncludeFields"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AttendeesItem"
+              }
             }
           }
         ],
@@ -608,8 +624,13 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional data namespaces to include in response",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/UiVisibilityIncludeFields"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/UiVisibilityItem"
+              }
             }
           },
           {
@@ -790,8 +811,13 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional data namespaces to include in response",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/UiVisibilityIncludeFields"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/UiVisibilityItem"
+              }
             }
           }
         ],
@@ -857,8 +883,14 @@
             "name": "ids",
             "in": "query",
             "description": "Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
+            "explode": false,
             "schema": {
-              "type": "string"
+              "maxItems": 100,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -945,16 +977,27 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional fields to include",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/GetDealsIncludeFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/GetDealsIncludeFieldsParameterItem"
+              }
             }
           },
           {
             "name": "custom_fields",
             "in": "query",
             "description": "Optional comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for faster results and smaller response.\u003Cbr/\u003EA maximum of 15 keys is allowed.",
+            "explode": false,
             "schema": {
-              "type": "string"
+              "maxItems": 15,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -1173,8 +1216,14 @@
             "name": "ids",
             "in": "query",
             "description": "Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
+            "explode": false,
             "schema": {
-              "type": "string"
+              "maxItems": 100,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -1261,16 +1310,27 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional fields to include",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/GetArchivedDealsIncludeFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/GetArchivedDealsIncludeFieldsParameterItem"
+              }
             }
           },
           {
             "name": "custom_fields",
             "in": "query",
             "description": "Optional comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for faster results and smaller response.\u003Cbr/\u003EA maximum of 15 keys is allowed.",
+            "explode": false,
             "schema": {
-              "type": "string"
+              "maxItems": 15,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -1436,16 +1496,27 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional fields to include",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/GetDealIncludeFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/GetDealIncludeFieldsParameterItem"
+              }
             }
           },
           {
             "name": "custom_fields",
             "in": "query",
             "description": "Optional comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for faster results and smaller response.\u003Cbr/\u003EA maximum of 15 keys is allowed.",
+            "explode": false,
             "schema": {
-              "type": "string"
+              "maxItems": 15,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -3274,8 +3345,13 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional data namespaces to include in response",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/GetDealFieldsIncludeFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/GetDealFieldsIncludeFieldsParameterItem"
+              }
             }
           },
           {
@@ -3581,8 +3657,13 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional data namespaces to include in response",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/GetDealFieldIncludeFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/GetDealFieldIncludeFieldsParameterItem"
+              }
             }
           }
         ],
@@ -4075,8 +4156,14 @@
             "name": "ids",
             "in": "query",
             "description": "Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
+            "explode": false,
             "schema": {
-              "type": "string"
+              "maxItems": 100,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -4139,16 +4226,27 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional fields to include. \u0060marketing_status\u0060 and \u0060doi_status\u0060 can only be included if the company has marketing app enabled.",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/GetPersonsIncludeFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/GetPersonsIncludeFieldsParameterItem"
+              }
             }
           },
           {
             "name": "custom_fields",
             "in": "query",
             "description": "Optional comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for faster results and smaller response.\u003Cbr/\u003EA maximum of 15 keys is allowed.",
+            "explode": false,
             "schema": {
-              "type": "string"
+              "maxItems": 15,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -4469,16 +4567,27 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional fields to include. \u0060marketing_status\u0060 and \u0060doi_status\u0060 can only be included if the company has marketing app enabled.",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/GetPersonIncludeFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/GetPersonIncludeFieldsParameterItem"
+              }
             }
           },
           {
             "name": "custom_fields",
             "in": "query",
             "description": "Optional comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for faster results and smaller response.\u003Cbr/\u003EA maximum of 15 keys is allowed.",
+            "explode": false,
             "schema": {
-              "type": "string"
+              "maxItems": 15,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -5054,8 +5163,13 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional data namespaces to include in response",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/GetPersonFieldsIncludeFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/GetPersonFieldsIncludeFieldsParameterItem"
+              }
             }
           },
           {
@@ -5299,8 +5413,13 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional data namespaces to include in response",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/GetPersonFieldIncludeFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/GetPersonFieldIncludeFieldsParameterItem"
+              }
             }
           }
         ],
@@ -5707,8 +5826,14 @@
             "name": "ids",
             "in": "query",
             "description": "Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
+            "explode": false,
             "schema": {
-              "type": "string"
+              "maxItems": 100,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -5755,16 +5880,27 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional fields to include",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/GetOrganizationsIncludeFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/GetOrganizationsIncludeFieldsParameterItem"
+              }
             }
           },
           {
             "name": "custom_fields",
             "in": "query",
             "description": "Optional comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for faster results and smaller response.\u003Cbr/\u003EA maximum of 15 keys is allowed.",
+            "explode": false,
             "schema": {
-              "type": "string"
+              "maxItems": 15,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -6011,16 +6147,27 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional fields to include",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/GetOrganizationIncludeFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/GetOrganizationIncludeFieldsParameterItem"
+              }
             }
           },
           {
             "name": "custom_fields",
             "in": "query",
             "description": "Optional comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for faster results and smaller response.\u003Cbr/\u003EA maximum of 15 keys is allowed.",
+            "explode": false,
             "schema": {
-              "type": "string"
+              "maxItems": 15,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -6463,8 +6610,13 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional data namespaces to include in response",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/GetOrganizationFieldsIncludeFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/GetOrganizationFieldsIncludeFieldsParameterItem"
+              }
             }
           },
           {
@@ -6790,8 +6942,13 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional data namespaces to include in response",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/GetOrganizationFieldIncludeFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/GetOrganizationFieldIncludeFieldsParameterItem"
+              }
             }
           }
         ],
@@ -7209,8 +7366,28 @@
             "name": "ids",
             "in": "query",
             "description": "Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
+            "explode": false,
             "schema": {
-              "type": "string"
+              "maxItems": 100,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "custom_fields",
+            "in": "query",
+            "description": "Optional comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for faster results and smaller response.\u003Cbr/\u003EA maximum of 15 keys is allowed.",
+            "explode": false,
+            "schema": {
+              "maxItems": 15,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -7258,14 +7435,6 @@
             "name": "updated_since",
             "in": "query",
             "description": "If set, only products with an \u0060update_time\u0060 later than or equal to this time are returned. In RFC3339 format, e.g. 2025-01-01T10:20:00Z.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "custom_fields",
-            "in": "query",
-            "description": "Comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for a smaller response.\u003Cbr/\u003EA maximum of 15 keys is allowed.",
             "schema": {
               "type": "string"
             }
@@ -7777,7 +7946,7 @@
                           "id": 1,
                           "type": "product",
                           "name": "Some product",
-                          "code": 123,
+                          "code": "123",
                           "visible_to": 3,
                           "owner": {
                             "id": 1
@@ -8658,8 +8827,13 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional data namespaces to include in response",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/UiVisibilityIncludeFields"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/UiVisibilityItem"
+              }
             }
           },
           {
@@ -8875,8 +9049,13 @@
             "name": "include_fields",
             "in": "query",
             "description": "Optional comma separated string array of additional data namespaces to include in response",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/UiVisibilityIncludeFields"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/UiVisibilityItem"
+              }
             }
           }
         ],
@@ -13379,23 +13558,28 @@
           },
           "deal_id": {
             "type": "integer",
-            "description": "The ID of the deal linked to the activity"
+            "description": "The ID of the deal linked to the activity",
+            "nullable": true
           },
           "lead_id": {
             "type": "string",
-            "description": "The ID of the lead linked to the activity"
+            "description": "The ID of the lead linked to the activity",
+            "nullable": true
           },
           "person_id": {
             "type": "integer",
-            "description": "The ID of the person linked to the activity"
+            "description": "The ID of the person linked to the activity",
+            "nullable": true
           },
           "org_id": {
             "type": "integer",
-            "description": "The ID of the organization linked to the activity"
+            "description": "The ID of the organization linked to the activity",
+            "nullable": true
           },
           "project_id": {
             "type": "integer",
-            "description": "The ID of the project linked to the activity"
+            "description": "The ID of the project linked to the activity",
+            "nullable": true
           },
           "due_date": {
             "type": "string",
@@ -13403,11 +13587,13 @@
           },
           "due_time": {
             "type": "string",
-            "description": "The due time of the activity"
+            "description": "The due time of the activity",
+            "nullable": true
           },
           "duration": {
             "type": "string",
-            "description": "The duration of the activity"
+            "description": "The duration of the activity",
+            "nullable": true
           },
           "busy": {
             "type": "boolean",
@@ -13419,7 +13605,8 @@
           },
           "marked_as_done_time": {
             "type": "string",
-            "description": "The date and time when the activity was marked as done"
+            "description": "The date and time when the activity was marked as done",
+            "nullable": true
           },
           "location": {
             "$ref": "#/components/schemas/ActivityItemLocation"
@@ -13516,7 +13703,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The last updated date and time of the deal"
+            "description": "The last updated date and time of the deal",
+            "nullable": true
           },
           "stage_change_time": {
             "type": "string",
@@ -13656,7 +13844,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The last updated date and time of the organization"
+            "description": "The last updated date and time of the organization",
+            "nullable": true
           },
           "is_deleted": {
             "type": "boolean",
@@ -13739,7 +13928,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The last updated date and time of the person"
+            "description": "The last updated date and time of the person",
+            "nullable": true
           },
           "emails": {
             "type": "array",
@@ -13772,7 +13962,8 @@
           },
           "picture_id": {
             "type": "integer",
-            "description": "The ID of the picture associated with the person"
+            "description": "The ID of the picture associated with the person",
+            "nullable": true
           },
           "postal_address": {
             "$ref": "#/components/schemas/PersonPostalAddress"
@@ -13810,42 +14001,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the activity"
+            "description": "Country of the activity",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the activity"
+            "description": "Admin area level 1 (e.g. state) of the activity",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the activity"
+            "description": "Admin area level 2 (e.g. county) of the activity",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the activity"
+            "description": "Locality (e.g. city) of the activity",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the activity"
+            "description": "Sublocality (e.g. neighborhood) of the activity",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the activity"
+            "description": "Route (e.g. street) of the activity",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the activity"
+            "description": "Street number of the activity",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the activity"
+            "description": "Subpremise (e.g. apartment/suite number) of the activity",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the activity"
+            "description": "Postal code of the activity",
+            "nullable": true
           }
         },
-        "description": "Location of the activity"
+        "description": "Location of the activity",
+        "nullable": true
       },
       "ActivityItemParticipantsItem": {
         "type": "object",
@@ -13903,42 +14104,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the organization"
+            "description": "Country of the organization",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the organization"
+            "description": "Admin area level 1 (e.g. state) of the organization",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the organization"
+            "description": "Admin area level 2 (e.g. county) of the organization",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the organization"
+            "description": "Locality (e.g. city) of the organization",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the organization"
+            "description": "Sublocality (e.g. neighborhood) of the organization",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the organization"
+            "description": "Route (e.g. street) of the organization",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the organization"
+            "description": "Street number of the organization",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the organization"
+            "description": "Subpremise (e.g. apartment/suite number) of the organization",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the organization"
+            "description": "Postal code of the organization",
+            "nullable": true
           }
         },
-        "description": "The address of the organization"
+        "description": "The address of the organization",
+        "nullable": true
       },
       "OrganizationItemCustomFields": {
         "type": "object",
@@ -13990,42 +14201,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the person"
+            "description": "Country of the person",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the person"
+            "description": "Admin area level 1 (e.g. state) of the person",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the person"
+            "description": "Admin area level 2 (e.g. county) of the person",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the person"
+            "description": "Locality (e.g. city) of the person",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the person"
+            "description": "Sublocality (e.g. neighborhood) of the person",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the person"
+            "description": "Route (e.g. street) of the person",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the person"
+            "description": "Street number of the person",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the person"
+            "description": "Subpremise (e.g. apartment/suite number) of the person",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the person"
+            "description": "Postal code of the person",
+            "nullable": true
           }
         },
-        "description": "Postal address of the person, included if contact sync is enabled for the company"
+        "description": "Postal address of the person, included if contact sync is enabled for the company",
+        "nullable": true
       },
       "PersonImItem": {
         "title": "PersonItemIm",
@@ -18633,23 +18854,28 @@
           },
           "deal_id": {
             "type": "integer",
-            "description": "The ID of the deal linked to the activity"
+            "description": "The ID of the deal linked to the activity",
+            "nullable": true
           },
           "lead_id": {
             "type": "string",
-            "description": "The ID of the lead linked to the activity"
+            "description": "The ID of the lead linked to the activity",
+            "nullable": true
           },
           "person_id": {
             "type": "integer",
-            "description": "The ID of the person linked to the activity"
+            "description": "The ID of the person linked to the activity",
+            "nullable": true
           },
           "org_id": {
             "type": "integer",
-            "description": "The ID of the organization linked to the activity"
+            "description": "The ID of the organization linked to the activity",
+            "nullable": true
           },
           "project_id": {
             "type": "integer",
-            "description": "The ID of the project linked to the activity"
+            "description": "The ID of the project linked to the activity",
+            "nullable": true
           },
           "due_date": {
             "type": "string",
@@ -18657,11 +18883,13 @@
           },
           "due_time": {
             "type": "string",
-            "description": "The due time of the activity"
+            "description": "The due time of the activity",
+            "nullable": true
           },
           "duration": {
             "type": "string",
-            "description": "The duration of the activity"
+            "description": "The duration of the activity",
+            "nullable": true
           },
           "busy": {
             "type": "boolean",
@@ -18673,7 +18901,8 @@
           },
           "marked_as_done_time": {
             "type": "string",
-            "description": "The date and time when the activity was marked as done"
+            "description": "The date and time when the activity was marked as done",
+            "nullable": true
           },
           "location": {
             "$ref": "#/components/schemas/GetActivitiesResponseDataItemLocation"
@@ -18728,7 +18957,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -18858,23 +19088,28 @@
           },
           "deal_id": {
             "type": "integer",
-            "description": "The ID of the deal linked to the activity"
+            "description": "The ID of the deal linked to the activity",
+            "nullable": true
           },
           "lead_id": {
             "type": "string",
-            "description": "The ID of the lead linked to the activity"
+            "description": "The ID of the lead linked to the activity",
+            "nullable": true
           },
           "person_id": {
             "type": "integer",
-            "description": "The ID of the person linked to the activity"
+            "description": "The ID of the person linked to the activity",
+            "nullable": true
           },
           "org_id": {
             "type": "integer",
-            "description": "The ID of the organization linked to the activity"
+            "description": "The ID of the organization linked to the activity",
+            "nullable": true
           },
           "project_id": {
             "type": "integer",
-            "description": "The ID of the project linked to the activity"
+            "description": "The ID of the project linked to the activity",
+            "nullable": true
           },
           "due_date": {
             "type": "string",
@@ -18882,11 +19117,13 @@
           },
           "due_time": {
             "type": "string",
-            "description": "The due time of the activity"
+            "description": "The due time of the activity",
+            "nullable": true
           },
           "duration": {
             "type": "string",
-            "description": "The duration of the activity"
+            "description": "The duration of the activity",
+            "nullable": true
           },
           "busy": {
             "type": "boolean",
@@ -18898,7 +19135,8 @@
           },
           "marked_as_done_time": {
             "type": "string",
-            "description": "The date and time when the activity was marked as done"
+            "description": "The date and time when the activity was marked as done",
+            "nullable": true
           },
           "location": {
             "$ref": "#/components/schemas/AddActivity200ResponseDataLocation"
@@ -18994,23 +19232,28 @@
           },
           "deal_id": {
             "type": "integer",
-            "description": "The ID of the deal linked to the activity"
+            "description": "The ID of the deal linked to the activity",
+            "nullable": true
           },
           "lead_id": {
             "type": "string",
-            "description": "The ID of the lead linked to the activity"
+            "description": "The ID of the lead linked to the activity",
+            "nullable": true
           },
           "person_id": {
             "type": "integer",
-            "description": "The ID of the person linked to the activity"
+            "description": "The ID of the person linked to the activity",
+            "nullable": true
           },
           "org_id": {
             "type": "integer",
-            "description": "The ID of the organization linked to the activity"
+            "description": "The ID of the organization linked to the activity",
+            "nullable": true
           },
           "project_id": {
             "type": "integer",
-            "description": "The ID of the project linked to the activity"
+            "description": "The ID of the project linked to the activity",
+            "nullable": true
           },
           "due_date": {
             "type": "string",
@@ -19018,11 +19261,13 @@
           },
           "due_time": {
             "type": "string",
-            "description": "The due time of the activity"
+            "description": "The due time of the activity",
+            "nullable": true
           },
           "duration": {
             "type": "string",
-            "description": "The duration of the activity"
+            "description": "The duration of the activity",
+            "nullable": true
           },
           "busy": {
             "type": "boolean",
@@ -19034,7 +19279,8 @@
           },
           "marked_as_done_time": {
             "type": "string",
-            "description": "The date and time when the activity was marked as done"
+            "description": "The date and time when the activity was marked as done",
+            "nullable": true
           },
           "location": {
             "$ref": "#/components/schemas/GetActivity200ResponseDataLocation"
@@ -19209,23 +19455,28 @@
           },
           "deal_id": {
             "type": "integer",
-            "description": "The ID of the deal linked to the activity"
+            "description": "The ID of the deal linked to the activity",
+            "nullable": true
           },
           "lead_id": {
             "type": "string",
-            "description": "The ID of the lead linked to the activity"
+            "description": "The ID of the lead linked to the activity",
+            "nullable": true
           },
           "person_id": {
             "type": "integer",
-            "description": "The ID of the person linked to the activity"
+            "description": "The ID of the person linked to the activity",
+            "nullable": true
           },
           "org_id": {
             "type": "integer",
-            "description": "The ID of the organization linked to the activity"
+            "description": "The ID of the organization linked to the activity",
+            "nullable": true
           },
           "project_id": {
             "type": "integer",
-            "description": "The ID of the project linked to the activity"
+            "description": "The ID of the project linked to the activity",
+            "nullable": true
           },
           "due_date": {
             "type": "string",
@@ -19233,11 +19484,13 @@
           },
           "due_time": {
             "type": "string",
-            "description": "The due time of the activity"
+            "description": "The due time of the activity",
+            "nullable": true
           },
           "duration": {
             "type": "string",
-            "description": "The duration of the activity"
+            "description": "The duration of the activity",
+            "nullable": true
           },
           "busy": {
             "type": "boolean",
@@ -19249,7 +19502,8 @@
           },
           "marked_as_done_time": {
             "type": "string",
-            "description": "The date and time when the activity was marked as done"
+            "description": "The date and time when the activity was marked as done",
+            "nullable": true
           },
           "location": {
             "$ref": "#/components/schemas/UpdateActivity200ResponseDataLocation"
@@ -19456,7 +19710,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The last updated date and time of the deal"
+            "description": "The last updated date and time of the deal",
+            "nullable": true
           },
           "stage_change_time": {
             "type": "string",
@@ -19567,7 +19822,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -19623,7 +19879,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The last updated date and time of the deal"
+            "description": "The last updated date and time of the deal",
+            "nullable": true
           },
           "stage_change_time": {
             "type": "string",
@@ -19776,7 +20033,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The last updated date and time of the deal"
+            "description": "The last updated date and time of the deal",
+            "nullable": true
           },
           "stage_change_time": {
             "type": "string",
@@ -19887,7 +20145,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -19948,7 +20207,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The last updated date and time of the deal"
+            "description": "The last updated date and time of the deal",
+            "nullable": true
           },
           "stage_change_time": {
             "type": "string",
@@ -20105,7 +20365,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The last updated date and time of the deal"
+            "description": "The last updated date and time of the deal",
+            "nullable": true
           },
           "stage_change_time": {
             "type": "string",
@@ -20229,7 +20490,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -20274,7 +20536,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -20388,7 +20651,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "Pagination related data"
@@ -20410,7 +20674,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "Pagination related data"
@@ -20515,7 +20780,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "Pagination related data"
@@ -21774,7 +22040,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The last updated date and time of the person"
+            "description": "The last updated date and time of the person",
+            "nullable": true
           },
           "emails": {
             "type": "array",
@@ -21807,7 +22074,8 @@
           },
           "picture_id": {
             "type": "integer",
-            "description": "The ID of the picture associated with the person"
+            "description": "The ID of the picture associated with the person",
+            "nullable": true
           },
           "postal_address": {
             "$ref": "#/components/schemas/GetPersonsResponseDataItemPostalAddress"
@@ -21841,7 +22109,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -21892,42 +22161,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the person"
+            "description": "Country of the person",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the person"
+            "description": "Admin area level 1 (e.g. state) of the person",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the person"
+            "description": "Admin area level 2 (e.g. county) of the person",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the person"
+            "description": "Locality (e.g. city) of the person",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the person"
+            "description": "Sublocality (e.g. neighborhood) of the person",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the person"
+            "description": "Route (e.g. street) of the person",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the person"
+            "description": "Street number of the person",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the person"
+            "description": "Subpremise (e.g. apartment/suite number) of the person",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the person"
+            "description": "Postal code of the person",
+            "nullable": true
           }
         },
-        "description": "Postal address of the person, included if contact sync is enabled for the company"
+        "description": "Postal address of the person, included if contact sync is enabled for the company",
+        "nullable": true
       },
       "AddPersonRequestImItem": {
         "title": "PersonItemIm",
@@ -21984,7 +22263,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The last updated date and time of the person"
+            "description": "The last updated date and time of the person",
+            "nullable": true
           },
           "emails": {
             "type": "array",
@@ -22017,7 +22297,8 @@
           },
           "picture_id": {
             "type": "integer",
-            "description": "The ID of the picture associated with the person"
+            "description": "The ID of the picture associated with the person",
+            "nullable": true
           },
           "postal_address": {
             "$ref": "#/components/schemas/AddPerson200ResponseDataPostalAddress"
@@ -22088,7 +22369,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The last updated date and time of the person"
+            "description": "The last updated date and time of the person",
+            "nullable": true
           },
           "emails": {
             "type": "array",
@@ -22121,7 +22403,8 @@
           },
           "picture_id": {
             "type": "integer",
-            "description": "The ID of the picture associated with the person"
+            "description": "The ID of the picture associated with the person",
+            "nullable": true
           },
           "postal_address": {
             "$ref": "#/components/schemas/GetPerson200ResponseDataPostalAddress"
@@ -22196,42 +22479,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the person"
+            "description": "Country of the person",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the person"
+            "description": "Admin area level 1 (e.g. state) of the person",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the person"
+            "description": "Admin area level 2 (e.g. county) of the person",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the person"
+            "description": "Locality (e.g. city) of the person",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the person"
+            "description": "Sublocality (e.g. neighborhood) of the person",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the person"
+            "description": "Route (e.g. street) of the person",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the person"
+            "description": "Street number of the person",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the person"
+            "description": "Subpremise (e.g. apartment/suite number) of the person",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the person"
+            "description": "Postal code of the person",
+            "nullable": true
           }
         },
-        "description": "Postal address of the person, included if contact sync is enabled for the company"
+        "description": "Postal address of the person, included if contact sync is enabled for the company",
+        "nullable": true
       },
       "UpdatePersonRequestImItem": {
         "title": "PersonItemIm",
@@ -22288,7 +22581,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The last updated date and time of the person"
+            "description": "The last updated date and time of the person",
+            "nullable": true
           },
           "emails": {
             "type": "array",
@@ -22321,7 +22615,8 @@
           },
           "picture_id": {
             "type": "integer",
-            "description": "The ID of the picture associated with the person"
+            "description": "The ID of the picture associated with the person",
+            "nullable": true
           },
           "postal_address": {
             "$ref": "#/components/schemas/UpdatePerson200ResponseDataPostalAddress"
@@ -22368,7 +22663,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -22413,7 +22709,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -22980,7 +23277,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The last updated date and time of the organization"
+            "description": "The last updated date and time of the organization",
+            "nullable": true
           },
           "is_deleted": {
             "type": "boolean",
@@ -23035,7 +23333,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -23050,42 +23349,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the organization"
+            "description": "Country of the organization",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the organization"
+            "description": "Admin area level 1 (e.g. state) of the organization",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the organization"
+            "description": "Admin area level 2 (e.g. county) of the organization",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the organization"
+            "description": "Locality (e.g. city) of the organization",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the organization"
+            "description": "Sublocality (e.g. neighborhood) of the organization",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the organization"
+            "description": "Route (e.g. street) of the organization",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the organization"
+            "description": "Street number of the organization",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the organization"
+            "description": "Subpremise (e.g. apartment/suite number) of the organization",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the organization"
+            "description": "Postal code of the organization",
+            "nullable": true
           }
         },
-        "description": "The address of the organization"
+        "description": "The address of the organization",
+        "nullable": true
       },
       "AddOrganizationRequestCustomFields": {
         "type": "object",
@@ -23112,7 +23421,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The last updated date and time of the organization"
+            "description": "The last updated date and time of the organization",
+            "nullable": true
           },
           "is_deleted": {
             "type": "boolean",
@@ -23192,7 +23502,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The last updated date and time of the organization"
+            "description": "The last updated date and time of the organization",
+            "nullable": true
           },
           "is_deleted": {
             "type": "boolean",
@@ -23252,42 +23563,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the organization"
+            "description": "Country of the organization",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the organization"
+            "description": "Admin area level 1 (e.g. state) of the organization",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the organization"
+            "description": "Admin area level 2 (e.g. county) of the organization",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the organization"
+            "description": "Locality (e.g. city) of the organization",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the organization"
+            "description": "Sublocality (e.g. neighborhood) of the organization",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the organization"
+            "description": "Route (e.g. street) of the organization",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the organization"
+            "description": "Street number of the organization",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the organization"
+            "description": "Subpremise (e.g. apartment/suite number) of the organization",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the organization"
+            "description": "Postal code of the organization",
+            "nullable": true
           }
         },
-        "description": "The address of the organization"
+        "description": "The address of the organization",
+        "nullable": true
       },
       "UpdateOrganizationRequestCustomFields": {
         "type": "object",
@@ -23314,7 +23635,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The last updated date and time of the organization"
+            "description": "The last updated date and time of the organization",
+            "nullable": true
           },
           "is_deleted": {
             "type": "boolean",
@@ -23382,7 +23704,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -23427,7 +23750,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -24031,7 +24355,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "Pagination related data"
@@ -24166,7 +24491,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -24211,7 +24537,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -24242,7 +24569,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "Pagination related data"
@@ -24555,7 +24883,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "Pagination related data"
@@ -25135,7 +25464,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "Pagination related data"
@@ -25228,7 +25558,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "Pagination related data"
@@ -25250,7 +25581,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "Pagination related data"
@@ -25279,7 +25611,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "Pagination related data"
@@ -25302,7 +25635,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "Pagination related data"
@@ -25350,7 +25684,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The stage update time"
+            "description": "The stage update time",
+            "nullable": true
           }
         }
       },
@@ -25359,7 +25694,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -25407,7 +25743,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The stage update time"
+            "description": "The stage update time",
+            "nullable": true
           }
         },
         "description": "The stage object"
@@ -25464,7 +25801,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The stage update time"
+            "description": "The stage update time",
+            "nullable": true
           }
         },
         "description": "The stage object"
@@ -25512,7 +25850,8 @@
           },
           "update_time": {
             "type": "string",
-            "description": "The stage update time"
+            "description": "The stage update time",
+            "nullable": true
           }
         },
         "description": "The stage object"
@@ -25555,7 +25894,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -26267,7 +26607,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -26475,7 +26816,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -26726,7 +27068,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -26787,7 +27130,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -26923,7 +27267,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -27012,7 +27357,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -27543,7 +27889,8 @@
         "properties": {
           "next_cursor": {
             "type": "string",
-            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned."
+            "description": "The first item on the next page. The value of the \u0060next_cursor\u0060 field will be \u0060null\u0060 if you have reached the end of the dataset and there\u2019s no more pages to be returned.",
+            "nullable": true
           }
         },
         "description": "The additional data of the list"
@@ -27782,42 +28129,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the activity"
+            "description": "Country of the activity",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the activity"
+            "description": "Admin area level 1 (e.g. state) of the activity",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the activity"
+            "description": "Admin area level 2 (e.g. county) of the activity",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the activity"
+            "description": "Locality (e.g. city) of the activity",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the activity"
+            "description": "Sublocality (e.g. neighborhood) of the activity",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the activity"
+            "description": "Route (e.g. street) of the activity",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the activity"
+            "description": "Street number of the activity",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the activity"
+            "description": "Subpremise (e.g. apartment/suite number) of the activity",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the activity"
+            "description": "Postal code of the activity",
+            "nullable": true
           }
         },
-        "description": "Location of the activity"
+        "description": "Location of the activity",
+        "nullable": true
       },
       "GetActivitiesResponseDataItemParticipantsItem": {
         "type": "object",
@@ -27870,42 +28227,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the activity"
+            "description": "Country of the activity",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the activity"
+            "description": "Admin area level 1 (e.g. state) of the activity",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the activity"
+            "description": "Admin area level 2 (e.g. county) of the activity",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the activity"
+            "description": "Locality (e.g. city) of the activity",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the activity"
+            "description": "Sublocality (e.g. neighborhood) of the activity",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the activity"
+            "description": "Route (e.g. street) of the activity",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the activity"
+            "description": "Street number of the activity",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the activity"
+            "description": "Subpremise (e.g. apartment/suite number) of the activity",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the activity"
+            "description": "Postal code of the activity",
+            "nullable": true
           }
         },
-        "description": "Location of the activity"
+        "description": "Location of the activity",
+        "nullable": true
       },
       "AddActivity200ResponseDataParticipantsItem": {
         "type": "object",
@@ -27958,42 +28325,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the activity"
+            "description": "Country of the activity",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the activity"
+            "description": "Admin area level 1 (e.g. state) of the activity",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the activity"
+            "description": "Admin area level 2 (e.g. county) of the activity",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the activity"
+            "description": "Locality (e.g. city) of the activity",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the activity"
+            "description": "Sublocality (e.g. neighborhood) of the activity",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the activity"
+            "description": "Route (e.g. street) of the activity",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the activity"
+            "description": "Street number of the activity",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the activity"
+            "description": "Subpremise (e.g. apartment/suite number) of the activity",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the activity"
+            "description": "Postal code of the activity",
+            "nullable": true
           }
         },
-        "description": "Location of the activity"
+        "description": "Location of the activity",
+        "nullable": true
       },
       "GetActivity200ResponseDataParticipantsItem": {
         "type": "object",
@@ -28046,42 +28423,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the activity"
+            "description": "Country of the activity",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the activity"
+            "description": "Admin area level 1 (e.g. state) of the activity",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the activity"
+            "description": "Admin area level 2 (e.g. county) of the activity",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the activity"
+            "description": "Locality (e.g. city) of the activity",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the activity"
+            "description": "Sublocality (e.g. neighborhood) of the activity",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the activity"
+            "description": "Route (e.g. street) of the activity",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the activity"
+            "description": "Street number of the activity",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the activity"
+            "description": "Subpremise (e.g. apartment/suite number) of the activity",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the activity"
+            "description": "Postal code of the activity",
+            "nullable": true
           }
         },
-        "description": "Location of the activity"
+        "description": "Location of the activity",
+        "nullable": true
       },
       "UpdateActivity200ResponseDataParticipantsItem": {
         "type": "object",
@@ -28849,42 +29236,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the person"
+            "description": "Country of the person",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the person"
+            "description": "Admin area level 1 (e.g. state) of the person",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the person"
+            "description": "Admin area level 2 (e.g. county) of the person",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the person"
+            "description": "Locality (e.g. city) of the person",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the person"
+            "description": "Sublocality (e.g. neighborhood) of the person",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the person"
+            "description": "Route (e.g. street) of the person",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the person"
+            "description": "Street number of the person",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the person"
+            "description": "Subpremise (e.g. apartment/suite number) of the person",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the person"
+            "description": "Postal code of the person",
+            "nullable": true
           }
         },
-        "description": "Postal address of the person, included if contact sync is enabled for the company"
+        "description": "Postal address of the person, included if contact sync is enabled for the company",
+        "nullable": true
       },
       "GetPersonsResponseDataItemImItem": {
         "title": "PersonItemIm",
@@ -28954,42 +29351,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the person"
+            "description": "Country of the person",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the person"
+            "description": "Admin area level 1 (e.g. state) of the person",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the person"
+            "description": "Admin area level 2 (e.g. county) of the person",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the person"
+            "description": "Locality (e.g. city) of the person",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the person"
+            "description": "Sublocality (e.g. neighborhood) of the person",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the person"
+            "description": "Route (e.g. street) of the person",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the person"
+            "description": "Street number of the person",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the person"
+            "description": "Subpremise (e.g. apartment/suite number) of the person",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the person"
+            "description": "Postal code of the person",
+            "nullable": true
           }
         },
-        "description": "Postal address of the person, included if contact sync is enabled for the company"
+        "description": "Postal address of the person, included if contact sync is enabled for the company",
+        "nullable": true
       },
       "AddPerson200ResponseDataImItem": {
         "title": "PersonItemIm",
@@ -29059,42 +29466,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the person"
+            "description": "Country of the person",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the person"
+            "description": "Admin area level 1 (e.g. state) of the person",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the person"
+            "description": "Admin area level 2 (e.g. county) of the person",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the person"
+            "description": "Locality (e.g. city) of the person",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the person"
+            "description": "Sublocality (e.g. neighborhood) of the person",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the person"
+            "description": "Route (e.g. street) of the person",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the person"
+            "description": "Street number of the person",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the person"
+            "description": "Subpremise (e.g. apartment/suite number) of the person",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the person"
+            "description": "Postal code of the person",
+            "nullable": true
           }
         },
-        "description": "Postal address of the person, included if contact sync is enabled for the company"
+        "description": "Postal address of the person, included if contact sync is enabled for the company",
+        "nullable": true
       },
       "GetPerson200ResponseDataImItem": {
         "title": "PersonItemIm",
@@ -29164,42 +29581,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the person"
+            "description": "Country of the person",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the person"
+            "description": "Admin area level 1 (e.g. state) of the person",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the person"
+            "description": "Admin area level 2 (e.g. county) of the person",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the person"
+            "description": "Locality (e.g. city) of the person",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the person"
+            "description": "Sublocality (e.g. neighborhood) of the person",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the person"
+            "description": "Route (e.g. street) of the person",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the person"
+            "description": "Street number of the person",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the person"
+            "description": "Subpremise (e.g. apartment/suite number) of the person",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the person"
+            "description": "Postal code of the person",
+            "nullable": true
           }
         },
-        "description": "Postal address of the person, included if contact sync is enabled for the company"
+        "description": "Postal address of the person, included if contact sync is enabled for the company",
+        "nullable": true
       },
       "UpdatePerson200ResponseDataImItem": {
         "title": "PersonItemIm",
@@ -29679,42 +30106,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the organization"
+            "description": "Country of the organization",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the organization"
+            "description": "Admin area level 1 (e.g. state) of the organization",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the organization"
+            "description": "Admin area level 2 (e.g. county) of the organization",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the organization"
+            "description": "Locality (e.g. city) of the organization",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the organization"
+            "description": "Sublocality (e.g. neighborhood) of the organization",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the organization"
+            "description": "Route (e.g. street) of the organization",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the organization"
+            "description": "Street number of the organization",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the organization"
+            "description": "Subpremise (e.g. apartment/suite number) of the organization",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the organization"
+            "description": "Postal code of the organization",
+            "nullable": true
           }
         },
-        "description": "The address of the organization"
+        "description": "The address of the organization",
+        "nullable": true
       },
       "GetOrganizationsResponseDataItemCustomFields": {
         "type": "object",
@@ -29730,42 +30167,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the organization"
+            "description": "Country of the organization",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the organization"
+            "description": "Admin area level 1 (e.g. state) of the organization",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the organization"
+            "description": "Admin area level 2 (e.g. county) of the organization",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the organization"
+            "description": "Locality (e.g. city) of the organization",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the organization"
+            "description": "Sublocality (e.g. neighborhood) of the organization",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the organization"
+            "description": "Route (e.g. street) of the organization",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the organization"
+            "description": "Street number of the organization",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the organization"
+            "description": "Subpremise (e.g. apartment/suite number) of the organization",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the organization"
+            "description": "Postal code of the organization",
+            "nullable": true
           }
         },
-        "description": "The address of the organization"
+        "description": "The address of the organization",
+        "nullable": true
       },
       "AddOrganization200ResponseDataCustomFields": {
         "type": "object",
@@ -29781,42 +30228,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the organization"
+            "description": "Country of the organization",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the organization"
+            "description": "Admin area level 1 (e.g. state) of the organization",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the organization"
+            "description": "Admin area level 2 (e.g. county) of the organization",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the organization"
+            "description": "Locality (e.g. city) of the organization",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the organization"
+            "description": "Sublocality (e.g. neighborhood) of the organization",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the organization"
+            "description": "Route (e.g. street) of the organization",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the organization"
+            "description": "Street number of the organization",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the organization"
+            "description": "Subpremise (e.g. apartment/suite number) of the organization",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the organization"
+            "description": "Postal code of the organization",
+            "nullable": true
           }
         },
-        "description": "The address of the organization"
+        "description": "The address of the organization",
+        "nullable": true
       },
       "GetOrganization200ResponseDataCustomFields": {
         "type": "object",
@@ -29832,42 +30289,52 @@
           },
           "country": {
             "type": "string",
-            "description": "Country of the organization"
+            "description": "Country of the organization",
+            "nullable": true
           },
           "admin_area_level_1": {
             "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the organization"
+            "description": "Admin area level 1 (e.g. state) of the organization",
+            "nullable": true
           },
           "admin_area_level_2": {
             "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the organization"
+            "description": "Admin area level 2 (e.g. county) of the organization",
+            "nullable": true
           },
           "locality": {
             "type": "string",
-            "description": "Locality (e.g. city) of the organization"
+            "description": "Locality (e.g. city) of the organization",
+            "nullable": true
           },
           "sublocality": {
             "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the organization"
+            "description": "Sublocality (e.g. neighborhood) of the organization",
+            "nullable": true
           },
           "route": {
             "type": "string",
-            "description": "Route (e.g. street) of the organization"
+            "description": "Route (e.g. street) of the organization",
+            "nullable": true
           },
           "street_number": {
             "type": "string",
-            "description": "Street number of the organization"
+            "description": "Street number of the organization",
+            "nullable": true
           },
           "subpremise": {
             "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the organization"
+            "description": "Subpremise (e.g. apartment/suite number) of the organization",
+            "nullable": true
           },
           "postal_code": {
             "type": "string",
-            "description": "Postal code of the organization"
+            "description": "Postal code of the organization",
+            "nullable": true
           }
         },
-        "description": "The address of the organization"
+        "description": "The address of the organization",
+        "nullable": true
       },
       "UpdateOrganization200ResponseDataCustomFields": {
         "type": "object",
@@ -31391,8 +31858,9 @@
             "description": "The title of the deal"
           },
           "value": {
-            "type": "integer",
-            "description": "The value of the deal"
+            "type": "number",
+            "description": "The value of the deal",
+            "nullable": true
           },
           "currency": {
             "type": "string",
@@ -31742,8 +32210,9 @@
             "description": "The name of the product"
           },
           "code": {
-            "type": "integer",
-            "description": "The code of the product"
+            "type": "string",
+            "description": "The code of the product",
+            "nullable": true
           },
           "visible_to": {
             "type": "integer",
@@ -31846,7 +32315,8 @@
           },
           "address": {
             "type": "string",
-            "description": "The address of the organization"
+            "description": "The address of the organization",
+            "nullable": true
           },
           "visible_to": {
             "type": "integer",
@@ -32083,7 +32553,8 @@
             "type": "string",
             "description": "The name of the person the lead is associated with"
           }
-        }
+        },
+        "nullable": true
       },
       "GetLeadSearchResponseDataItemsItemItemOrganization": {
         "type": "object",
@@ -38193,14 +38664,14 @@
           ]
         }
       },
-      "AttendeesIncludeFields": {
+      "AttendeesItem": {
         "enum": [
           "attendees"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "AttendeesIncludeFields",
+          "name": "AttendeesItem",
           "modelAsString": false,
           "values": [
             {
@@ -38210,14 +38681,14 @@
           ]
         }
       },
-      "UiVisibilityIncludeFields": {
+      "UiVisibilityItem": {
         "enum": [
           "ui_visibility"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "UiVisibilityIncludeFields",
+          "name": "UiVisibilityItem",
           "modelAsString": false,
           "values": [
             {
@@ -38308,7 +38779,7 @@
           ]
         }
       },
-      "GetDealsIncludeFieldsParameter": {
+      "GetDealsIncludeFieldsParameterItem": {
         "enum": [
           "next_activity_id",
           "last_activity_id",
@@ -38330,7 +38801,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetDealsIncludeFieldsParameter",
+          "name": "GetDealsIncludeFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -38481,7 +38952,7 @@
           ]
         }
       },
-      "GetArchivedDealsIncludeFieldsParameter": {
+      "GetArchivedDealsIncludeFieldsParameterItem": {
         "enum": [
           "next_activity_id",
           "last_activity_id",
@@ -38503,7 +38974,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetArchivedDealsIncludeFieldsParameter",
+          "name": "GetArchivedDealsIncludeFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -38573,7 +39044,7 @@
           ]
         }
       },
-      "GetDealIncludeFieldsParameter": {
+      "GetDealIncludeFieldsParameterItem": {
         "enum": [
           "next_activity_id",
           "last_activity_id",
@@ -38595,7 +39066,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetDealIncludeFieldsParameter",
+          "name": "GetDealIncludeFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -38898,20 +39369,16 @@
           ]
         }
       },
-      "GetDealFieldsIncludeFieldsParameter": {
+      "GetDealFieldsIncludeFieldsParameterItem": {
         "enum": [
           "ui_visibility",
           "important_fields",
-          "required_fields",
-          "ui_visibility,important_fields",
-          "ui_visibility,required_fields",
-          "important_fields,required_fields",
-          "ui_visibility,important_fields,required_fields"
+          "required_fields"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetDealFieldsIncludeFieldsParameter",
+          "name": "GetDealFieldsIncludeFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -38925,40 +39392,20 @@
             {
               "value": "required_fields",
               "name": "RequiredFields"
-            },
-            {
-              "value": "ui_visibility,important_fields",
-              "name": "UiVisibilityCommaImportantFields"
-            },
-            {
-              "value": "ui_visibility,required_fields",
-              "name": "UiVisibilityCommaRequiredFields"
-            },
-            {
-              "value": "important_fields,required_fields",
-              "name": "ImportantFieldsCommaRequiredFields"
-            },
-            {
-              "value": "ui_visibility,important_fields,required_fields",
-              "name": "UiVisibilityCommaImportantFieldsCommaRequiredFields"
             }
           ]
         }
       },
-      "GetDealFieldIncludeFieldsParameter": {
+      "GetDealFieldIncludeFieldsParameterItem": {
         "enum": [
           "ui_visibility",
           "important_fields",
-          "required_fields",
-          "ui_visibility,important_fields",
-          "ui_visibility,required_fields",
-          "important_fields,required_fields",
-          "ui_visibility,important_fields,required_fields"
+          "required_fields"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetDealFieldIncludeFieldsParameter",
+          "name": "GetDealFieldIncludeFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -38972,22 +39419,6 @@
             {
               "value": "required_fields",
               "name": "RequiredFields"
-            },
-            {
-              "value": "ui_visibility,important_fields",
-              "name": "UiVisibilityCommaImportantFields"
-            },
-            {
-              "value": "ui_visibility,required_fields",
-              "name": "UiVisibilityCommaRequiredFields"
-            },
-            {
-              "value": "important_fields,required_fields",
-              "name": "ImportantFieldsCommaRequiredFields"
-            },
-            {
-              "value": "ui_visibility,important_fields,required_fields",
-              "name": "UiVisibilityCommaImportantFieldsCommaRequiredFields"
             }
           ]
         }
@@ -39041,7 +39472,7 @@
           ]
         }
       },
-      "GetPersonsIncludeFieldsParameter": {
+      "GetPersonsIncludeFieldsParameterItem": {
         "enum": [
           "next_activity_id",
           "last_activity_id",
@@ -39071,7 +39502,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetPersonsIncludeFieldsParameter",
+          "name": "GetPersonsIncludeFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -39173,7 +39604,7 @@
           ]
         }
       },
-      "GetPersonIncludeFieldsParameter": {
+      "GetPersonIncludeFieldsParameterItem": {
         "enum": [
           "next_activity_id",
           "last_activity_id",
@@ -39203,7 +39634,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetPersonIncludeFieldsParameter",
+          "name": "GetPersonIncludeFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -39305,20 +39736,16 @@
           ]
         }
       },
-      "GetPersonFieldsIncludeFieldsParameter": {
+      "GetPersonFieldsIncludeFieldsParameterItem": {
         "enum": [
           "ui_visibility",
           "important_fields",
-          "required_fields",
-          "ui_visibility,important_fields",
-          "ui_visibility,required_fields",
-          "important_fields,required_fields",
-          "ui_visibility,important_fields,required_fields"
+          "required_fields"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetPersonFieldsIncludeFieldsParameter",
+          "name": "GetPersonFieldsIncludeFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -39332,40 +39759,20 @@
             {
               "value": "required_fields",
               "name": "RequiredFields"
-            },
-            {
-              "value": "ui_visibility,important_fields",
-              "name": "UiVisibilityCommaImportantFields"
-            },
-            {
-              "value": "ui_visibility,required_fields",
-              "name": "UiVisibilityCommaRequiredFields"
-            },
-            {
-              "value": "important_fields,required_fields",
-              "name": "ImportantFieldsCommaRequiredFields"
-            },
-            {
-              "value": "ui_visibility,important_fields,required_fields",
-              "name": "UiVisibilityCommaImportantFieldsCommaRequiredFields"
             }
           ]
         }
       },
-      "GetPersonFieldIncludeFieldsParameter": {
+      "GetPersonFieldIncludeFieldsParameterItem": {
         "enum": [
           "ui_visibility",
           "important_fields",
-          "required_fields",
-          "ui_visibility,important_fields",
-          "ui_visibility,required_fields",
-          "important_fields,required_fields",
-          "ui_visibility,important_fields,required_fields"
+          "required_fields"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetPersonFieldIncludeFieldsParameter",
+          "name": "GetPersonFieldIncludeFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -39379,22 +39786,6 @@
             {
               "value": "required_fields",
               "name": "RequiredFields"
-            },
-            {
-              "value": "ui_visibility,important_fields",
-              "name": "UiVisibilityCommaImportantFields"
-            },
-            {
-              "value": "ui_visibility,required_fields",
-              "name": "UiVisibilityCommaRequiredFields"
-            },
-            {
-              "value": "important_fields,required_fields",
-              "name": "ImportantFieldsCommaRequiredFields"
-            },
-            {
-              "value": "ui_visibility,important_fields,required_fields",
-              "name": "UiVisibilityCommaImportantFieldsCommaRequiredFields"
             }
           ]
         }
@@ -39448,7 +39839,7 @@
           ]
         }
       },
-      "GetOrganizationsIncludeFieldsParameter": {
+      "GetOrganizationsIncludeFieldsParameterItem": {
         "enum": [
           "next_activity_id",
           "last_activity_id",
@@ -39473,7 +39864,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetOrganizationsIncludeFieldsParameter",
+          "name": "GetOrganizationsIncludeFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -39555,7 +39946,7 @@
           ]
         }
       },
-      "GetOrganizationIncludeFieldsParameter": {
+      "GetOrganizationIncludeFieldsParameterItem": {
         "enum": [
           "next_activity_id",
           "last_activity_id",
@@ -39580,7 +39971,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetOrganizationIncludeFieldsParameter",
+          "name": "GetOrganizationIncludeFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -39662,20 +40053,16 @@
           ]
         }
       },
-      "GetOrganizationFieldsIncludeFieldsParameter": {
+      "GetOrganizationFieldsIncludeFieldsParameterItem": {
         "enum": [
           "ui_visibility",
           "important_fields",
-          "required_fields",
-          "ui_visibility,important_fields",
-          "ui_visibility,required_fields",
-          "important_fields,required_fields",
-          "ui_visibility,important_fields,required_fields"
+          "required_fields"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetOrganizationFieldsIncludeFieldsParameter",
+          "name": "GetOrganizationFieldsIncludeFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -39689,40 +40076,20 @@
             {
               "value": "required_fields",
               "name": "RequiredFields"
-            },
-            {
-              "value": "ui_visibility,important_fields",
-              "name": "UiVisibilityCommaImportantFields"
-            },
-            {
-              "value": "ui_visibility,required_fields",
-              "name": "UiVisibilityCommaRequiredFields"
-            },
-            {
-              "value": "important_fields,required_fields",
-              "name": "ImportantFieldsCommaRequiredFields"
-            },
-            {
-              "value": "ui_visibility,important_fields,required_fields",
-              "name": "UiVisibilityCommaImportantFieldsCommaRequiredFields"
             }
           ]
         }
       },
-      "GetOrganizationFieldIncludeFieldsParameter": {
+      "GetOrganizationFieldIncludeFieldsParameterItem": {
         "enum": [
           "ui_visibility",
           "important_fields",
-          "required_fields",
-          "ui_visibility,important_fields",
-          "ui_visibility,required_fields",
-          "important_fields,required_fields",
-          "ui_visibility,important_fields,required_fields"
+          "required_fields"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetOrganizationFieldIncludeFieldsParameter",
+          "name": "GetOrganizationFieldIncludeFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -39736,22 +40103,6 @@
             {
               "value": "required_fields",
               "name": "RequiredFields"
-            },
-            {
-              "value": "ui_visibility,important_fields",
-              "name": "UiVisibilityCommaImportantFields"
-            },
-            {
-              "value": "ui_visibility,required_fields",
-              "name": "UiVisibilityCommaRequiredFields"
-            },
-            {
-              "value": "important_fields,required_fields",
-              "name": "ImportantFieldsCommaRequiredFields"
-            },
-            {
-              "value": "ui_visibility,important_fields,required_fields",
-              "name": "UiVisibilityCommaImportantFieldsCommaRequiredFields"
             }
           ]
         }

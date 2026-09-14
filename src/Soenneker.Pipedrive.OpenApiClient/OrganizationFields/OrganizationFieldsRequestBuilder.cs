@@ -35,7 +35,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.OrganizationFields
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OrganizationFieldsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizationFields{?cursor*,include_fields*,limit*}", pathParameters)
+        public OrganizationFieldsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizationFields{?cursor*,include_fields,limit*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.OrganizationFields
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OrganizationFieldsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizationFields{?cursor*,include_fields*,limit*}", rawUrl)
+        public OrganizationFieldsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/organizationFields{?cursor*,include_fields,limit*}", rawUrl)
         {
         }
         /// <summary>
@@ -151,8 +151,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.OrganizationFields
             public string Cursor { get; set; }
 #endif
             /// <summary>Optional comma separated string array of additional data namespaces to include in response</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFieldsIncludeFieldsParameter? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFieldsIncludeFieldsParameterItem[]? IncludeFields { get; set; }
+#nullable restore
+#else
+            [QueryParameter("include_fields")]
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFieldsIncludeFieldsParameterItem[] IncludeFields { get; set; }
+#endif
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }

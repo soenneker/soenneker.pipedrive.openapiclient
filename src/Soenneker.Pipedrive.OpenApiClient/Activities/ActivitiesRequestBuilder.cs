@@ -35,7 +35,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivitiesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities{?cursor*,deal_id*,done*,filter_id*,ids*,include_fields*,lead_id*,limit*,org_id*,owner_id*,person_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", pathParameters)
+        public ActivitiesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities{?cursor*,deal_id*,done*,filter_id*,ids,include_fields,lead_id*,limit*,org_id*,owner_id*,person_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivitiesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities{?cursor*,deal_id*,done*,filter_id*,ids*,include_fields*,lead_id*,limit*,org_id*,owner_id*,person_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", rawUrl)
+        public ActivitiesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities{?cursor*,deal_id*,done*,filter_id*,ids,include_fields,lead_id*,limit*,org_id*,owner_id*,person_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", rawUrl)
         {
         }
         /// <summary>
@@ -163,15 +163,22 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ids")]
-            public string? Ids { get; set; }
+            public string[]? Ids { get; set; }
 #nullable restore
 #else
             [QueryParameter("ids")]
-            public string Ids { get; set; }
+            public string[] Ids { get; set; }
 #endif
             /// <summary>Optional comma separated string array of additional fields to include</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.AttendeesIncludeFields? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.AttendeesItem[]? IncludeFields { get; set; }
+#nullable restore
+#else
+            [QueryParameter("include_fields")]
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.AttendeesItem[] IncludeFields { get; set; }
+#endif
             /// <summary>If supplied, only activities linked to the specified lead are returned. If filter_id is provided, this is ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

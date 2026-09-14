@@ -41,7 +41,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Products
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ProductsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/products{?cursor*,custom_fields*,filter_id*,ids*,limit*,owner_id*,sort_by*,sort_direction*,updated_since*}", pathParameters)
+        public ProductsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/products{?cursor*,custom_fields,filter_id*,ids,limit*,owner_id*,sort_by*,sort_direction*,updated_since*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Products
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ProductsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/products{?cursor*,custom_fields*,filter_id*,ids*,limit*,owner_id*,sort_by*,sort_direction*,updated_since*}", rawUrl)
+        public ProductsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/products{?cursor*,custom_fields,filter_id*,ids,limit*,owner_id*,sort_by*,sort_direction*,updated_since*}", rawUrl)
         {
         }
         /// <summary>
@@ -156,15 +156,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.Products
             [QueryParameter("cursor")]
             public string Cursor { get; set; }
 #endif
-            /// <summary>Comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for a smaller response.&lt;br/&gt;A maximum of 15 keys is allowed.</summary>
+            /// <summary>Optional comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for faster results and smaller response.&lt;br/&gt;A maximum of 15 keys is allowed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("custom_fields")]
-            public string? CustomFields { get; set; }
+            public string[]? CustomFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("custom_fields")]
-            public string CustomFields { get; set; }
+            public string[] CustomFields { get; set; }
 #endif
             /// <summary>The ID of the filter to use</summary>
             [QueryParameter("filter_id")]
@@ -173,11 +173,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Products
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ids")]
-            public string? Ids { get; set; }
+            public string[]? Ids { get; set; }
 #nullable restore
 #else
             [QueryParameter("ids")]
-            public string Ids { get; set; }
+            public string[] Ids { get; set; }
 #endif
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]

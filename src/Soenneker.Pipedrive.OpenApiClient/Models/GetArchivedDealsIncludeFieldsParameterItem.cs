@@ -5,7 +5,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum GetOrganizationsIncludeFieldsParameter
+    public enum GetArchivedDealsIncludeFieldsParameterItem
     #pragma warning restore CS1591
     {
         [EnumMember(Value = "next_activity_id")]
@@ -16,41 +16,13 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         #pragma warning disable CS1591
         LastActivityId,
         #pragma warning restore CS1591
-        [EnumMember(Value = "open_deals_count")]
+        [EnumMember(Value = "first_won_time")]
         #pragma warning disable CS1591
-        OpenDealsCount,
+        FirstWonTime,
         #pragma warning restore CS1591
-        [EnumMember(Value = "related_open_deals_count")]
+        [EnumMember(Value = "products_count")]
         #pragma warning disable CS1591
-        RelatedOpenDealsCount,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "closed_deals_count")]
-        #pragma warning disable CS1591
-        ClosedDealsCount,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "related_closed_deals_count")]
-        #pragma warning disable CS1591
-        RelatedClosedDealsCount,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "email_messages_count")]
-        #pragma warning disable CS1591
-        EmailMessagesCount,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "people_count")]
-        #pragma warning disable CS1591
-        PeopleCount,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "activities_count")]
-        #pragma warning disable CS1591
-        ActivitiesCount,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "done_activities_count")]
-        #pragma warning disable CS1591
-        DoneActivitiesCount,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "undone_activities_count")]
-        #pragma warning disable CS1591
-        UndoneActivitiesCount,
+        ProductsCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "files_count")]
         #pragma warning disable CS1591
@@ -64,25 +36,41 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         #pragma warning disable CS1591
         FollowersCount,
         #pragma warning restore CS1591
-        [EnumMember(Value = "won_deals_count")]
+        [EnumMember(Value = "email_messages_count")]
         #pragma warning disable CS1591
-        WonDealsCount,
+        EmailMessagesCount,
         #pragma warning restore CS1591
-        [EnumMember(Value = "related_won_deals_count")]
+        [EnumMember(Value = "activities_count")]
         #pragma warning disable CS1591
-        RelatedWonDealsCount,
+        ActivitiesCount,
         #pragma warning restore CS1591
-        [EnumMember(Value = "lost_deals_count")]
+        [EnumMember(Value = "done_activities_count")]
         #pragma warning disable CS1591
-        LostDealsCount,
+        DoneActivitiesCount,
         #pragma warning restore CS1591
-        [EnumMember(Value = "related_lost_deals_count")]
+        [EnumMember(Value = "undone_activities_count")]
         #pragma warning disable CS1591
-        RelatedLostDealsCount,
+        UndoneActivitiesCount,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "participants_count")]
+        #pragma warning disable CS1591
+        ParticipantsCount,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "last_incoming_mail_time")]
+        #pragma warning disable CS1591
+        LastIncomingMailTime,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "last_outgoing_mail_time")]
+        #pragma warning disable CS1591
+        LastOutgoingMailTime,
         #pragma warning restore CS1591
         [EnumMember(Value = "smart_bcc_email")]
         #pragma warning disable CS1591
         SmartBccEmail,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "source_lead_id")]
+        #pragma warning disable CS1591
+        SourceLeadId,
         #pragma warning restore CS1591
     }
 }

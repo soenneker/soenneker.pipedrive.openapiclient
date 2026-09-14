@@ -22,7 +22,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Archived
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ArchivedRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/archived{?cursor*,custom_fields*,filter_id*,ids*,include_fields*,limit*,org_id*,owner_id*,person_id*,pipeline_id*,sort_by*,sort_direction*,stage_id*,status*,updated_since*,updated_until*}", pathParameters)
+        public ArchivedRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/archived{?cursor*,custom_fields,filter_id*,ids,include_fields,limit*,org_id*,owner_id*,person_id*,pipeline_id*,sort_by*,sort_direction*,stage_id*,status*,updated_since*,updated_until*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Archived
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ArchivedRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/archived{?cursor*,custom_fields*,filter_id*,ids*,include_fields*,limit*,org_id*,owner_id*,person_id*,pipeline_id*,sort_by*,sort_direction*,stage_id*,status*,updated_since*,updated_until*}", rawUrl)
+        public ArchivedRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/archived{?cursor*,custom_fields,filter_id*,ids,include_fields,limit*,org_id*,owner_id*,person_id*,pipeline_id*,sort_by*,sort_direction*,stage_id*,status*,updated_since*,updated_until*}", rawUrl)
         {
         }
         /// <summary>
@@ -99,11 +99,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Archived
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("custom_fields")]
-            public string? CustomFields { get; set; }
+            public string[]? CustomFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("custom_fields")]
-            public string CustomFields { get; set; }
+            public string[] CustomFields { get; set; }
 #endif
             /// <summary>If supplied, only deals matching the specified filter are returned</summary>
             [QueryParameter("filter_id")]
@@ -112,15 +112,22 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Archived
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ids")]
-            public string? Ids { get; set; }
+            public string[]? Ids { get; set; }
 #nullable restore
 #else
             [QueryParameter("ids")]
-            public string Ids { get; set; }
+            public string[] Ids { get; set; }
 #endif
             /// <summary>Optional comma separated string array of additional fields to include</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetArchivedDealsIncludeFieldsParameter? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetArchivedDealsIncludeFieldsParameterItem[]? IncludeFields { get; set; }
+#nullable restore
+#else
+            [QueryParameter("include_fields")]
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetArchivedDealsIncludeFieldsParameterItem[] IncludeFields { get; set; }
+#endif
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
