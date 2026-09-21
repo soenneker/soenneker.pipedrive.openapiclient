@@ -238,7 +238,8 @@
               "activities:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -336,7 +337,9 @@
               "activities:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5,
+        "x-tool-description": "Adds a new activity. person_id is not accepted directly \u2014 set a person by including them in participants, e.g. participants: [{\u0022person_id\u0022: 123, \u0022primary\u0022: true}]."
       }
     },
     "/activities/{id}": {
@@ -385,7 +388,8 @@
               "activities:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       },
       "get": {
         "tags": [
@@ -499,7 +503,8 @@
               "activities:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       },
       "patch": {
         "tags": [
@@ -608,7 +613,9 @@
               "activities:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5,
+        "x-tool-description": "Updates the properties of an activity. person_id is not accepted directly \u2014 set a person by including them in participants, e.g. participants: [{\u0022person_id\u0022: 123, \u0022primary\u0022: true}]."
       }
     },
     "/activityFields": {
@@ -786,7 +793,8 @@
               "admin"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       }
     },
     "/activityFields/{fieldCode}": {
@@ -859,7 +867,8 @@
               "admin"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       }
     },
     "/deals": {
@@ -1107,7 +1116,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Retrieves paginated active deals with filtering by owner, person, organization, pipeline, stage, status, and time ranges. Essential for analytics, reporting, dashboard views, and bulk operations. Filters combine for precise selection; filter_id overrides individual filters.",
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -1192,7 +1203,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Creates new sales deals with customizable properties: title (required), value, person, organization, pipeline stage, and custom fields. Essential for lead conversion, sales processes, and integrations. Automatically assigns timestamps and ownership.",
+        "x-token-cost": 5
       }
     },
     "/deals/archived": {
@@ -1424,7 +1437,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Retrieves paginated archived deals with same filtering as active deals. Essential for historical analysis, closed opportunity reporting, data recovery, and audit trails. Supports filtering by owner, person, organization, pipeline, stage, and time ranges.",
+        "x-token-cost": 20
       }
     },
     "/deals/{id}": {
@@ -1473,7 +1488,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Soft-deletes deals with 30-day recovery period before permanent removal. Essential for deal cleanup, error correction, and removing unwanted opportunities. Becomes inaccessible via standard APIs but recoverable during grace period.",
+        "x-token-cost": 3
       },
       "get": {
         "tags": [
@@ -1604,7 +1621,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Fetches comprehensive details of a specific deal by ID, including all properties, custom fields, associated contacts, and metadata. Use this endpoint for deal detail pages, updating deal information, or when you need complete deal context. Supports optional field inclusion for optimized data retrieval and custom field expansion for enhanced deal analysis.",
+        "x-token-cost": 1
       },
       "patch": {
         "tags": [
@@ -1700,7 +1719,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Modifies deal properties using PATCH semantics for partial updates without affecting unchanged fields. Essential for deal progression, value updates, stage changes, and workflow automation. Preserves data integrity by updating only provided fields.",
+        "x-token-cost": 5
       }
     },
     "/deals/{id}/followers": {
@@ -1773,7 +1794,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Retrieves users following a deal for visibility into collaboration and stakeholder involvement. Essential for team coordination, notification management, and understanding deal ownership in collaborative sales environments.",
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -1830,7 +1853,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Adds user as deal follower to receive notifications and updates about progress. Essential for team collaboration, manager oversight, stakeholder visibility, and proper deal communication.",
+        "x-token-cost": 5
       }
     },
     "/deals/{id}/followers/changelog": {
@@ -1905,7 +1930,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Retrieves historical log of deal follower changes including start and stop events. Essential for audit trails, team collaboration analysis, compliance, and tracking deal stakeholder evolution over time.",
+        "x-token-cost": 10
       }
     },
     "/deals/{id}/followers/{followerId}": {
@@ -1963,7 +1990,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Removes user from deal\u0027s follower list by follower ID, stopping notifications and updates. Essential for team restructuring, role changes, access control, and managing stakeholder lists.",
+        "x-token-cost": 3
       }
     },
     "/deals/products": {
@@ -2077,7 +2106,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Retrieves product attachments across multiple deals (up to 100 IDs) in single request. Essential for bulk product analysis, revenue calculations, sales analytics, and commission calculations across deal portfolios.",
+        "x-token-cost": 10
       }
     },
     "/deals/search": {
@@ -2224,7 +2255,9 @@
               "search:read"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Performs full-text search across deal titles, notes, and custom fields with advanced filtering. Essential for search functionality, autocomplete features, and deal discovery. Supports exact matching, field-specific searches, and filtering by person, organization, or status.",
+        "x-token-cost": 20
       }
     },
     "/deals/{id}/products": {
@@ -2334,7 +2367,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Retrieves products attached to deal with detailed information: quantities, prices, and configurations. Essential for deal value analysis, product management, accurate summaries, and pricing calculations.",
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -2411,7 +2446,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Attaches product to deal with configurable quantity, pricing, and discounts. Essential for sales processes, quote generation, and deal composition. Automatically updates deal values and maintains accurate sales tracking.",
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -2475,7 +2512,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Bulk-deletes products from a deal to simplify management and cleanup. Supports selective deletion (by specifying product IDs) or full removal of up to 100 products per request, enabling efficient deal maintenance and product update workflows.",
+        "x-token-cost": 15
       }
     },
     "/deals/{id}/products/{productAttachmentId}": {
@@ -2563,7 +2602,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Modifies product attachment configuration within deal: quantity, pricing, discounts, and properties. Essential for negotiations, quantity updates, configuration corrections, and maintaining accurate deal values.",
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -2620,7 +2661,9 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Removes product attachment from deal by ID, automatically recalculating values and maintaining data integrity. Essential for negotiations, quote revisions, composition changes, and clean product-deal relationships.",
+        "x-token-cost": 3
       }
     },
     "/deals/{id}/products/bulk": {
@@ -2724,7 +2767,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Bulk attaches multiple products to deal with configurable quantities, pricing, and discounts. Essential for efficient deal composition, batch product management, and streamlined sales processes. Automatically calculates deal values and maintains sales tracking.",
+        "x-token-cost": 25
       }
     },
     "/deals/{id}/discounts": {
@@ -2784,7 +2829,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Retrieves discount configurations applied to deal including percentage and fixed-amount discounts. Essential for discount analysis, deal value calculations, accurate pricing summaries, and complex promotional arrangements.",
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -2848,7 +2895,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Applies new discount to deal, automatically recalculating values for one-time products. Essential for negotiations, promotional campaigns, volume discounts, and maintaining accurate financial tracking.",
+        "x-token-cost": 5
       }
     },
     "/deals/{id}/discounts/{discountId}": {
@@ -2924,7 +2973,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Modifies existing discount configuration on deal, automatically recalculating values for one-time products. Essential for discount adjustments, corrections, promotional updates, and maintaining pricing integrity.",
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -2981,7 +3032,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Removes discount from deal by ID, automatically recalculating values for one-time products. Essential when discounts become inapplicable, negotiations change, or pricing corrections are needed.",
+        "x-token-cost": 3
       }
     },
     "/deals/installments": {
@@ -3073,7 +3126,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Retrieves payment installments across multiple deals (up to 100 IDs) in single request. Restricted to Growth\u002B plans. Essential for bulk installment analysis, payment reporting, and enterprise cash flow management.",
+        "x-token-cost": 10
       }
     },
     "/deals/{id}/installments": {
@@ -3135,7 +3190,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Creates payment installment for deals with one-time products, enabling split payment schedules. Restricted to Growth\u002B plans and incompatible with recurring products. Essential for enterprise deals and custom payment terms.",
+        "x-token-cost": 5
       }
     },
     "/deals/{id}/installments/{installmentId}": {
@@ -3206,7 +3263,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Modifies existing payment installment within deal: amounts, dates, or terms. Restricted to Growth\u002B plans. Essential for renegotiating schedules, corrections, and maintaining flexible payment arrangements.",
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -3262,7 +3321,9 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-tool-description": "Removes payment installment from deal by ID, simplifying schedules or correcting structures. Restricted to Growth\u002B plans. Essential when payment terms change or installments are no longer needed.",
+        "x-token-cost": 3
       }
     },
     "/deals/{id}/convert/lead": {
@@ -3329,7 +3390,8 @@
               "deals:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 40
       }
     },
     "/dealFields": {
@@ -3536,7 +3598,8 @@
               "deal-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -3632,7 +3695,8 @@
               "deal-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/dealFields/{fieldCode}": {
@@ -3722,7 +3786,8 @@
               "deal-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       },
       "patch": {
         "tags": [
@@ -3806,7 +3871,8 @@
               "deal-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -3861,7 +3927,8 @@
               "deal-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       }
     },
     "/dealFields/{fieldCode}/options": {
@@ -3926,7 +3993,8 @@
               "deal-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -3989,7 +4057,8 @@
               "deal-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       },
       "patch": {
         "tags": [
@@ -4052,7 +4121,8 @@
               "deal-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/deals/{id}/convert/status/{conversionId}": {
@@ -4132,7 +4202,8 @@
               "deals:read"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       }
     },
     "/persons": {
@@ -4383,7 +4454,8 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -4495,7 +4567,9 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5,
+        "x-tool-description": "Creates a new contact person, requiring only a name. The im, postal_address, notes, birthday, and job_title fields are only accepted when contact sync is enabled for the company; otherwise the request returns 403. If the company uses the Campaigns product, this endpoint also accepts and returns the marketing_status field."
       }
     },
     "/persons/{id}": {
@@ -4544,7 +4618,8 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       },
       "get": {
         "tags": [
@@ -4702,7 +4777,8 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       },
       "patch": {
         "tags": [
@@ -4825,7 +4901,9 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5,
+        "x-tool-description": "Updates a contact person. The im, postal_address, notes, birthday, and job_title fields are only accepted when contact sync is enabled for the company; otherwise the request returns 403. If the company uses the Campaigns product, this endpoint also accepts and returns the marketing_status field."
       }
     },
     "/persons/{id}/followers": {
@@ -4898,7 +4976,8 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -4955,7 +5034,8 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/persons/{id}/followers/changelog": {
@@ -5030,7 +5110,8 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       }
     },
     "/persons/{id}/followers/{followerId}": {
@@ -5088,7 +5169,8 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       }
     },
     "/persons/{id}/picture": {
@@ -5147,7 +5229,9 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1,
+        "x-tool-description": "Retrieves the profile picture for a specific person, including URLs for both thumbnail (128x128) and full-size (512x512) versions. Use for displaying contact pictures in UI or exporting contact data. Returns 404 if the person has no picture."
       }
     },
     "/personFields": {
@@ -5310,7 +5394,8 @@
               "contact-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -5388,7 +5473,8 @@
               "contact-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/personFields/{fieldCode}": {
@@ -5475,7 +5561,8 @@
               "contact-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       },
       "patch": {
         "tags": [
@@ -5556,7 +5643,8 @@
               "contact-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -5611,7 +5699,8 @@
               "contact-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       }
     },
     "/personFields/{fieldCode}/options": {
@@ -5676,7 +5765,8 @@
               "contact-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -5739,7 +5829,8 @@
               "contact-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       },
       "patch": {
         "tags": [
@@ -5802,7 +5893,8 @@
               "contact-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/organizations": {
@@ -6000,7 +6092,8 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -6075,7 +6168,8 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/organizations/{id}": {
@@ -6124,7 +6218,8 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       },
       "get": {
         "tags": [
@@ -6245,7 +6340,8 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       },
       "patch": {
         "tags": [
@@ -6331,7 +6427,8 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/organizations/{id}/followers": {
@@ -6404,7 +6501,8 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -6461,7 +6559,8 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/organizations/{id}/followers/changelog": {
@@ -6536,7 +6635,8 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       }
     },
     "/organizations/{id}/followers/{followerId}": {
@@ -6594,7 +6694,8 @@
               "contacts:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       }
     },
     "/organizationFields": {
@@ -6829,7 +6930,8 @@
               "contact-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -6917,7 +7019,8 @@
               "contact-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/organizationFields/{fieldCode}": {
@@ -7010,7 +7113,8 @@
               "contact-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       },
       "patch": {
         "tags": [
@@ -7097,7 +7201,8 @@
               "contact-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -7151,7 +7256,8 @@
               "contact-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       }
     },
     "/organizationFields/{fieldCode}/options": {
@@ -7216,7 +7322,8 @@
               "contact-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -7279,7 +7386,8 @@
               "contact-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       },
       "patch": {
         "tags": [
@@ -7342,7 +7450,8 @@
               "contact-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/products": {
@@ -7515,7 +7624,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -7602,7 +7712,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/products/{id}/followers": {
@@ -7675,7 +7786,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -7732,7 +7844,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/products/{id}/followers/changelog": {
@@ -7807,7 +7920,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       }
     },
     "/products/{id}/followers/{followerId}": {
@@ -7865,7 +7979,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       }
     },
     "/products/search": {
@@ -7975,7 +8090,8 @@
               "search:read"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 20
       }
     },
     "/products/{id}": {
@@ -8024,7 +8140,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       },
       "get": {
         "tags": [
@@ -8114,7 +8231,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       },
       "patch": {
         "tags": [
@@ -8212,7 +8330,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/products/{id}/duplicate": {
@@ -8303,7 +8422,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/products/{id}/variations": {
@@ -8387,7 +8507,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -8455,7 +8576,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/products/{id}/variations/{productVariationId}": {
@@ -8534,7 +8656,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -8590,7 +8713,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       }
     },
     "/products/{id}/images": {
@@ -8646,7 +8770,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -8705,7 +8830,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 20
       },
       "put": {
         "tags": [
@@ -8764,7 +8890,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 20
       },
       "delete": {
         "tags": [
@@ -8811,7 +8938,8 @@
               "products:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 6
       }
     },
     "/productFields": {
@@ -8951,7 +9079,8 @@
               "product-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -9024,7 +9153,8 @@
               "product-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/productFields/{fieldCode}": {
@@ -9098,7 +9228,8 @@
               "product-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       },
       "patch": {
         "tags": [
@@ -9166,7 +9297,8 @@
               "product-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -9220,7 +9352,8 @@
               "product-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       }
     },
     "/productFields/{fieldCode}/options": {
@@ -9284,7 +9417,8 @@
               "product-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -9346,7 +9480,8 @@
               "product-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       },
       "patch": {
         "tags": [
@@ -9408,7 +9543,8 @@
               "product-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/leads/search": {
@@ -9549,7 +9685,8 @@
               "search:read"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 20
       }
     },
     "/leads/{id}/convert/deal": {
@@ -9626,7 +9763,8 @@
               "leads:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 40
       }
     },
     "/leads/{id}/convert/status/{conversionId}": {
@@ -9707,7 +9845,8 @@
               "leads:read"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       }
     },
     "/organizations/search": {
@@ -9810,7 +9949,8 @@
               "search:read"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 20
       }
     },
     "/persons/search": {
@@ -9939,7 +10079,8 @@
               "search:read"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 20
       }
     },
     "/itemSearch": {
@@ -10202,7 +10343,8 @@
               "search:read"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 20
       }
     },
     "/itemSearch/field": {
@@ -10304,7 +10446,8 @@
               "search:read"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 20
       }
     },
     "/stages": {
@@ -10401,7 +10544,8 @@
               "admin"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "post": {
         "tags": [
@@ -10455,7 +10599,8 @@
               "admin"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/stages/{id}": {
@@ -10504,7 +10649,8 @@
               "admin"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       },
       "get": {
         "tags": [
@@ -10562,7 +10708,8 @@
               "admin"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       },
       "patch": {
         "tags": [
@@ -10627,7 +10774,8 @@
               "admin"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/pipelines": {
@@ -10713,7 +10861,8 @@
               "admin"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "post": {
         "tags": [
@@ -10764,7 +10913,8 @@
               "admin"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/pipelines/{id}": {
@@ -10813,7 +10963,8 @@
               "admin"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       },
       "get": {
         "tags": [
@@ -10868,7 +11019,8 @@
               "admin"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       },
       "patch": {
         "tags": [
@@ -10930,7 +11082,8 @@
               "admin"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/projectFields": {
@@ -11045,7 +11198,8 @@
               "project-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -11122,7 +11276,8 @@
               "project-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/projectFields/{fieldCode}": {
@@ -11191,7 +11346,8 @@
               "project-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       },
       "patch": {
         "tags": [
@@ -11266,7 +11422,8 @@
               "project-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -11320,7 +11477,8 @@
               "project-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       }
     },
     "/projectFields/{fieldCode}/options": {
@@ -11384,7 +11542,8 @@
               "project-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -11446,7 +11605,8 @@
               "project-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       },
       "patch": {
         "tags": [
@@ -11508,7 +11668,8 @@
               "project-fields:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/projects": {
@@ -11646,7 +11807,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -11718,7 +11880,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/projects/archived": {
@@ -11832,7 +11995,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       }
     },
     "/projects/{id}": {
@@ -11908,7 +12072,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       },
       "patch": {
         "tags": [
@@ -11990,7 +12155,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -12037,7 +12203,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       }
     },
     "/projectTemplates": {
@@ -12106,7 +12273,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       }
     },
     "/projectTemplates/{id}": {
@@ -12163,7 +12331,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       }
     },
     "/projects/search": {
@@ -12303,7 +12472,8 @@
               "search:read"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 20
       }
     },
     "/projects/{id}/archive": {
@@ -12378,7 +12548,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       }
     },
     "/projects/{id}/permittedUsers": {
@@ -12429,7 +12600,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/projects/{id}/changelog": {
@@ -12524,7 +12696,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       }
     },
     "/tasks": {
@@ -12645,7 +12818,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -12710,7 +12884,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/tasks/{id}": {
@@ -12779,7 +12954,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 1
       },
       "patch": {
         "tags": [
@@ -12854,7 +13030,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -12903,7 +13080,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       }
     },
     "/boards": {
@@ -12950,7 +13128,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -13001,7 +13180,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/boards/{id}": {
@@ -13056,7 +13236,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "patch": {
         "tags": [
@@ -13117,7 +13298,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -13165,7 +13347,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       }
     },
     "/phases": {
@@ -13225,7 +13408,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "post": {
         "tags": [
@@ -13277,7 +13461,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       }
     },
     "/phases/{id}": {
@@ -13333,7 +13518,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       },
       "patch": {
         "tags": [
@@ -13395,7 +13581,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 5
       },
       "delete": {
         "tags": [
@@ -13443,7 +13630,8 @@
               "projects:full"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 3
       }
     },
     "/users/{id}/followers": {
@@ -13515,7 +13703,8 @@
               "users:read"
             ]
           }
-        ]
+        ],
+        "x-token-cost": 10
       }
     }
   },
