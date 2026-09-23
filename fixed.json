@@ -33806,7 +33806,9 @@
           "price_list",
           "billing_frequency",
           "projects_board",
-          "projects_phase"
+          "projects_phase",
+          "participants",
+          "attendees"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -33946,6 +33948,14 @@
             {
               "value": "projects_phase",
               "name": "ProjectsPhase"
+            },
+            {
+              "value": "participants",
+              "name": "Participants"
+            },
+            {
+              "value": "attendees",
+              "name": "Attendees"
             }
           ]
         }
@@ -33984,7 +33994,9 @@
           "price_list",
           "billing_frequency",
           "projects_board",
-          "projects_phase"
+          "projects_phase",
+          "participants",
+          "attendees"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -34124,6 +34136,14 @@
             {
               "value": "projects_phase",
               "name": "ProjectsPhase"
+            },
+            {
+              "value": "participants",
+              "name": "Participants"
+            },
+            {
+              "value": "attendees",
+              "name": "Attendees"
             }
           ]
         }
@@ -37989,7 +38009,8 @@
           "price_list",
           "billing_frequency",
           "projects_board",
-          "projects_phase"
+          "projects_phase",
+          "orgs"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -38129,6 +38150,10 @@
             {
               "value": "projects_phase",
               "name": "ProjectsPhase"
+            },
+            {
+              "value": "orgs",
+              "name": "Orgs"
             }
           ]
         }
@@ -38167,7 +38192,8 @@
           "price_list",
           "billing_frequency",
           "projects_board",
-          "projects_phase"
+          "projects_phase",
+          "orgs"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -38307,6 +38333,10 @@
             {
               "value": "projects_phase",
               "name": "ProjectsPhase"
+            },
+            {
+              "value": "orgs",
+              "name": "Orgs"
             }
           ]
         }
@@ -38345,7 +38375,8 @@
           "price_list",
           "billing_frequency",
           "projects_board",
-          "projects_phase"
+          "projects_phase",
+          "orgs"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -38485,6 +38516,10 @@
             {
               "value": "projects_phase",
               "name": "ProjectsPhase"
+            },
+            {
+              "value": "orgs",
+              "name": "Orgs"
             }
           ]
         }
@@ -38523,7 +38558,8 @@
           "price_list",
           "billing_frequency",
           "projects_board",
-          "projects_phase"
+          "projects_phase",
+          "orgs"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -38663,6 +38699,10 @@
             {
               "value": "projects_phase",
               "name": "ProjectsPhase"
+            },
+            {
+              "value": "orgs",
+              "name": "Orgs"
             }
           ]
         }

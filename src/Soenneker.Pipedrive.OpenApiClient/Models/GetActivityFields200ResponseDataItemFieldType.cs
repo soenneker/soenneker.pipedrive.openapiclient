@@ -139,5 +139,13 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         #pragma warning disable CS1591
         ProjectsPhase,
         #pragma warning restore CS1591
+        [EnumMember(Value = "participants")]
+        #pragma warning disable CS1591
+        Participants,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "attendees")]
+        #pragma warning disable CS1591
+        Attendees,
+        #pragma warning restore CS1591
     }
 }

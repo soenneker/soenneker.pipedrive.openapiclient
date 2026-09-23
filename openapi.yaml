@@ -1611,6 +1611,8 @@ paths:
                             - billing_frequency
                             - projects_board
                             - projects_phase
+                            - participants
+                            - attendees
                         options:
                           type: array
                           nullable: true
@@ -1847,6 +1849,8 @@ paths:
                           - billing_frequency
                           - projects_board
                           - projects_phase
+                          - participants
+                          - attendees
                       options:
                         type: array
                         nullable: true
@@ -19060,6 +19064,7 @@ paths:
                             - billing_frequency
                             - projects_board
                             - projects_phase
+                            - orgs
                         options:
                           type: array
                           nullable: true
@@ -19346,6 +19351,7 @@ paths:
                           - billing_frequency
                           - projects_board
                           - projects_phase
+                          - orgs
                       options:
                         type: array
                         nullable: true
@@ -19535,6 +19541,7 @@ paths:
                           - billing_frequency
                           - projects_board
                           - projects_phase
+                          - orgs
                       options:
                         type: array
                         nullable: true
@@ -19765,6 +19772,7 @@ paths:
                           - billing_frequency
                           - projects_board
                           - projects_phase
+                          - orgs
                       options:
                         type: array
                         nullable: true
