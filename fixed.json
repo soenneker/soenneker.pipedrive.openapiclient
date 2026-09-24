@@ -946,8 +946,13 @@
             "name": "status",
             "in": "query",
             "description": "Only fetch deals with a specific status. If omitted, all not deleted deals are returned. If set to deleted, deals that have been deleted up to 30 days ago will be included. Multiple statuses can be included as a comma separated array. If filter_id is provided, this is ignored.",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/GetDealsStatusParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/GetDealsStatusParameterItem"
+              }
             }
           },
           {
@@ -1283,8 +1288,13 @@
             "name": "status",
             "in": "query",
             "description": "Only fetch deals with a specific status. If omitted, all not deleted deals are returned. If set to deleted, deals that have been deleted up to 30 days ago will be included. Multiple statuses can be included as a comma separated array. If filter_id is provided, this is ignored.",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/GetArchivedDealsStatusParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/GetArchivedDealsStatusParameterItem"
+              }
             }
           },
           {
@@ -2133,8 +2143,13 @@
             "name": "fields",
             "in": "query",
             "description": "A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/SearchDealsFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SearchDealsFieldsParameterItem"
+              }
             }
           },
           {
@@ -2165,16 +2180,26 @@
             "name": "status",
             "in": "query",
             "description": "Will filter deals by the provided specific status. open = Open, won = Won, lost = Lost. The upper limit of found deals associated with the status is 2000.",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/SearchDealsStatusParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SearchDealsStatusParameterItem"
+              }
             }
           },
           {
             "name": "include_fields",
             "in": "query",
             "description": "Supports including optional fields in the results which are not provided by default",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/DealCcEmailIncludeFields"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/DealCcEmailItem"
+              }
             }
           },
           {
@@ -2471,9 +2496,19 @@
             "name": "ids",
             "in": "query",
             "description": "Comma-separated list of deal product IDs to delete. If not provided, all deal products will be deleted up to 100 items. Maximum 100 IDs allowed.",
+            "explode": false,
             "schema": {
-              "type": "string",
-              "example": "1,2,3"
+              "maxItems": 100,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "example": [
+                1,
+                2,
+                3
+              ]
             }
           }
         ],
@@ -8005,8 +8040,13 @@
             "name": "fields",
             "in": "query",
             "description": "A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/SearchProductsFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SearchProductsFieldsParameterItem"
+              }
             }
           },
           {
@@ -8021,8 +8061,13 @@
             "name": "include_fields",
             "in": "query",
             "description": "Supports including optional fields in the results which are not provided by default",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/ProductPriceIncludeFields"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ProductPriceItem"
+              }
             }
           },
           {
@@ -9569,8 +9614,13 @@
             "name": "fields",
             "in": "query",
             "description": "A comma-separated string array. The fields to perform the search from. Defaults to all of them.",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/SearchLeadsFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SearchLeadsFieldsParameterItem"
+              }
             }
           },
           {
@@ -9601,8 +9651,13 @@
             "name": "include_fields",
             "in": "query",
             "description": "Supports including optional fields in the results which are not provided by default",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/LeadWasSeenIncludeFields"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LeadWasSeenItem"
+              }
             }
           },
           {
@@ -9871,8 +9926,13 @@
             "name": "fields",
             "in": "query",
             "description": "A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/SearchOrganizationFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SearchOrganizationFieldsParameterItem"
+              }
             }
           },
           {
@@ -9975,8 +10035,13 @@
             "name": "fields",
             "in": "query",
             "description": "A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/SearchPersonsFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SearchPersonsFieldsParameterItem"
+              }
             }
           },
           {
@@ -9999,8 +10064,13 @@
             "name": "include_fields",
             "in": "query",
             "description": "Supports including optional fields in the results which are not provided by default",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/PersonPictureIncludeFields"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PersonPictureItem"
+              }
             }
           },
           {
@@ -10105,16 +10175,26 @@
             "name": "item_types",
             "in": "query",
             "description": "A comma-separated string array. The type of items to perform the search from. Defaults to all.",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/SearchItemItemTypesParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SearchItemItemTypesParameterItem"
+              }
             }
           },
           {
             "name": "fields",
             "in": "query",
             "description": "A comma-separated string array. The fields to perform the search from. Defaults to all. Relevant for each item type are:\u003Cbr\u003E \u003Ctable\u003E \u003Ctr\u003E\u003Cth\u003E\u003Cb\u003EItem type\u003C/b\u003E\u003C/th\u003E\u003Cth\u003E\u003Cb\u003EField\u003C/b\u003E\u003C/th\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EDeal\u003C/td\u003E\u003Ctd\u003E\u0060custom_fields\u0060, \u0060notes\u0060, \u0060title\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EPerson\u003C/td\u003E\u003Ctd\u003E\u0060custom_fields\u0060, \u0060email\u0060, \u0060name\u0060, \u0060notes\u0060, \u0060phone\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EOrganization\u003C/td\u003E\u003Ctd\u003E\u0060address\u0060, \u0060custom_fields\u0060, \u0060name\u0060, \u0060notes\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EProduct\u003C/td\u003E\u003Ctd\u003E\u0060code\u0060, \u0060custom_fields\u0060, \u0060name\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003ELead\u003C/td\u003E\u003Ctd\u003E\u0060custom_fields\u0060, \u0060notes\u0060, \u0060title\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EFile\u003C/td\u003E\u003Ctd\u003E\u0060name\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EMail attachment\u003C/td\u003E\u003Ctd\u003E\u0060name\u0060\u003C/td\u003E\u003C/tr\u003E \u003Ctr\u003E\u003Ctd\u003EProject\u003C/td\u003E\u003Ctd\u003E \u0060custom_fields\u0060, \u0060notes\u0060, \u0060title\u0060, \u0060description\u0060 \u003C/td\u003E\u003C/tr\u003E \u003C/table\u003E \u003Cbr\u003E Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/SearchItemFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SearchItemFieldsParameterItem"
+              }
             }
           },
           {
@@ -10137,8 +10217,13 @@
             "name": "include_fields",
             "in": "query",
             "description": "A comma-separated string array. Supports including optional fields in the results which are not provided by default.",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/SearchItemIncludeFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SearchItemIncludeFieldsParameterItem"
+              }
             }
           },
           {
@@ -12358,8 +12443,13 @@
             "name": "fields",
             "in": "query",
             "description": "A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: \u0060address\u0060, \u0060varchar\u0060, \u0060text\u0060, \u0060varchar_auto\u0060, \u0060double\u0060, \u0060monetary\u0060 and \u0060phone\u0060. Read more about searching by custom fields \u003Ca href=\u0022https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.",
+            "explode": false,
             "schema": {
-              "$ref": "#/components/schemas/SearchProjectsFieldsParameter"
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SearchProjectsFieldsParameterItem"
+              }
             }
           },
           {
@@ -38927,7 +39017,7 @@
           ]
         }
       },
-      "GetDealsStatusParameter": {
+      "GetDealsStatusParameterItem": {
         "enum": [
           "open",
           "won",
@@ -38937,7 +39027,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetDealsStatusParameter",
+          "name": "GetDealsStatusParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -39100,7 +39190,7 @@
           ]
         }
       },
-      "GetArchivedDealsStatusParameter": {
+      "GetArchivedDealsStatusParameterItem": {
         "enum": [
           "open",
           "won",
@@ -39110,7 +39200,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetArchivedDealsStatusParameter",
+          "name": "GetArchivedDealsStatusParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -39424,7 +39514,7 @@
           ]
         }
       },
-      "SearchDealsFieldsParameter": {
+      "SearchDealsFieldsParameterItem": {
         "enum": [
           "custom_fields",
           "notes",
@@ -39433,7 +39523,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "SearchDealsFieldsParameter",
+          "name": "SearchDealsFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -39451,7 +39541,7 @@
           ]
         }
       },
-      "SearchDealsStatusParameter": {
+      "SearchDealsStatusParameterItem": {
         "enum": [
           "open",
           "won",
@@ -39460,7 +39550,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "SearchDealsStatusParameter",
+          "name": "SearchDealsStatusParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -39478,14 +39568,14 @@
           ]
         }
       },
-      "DealCcEmailIncludeFields": {
+      "DealCcEmailItem": {
         "enum": [
           "deal.cc_email"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "DealCcEmailIncludeFields",
+          "name": "DealCcEmailItem",
           "modelAsString": false,
           "values": [
             {
@@ -40390,7 +40480,7 @@
           ]
         }
       },
-      "SearchProductsFieldsParameter": {
+      "SearchProductsFieldsParameterItem": {
         "enum": [
           "code",
           "custom_fields",
@@ -40399,7 +40489,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "SearchProductsFieldsParameter",
+          "name": "SearchProductsFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -40417,14 +40507,14 @@
           ]
         }
       },
-      "ProductPriceIncludeFields": {
+      "ProductPriceItem": {
         "enum": [
           "product.price"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ProductPriceIncludeFields",
+          "name": "ProductPriceItem",
           "modelAsString": false,
           "values": [
             {
@@ -40434,7 +40524,7 @@
           ]
         }
       },
-      "SearchLeadsFieldsParameter": {
+      "SearchLeadsFieldsParameterItem": {
         "enum": [
           "custom_fields",
           "notes",
@@ -40443,7 +40533,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "SearchLeadsFieldsParameter",
+          "name": "SearchLeadsFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -40461,14 +40551,14 @@
           ]
         }
       },
-      "LeadWasSeenIncludeFields": {
+      "LeadWasSeenItem": {
         "enum": [
           "lead.was_seen"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "LeadWasSeenIncludeFields",
+          "name": "LeadWasSeenItem",
           "modelAsString": false,
           "values": [
             {
@@ -40478,7 +40568,7 @@
           ]
         }
       },
-      "SearchOrganizationFieldsParameter": {
+      "SearchOrganizationFieldsParameterItem": {
         "enum": [
           "address",
           "custom_fields",
@@ -40488,7 +40578,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "SearchOrganizationFieldsParameter",
+          "name": "SearchOrganizationFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -40510,7 +40600,7 @@
           ]
         }
       },
-      "SearchPersonsFieldsParameter": {
+      "SearchPersonsFieldsParameterItem": {
         "enum": [
           "custom_fields",
           "email",
@@ -40521,7 +40611,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "SearchPersonsFieldsParameter",
+          "name": "SearchPersonsFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -40547,14 +40637,14 @@
           ]
         }
       },
-      "PersonPictureIncludeFields": {
+      "PersonPictureItem": {
         "enum": [
           "person.picture"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PersonPictureIncludeFields",
+          "name": "PersonPictureItem",
           "modelAsString": false,
           "values": [
             {
@@ -40564,7 +40654,7 @@
           ]
         }
       },
-      "SearchItemItemTypesParameter": {
+      "SearchItemItemTypesParameterItem": {
         "enum": [
           "deal",
           "person",
@@ -40578,7 +40668,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "SearchItemItemTypesParameter",
+          "name": "SearchItemItemTypesParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -40616,7 +40706,7 @@
           ]
         }
       },
-      "SearchItemFieldsParameter": {
+      "SearchItemFieldsParameterItem": {
         "enum": [
           "address",
           "code",
@@ -40631,7 +40721,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "SearchItemFieldsParameter",
+          "name": "SearchItemFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -40673,7 +40763,7 @@
           ]
         }
       },
-      "SearchItemIncludeFieldsParameter": {
+      "SearchItemIncludeFieldsParameterItem": {
         "enum": [
           "deal.cc_email",
           "person.picture",
@@ -40682,7 +40772,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "SearchItemIncludeFieldsParameter",
+          "name": "SearchItemIncludeFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
@@ -40872,7 +40962,7 @@
           ]
         }
       },
-      "SearchProjectsFieldsParameter": {
+      "SearchProjectsFieldsParameterItem": {
         "enum": [
           "custom_fields",
           "notes",
@@ -40882,7 +40972,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "SearchProjectsFieldsParameter",
+          "name": "SearchProjectsFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {

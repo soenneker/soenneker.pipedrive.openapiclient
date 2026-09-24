@@ -22,7 +22,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/persons/search?term={term}{&cursor*,exact_match*,fields*,include_fields*,limit*,organization_id*}", pathParameters)
+        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/persons/search?term={term}{&cursor*,exact_match*,fields,include_fields,limit*,organization_id*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/persons/search?term={term}{&cursor*,exact_match*,fields*,include_fields*,limit*,organization_id*}", rawUrl)
+        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/persons/search?term={term}{&cursor*,exact_match*,fields,include_fields,limit*,organization_id*}", rawUrl)
         {
         }
         /// <summary>
@@ -99,11 +99,25 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Search
             [QueryParameter("exact_match")]
             public bool? ExactMatch { get; set; }
             /// <summary>A comma-separated string array. The fields to perform the search from. Defaults to all of them. Only the following custom field types are searchable: `address`, `varchar`, `text`, `varchar_auto`, `double`, `monetary` and `phone`. Read more about searching by custom fields &lt;a href=&quot;https://support.pipedrive.com/en/article/search-finding-what-you-need#searching-by-custom-fields&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;here&lt;/a&gt;.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchPersonsFieldsParameter? Fields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchPersonsFieldsParameterItem[]? Fields { get; set; }
+#nullable restore
+#else
+            [QueryParameter("fields")]
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchPersonsFieldsParameterItem[] Fields { get; set; }
+#endif
             /// <summary>Supports including optional fields in the results which are not provided by default</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.PersonPictureIncludeFields? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.PersonPictureItem[]? IncludeFields { get; set; }
+#nullable restore
+#else
+            [QueryParameter("include_fields")]
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.PersonPictureItem[] IncludeFields { get; set; }
+#endif
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }

@@ -5,24 +5,20 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum SearchOrganizationFieldsParameter
+    public enum SearchItemIncludeFieldsParameterItem
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "address")]
+        [EnumMember(Value = "deal.cc_email")]
         #pragma warning disable CS1591
-        Address,
+        DealCcEmail,
         #pragma warning restore CS1591
-        [EnumMember(Value = "custom_fields")]
+        [EnumMember(Value = "person.picture")]
         #pragma warning disable CS1591
-        CustomFields,
+        PersonPicture,
         #pragma warning restore CS1591
-        [EnumMember(Value = "notes")]
+        [EnumMember(Value = "product.price")]
         #pragma warning disable CS1591
-        Notes,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "name")]
-        #pragma warning disable CS1591
-        Name,
+        ProductPrice,
         #pragma warning restore CS1591
     }
 }

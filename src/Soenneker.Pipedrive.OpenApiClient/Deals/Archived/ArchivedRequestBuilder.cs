@@ -22,7 +22,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Archived
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ArchivedRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/archived{?cursor*,custom_fields,filter_id*,ids,include_fields,limit*,org_id*,owner_id*,person_id*,pipeline_id*,sort_by*,sort_direction*,stage_id*,status*,updated_since*,updated_until*}", pathParameters)
+        public ArchivedRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/archived{?cursor*,custom_fields,filter_id*,ids,include_fields,limit*,org_id*,owner_id*,person_id*,pipeline_id*,sort_by*,sort_direction*,stage_id*,status,updated_since*,updated_until*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Archived
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ArchivedRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/archived{?cursor*,custom_fields,filter_id*,ids,include_fields,limit*,org_id*,owner_id*,person_id*,pipeline_id*,sort_by*,sort_direction*,stage_id*,status*,updated_since*,updated_until*}", rawUrl)
+        public ArchivedRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/archived{?cursor*,custom_fields,filter_id*,ids,include_fields,limit*,org_id*,owner_id*,person_id*,pipeline_id*,sort_by*,sort_direction*,stage_id*,status,updated_since*,updated_until*}", rawUrl)
         {
         }
         /// <summary>
@@ -153,8 +153,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Archived
             [QueryParameter("stage_id")]
             public int? StageId { get; set; }
             /// <summary>Only fetch deals with a specific status. If omitted, all not deleted deals are returned. If set to deleted, deals that have been deleted up to 30 days ago will be included. Multiple statuses can be included as a comma separated array. If filter_id is provided, this is ignored.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("status")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetArchivedDealsStatusParameter? Status { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetArchivedDealsStatusParameterItem[]? Status { get; set; }
+#nullable restore
+#else
+            [QueryParameter("status")]
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetArchivedDealsStatusParameterItem[] Status { get; set; }
+#endif
             /// <summary>If set, only deals with an `update_time` later than or equal to this time are returned. In RFC3339 format, e.g. 2025-01-01T10:20:00Z.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

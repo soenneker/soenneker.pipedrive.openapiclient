@@ -5,44 +5,40 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum SearchItemFieldsParameter
+    public enum SearchItemItemTypesParameterItem
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "address")]
+        [EnumMember(Value = "deal")]
         #pragma warning disable CS1591
-        Address,
+        Deal,
         #pragma warning restore CS1591
-        [EnumMember(Value = "code")]
+        [EnumMember(Value = "person")]
         #pragma warning disable CS1591
-        Code,
+        Person,
         #pragma warning restore CS1591
-        [EnumMember(Value = "custom_fields")]
+        [EnumMember(Value = "organization")]
         #pragma warning disable CS1591
-        CustomFields,
+        Organization,
         #pragma warning restore CS1591
-        [EnumMember(Value = "email")]
+        [EnumMember(Value = "product")]
         #pragma warning disable CS1591
-        Email,
+        Product,
         #pragma warning restore CS1591
-        [EnumMember(Value = "name")]
+        [EnumMember(Value = "lead")]
         #pragma warning disable CS1591
-        Name,
+        Lead,
         #pragma warning restore CS1591
-        [EnumMember(Value = "notes")]
+        [EnumMember(Value = "file")]
         #pragma warning disable CS1591
-        Notes,
+        File,
         #pragma warning restore CS1591
-        [EnumMember(Value = "phone")]
+        [EnumMember(Value = "mail_attachment")]
         #pragma warning disable CS1591
-        Phone,
+        MailAttachment,
         #pragma warning restore CS1591
-        [EnumMember(Value = "title")]
+        [EnumMember(Value = "project")]
         #pragma warning disable CS1591
-        Title,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "description")]
-        #pragma warning disable CS1591
-        Description,
+        Project,
         #pragma warning restore CS1591
     }
 }
