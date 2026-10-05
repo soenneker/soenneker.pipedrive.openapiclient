@@ -5,7 +5,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum SearchDealsStatusParameterItem
+    public enum SearchDealsStatusParameter
     #pragma warning restore CS1591
     {
         [EnumMember(Value = "open")]

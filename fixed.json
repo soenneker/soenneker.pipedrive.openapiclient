@@ -2180,13 +2180,8 @@
             "name": "status",
             "in": "query",
             "description": "Will filter deals by the provided specific status. open = Open, won = Won, lost = Lost. The upper limit of found deals associated with the status is 2000.",
-            "explode": false,
             "schema": {
-              "uniqueItems": true,
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/SearchDealsStatusParameterItem"
-              }
+              "$ref": "#/components/schemas/SearchDealsStatusParameter"
             }
           },
           {
@@ -39541,7 +39536,7 @@
           ]
         }
       },
-      "SearchDealsStatusParameterItem": {
+      "SearchDealsStatusParameter": {
         "enum": [
           "open",
           "won",
@@ -39550,7 +39545,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "SearchDealsStatusParameterItem",
+          "name": "SearchDealsStatusParameter",
           "modelAsString": false,
           "values": [
             {

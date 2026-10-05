@@ -22,7 +22,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/search?term={term}{&cursor*,exact_match*,fields,include_fields,limit*,organization_id*,person_id*,status}", pathParameters)
+        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/search?term={term}{&cursor*,exact_match*,fields,include_fields,limit*,organization_id*,person_id*,status*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/search?term={term}{&cursor*,exact_match*,fields,include_fields,limit*,organization_id*,person_id*,status}", rawUrl)
+        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/deals/search?term={term}{&cursor*,exact_match*,fields,include_fields,limit*,organization_id*,person_id*,status*}", rawUrl)
         {
         }
         /// <summary>
@@ -128,15 +128,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Search
             [QueryParameter("person_id")]
             public int? PersonId { get; set; }
             /// <summary>Will filter deals by the provided specific status. open = Open, won = Won, lost = Lost. The upper limit of found deals associated with the status is 2000.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("status")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchDealsStatusParameterItem[]? Status { get; set; }
-#nullable restore
-#else
-            [QueryParameter("status")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchDealsStatusParameterItem[] Status { get; set; }
-#endif
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchDealsStatusParameter? Status { get; set; }
             /// <summary>The search term to look for. Minimum 2 characters (or 1 if using `exact_match`). Please note that the search term has to be URL encoded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

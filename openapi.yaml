@@ -4094,16 +4094,11 @@ paths:
         - in: query
           name: status
           schema:
-            type: array
-            uniqueItems: true
-            items:
-              type: string
-              enum:
-                - open
-                - won
-                - lost
-          style: form
-          explode: false
+            type: string
+            enum:
+              - open
+              - won
+              - lost
           description: 'Will filter deals by the provided specific status. open = Open, won = Won, lost = Lost. The upper limit of found deals associated with the status is 2000.'
         - in: query
           name: include_fields
