@@ -108,7 +108,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Organizations.Search
             [QueryParameter("fields")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchOrganizationFieldsParameterItem[] Fields { get; set; }
 #endif
-            /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
+            /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             /// <summary>The search term to look for. Minimum 2 characters (or 1 if using `exact_match`). Please note that the search term has to be URL encoded.</summary>

@@ -108,7 +108,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Projects.Search
             [QueryParameter("fields")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.SearchProjectsFieldsParameterItem[] Fields { get; set; }
 #endif
-            /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
+            /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             /// <summary>Will filter projects by the provided organization ID</summary>

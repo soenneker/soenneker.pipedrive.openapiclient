@@ -139,6 +139,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -645,6 +647,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -1035,6 +1039,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -1361,6 +1367,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -1757,6 +1765,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -1891,6 +1901,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -2200,8 +2212,10 @@
           {
             "name": "limit",
             "in": "query",
-            "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
+            "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.",
             "schema": {
+              "maximum": 100,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -3451,6 +3465,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -4371,6 +4387,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -4959,6 +4977,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -5091,6 +5111,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -5291,6 +5313,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -6046,6 +6070,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -6484,6 +6510,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -6616,6 +6644,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -6755,6 +6785,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -7769,6 +7801,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -7901,6 +7935,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -8068,8 +8104,10 @@
           {
             "name": "limit",
             "in": "query",
-            "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
+            "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.",
             "schema": {
+              "maximum": 100,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -9009,6 +9047,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -9658,8 +9698,10 @@
           {
             "name": "limit",
             "in": "query",
-            "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
+            "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.",
             "schema": {
+              "maximum": 100,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -9941,8 +9983,10 @@
           {
             "name": "limit",
             "in": "query",
-            "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
+            "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.",
             "schema": {
+              "maximum": 100,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -10071,8 +10115,10 @@
           {
             "name": "limit",
             "in": "query",
-            "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
+            "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.",
             "schema": {
+              "maximum": 100,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -10226,6 +10272,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.",
             "schema": {
+              "maximum": 100,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -10476,6 +10524,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -10568,6 +10618,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -10888,6 +10940,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -11181,6 +11235,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -11815,6 +11871,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -12003,6 +12061,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -12309,6 +12369,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -12474,8 +12536,10 @@
           {
             "name": "limit",
             "in": "query",
-            "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
+            "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.",
             "schema": {
+              "maximum": 100,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -12712,6 +12776,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -12808,6 +12874,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }
@@ -13742,6 +13810,8 @@
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
             "schema": {
+              "maximum": 500,
+              "minimum": 1,
               "type": "integer",
               "example": 100
             }

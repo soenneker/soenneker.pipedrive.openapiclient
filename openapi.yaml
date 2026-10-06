@@ -185,6 +185,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -1539,6 +1541,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -2079,6 +2083,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -2725,6 +2731,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -3566,6 +3574,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -3704,6 +3714,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -4114,9 +4126,11 @@ paths:
           description: Supports including optional fields in the results which are not provided by default
         - in: query
           name: limit
-          description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
+          description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 100
             example: 100
         - in: query
           name: cursor
@@ -6255,6 +6269,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -7979,6 +7995,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -9333,6 +9351,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -9469,6 +9489,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -9687,6 +9709,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -11095,6 +11119,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -12058,6 +12084,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -12194,6 +12222,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -12336,6 +12366,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -14385,6 +14417,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -14521,6 +14555,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -14682,9 +14718,11 @@ paths:
           description: Supports including optional fields in the results which are not provided by default
         - in: query
           name: limit
-          description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
+          description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 100
             example: 100
         - in: query
           name: cursor
@@ -16062,6 +16100,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -17171,9 +17211,11 @@ paths:
           description: Supports including optional fields in the results which are not provided by default
         - in: query
           name: limit
-          description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
+          description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 100
             example: 100
         - in: query
           name: cursor
@@ -17562,9 +17604,11 @@ paths:
           description: 'When enabled, only full exact matches against the given term are returned. It is <b>not</b> case sensitive.'
         - in: query
           name: limit
-          description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
+          description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 100
             example: 100
         - in: query
           name: cursor
@@ -17721,9 +17765,11 @@ paths:
           description: Supports including optional fields in the results which are not provided by default
         - in: query
           name: limit
-          description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
+          description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 100
             example: 100
         - in: query
           name: cursor
@@ -17928,6 +17974,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 100
             example: 100
         - in: query
           name: cursor
@@ -18159,6 +18207,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -18257,6 +18307,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -18702,6 +18754,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -19071,6 +19125,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -20286,6 +20342,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -20651,6 +20709,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -21187,6 +21247,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
       responses:
         '200':
@@ -21373,9 +21435,11 @@ paths:
           description: Will filter projects by the provided organization ID
         - in: query
           name: limit
-          description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
+          description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 100
             example: 100
         - in: query
           name: cursor
@@ -21750,6 +21814,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor
@@ -21853,6 +21919,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: is_done
@@ -23154,6 +23222,8 @@ paths:
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
             type: integer
+            minimum: 1
+            maximum: 500
             example: 100
         - in: query
           name: cursor

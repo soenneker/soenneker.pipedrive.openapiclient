@@ -118,7 +118,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Search
             [QueryParameter("include_fields")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.PersonPictureItem[] IncludeFields { get; set; }
 #endif
-            /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
+            /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 100 is allowed.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             /// <summary>Will filter persons by the provided organization ID. The upper limit of found persons associated with the organization is 2000.</summary>
