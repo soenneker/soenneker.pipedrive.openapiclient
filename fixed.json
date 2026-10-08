@@ -30,14 +30,14 @@
           {
             "name": "ids",
             "in": "query",
-            "description": "Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
+            "description": "Optional comma separated array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
             "explode": false,
             "schema": {
               "maxItems": 100,
               "uniqueItems": true,
               "type": "array",
               "items": {
-                "type": "string"
+                "type": "integer"
               }
             }
           },
@@ -895,14 +895,14 @@
           {
             "name": "ids",
             "in": "query",
-            "description": "Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
+            "description": "Optional comma separated array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
             "explode": false,
             "schema": {
               "maxItems": 100,
               "uniqueItems": true,
               "type": "array",
               "items": {
-                "type": "string"
+                "type": "integer"
               }
             }
           },
@@ -1239,14 +1239,14 @@
           {
             "name": "ids",
             "in": "query",
-            "description": "Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
+            "description": "Optional comma separated array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
             "explode": false,
             "schema": {
               "maxItems": 100,
               "uniqueItems": true,
               "type": "array",
               "items": {
-                "type": "string"
+                "type": "integer"
               }
             }
           },
@@ -4272,14 +4272,14 @@
           {
             "name": "ids",
             "in": "query",
-            "description": "Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
+            "description": "Optional comma separated array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
             "explode": false,
             "schema": {
               "maxItems": 100,
               "uniqueItems": true,
               "type": "array",
               "items": {
-                "type": "string"
+                "type": "integer"
               }
             }
           },
@@ -5971,14 +5971,14 @@
           {
             "name": "ids",
             "in": "query",
-            "description": "Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
+            "description": "Optional comma separated array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
             "explode": false,
             "schema": {
               "maxItems": 100,
               "uniqueItems": true,
               "type": "array",
               "items": {
-                "type": "string"
+                "type": "integer"
               }
             }
           },
@@ -7536,14 +7536,14 @@
           {
             "name": "ids",
             "in": "query",
-            "description": "Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
+            "description": "Optional comma separated array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.",
             "explode": false,
             "schema": {
               "maxItems": 100,
               "uniqueItems": true,
               "type": "array",
               "items": {
-                "type": "string"
+                "type": "integer"
               }
             }
           },

@@ -169,15 +169,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.Products
             /// <summary>The ID of the filter to use</summary>
             [QueryParameter("filter_id")]
             public int? FilterId { get; set; }
-            /// <summary>Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.</summary>
+            /// <summary>Optional comma separated array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ids")]
-            public string[]? Ids { get; set; }
+            public int?[]? Ids { get; set; }
 #nullable restore
 #else
             [QueryParameter("ids")]
-            public string[] Ids { get; set; }
+            public int?[] Ids { get; set; }
 #endif
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]

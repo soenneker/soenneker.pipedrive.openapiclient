@@ -99,13 +99,13 @@ paths:
           description: 'If supplied, only activities matching the specified filter are returned'
         - in: query
           name: ids
-          description: 'Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.'
+          description: 'Optional comma separated array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.'
           schema:
             type: array
             uniqueItems: true
             maxItems: 100
             items:
-              type: string
+              type: integer
           style: form
           explode: false
         - in: query
@@ -1952,13 +1952,13 @@ paths:
           description: 'If supplied, only deals matching the specified filter are returned'
         - in: query
           name: ids
-          description: 'Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.'
+          description: 'Optional comma separated array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.'
           schema:
             type: array
             uniqueItems: true
             maxItems: 100
             items:
-              type: string
+              type: integer
           style: form
           explode: false
         - in: query
@@ -2610,13 +2610,13 @@ paths:
           description: 'If supplied, only deals matching the specified filter are returned'
         - in: query
           name: ids
-          description: 'Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.'
+          description: 'Optional comma separated array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.'
           schema:
             type: array
             uniqueItems: true
             maxItems: 100
             items:
-              type: string
+              type: integer
           style: form
           explode: false
         - in: query
@@ -7881,13 +7881,13 @@ paths:
           description: 'If supplied, only persons matching the specified filter are returned'
         - in: query
           name: ids
-          description: 'Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.'
+          description: 'Optional comma separated array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.'
           schema:
             type: array
             uniqueItems: true
             maxItems: 100
             items:
-              type: string
+              type: integer
           style: form
           explode: false
         - in: query
@@ -11020,13 +11020,13 @@ paths:
           description: 'If supplied, only organizations matching the specified filter are returned'
         - in: query
           name: ids
-          description: 'Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.'
+          description: 'Optional comma separated array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.'
           schema:
             type: array
             uniqueItems: true
             maxItems: 100
             items:
-              type: string
+              type: integer
           style: form
           explode: false
         - in: query
@@ -13845,13 +13845,13 @@ paths:
           description: 'If supplied, only products owned by the given user will be returned'
         - in: query
           name: ids
-          description: 'Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.'
+          description: 'Optional comma separated array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.'
           schema:
             type: array
             uniqueItems: true
             maxItems: 100
             items:
-              type: string
+              type: integer
           style: form
           explode: false
         - in: query

@@ -159,15 +159,15 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities
             /// <summary>If supplied, only activities matching the specified filter are returned</summary>
             [QueryParameter("filter_id")]
             public int? FilterId { get; set; }
-            /// <summary>Optional comma separated string array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.</summary>
+            /// <summary>Optional comma separated array of up to 100 entity ids to fetch. If filter_id is provided, this is ignored. If any of the requested entities do not exist or are not visible, they are not included in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ids")]
-            public string[]? Ids { get; set; }
+            public int?[]? Ids { get; set; }
 #nullable restore
 #else
             [QueryParameter("ids")]
-            public string[] Ids { get; set; }
+            public int?[] Ids { get; set; }
 #endif
             /// <summary>Optional comma separated string array of additional fields to include</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
