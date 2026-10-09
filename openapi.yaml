@@ -14022,33 +14022,30 @@ paths:
                               type: array
                               description: The prices of the product in different currencies
                               items:
-                                allOf:
-                                  - type: object
-                                    title: ProductPriceBase
-                                    properties:
-                                      price:
-                                        type: number
-                                        description: The price of the product
-                                      cost:
-                                        type: number
-                                        description: The cost of the product
-                                  - type: object
-                                    properties:
-                                      product_id:
-                                        type: integer
-                                        nullable: true
-                                        description: The ID of the product
-                                      currency:
-                                        type: string
-                                        nullable: true
-                                        description: The currency of the price
-                                      direct_cost:
-                                        type: number
-                                        nullable: true
-                                        description: The direct cost of the product
-                                      notes:
-                                        type: string
-                                        description: The notes about the price
+                                type: object
+                                title: ProductPrice
+                                properties:
+                                  price:
+                                    type: number
+                                    description: The price of the product
+                                  cost:
+                                    type: number
+                                    description: The cost of the product
+                                  product_id:
+                                    type: integer
+                                    nullable: true
+                                    description: The ID of the product
+                                  currency:
+                                    type: string
+                                    nullable: true
+                                    description: The currency of the price
+                                  direct_cost:
+                                    type: number
+                                    nullable: true
+                                    description: The direct cost of the product
+                                  notes:
+                                    type: string
+                                    description: The notes about the price
                   additional_data:
                     type: object
                     description: Pagination related data
@@ -14157,30 +14154,27 @@ paths:
                       type: array
                       description: 'The prices of the product in different currencies. Note that there can only be one price per product per currency. When `prices` is omitted altogether, a default price of 0 and the user''s default currency will be assigned.'
                       items:
-                        allOf:
-                          - type: object
-                            title: ProductPriceBase
-                            properties:
-                              price:
-                                type: number
-                                description: The price of the product
-                              cost:
-                                type: number
-                                description: The cost of the product
-                          - type: object
-                            required:
-                              - price
-                              - currency
-                            properties:
-                              currency:
-                                type: string
-                                description: The currency of the price
-                              direct_cost:
-                                type: number
-                                description: The direct cost of the product
-                              notes:
-                                type: string
-                                description: The notes about the price
+                        type: object
+                        title: ProductPriceRequest
+                        required:
+                          - price
+                          - currency
+                        properties:
+                          price:
+                            type: number
+                            description: The price of the product
+                          cost:
+                            type: number
+                            description: The cost of the product
+                          currency:
+                            type: string
+                            description: The currency of the price
+                          direct_cost:
+                            type: number
+                            description: The direct cost of the product
+                          notes:
+                            type: string
+                            description: The notes about the price
                     custom_fields:
                       type: object
                       additionalProperties: true
@@ -14331,33 +14325,30 @@ paths:
                             type: array
                             description: The prices of the product in different currencies
                             items:
-                              allOf:
-                                - type: object
-                                  title: ProductPriceBase
-                                  properties:
-                                    price:
-                                      type: number
-                                      description: The price of the product
-                                    cost:
-                                      type: number
-                                      description: The cost of the product
-                                - type: object
-                                  properties:
-                                    product_id:
-                                      type: integer
-                                      nullable: true
-                                      description: The ID of the product
-                                    currency:
-                                      type: string
-                                      nullable: true
-                                      description: The currency of the price
-                                    direct_cost:
-                                      type: number
-                                      nullable: true
-                                      description: The direct cost of the product
-                                    notes:
-                                      type: string
-                                      description: The notes about the price
+                              type: object
+                              title: ProductPrice
+                              properties:
+                                price:
+                                  type: number
+                                  description: The price of the product
+                                cost:
+                                  type: number
+                                  description: The cost of the product
+                                product_id:
+                                  type: integer
+                                  nullable: true
+                                  description: The ID of the product
+                                currency:
+                                  type: string
+                                  nullable: true
+                                  description: The currency of the price
+                                direct_cost:
+                                  type: number
+                                  nullable: true
+                                  description: The direct cost of the product
+                                notes:
+                                  type: string
+                                  description: The notes about the price
               example:
                 success: true
                 data:
@@ -14984,33 +14975,30 @@ paths:
                             type: array
                             description: The prices of the product in different currencies
                             items:
-                              allOf:
-                                - type: object
-                                  title: ProductPriceBase
-                                  properties:
-                                    price:
-                                      type: number
-                                      description: The price of the product
-                                    cost:
-                                      type: number
-                                      description: The cost of the product
-                                - type: object
-                                  properties:
-                                    product_id:
-                                      type: integer
-                                      nullable: true
-                                      description: The ID of the product
-                                    currency:
-                                      type: string
-                                      nullable: true
-                                      description: The currency of the price
-                                    direct_cost:
-                                      type: number
-                                      nullable: true
-                                      description: The direct cost of the product
-                                    notes:
-                                      type: string
-                                      description: The notes about the price
+                              type: object
+                              title: ProductPrice
+                              properties:
+                                price:
+                                  type: number
+                                  description: The price of the product
+                                cost:
+                                  type: number
+                                  description: The cost of the product
+                                product_id:
+                                  type: integer
+                                  nullable: true
+                                  description: The ID of the product
+                                currency:
+                                  type: string
+                                  nullable: true
+                                  description: The currency of the price
+                                direct_cost:
+                                  type: number
+                                  nullable: true
+                                  description: The direct cost of the product
+                                notes:
+                                  type: string
+                                  description: The notes about the price
               example:
                 success: true
                 data:
@@ -15114,30 +15102,27 @@ paths:
                       type: array
                       description: 'The prices of the product in different currencies. Note that there can only be one price per product per currency. When `prices` is omitted altogether, a default price of 0 and the user''s default currency will be assigned.'
                       items:
-                        allOf:
-                          - type: object
-                            title: ProductPriceBase
-                            properties:
-                              price:
-                                type: number
-                                description: The price of the product
-                              cost:
-                                type: number
-                                description: The cost of the product
-                          - type: object
-                            required:
-                              - price
-                              - currency
-                            properties:
-                              currency:
-                                type: string
-                                description: The currency of the price
-                              direct_cost:
-                                type: number
-                                description: The direct cost of the product
-                              notes:
-                                type: string
-                                description: The notes about the price
+                        type: object
+                        title: ProductPriceRequest
+                        required:
+                          - price
+                          - currency
+                        properties:
+                          price:
+                            type: number
+                            description: The price of the product
+                          cost:
+                            type: number
+                            description: The cost of the product
+                          currency:
+                            type: string
+                            description: The currency of the price
+                          direct_cost:
+                            type: number
+                            description: The direct cost of the product
+                          notes:
+                            type: string
+                            description: The notes about the price
                     custom_fields:
                       type: object
                       additionalProperties: true
@@ -15286,33 +15271,30 @@ paths:
                             type: array
                             description: The prices of the product in different currencies
                             items:
-                              allOf:
-                                - type: object
-                                  title: ProductPriceBase
-                                  properties:
-                                    price:
-                                      type: number
-                                      description: The price of the product
-                                    cost:
-                                      type: number
-                                      description: The cost of the product
-                                - type: object
-                                  properties:
-                                    product_id:
-                                      type: integer
-                                      nullable: true
-                                      description: The ID of the product
-                                    currency:
-                                      type: string
-                                      nullable: true
-                                      description: The currency of the price
-                                    direct_cost:
-                                      type: number
-                                      nullable: true
-                                      description: The direct cost of the product
-                                    notes:
-                                      type: string
-                                      description: The notes about the price
+                              type: object
+                              title: ProductPrice
+                              properties:
+                                price:
+                                  type: number
+                                  description: The price of the product
+                                cost:
+                                  type: number
+                                  description: The cost of the product
+                                product_id:
+                                  type: integer
+                                  nullable: true
+                                  description: The ID of the product
+                                currency:
+                                  type: string
+                                  nullable: true
+                                  description: The currency of the price
+                                direct_cost:
+                                  type: number
+                                  nullable: true
+                                  description: The direct cost of the product
+                                notes:
+                                  type: string
+                                  description: The notes about the price
               example:
                 success: true
                 data:
@@ -15478,33 +15460,30 @@ paths:
                             type: array
                             description: The prices of the product in different currencies
                             items:
-                              allOf:
-                                - type: object
-                                  title: ProductPriceBase
-                                  properties:
-                                    price:
-                                      type: number
-                                      description: The price of the product
-                                    cost:
-                                      type: number
-                                      description: The cost of the product
-                                - type: object
-                                  properties:
-                                    product_id:
-                                      type: integer
-                                      nullable: true
-                                      description: The ID of the product
-                                    currency:
-                                      type: string
-                                      nullable: true
-                                      description: The currency of the price
-                                    direct_cost:
-                                      type: number
-                                      nullable: true
-                                      description: The direct cost of the product
-                                    notes:
-                                      type: string
-                                      description: The notes about the price
+                              type: object
+                              title: ProductPrice
+                              properties:
+                                price:
+                                  type: number
+                                  description: The price of the product
+                                cost:
+                                  type: number
+                                  description: The cost of the product
+                                product_id:
+                                  type: integer
+                                  nullable: true
+                                  description: The ID of the product
+                                currency:
+                                  type: string
+                                  nullable: true
+                                  description: The currency of the price
+                                direct_cost:
+                                  type: number
+                                  nullable: true
+                                  description: The direct cost of the product
+                                notes:
+                                  type: string
+                                  description: The notes about the price
               example:
                 success: true
                 data:
