@@ -17310,7 +17310,7 @@
             "items": {
               "$ref": "#/components/schemas/AddProductVariationRequestPricesItem"
             },
-            "description": "Array of objects, each containing: currency (string), price (number), cost (number, optional), direct_cost (number, optional), notes (string, optional). When prices is omitted altogether, a default price of 0, a default cost of 0, a default direct_cost of 0 and the user\u0027s default currency will be assigned."
+            "description": "Array of prices of the product variation. When prices is omitted altogether, a default price of 0, a default cost of 0, a default direct_cost of 0 and the user\u0027s default currency will be assigned."
           }
         }
       },
@@ -17340,7 +17340,7 @@
             "items": {
               "$ref": "#/components/schemas/UpdateProductVariationRequestPricesItem"
             },
-            "description": "Array of objects, each containing: currency (string), price (number), cost (number, optional), direct_cost (number, optional), notes (string, optional). When prices is omitted altogether, a default price of 0, a default cost of 0, a default direct_cost of 0 and the user\u0027s default currency will be assigned."
+            "description": "Array of prices of the product variation. When prices is omitted altogether, a default price of 0, a default cost of 0, a default direct_cost of 0 and the user\u0027s default currency will be assigned."
           }
         }
       },
@@ -25220,7 +25220,7 @@
             "items": {
               "$ref": "#/components/schemas/GetProductVariationsResponseDataItemPricesItem"
             },
-            "description": "Array of objects, each containing: product_variation_id (number), currency (string), price (number), cost (number), direct_cost (number) , notes (string)"
+            "description": "Array of prices of the product variation"
           }
         }
       },
@@ -25236,7 +25236,34 @@
         "description": "Pagination related data"
       },
       "AddProductVariationRequestPricesItem": {
-        "type": "object"
+        "title": "ProductVariationPriceRequest",
+        "required": [
+          "price",
+          "currency"
+        ],
+        "type": "object",
+        "properties": {
+          "price": {
+            "type": "number",
+            "description": "The price of the product variation"
+          },
+          "cost": {
+            "type": "number",
+            "description": "The cost of the product variation"
+          },
+          "currency": {
+            "type": "string",
+            "description": "The currency of the price"
+          },
+          "direct_cost": {
+            "type": "number",
+            "description": "The direct cost of the product variation"
+          },
+          "notes": {
+            "type": "string",
+            "description": "The notes about the price"
+          }
+        }
       },
       "AddProductVariation201ResponseData": {
         "type": "object",
@@ -25258,12 +25285,39 @@
             "items": {
               "$ref": "#/components/schemas/AddProductVariation201ResponseDataPricesItem"
             },
-            "description": "Array of objects, each containing: product_variation_id (number), currency (string), price (number), cost (number), direct_cost (number) , notes (string)"
+            "description": "Array of prices of the product variation"
           }
         }
       },
       "UpdateProductVariationRequestPricesItem": {
-        "type": "object"
+        "title": "ProductVariationPriceRequest",
+        "required": [
+          "price",
+          "currency"
+        ],
+        "type": "object",
+        "properties": {
+          "price": {
+            "type": "number",
+            "description": "The price of the product variation"
+          },
+          "cost": {
+            "type": "number",
+            "description": "The cost of the product variation"
+          },
+          "currency": {
+            "type": "string",
+            "description": "The currency of the price"
+          },
+          "direct_cost": {
+            "type": "number",
+            "description": "The direct cost of the product variation"
+          },
+          "notes": {
+            "type": "string",
+            "description": "The notes about the price"
+          }
+        }
       },
       "UpdateProductVariation200ResponseData": {
         "type": "object",
@@ -25285,7 +25339,7 @@
             "items": {
               "$ref": "#/components/schemas/UpdateProductVariation200ResponseDataPricesItem"
             },
-            "description": "Array of objects, each containing: product_variation_id (number), currency (string), price (number), cost (number), direct_cost (number) , notes (string)"
+            "description": "Array of prices of the product variation"
           }
         }
       },
@@ -31410,13 +31464,94 @@
         }
       },
       "GetProductVariationsResponseDataItemPricesItem": {
-        "type": "object"
+        "title": "ProductVariationPrice",
+        "type": "object",
+        "properties": {
+          "product_variation_id": {
+            "type": "integer",
+            "description": "The ID of the product variation"
+          },
+          "price": {
+            "type": "number",
+            "description": "The price of the product variation"
+          },
+          "cost": {
+            "type": "number",
+            "description": "The cost of the product variation"
+          },
+          "currency": {
+            "type": "string",
+            "description": "The currency of the price"
+          },
+          "direct_cost": {
+            "type": "number",
+            "description": "The direct cost of the product variation"
+          },
+          "notes": {
+            "type": "string",
+            "description": "The notes about the price"
+          }
+        }
       },
       "AddProductVariation201ResponseDataPricesItem": {
-        "type": "object"
+        "title": "ProductVariationPrice",
+        "type": "object",
+        "properties": {
+          "product_variation_id": {
+            "type": "integer",
+            "description": "The ID of the product variation"
+          },
+          "price": {
+            "type": "number",
+            "description": "The price of the product variation"
+          },
+          "cost": {
+            "type": "number",
+            "description": "The cost of the product variation"
+          },
+          "currency": {
+            "type": "string",
+            "description": "The currency of the price"
+          },
+          "direct_cost": {
+            "type": "number",
+            "description": "The direct cost of the product variation"
+          },
+          "notes": {
+            "type": "string",
+            "description": "The notes about the price"
+          }
+        }
       },
       "UpdateProductVariation200ResponseDataPricesItem": {
-        "type": "object"
+        "title": "ProductVariationPrice",
+        "type": "object",
+        "properties": {
+          "product_variation_id": {
+            "type": "integer",
+            "description": "The ID of the product variation"
+          },
+          "price": {
+            "type": "number",
+            "description": "The price of the product variation"
+          },
+          "cost": {
+            "type": "number",
+            "description": "The cost of the product variation"
+          },
+          "currency": {
+            "type": "string",
+            "description": "The currency of the price"
+          },
+          "direct_cost": {
+            "type": "number",
+            "description": "The direct cost of the product variation"
+          },
+          "notes": {
+            "type": "string",
+            "description": "The notes about the price"
+          }
+        }
       },
       "GetProductFields200ResponseDataItemOptionsItem": {
         "type": "object",

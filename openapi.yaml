@@ -15580,8 +15580,32 @@ paths:
                         prices:
                           type: array
                           items:
-                            type: object
-                          description: 'Array of objects, each containing: product_variation_id (number), currency (string), price (number), cost (number), direct_cost (number) , notes (string)'
+                            title: ProductVariationPrice
+                            allOf:
+                              - type: object
+                                properties:
+                                  product_variation_id:
+                                    type: integer
+                                    description: The ID of the product variation
+                              - title: BaseProductVariationPrice
+                                type: object
+                                properties:
+                                  price:
+                                    type: number
+                                    description: The price of the product variation
+                                  cost:
+                                    type: number
+                                    description: The cost of the product variation
+                                  currency:
+                                    type: string
+                                    description: The currency of the price
+                                  direct_cost:
+                                    type: number
+                                    description: The direct cost of the product variation
+                                  notes:
+                                    type: string
+                                    description: The notes about the price
+                          description: Array of prices of the product variation
                   additional_data:
                     type: object
                     description: Pagination related data
@@ -15638,8 +15662,31 @@ paths:
                 prices:
                   type: array
                   items:
-                    type: object
-                  description: 'Array of objects, each containing: currency (string), price (number), cost (number, optional), direct_cost (number, optional), notes (string, optional). When prices is omitted altogether, a default price of 0, a default cost of 0, a default direct_cost of 0 and the user''s default currency will be assigned.'
+                    title: ProductVariationPriceRequest
+                    allOf:
+                      - type: object
+                        required:
+                          - price
+                          - currency
+                      - title: BaseProductVariationPrice
+                        type: object
+                        properties:
+                          price:
+                            type: number
+                            description: The price of the product variation
+                          cost:
+                            type: number
+                            description: The cost of the product variation
+                          currency:
+                            type: string
+                            description: The currency of the price
+                          direct_cost:
+                            type: number
+                            description: The direct cost of the product variation
+                          notes:
+                            type: string
+                            description: The notes about the price
+                  description: 'Array of prices of the product variation. When prices is omitted altogether, a default price of 0, a default cost of 0, a default direct_cost of 0 and the user''s default currency will be assigned.'
       responses:
         '201':
           description: Add a product variation
@@ -15667,8 +15714,32 @@ paths:
                       prices:
                         type: array
                         items:
-                          type: object
-                        description: 'Array of objects, each containing: product_variation_id (number), currency (string), price (number), cost (number), direct_cost (number) , notes (string)'
+                          title: ProductVariationPrice
+                          allOf:
+                            - type: object
+                              properties:
+                                product_variation_id:
+                                  type: integer
+                                  description: The ID of the product variation
+                            - title: BaseProductVariationPrice
+                              type: object
+                              properties:
+                                price:
+                                  type: number
+                                  description: The price of the product variation
+                                cost:
+                                  type: number
+                                  description: The cost of the product variation
+                                currency:
+                                  type: string
+                                  description: The currency of the price
+                                direct_cost:
+                                  type: number
+                                  description: The direct cost of the product variation
+                                notes:
+                                  type: string
+                                  description: The notes about the price
+                        description: Array of prices of the product variation
               example:
                 success: true
                 data:
@@ -15720,8 +15791,31 @@ paths:
                 prices:
                   type: array
                   items:
-                    type: object
-                  description: 'Array of objects, each containing: currency (string), price (number), cost (number, optional), direct_cost (number, optional), notes (string, optional). When prices is omitted altogether, a default price of 0, a default cost of 0, a default direct_cost of 0 and the user''s default currency will be assigned.'
+                    title: ProductVariationPriceRequest
+                    allOf:
+                      - type: object
+                        required:
+                          - price
+                          - currency
+                      - title: BaseProductVariationPrice
+                        type: object
+                        properties:
+                          price:
+                            type: number
+                            description: The price of the product variation
+                          cost:
+                            type: number
+                            description: The cost of the product variation
+                          currency:
+                            type: string
+                            description: The currency of the price
+                          direct_cost:
+                            type: number
+                            description: The direct cost of the product variation
+                          notes:
+                            type: string
+                            description: The notes about the price
+                  description: 'Array of prices of the product variation. When prices is omitted altogether, a default price of 0, a default cost of 0, a default direct_cost of 0 and the user''s default currency will be assigned.'
       responses:
         '200':
           description: Update product variation data
@@ -15749,8 +15843,32 @@ paths:
                       prices:
                         type: array
                         items:
-                          type: object
-                        description: 'Array of objects, each containing: product_variation_id (number), currency (string), price (number), cost (number), direct_cost (number) , notes (string)'
+                          title: ProductVariationPrice
+                          allOf:
+                            - type: object
+                              properties:
+                                product_variation_id:
+                                  type: integer
+                                  description: The ID of the product variation
+                            - title: BaseProductVariationPrice
+                              type: object
+                              properties:
+                                price:
+                                  type: number
+                                  description: The price of the product variation
+                                cost:
+                                  type: number
+                                  description: The cost of the product variation
+                                currency:
+                                  type: string
+                                  description: The currency of the price
+                                direct_cost:
+                                  type: number
+                                  description: The direct cost of the product variation
+                                notes:
+                                  type: string
+                                  description: The notes about the price
+                        description: Array of prices of the product variation
               example:
                 success: true
                 data:
