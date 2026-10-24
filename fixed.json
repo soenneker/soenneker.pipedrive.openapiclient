@@ -33167,7 +33167,6 @@
           "none"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The tax option to be applied to the products. When using \u0060inclusive\u0060, the tax percentage will already be included in the price. When using \u0060exclusive\u0060, the tax will not be included in the price. When using \u0060none\u0060, no tax will be added. Use the \u0060tax\u0060 field for defining the tax percentage amount. By default, the user setting value for tax options will be used. Changing this in one product affects the rest of the products attached to the deal",
         "x-ms-enum": {
           "name": "AddDealProductRequestTaxMethod",
@@ -33194,7 +33193,6 @@
           "amount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The value of the discount. The \u0060discount_type\u0060 field can be used to specify whether the value is an amount or a percentage",
         "x-ms-enum": {
           "name": "AddDealProductRequestDiscountType",
@@ -33221,7 +33219,6 @@
           "weekly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
         "x-ms-enum": {
           "name": "AddDealProductRequestBillingFrequency",
@@ -33261,7 +33258,6 @@
           "none"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The tax option to be applied to the products. When using \u0060inclusive\u0060, the tax percentage will already be included in the price. When using \u0060exclusive\u0060, the tax will not be included in the price. When using \u0060none\u0060, no tax will be added. Use the \u0060tax\u0060 field for defining the tax percentage amount. By default, the user setting value for tax options will be used. Changing this in one product affects the rest of the products attached to the deal",
         "x-ms-enum": {
           "name": "UpdateDealProductRequestTaxMethod",
@@ -33288,7 +33284,6 @@
           "amount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The value of the discount. The \u0060discount_type\u0060 field can be used to specify whether the value is an amount or a percentage",
         "x-ms-enum": {
           "name": "UpdateDealProductRequestDiscountType",
@@ -33315,7 +33310,6 @@
           "weekly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
         "x-ms-enum": {
           "name": "UpdateDealProductRequestBillingFrequency",
@@ -33354,7 +33348,6 @@
           "amount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Determines whether the discount is applied as a percentage or a fixed amount.",
         "x-ms-enum": {
           "name": "PostAdditionalDiscountRequestType",
@@ -33377,7 +33370,6 @@
           "amount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Determines whether the discount is applied as a percentage or a fixed amount.",
         "x-ms-enum": {
           "name": "UpdateAdditionalDiscountRequestType",
@@ -33414,7 +33406,6 @@
           "user"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field\u003Ctable\u003E\u003Ctr\u003E\u003Cth\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060varchar\u0060\u003C/td\u003E\u003Ctd\u003EText (up to 255 characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060varchar_auto\u0060\u003C/td\u003E\u003Ctd\u003EAutocomplete text (up to 255 characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060text\u0060\u003C/td\u003E\u003Ctd\u003ELong text (up to 65k characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060double\u0060\u003C/td\u003E\u003Ctd\u003ENumeric value\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060monetary\u0060\u003C/td\u003E\u003Ctd\u003EMonetary field (has a numeric value and a currency value)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060date\u0060\u003C/td\u003E\u003Ctd\u003EDate (format YYYY-MM-DD)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060set\u0060\u003C/td\u003E\u003Ctd\u003EOptions field with a possibility of having multiple chosen options\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060enum\u0060\u003C/td\u003E\u003Ctd\u003EOptions field with a single possible chosen option\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060user\u0060\u003C/td\u003E\u003Ctd\u003EUser field (contains a user ID of another Pipedrive user)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060org\u0060\u003C/td\u003E\u003Ctd\u003EOrganization field (contains an organization ID which is stored on the same account)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060people\u0060\u003C/td\u003E\u003Ctd\u003EPerson field (contains a person ID which is stored on the same account)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060phone\u0060\u003C/td\u003E\u003Ctd\u003EPhone field (up to 255 numbers and/or characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060time\u0060\u003C/td\u003E\u003Ctd\u003ETime field (format HH:MM:SS)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060timerange\u0060\u003C/td\u003E\u003Ctd\u003ETime-range field (has a start time and end time value, both HH:MM:SS)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060daterange\u0060\u003C/td\u003E\u003Ctd\u003EDate-range field (has a start date and end date value, both YYYY-MM-DD)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060address\u0060\u003C/td\u003E\u003Ctd\u003EAddress field\u003C/dd\u003E\u003C/table\u003E",
         "x-ms-enum": {
           "name": "AddDealFieldRequestFieldType",
@@ -33495,7 +33486,6 @@
           "archived"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "If the person does not have a valid email address, then the marketing status is **not set** and \u0060no_consent\u0060 is returned for the \u0060marketing_status\u0060 value when the new person is created. If the change is forbidden, the status will remain unchanged for every call that tries to modify the marketing status. Please be aware that it is only allowed **once** to change the marketing status from an old status to a new one.\u003Ctable\u003E\u003Ctr\u003E\u003Cth\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060no_consent\u0060\u003C/td\u003E\u003Ctd\u003EThe customer has not given consent to receive any marketing communications\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060unsubscribed\u0060\u003C/td\u003E\u003Ctd\u003EThe customers have unsubscribed from ALL marketing communications\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060subscribed\u0060\u003C/td\u003E\u003Ctd\u003EThe customers are subscribed and are counted towards marketing caps\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060archived\u0060\u003C/td\u003E\u003Ctd\u003EThe customers with \u0060subscribed\u0060 status can be moved to \u0060archived\u0060 to save consent, but they are not paid for\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E",
         "x-ms-enum": {
           "name": "AddPersonRequestMarketingStatus",
@@ -33528,7 +33518,6 @@
           "archived"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "If the person does not have a valid email address, then the marketing status is **not set** and \u0060no_consent\u0060 is returned for the \u0060marketing_status\u0060 value when the new person is created. If the change is forbidden, the status will remain unchanged for every call that tries to modify the marketing status. Please be aware that it is only allowed **once** to change the marketing status from an old status to a new one.\u003Ctable\u003E\u003Ctr\u003E\u003Cth\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060no_consent\u0060\u003C/td\u003E\u003Ctd\u003EThe customer has not given consent to receive any marketing communications\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060unsubscribed\u0060\u003C/td\u003E\u003Ctd\u003EThe customers have unsubscribed from ALL marketing communications\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060subscribed\u0060\u003C/td\u003E\u003Ctd\u003EThe customers are subscribed and are counted towards marketing caps\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060archived\u0060\u003C/td\u003E\u003Ctd\u003EThe customers with \u0060subscribed\u0060 status can be moved to \u0060archived\u0060 to save consent, but they are not paid for\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E",
         "x-ms-enum": {
           "name": "UpdatePersonRequestMarketingStatus",
@@ -33573,7 +33562,6 @@
           "user"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field\u003Ctable\u003E\u003Ctr\u003E\u003Cth\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060varchar\u0060\u003C/td\u003E\u003Ctd\u003EText (up to 255 characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060varchar_auto\u0060\u003C/td\u003E\u003Ctd\u003EAutocomplete text (up to 255 characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060text\u0060\u003C/td\u003E\u003Ctd\u003ELong text (up to 65k characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060double\u0060\u003C/td\u003E\u003Ctd\u003ENumeric value\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060monetary\u0060\u003C/td\u003E\u003Ctd\u003EMonetary field (has a numeric value and a currency value)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060date\u0060\u003C/td\u003E\u003Ctd\u003EDate (format YYYY-MM-DD)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060set\u0060\u003C/td\u003E\u003Ctd\u003EOptions field with a possibility of having multiple chosen options\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060enum\u0060\u003C/td\u003E\u003Ctd\u003EOptions field with a single possible chosen option\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060user\u0060\u003C/td\u003E\u003Ctd\u003EUser field (contains a user ID of another Pipedrive user)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060org\u0060\u003C/td\u003E\u003Ctd\u003EOrganization field (contains an organization ID which is stored on the same account)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060people\u0060\u003C/td\u003E\u003Ctd\u003EPerson field (contains a person ID which is stored on the same account)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060phone\u0060\u003C/td\u003E\u003Ctd\u003EPhone field (up to 255 numbers and/or characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060time\u0060\u003C/td\u003E\u003Ctd\u003ETime field (format HH:MM:SS)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060timerange\u0060\u003C/td\u003E\u003Ctd\u003ETime-range field (has a start time and end time value, both HH:MM:SS)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060daterange\u0060\u003C/td\u003E\u003Ctd\u003EDate-range field (has a start date and end date value, both YYYY-MM-DD)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060address\u0060\u003C/td\u003E\u003Ctd\u003EAddress field\u003C/dd\u003E\u003C/table\u003E",
         "x-ms-enum": {
           "name": "AddPersonFieldRequestFieldType",
@@ -33666,7 +33654,6 @@
           "user"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field\u003Ctable\u003E\u003Ctr\u003E\u003Cth\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060varchar\u0060\u003C/td\u003E\u003Ctd\u003EText (up to 255 characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060varchar_auto\u0060\u003C/td\u003E\u003Ctd\u003EAutocomplete text (up to 255 characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060text\u0060\u003C/td\u003E\u003Ctd\u003ELong text (up to 65k characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060double\u0060\u003C/td\u003E\u003Ctd\u003ENumeric value\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060monetary\u0060\u003C/td\u003E\u003Ctd\u003EMonetary field (has a numeric value and a currency value)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060date\u0060\u003C/td\u003E\u003Ctd\u003EDate (format YYYY-MM-DD)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060set\u0060\u003C/td\u003E\u003Ctd\u003EOptions field with a possibility of having multiple chosen options\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060enum\u0060\u003C/td\u003E\u003Ctd\u003EOptions field with a single possible chosen option\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060user\u0060\u003C/td\u003E\u003Ctd\u003EUser field (contains a user ID of another Pipedrive user)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060org\u0060\u003C/td\u003E\u003Ctd\u003EOrganization field (contains an organization ID which is stored on the same account)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060people\u0060\u003C/td\u003E\u003Ctd\u003EPerson field (contains a person ID which is stored on the same account)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060phone\u0060\u003C/td\u003E\u003Ctd\u003EPhone field (up to 255 numbers and/or characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060time\u0060\u003C/td\u003E\u003Ctd\u003ETime field (format HH:MM:SS)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060timerange\u0060\u003C/td\u003E\u003Ctd\u003ETime-range field (has a start time and end time value, both HH:MM:SS)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060daterange\u0060\u003C/td\u003E\u003Ctd\u003EDate-range field (has a start date and end date value, both YYYY-MM-DD)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060address\u0060\u003C/td\u003E\u003Ctd\u003EAddress field\u003C/dd\u003E\u003C/table\u003E",
         "x-ms-enum": {
           "name": "AddOrganizationFieldRequestFieldType",
@@ -33747,7 +33734,6 @@
           7
         ],
         "type": "number",
-        "additionalProperties": false,
         "description": "The visibility of the product. If omitted, the visibility will be set to the default visibility setting of this item type for the authorized user. Read more about visibility groups \u003Ca href=\u0022https://support.pipedrive.com/en/article/visibility-groups\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.\u003Ch4\u003ELight / Growth and Professional plans\u003C/h4\u003E\u003Ctable\u003E\u003Ctr\u003E\u003Cth style=\u0022width: 40px\u0022\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00601\u0060\u003C/td\u003E\u003Ctd\u003EOwner \u0026amp; followers\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u00603\u0060\u003C/td\u003E\u003Ctd\u003EEntire company\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E\u003Ch4\u003EPremium / Ultimate plan\u003C/h4\u003E\u003Ctable\u003E\u003Ctr\u003E\u003Cth style=\u0022width: 40px\u0022\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00601\u0060\u003C/td\u003E\u003Ctd\u003EOwner only\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u00603\u0060\u003C/td\u003E\u003Ctd\u003EOwner\u0027s visibility group\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00605\u0060\u003C/td\u003E\u003Ctd\u003EOwner\u0027s visibility group and sub-groups\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00607\u0060\u003C/td\u003E\u003Ctd\u003EEntire company\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E"
       },
       "AddProductRequestBillingFrequency": {
@@ -33760,7 +33746,6 @@
           "weekly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n",
         "x-ms-enum": {
           "name": "AddProductRequestBillingFrequency",
@@ -33801,7 +33786,6 @@
           7
         ],
         "type": "number",
-        "additionalProperties": false,
         "description": "The visibility of the product. If omitted, the visibility will be set to the default visibility setting of this item type for the authorized user. Read more about visibility groups \u003Ca href=\u0022https://support.pipedrive.com/en/article/visibility-groups\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003Ehere\u003C/a\u003E.\u003Ch4\u003ELight / Growth and Professional plans\u003C/h4\u003E\u003Ctable\u003E\u003Ctr\u003E\u003Cth style=\u0022width: 40px\u0022\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00601\u0060\u003C/td\u003E\u003Ctd\u003EOwner \u0026amp; followers\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u00603\u0060\u003C/td\u003E\u003Ctd\u003EEntire company\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E\u003Ch4\u003EPremium / Ultimate plan\u003C/h4\u003E\u003Ctable\u003E\u003Ctr\u003E\u003Cth style=\u0022width: 40px\u0022\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00601\u0060\u003C/td\u003E\u003Ctd\u003EOwner only\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u00603\u0060\u003C/td\u003E\u003Ctd\u003EOwner\u0027s visibility group\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00605\u0060\u003C/td\u003E\u003Ctd\u003EOwner\u0027s visibility group and sub-groups\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u00607\u0060\u003C/td\u003E\u003Ctd\u003EEntire company\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E"
       },
       "UpdateProductRequestBillingFrequency": {
@@ -33814,7 +33798,6 @@
           "weekly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n",
         "x-ms-enum": {
           "name": "UpdateProductRequestBillingFrequency",
@@ -33867,7 +33850,6 @@
           "user"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field\u003Ctable\u003E\u003Ctr\u003E\u003Cth\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060varchar\u0060\u003C/td\u003E\u003Ctd\u003EText (up to 255 characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060varchar_auto\u0060\u003C/td\u003E\u003Ctd\u003EAutocomplete text (up to 255 characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060text\u0060\u003C/td\u003E\u003Ctd\u003ELong text (up to 65k characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060double\u0060\u003C/td\u003E\u003Ctd\u003ENumeric value\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060monetary\u0060\u003C/td\u003E\u003Ctd\u003EMonetary field (has a numeric value and a currency value)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060date\u0060\u003C/td\u003E\u003Ctd\u003EDate (format YYYY-MM-DD)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060set\u0060\u003C/td\u003E\u003Ctd\u003EOptions field with a possibility of having multiple chosen options\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060enum\u0060\u003C/td\u003E\u003Ctd\u003EOptions field with a single possible chosen option\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060user\u0060\u003C/td\u003E\u003Ctd\u003EUser field (contains a user ID of another Pipedrive user)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060org\u0060\u003C/td\u003E\u003Ctd\u003EOrganization field (contains an organization ID which is stored on the same account)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060people\u0060\u003C/td\u003E\u003Ctd\u003EPerson field (contains a person ID which is stored on the same account)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060phone\u0060\u003C/td\u003E\u003Ctd\u003EPhone field (up to 255 numbers and/or characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060time\u0060\u003C/td\u003E\u003Ctd\u003ETime field (format HH:MM:SS)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060timerange\u0060\u003C/td\u003E\u003Ctd\u003ETime-range field (has a start time and end time value, both HH:MM:SS)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060daterange\u0060\u003C/td\u003E\u003Ctd\u003EDate-range field (has a start date and end date value, both YYYY-MM-DD)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060address\u0060\u003C/td\u003E\u003Ctd\u003EAddress field\u003C/dd\u003E\u003C/table\u003E",
         "x-ms-enum": {
           "name": "AddProductFieldRequestFieldType",
@@ -33960,7 +33942,6 @@
           "user"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field\u003Ctable\u003E\u003Ctr\u003E\u003Cth\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060varchar\u0060\u003C/td\u003E\u003Ctd\u003EText (up to 255 characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060varchar_auto\u0060\u003C/td\u003E\u003Ctd\u003EAutocomplete text (up to 255 characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060text\u0060\u003C/td\u003E\u003Ctd\u003ELong text (up to 65k characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060double\u0060\u003C/td\u003E\u003Ctd\u003ENumeric value\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060monetary\u0060\u003C/td\u003E\u003Ctd\u003EMonetary field (has a numeric value and a currency value)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060date\u0060\u003C/td\u003E\u003Ctd\u003EDate (format YYYY-MM-DD)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060set\u0060\u003C/td\u003E\u003Ctd\u003EOptions field with a possibility of having multiple chosen options\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060enum\u0060\u003C/td\u003E\u003Ctd\u003EOptions field with a single possible chosen option\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060user\u0060\u003C/td\u003E\u003Ctd\u003EUser field (contains a user ID of another Pipedrive user)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060org\u0060\u003C/td\u003E\u003Ctd\u003EOrganization field (contains an organization ID which is stored on the same account)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060people\u0060\u003C/td\u003E\u003Ctd\u003EPerson field (contains a person ID which is stored on the same account)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060phone\u0060\u003C/td\u003E\u003Ctd\u003EPhone field (up to 255 numbers and/or characters)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060time\u0060\u003C/td\u003E\u003Ctd\u003ETime field (format HH:MM:SS)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060timerange\u0060\u003C/td\u003E\u003Ctd\u003ETime-range field (has a start time and end time value, both HH:MM:SS)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060daterange\u0060\u003C/td\u003E\u003Ctd\u003EDate-range field (has a start date and end date value, both YYYY-MM-DD)\u003C/td\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060address\u0060\u003C/td\u003E\u003Ctd\u003EAddress field\u003C/dd\u003E\u003C/table\u003E",
         "x-ms-enum": {
           "name": "AddProjectFieldRequestFieldType",
@@ -34039,7 +34020,6 @@
           1
         ],
         "type": "integer",
-        "additionalProperties": false,
         "description": "Whether the task is done or not. \u00600\u0060 = Not done, \u00601\u0060 = Done."
       },
       "AddTaskRequestMilestone": {
@@ -34048,7 +34028,6 @@
           1
         ],
         "type": "integer",
-        "additionalProperties": false,
         "description": "Whether the task is a milestone or not. \u00600\u0060 = Not a milestone, \u00601\u0060 = Milestone."
       },
       "UpdateTaskRequestDone": {
@@ -34057,7 +34036,6 @@
           1
         ],
         "type": "integer",
-        "additionalProperties": false,
         "description": "Whether the task is done or not. \u00600\u0060 = Not done, \u00601\u0060 = Done."
       },
       "UpdateTaskRequestMilestone": {
@@ -34066,7 +34044,6 @@
           1
         ],
         "type": "integer",
-        "additionalProperties": false,
         "description": "Whether the task is a milestone or not. \u00600\u0060 = Not a milestone, \u00601\u0060 = Milestone."
       },
       "GetActivityFields200ResponseDataItemFieldType": {
@@ -34108,7 +34085,6 @@
           "attendees"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "GetActivityFields200ResponseDataItemFieldType",
@@ -34296,7 +34272,6 @@
           "attendees"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "GetActivityField200ResponseDataFieldType",
@@ -34451,7 +34426,6 @@
           "amount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the discount\u0027s value",
         "x-ms-enum": {
           "name": "GetDealsProducts200ResponseDataItemDiscountType",
@@ -34475,7 +34449,6 @@
           "none"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The tax option to be applied to the products. When using \u0060inclusive\u0060, the tax percentage will already be included in the price. When using \u0060exclusive\u0060, the tax will not be included in the price. When using \u0060none\u0060, no tax will be added. Use the \u0060tax\u0060 field for defining the tax percentage amount. By default, the user setting value for tax options will be used. Changing this in one product affects the rest of the products attached to the deal",
         "x-ms-enum": {
           "name": "GetDealsProducts200ResponseDataItemTaxMethod",
@@ -34506,7 +34479,6 @@
           "weekly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
         "x-ms-enum": {
           "name": "GetDealsProducts200ResponseDataItemBillingFrequency",
@@ -34545,7 +34517,6 @@
           "amount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the discount\u0027s value",
         "x-ms-enum": {
           "name": "GetDealProducts200ResponseDataItemDiscountType",
@@ -34569,7 +34540,6 @@
           "none"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The tax option to be applied to the products. When using \u0060inclusive\u0060, the tax percentage will already be included in the price. When using \u0060exclusive\u0060, the tax will not be included in the price. When using \u0060none\u0060, no tax will be added. Use the \u0060tax\u0060 field for defining the tax percentage amount. By default, the user setting value for tax options will be used. Changing this in one product affects the rest of the products attached to the deal",
         "x-ms-enum": {
           "name": "GetDealProducts200ResponseDataItemTaxMethod",
@@ -34600,7 +34570,6 @@
           "weekly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
         "x-ms-enum": {
           "name": "GetDealProducts200ResponseDataItemBillingFrequency",
@@ -34639,7 +34608,6 @@
           "amount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the discount\u0027s value",
         "x-ms-enum": {
           "name": "AddDealProduct201ResponseDataDiscountType",
@@ -34663,7 +34631,6 @@
           "none"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The tax option to be applied to the products. When using \u0060inclusive\u0060, the tax percentage will already be included in the price. When using \u0060exclusive\u0060, the tax will not be included in the price. When using \u0060none\u0060, no tax will be added. Use the \u0060tax\u0060 field for defining the tax percentage amount. By default, the user setting value for tax options will be used. Changing this in one product affects the rest of the products attached to the deal",
         "x-ms-enum": {
           "name": "AddDealProduct201ResponseDataTaxMethod",
@@ -34694,7 +34661,6 @@
           "weekly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
         "x-ms-enum": {
           "name": "AddDealProduct201ResponseDataBillingFrequency",
@@ -34733,7 +34699,6 @@
           "amount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the discount\u0027s value",
         "x-ms-enum": {
           "name": "UpdateDealProduct200ResponseDataDiscountType",
@@ -34757,7 +34722,6 @@
           "none"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The tax option to be applied to the products. When using \u0060inclusive\u0060, the tax percentage will already be included in the price. When using \u0060exclusive\u0060, the tax will not be included in the price. When using \u0060none\u0060, no tax will be added. Use the \u0060tax\u0060 field for defining the tax percentage amount. By default, the user setting value for tax options will be used. Changing this in one product affects the rest of the products attached to the deal",
         "x-ms-enum": {
           "name": "UpdateDealProduct200ResponseDataTaxMethod",
@@ -34788,7 +34752,6 @@
           "weekly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
         "x-ms-enum": {
           "name": "UpdateDealProduct200ResponseDataBillingFrequency",
@@ -34828,7 +34791,6 @@
           "none"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The tax option to be applied to the products. When using \u0060inclusive\u0060, the tax percentage will already be included in the price. When using \u0060exclusive\u0060, the tax will not be included in the price. When using \u0060none\u0060, no tax will be added. Use the \u0060tax\u0060 field for defining the tax percentage amount. By default, the user setting value for tax options will be used. Changing this in one product affects the rest of the products attached to the deal",
         "x-ms-enum": {
           "name": "AddManyDealProductsRequestDataItemTaxMethod",
@@ -34855,7 +34817,6 @@
           "amount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The value of the discount. The \u0060discount_type\u0060 field can be used to specify whether the value is an amount or a percentage",
         "x-ms-enum": {
           "name": "AddManyDealProductsRequestDataItemDiscountType",
@@ -34882,7 +34843,6 @@
           "weekly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
         "x-ms-enum": {
           "name": "AddManyDealProductsRequestDataItemBillingFrequency",
@@ -34921,7 +34881,6 @@
           "amount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the discount\u0027s value",
         "x-ms-enum": {
           "name": "AddManyDealProductResponseDataItemDiscountType",
@@ -34945,7 +34904,6 @@
           "none"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The tax option to be applied to the products. When using \u0060inclusive\u0060, the tax percentage will already be included in the price. When using \u0060exclusive\u0060, the tax will not be included in the price. When using \u0060none\u0060, no tax will be added. Use the \u0060tax\u0060 field for defining the tax percentage amount. By default, the user setting value for tax options will be used. Changing this in one product affects the rest of the products attached to the deal",
         "x-ms-enum": {
           "name": "AddManyDealProductResponseDataItemTaxMethod",
@@ -34976,7 +34934,6 @@
           "weekly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n\nTo set \u0060billing_frequency\u0060 different than \u0060one-time\u0060, the deal must not have installments associated\n\nA deal can have up to 20 products attached with \u0060billing_frequency\u0060 different than \u0060one-time\u0060\n",
         "x-ms-enum": {
           "name": "AddManyDealProductResponseDataItemBillingFrequency",
@@ -35015,7 +34972,6 @@
           "amount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Determines whether the discount is applied as a percentage or a fixed amount.",
         "x-ms-enum": {
           "name": "GetAdditionalDiscountsResponseDataItemType",
@@ -35038,7 +34994,6 @@
           "amount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Determines whether the discount is applied as a percentage or a fixed amount.",
         "x-ms-enum": {
           "name": "AddAdditionalDiscountResponseDataType",
@@ -35061,7 +35016,6 @@
           "amount"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Determines whether the discount is applied as a percentage or a fixed amount.",
         "x-ms-enum": {
           "name": "UpdateAdditionalDiscountResponseDataType",
@@ -35115,7 +35069,6 @@
           "projects_phase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "GetDealFields200ResponseDataItemFieldType",
@@ -35293,7 +35246,6 @@
           "projects_phase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "AddDealField200ResponseDataFieldType",
@@ -35471,7 +35423,6 @@
           "projects_phase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "GetDealField200ResponseDataFieldType",
@@ -35649,7 +35600,6 @@
           "projects_phase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "UpdateDealField200ResponseDataFieldType",
@@ -35799,7 +35749,6 @@
           "rejected"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Status of the conversion job.",
         "x-ms-enum": {
           "name": "GetDealConversionStatus200ResponseDataStatus",
@@ -35865,7 +35814,6 @@
           "projects_phase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "GetPersonFields200ResponseDataItemFieldType",
@@ -36043,7 +35991,6 @@
           "projects_phase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "AddPersonField200ResponseDataFieldType",
@@ -36221,7 +36168,6 @@
           "projects_phase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "GetPersonField200ResponseDataFieldType",
@@ -36399,7 +36345,6 @@
           "projects_phase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "UpdatePersonField200ResponseDataFieldType",
@@ -36577,7 +36522,6 @@
           "projects_phase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "GetOrganizationFields200ResponseDataItemFieldType",
@@ -36755,7 +36699,6 @@
           "projects_phase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "AddOrganizationField200ResponseDataFieldType",
@@ -36933,7 +36876,6 @@
           "projects_phase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "GetOrganizationField200ResponseDataFieldType",
@@ -37111,7 +37053,6 @@
           "projects_phase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "UpdateOrganizationField200ResponseDataFieldType",
@@ -37260,7 +37201,6 @@
           7
         ],
         "type": "number",
-        "additionalProperties": false,
         "description": "Visibility of the product"
       },
       "GetProductsResponseDataItemBillingFrequency": {
@@ -37273,7 +37213,6 @@
           "weekly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n",
         "x-ms-enum": {
           "name": "GetProductsResponseDataItemBillingFrequency",
@@ -37314,7 +37253,6 @@
           7
         ],
         "type": "number",
-        "additionalProperties": false,
         "description": "Visibility of the product"
       },
       "AddProduct201ResponseDataBillingFrequency": {
@@ -37327,7 +37265,6 @@
           "weekly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n",
         "x-ms-enum": {
           "name": "AddProduct201ResponseDataBillingFrequency",
@@ -37368,7 +37305,6 @@
           7
         ],
         "type": "number",
-        "additionalProperties": false,
         "description": "Visibility of the product"
       },
       "GetProduct200ResponseDataBillingFrequency": {
@@ -37381,7 +37317,6 @@
           "weekly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n",
         "x-ms-enum": {
           "name": "GetProduct200ResponseDataBillingFrequency",
@@ -37422,7 +37357,6 @@
           7
         ],
         "type": "number",
-        "additionalProperties": false,
         "description": "Visibility of the product"
       },
       "UpdateProductResponseDataBillingFrequency": {
@@ -37435,7 +37369,6 @@
           "weekly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n",
         "x-ms-enum": {
           "name": "UpdateProductResponseDataBillingFrequency",
@@ -37476,7 +37409,6 @@
           7
         ],
         "type": "number",
-        "additionalProperties": false,
         "description": "Visibility of the product"
       },
       "DuplicateProduct201ResponseDataBillingFrequency": {
@@ -37489,7 +37421,6 @@
           "weekly"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Only available in Growth and above plans\n\nHow often a customer is billed for access to a service or product\n",
         "x-ms-enum": {
           "name": "DuplicateProduct201ResponseDataBillingFrequency",
@@ -37559,7 +37490,6 @@
           "projects_phase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "GetProductFields200ResponseDataItemFieldType",
@@ -37737,7 +37667,6 @@
           "projects_phase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "AddProductField200ResponseDataFieldType",
@@ -37915,7 +37844,6 @@
           "projects_phase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "GetProductField200ResponseDataFieldType",
@@ -38093,7 +38021,6 @@
           "projects_phase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "UpdateProductField200ResponseDataFieldType",
@@ -38243,7 +38170,6 @@
           "rejected"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Status of the conversion job.",
         "x-ms-enum": {
           "name": "GetLeadConversionStatus200ResponseDataStatus",
@@ -38310,7 +38236,6 @@
           "orgs"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "GetProjectFields200ResponseDataItemFieldType",
@@ -38493,7 +38418,6 @@
           "orgs"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "AddProjectField200ResponseDataFieldType",
@@ -38676,7 +38600,6 @@
           "orgs"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "GetProjectField200ResponseDataFieldType",
@@ -38859,7 +38782,6 @@
           "orgs"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the field",
         "x-ms-enum": {
           "name": "UpdateProjectField200ResponseDataFieldType",
@@ -39010,7 +38932,6 @@
           "lost"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AddDealFieldRequestRequiredFieldsStatusesAdditionalPropertiesItem",
           "modelAsString": false,
@@ -39032,7 +38953,6 @@
           "lost"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UpdateDealFieldRequestRequiredFieldsStatusesAdditionalPropertiesItem",
           "modelAsString": false,
@@ -39054,7 +38974,6 @@
           "lost"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetDealFields200ResponseDataItemRequiredFieldsStatusesAdditionalPropertiesItem",
           "modelAsString": false,
@@ -39076,7 +38995,6 @@
           "lost"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AddDealField200ResponseDataRequiredFieldsStatusesAdditionalPropertiesItem",
           "modelAsString": false,
@@ -39098,7 +39016,6 @@
           "lost"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetDealField200ResponseDataRequiredFieldsStatusesAdditionalPropertiesItem",
           "modelAsString": false,
@@ -39120,7 +39037,6 @@
           "lost"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UpdateDealField200ResponseDataRequiredFieldsStatusesAdditionalPropertiesItem",
           "modelAsString": false,
@@ -39144,7 +39060,6 @@
           "due_date"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetActivitiesSortByParameter",
           "modelAsString": false,
@@ -39174,7 +39089,6 @@
           "desc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetActivitiesSortDirectionParameter",
           "modelAsString": false,
@@ -39195,7 +39109,6 @@
           "attendees"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AttendeesItem",
           "modelAsString": false,
@@ -39212,7 +39125,6 @@
           "ui_visibility"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UiVisibilityItem",
           "modelAsString": false,
@@ -39232,7 +39144,6 @@
           "deleted"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetDealsStatusParameterItem",
           "modelAsString": false,
@@ -39263,7 +39174,6 @@
           "add_time"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetDealsSortByParameter",
           "modelAsString": false,
@@ -39289,7 +39199,6 @@
           "desc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetDealsSortDirectionParameter",
           "modelAsString": false,
@@ -39325,7 +39234,6 @@
           "source_lead_id"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetDealsIncludeFieldsParameterItem",
           "modelAsString": false,
@@ -39405,7 +39313,6 @@
           "deleted"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetArchivedDealsStatusParameterItem",
           "modelAsString": false,
@@ -39436,7 +39343,6 @@
           "add_time"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetArchivedDealsSortByParameter",
           "modelAsString": false,
@@ -39462,7 +39368,6 @@
           "desc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetArchivedDealsSortDirectionParameter",
           "modelAsString": false,
@@ -39498,7 +39403,6 @@
           "source_lead_id"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetArchivedDealsIncludeFieldsParameterItem",
           "modelAsString": false,
@@ -39590,7 +39494,6 @@
           "source_lead_id"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetDealIncludeFieldsParameterItem",
           "modelAsString": false,
@@ -39671,7 +39574,6 @@
           "order_nr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetDealsProductsSortByParameter",
           "modelAsString": false,
@@ -39705,7 +39607,6 @@
           "desc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetDealsProductsSortDirectionParameter",
           "modelAsString": false,
@@ -39728,7 +39629,6 @@
           "title"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SearchDealsFieldsParameterItem",
           "modelAsString": false,
@@ -39755,7 +39655,6 @@
           "lost"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SearchDealsStatusParameter",
           "modelAsString": false,
@@ -39780,7 +39679,6 @@
           "deal.cc_email"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "DealCcEmailItem",
           "modelAsString": false,
@@ -39800,7 +39698,6 @@
           "order_nr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetDealProductsSortByParameter",
           "modelAsString": false,
@@ -39830,7 +39727,6 @@
           "desc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetDealProductsSortDirectionParameter",
           "modelAsString": false,
@@ -39853,7 +39749,6 @@
           "deal_id"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetInstallmentsSortByParameter",
           "modelAsString": false,
@@ -39879,7 +39774,6 @@
           "desc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetInstallmentsSortDirectionParameter",
           "modelAsString": false,
@@ -39902,7 +39796,6 @@
           "required_fields"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetDealFieldsIncludeFieldsParameterItem",
           "modelAsString": false,
@@ -39929,7 +39822,6 @@
           "required_fields"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetDealFieldIncludeFieldsParameterItem",
           "modelAsString": false,
@@ -39956,7 +39848,6 @@
           "add_time"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetPersonsSortByParameter",
           "modelAsString": false,
@@ -39982,7 +39873,6 @@
           "desc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetPersonsSortDirectionParameter",
           "modelAsString": false,
@@ -40026,7 +39916,6 @@
           "smart_bcc_email"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetPersonsIncludeFieldsParameterItem",
           "modelAsString": false,
@@ -40158,7 +40047,6 @@
           "smart_bcc_email"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetPersonIncludeFieldsParameterItem",
           "modelAsString": false,
@@ -40269,7 +40157,6 @@
           "required_fields"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetPersonFieldsIncludeFieldsParameterItem",
           "modelAsString": false,
@@ -40296,7 +40183,6 @@
           "required_fields"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetPersonFieldIncludeFieldsParameterItem",
           "modelAsString": false,
@@ -40323,7 +40209,6 @@
           "add_time"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetOrganizationsSortByParameter",
           "modelAsString": false,
@@ -40349,7 +40234,6 @@
           "desc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetOrganizationsSortDirectionParameter",
           "modelAsString": false,
@@ -40388,7 +40272,6 @@
           "smart_bcc_email"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetOrganizationsIncludeFieldsParameterItem",
           "modelAsString": false,
@@ -40495,7 +40378,6 @@
           "smart_bcc_email"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetOrganizationIncludeFieldsParameterItem",
           "modelAsString": false,
@@ -40586,7 +40468,6 @@
           "required_fields"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetOrganizationFieldsIncludeFieldsParameterItem",
           "modelAsString": false,
@@ -40613,7 +40494,6 @@
           "required_fields"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetOrganizationFieldIncludeFieldsParameterItem",
           "modelAsString": false,
@@ -40641,7 +40521,6 @@
           "update_time"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetProductsSortByParameter",
           "modelAsString": false,
@@ -40671,7 +40550,6 @@
           "desc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetProductsSortDirectionParameter",
           "modelAsString": false,
@@ -40694,7 +40572,6 @@
           "name"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SearchProductsFieldsParameterItem",
           "modelAsString": false,
@@ -40719,7 +40596,6 @@
           "product.price"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductPriceItem",
           "modelAsString": false,
@@ -40738,7 +40614,6 @@
           "title"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SearchLeadsFieldsParameterItem",
           "modelAsString": false,
@@ -40763,7 +40638,6 @@
           "lead.was_seen"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "LeadWasSeenItem",
           "modelAsString": false,
@@ -40783,7 +40657,6 @@
           "name"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SearchOrganizationFieldsParameterItem",
           "modelAsString": false,
@@ -40816,7 +40689,6 @@
           "name"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SearchPersonsFieldsParameterItem",
           "modelAsString": false,
@@ -40849,7 +40721,6 @@
           "person.picture"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PersonPictureItem",
           "modelAsString": false,
@@ -40873,7 +40744,6 @@
           "project"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SearchItemItemTypesParameterItem",
           "modelAsString": false,
@@ -40926,7 +40796,6 @@
           "description"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SearchItemFieldsParameterItem",
           "modelAsString": false,
@@ -40977,7 +40846,6 @@
           "product.price"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SearchItemIncludeFieldsParameterItem",
           "modelAsString": false,
@@ -41007,7 +40875,6 @@
           "project"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SearchItemByFieldEntityTypeParameter",
           "modelAsString": false,
@@ -41046,7 +40913,6 @@
           "middle"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SearchItemByFieldMatchParameter",
           "modelAsString": false,
@@ -41074,7 +40940,6 @@
           "order_nr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetStagesSortByParameter",
           "modelAsString": false,
@@ -41104,7 +40969,6 @@
           "desc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetStagesSortDirectionParameter",
           "modelAsString": false,
@@ -41127,7 +40991,6 @@
           "add_time"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetPipelinesSortByParameter",
           "modelAsString": false,
@@ -41153,7 +41016,6 @@
           "desc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetPipelinesSortDirectionParameter",
           "modelAsString": false,
@@ -41177,7 +41039,6 @@
           "description"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SearchProjectsFieldsParameterItem",
           "modelAsString": false,
