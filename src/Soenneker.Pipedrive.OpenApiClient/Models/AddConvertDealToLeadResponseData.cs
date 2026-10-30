@@ -18,13 +18,14 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("conversion_id") is { } nullNodeConversionId && nullNodeConversionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversionId = null;
+            if (parseNode.GetChildNode("conversion_id") is null) { _explicitNullValueConversionId = default!; _explicitNullProperties?.Remove("conversion_id"); }
+            else if (parseNode.GetChildNode("conversion_id") is { } nullNodeConversionId && nullNodeConversionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversionId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the conversion job that can be used to retrieve conversion status and details. The ID has UUID format.</summary>
-        public Guid? ConversionId { get => _explicitNullValueConversionId; set { _explicitNullValueConversionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversion_id"); else _explicitNullProperties?.Remove("conversion_id"); } }
+        public Guid? ConversionId { get => _explicitNullValueConversionId; set { _explicitNullValueConversionId = value; AdditionalData?.Remove("conversion_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversion_id"); else _explicitNullProperties?.Remove("conversion_id"); } }
         private Guid? _explicitNullValueConversionId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddConvertDealToLeadResponseData"/> and sets the default values.

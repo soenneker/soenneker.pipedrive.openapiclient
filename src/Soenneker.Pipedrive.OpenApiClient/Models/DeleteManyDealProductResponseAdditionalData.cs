@@ -17,13 +17,14 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("more_items_in_collection") is { } nullNodeMoreItemsInCollection && nullNodeMoreItemsInCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoreItemsInCollection = null;
+            if (parseNode.GetChildNode("more_items_in_collection") is null) { _explicitNullValueMoreItemsInCollection = default!; _explicitNullProperties?.Remove("more_items_in_collection"); }
+            else if (parseNode.GetChildNode("more_items_in_collection") is { } nullNodeMoreItemsInCollection && nullNodeMoreItemsInCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoreItemsInCollection = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether there are more products to delete (when the deal has more than 100 products)</summary>
-        public bool? MoreItemsInCollection { get => _explicitNullValueMoreItemsInCollection; set { _explicitNullValueMoreItemsInCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("more_items_in_collection"); else _explicitNullProperties?.Remove("more_items_in_collection"); } }
+        public bool? MoreItemsInCollection { get => _explicitNullValueMoreItemsInCollection; set { _explicitNullValueMoreItemsInCollection = value; AdditionalData?.Remove("more_items_in_collection"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("more_items_in_collection"); else _explicitNullProperties?.Remove("more_items_in_collection"); } }
         private bool? _explicitNullValueMoreItemsInCollection = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteManyDealProductResponseAdditionalData"/> and sets the default values.

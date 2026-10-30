@@ -17,36 +17,41 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("days_to_rotten") is { } nullNodeDaysToRotten && nullNodeDaysToRotten.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaysToRotten = null;
-            if (parseNode.GetChildNode("deal_probability") is { } nullNodeDealProbability && nullNodeDealProbability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DealProbability = null;
-            if (parseNode.GetChildNode("is_deal_rot_enabled") is { } nullNodeIsDealRotEnabled && nullNodeIsDealRotEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDealRotEnabled = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("pipeline_id") is { } nullNodePipelineId && nullNodePipelineId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineId = null;
+            if (parseNode.GetChildNode("days_to_rotten") is null) { _explicitNullValueDaysToRotten = default!; _explicitNullProperties?.Remove("days_to_rotten"); }
+            else if (parseNode.GetChildNode("days_to_rotten") is { } nullNodeDaysToRotten && nullNodeDaysToRotten.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaysToRotten = null;
+            if (parseNode.GetChildNode("deal_probability") is null) { _explicitNullValueDealProbability = default!; _explicitNullProperties?.Remove("deal_probability"); }
+            else if (parseNode.GetChildNode("deal_probability") is { } nullNodeDealProbability && nullNodeDealProbability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DealProbability = null;
+            if (parseNode.GetChildNode("is_deal_rot_enabled") is null) { _explicitNullValueIsDealRotEnabled = default!; _explicitNullProperties?.Remove("is_deal_rot_enabled"); }
+            else if (parseNode.GetChildNode("is_deal_rot_enabled") is { } nullNodeIsDealRotEnabled && nullNodeIsDealRotEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDealRotEnabled = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("pipeline_id") is null) { _explicitNullValuePipelineId = default!; _explicitNullProperties?.Remove("pipeline_id"); }
+            else if (parseNode.GetChildNode("pipeline_id") is { } nullNodePipelineId && nullNodePipelineId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of days the deals not updated in this stage would become rotten. Applies only if the `is_deal_rot_enabled` is set.</summary>
-        public int? DaysToRotten { get => _explicitNullValueDaysToRotten; set { _explicitNullValueDaysToRotten = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days_to_rotten"); else _explicitNullProperties?.Remove("days_to_rotten"); } }
+        public int? DaysToRotten { get => _explicitNullValueDaysToRotten; set { _explicitNullValueDaysToRotten = value; AdditionalData?.Remove("days_to_rotten"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days_to_rotten"); else _explicitNullProperties?.Remove("days_to_rotten"); } }
         private int? _explicitNullValueDaysToRotten = default!;
         /// <summary>The success probability percentage of the deal. Used/shown when deal weighted values are used.</summary>
-        public int? DealProbability { get => _explicitNullValueDealProbability; set { _explicitNullValueDealProbability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deal_probability"); else _explicitNullProperties?.Remove("deal_probability"); } }
+        public int? DealProbability { get => _explicitNullValueDealProbability; set { _explicitNullValueDealProbability = value; AdditionalData?.Remove("deal_probability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deal_probability"); else _explicitNullProperties?.Remove("deal_probability"); } }
         private int? _explicitNullValueDealProbability = default!;
         /// <summary>Whether deals in this stage can become rotten</summary>
-        public bool? IsDealRotEnabled { get => _explicitNullValueIsDealRotEnabled; set { _explicitNullValueIsDealRotEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_deal_rot_enabled"); else _explicitNullProperties?.Remove("is_deal_rot_enabled"); } }
+        public bool? IsDealRotEnabled { get => _explicitNullValueIsDealRotEnabled; set { _explicitNullValueIsDealRotEnabled = value; AdditionalData?.Remove("is_deal_rot_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_deal_rot_enabled"); else _explicitNullProperties?.Remove("is_deal_rot_enabled"); } }
         private bool? _explicitNullValueIsDealRotEnabled = default!;
         /// <summary>The name of the stage</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The ID of the pipeline to add stage to</summary>
-        public int? PipelineId { get => _explicitNullValuePipelineId; set { _explicitNullValuePipelineId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_id"); else _explicitNullProperties?.Remove("pipeline_id"); } }
+        public int? PipelineId { get => _explicitNullValuePipelineId; set { _explicitNullValuePipelineId = value; AdditionalData?.Remove("pipeline_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_id"); else _explicitNullProperties?.Remove("pipeline_id"); } }
         private int? _explicitNullValuePipelineId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateStageRequest"/> and sets the default values.

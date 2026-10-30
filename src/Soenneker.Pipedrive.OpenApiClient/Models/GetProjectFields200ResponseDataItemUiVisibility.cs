@@ -18,17 +18,19 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("add_visible_flag") is { } nullNodeAddVisibleFlag && nullNodeAddVisibleFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddVisibleFlag = null;
-            if (parseNode.GetChildNode("details_visible_flag") is { } nullNodeDetailsVisibleFlag && nullNodeDetailsVisibleFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetailsVisibleFlag = null;
+            if (parseNode.GetChildNode("add_visible_flag") is null) { _explicitNullValueAddVisibleFlag = default!; _explicitNullProperties?.Remove("add_visible_flag"); }
+            else if (parseNode.GetChildNode("add_visible_flag") is { } nullNodeAddVisibleFlag && nullNodeAddVisibleFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddVisibleFlag = null;
+            if (parseNode.GetChildNode("details_visible_flag") is null) { _explicitNullValueDetailsVisibleFlag = default!; _explicitNullProperties?.Remove("details_visible_flag"); }
+            else if (parseNode.GetChildNode("details_visible_flag") is { } nullNodeDetailsVisibleFlag && nullNodeDetailsVisibleFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetailsVisibleFlag = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the field is shown in the add modal</summary>
-        public bool? AddVisibleFlag { get => _explicitNullValueAddVisibleFlag; set { _explicitNullValueAddVisibleFlag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_visible_flag"); else _explicitNullProperties?.Remove("add_visible_flag"); } }
+        public bool? AddVisibleFlag { get => _explicitNullValueAddVisibleFlag; set { _explicitNullValueAddVisibleFlag = value; AdditionalData?.Remove("add_visible_flag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_visible_flag"); else _explicitNullProperties?.Remove("add_visible_flag"); } }
         private bool? _explicitNullValueAddVisibleFlag = default!;
         /// <summary>Whether the field is shown in the details view</summary>
-        public bool? DetailsVisibleFlag { get => _explicitNullValueDetailsVisibleFlag; set { _explicitNullValueDetailsVisibleFlag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details_visible_flag"); else _explicitNullProperties?.Remove("details_visible_flag"); } }
+        public bool? DetailsVisibleFlag { get => _explicitNullValueDetailsVisibleFlag; set { _explicitNullValueDetailsVisibleFlag = value; AdditionalData?.Remove("details_visible_flag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details_visible_flag"); else _explicitNullProperties?.Remove("details_visible_flag"); } }
         private bool? _explicitNullValueDetailsVisibleFlag = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectFields200ResponseDataItemUiVisibility"/> and sets the default values.

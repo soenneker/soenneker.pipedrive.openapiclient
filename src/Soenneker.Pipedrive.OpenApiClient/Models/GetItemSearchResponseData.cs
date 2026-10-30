@@ -17,8 +17,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
-            if (parseNode.GetChildNode("related_items") is { } nullNodeRelatedItems && nullNodeRelatedItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelatedItems = null;
+            if (parseNode.GetChildNode("items") is null) { _explicitNullValueItems = default!; _explicitNullProperties?.Remove("items"); }
+            else if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
+            if (parseNode.GetChildNode("related_items") is null) { _explicitNullValueRelatedItems = default!; _explicitNullProperties?.Remove("related_items"); }
+            else if (parseNode.GetChildNode("related_items") is { } nullNodeRelatedItems && nullNodeRelatedItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelatedItems = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <summary>The array of found items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataItemsItem>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataItemsItem>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
         private List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataItemsItem>? _explicitNullValueItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataItemsItem> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataItemsItem> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
         private List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataItemsItem> _explicitNullValueItems = default!;
 #endif
         /// <summary>The array of related items if `search_for_related_items` was enabled</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataRelatedItemsItem>? RelatedItems { get => _explicitNullValueRelatedItems; set { _explicitNullValueRelatedItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_items"); else _explicitNullProperties?.Remove("related_items"); } }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataRelatedItemsItem>? RelatedItems { get => _explicitNullValueRelatedItems; set { _explicitNullValueRelatedItems = value; AdditionalData?.Remove("related_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_items"); else _explicitNullProperties?.Remove("related_items"); } }
         private List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataRelatedItemsItem>? _explicitNullValueRelatedItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataRelatedItemsItem> RelatedItems { get => _explicitNullValueRelatedItems; set { _explicitNullValueRelatedItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_items"); else _explicitNullProperties?.Remove("related_items"); } }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataRelatedItemsItem> RelatedItems { get => _explicitNullValueRelatedItems; set { _explicitNullValueRelatedItems = value; AdditionalData?.Remove("related_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_items"); else _explicitNullProperties?.Remove("related_items"); } }
         private List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataRelatedItemsItem> _explicitNullValueRelatedItems = default!;
 #endif
         /// <summary>

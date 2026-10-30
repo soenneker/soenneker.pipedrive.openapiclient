@@ -18,8 +18,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("512") is { } nullNodeFiveOneTwo && nullNodeFiveOneTwo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FiveOneTwo = null;
-            if (parseNode.GetChildNode("128") is { } nullNodeOneTwoEight && nullNodeOneTwoEight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OneTwoEight = null;
+            if (parseNode.GetChildNode("512") is null) { _explicitNullValueFiveOneTwo = default!; _explicitNullProperties?.Remove("512"); }
+            else if (parseNode.GetChildNode("512") is { } nullNodeFiveOneTwo && nullNodeFiveOneTwo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FiveOneTwo = null;
+            if (parseNode.GetChildNode("128") is null) { _explicitNullValueOneTwoEight = default!; _explicitNullProperties?.Remove("128"); }
+            else if (parseNode.GetChildNode("128") is { } nullNodeOneTwoEight && nullNodeOneTwoEight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OneTwoEight = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <summary>The URL of the 512x512 picture.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FiveOneTwo { get => _explicitNullValueFiveOneTwo; set { _explicitNullValueFiveOneTwo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("512"); else _explicitNullProperties?.Remove("512"); } }
+        public string? FiveOneTwo { get => _explicitNullValueFiveOneTwo; set { _explicitNullValueFiveOneTwo = value; AdditionalData?.Remove("512"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("512"); else _explicitNullProperties?.Remove("512"); } }
         private string? _explicitNullValueFiveOneTwo = default!;
 #nullable restore
 #else
-        public string FiveOneTwo { get => _explicitNullValueFiveOneTwo; set { _explicitNullValueFiveOneTwo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("512"); else _explicitNullProperties?.Remove("512"); } }
+        public string FiveOneTwo { get => _explicitNullValueFiveOneTwo; set { _explicitNullValueFiveOneTwo = value; AdditionalData?.Remove("512"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("512"); else _explicitNullProperties?.Remove("512"); } }
         private string _explicitNullValueFiveOneTwo = default!;
 #endif
         /// <summary>The URL of the 128x128 picture.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OneTwoEight { get => _explicitNullValueOneTwoEight; set { _explicitNullValueOneTwoEight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("128"); else _explicitNullProperties?.Remove("128"); } }
+        public string? OneTwoEight { get => _explicitNullValueOneTwoEight; set { _explicitNullValueOneTwoEight = value; AdditionalData?.Remove("128"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("128"); else _explicitNullProperties?.Remove("128"); } }
         private string? _explicitNullValueOneTwoEight = default!;
 #nullable restore
 #else
-        public string OneTwoEight { get => _explicitNullValueOneTwoEight; set { _explicitNullValueOneTwoEight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("128"); else _explicitNullProperties?.Remove("128"); } }
+        public string OneTwoEight { get => _explicitNullValueOneTwoEight; set { _explicitNullValueOneTwoEight = value; AdditionalData?.Remove("128"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("128"); else _explicitNullProperties?.Remove("128"); } }
         private string _explicitNullValueOneTwoEight = default!;
 #endif
         /// <summary>

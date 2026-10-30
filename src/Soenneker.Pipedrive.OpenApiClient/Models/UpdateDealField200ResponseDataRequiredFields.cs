@@ -18,34 +18,37 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
-            if (parseNode.GetChildNode("stage_ids") is { } nullNodeStageIds && nullNodeStageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StageIds = null;
-            if (parseNode.GetChildNode("statuses") is { } nullNodeStatuses && nullNodeStatuses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Statuses = null;
+            if (parseNode.GetChildNode("enabled") is null) { _explicitNullValueEnabled = default!; _explicitNullProperties?.Remove("enabled"); }
+            else if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("stage_ids") is null) { _explicitNullValueStageIds = default!; _explicitNullProperties?.Remove("stage_ids"); }
+            else if (parseNode.GetChildNode("stage_ids") is { } nullNodeStageIds && nullNodeStageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StageIds = null;
+            if (parseNode.GetChildNode("statuses") is null) { _explicitNullValueStatuses = default!; _explicitNullProperties?.Remove("statuses"); }
+            else if (parseNode.GetChildNode("statuses") is { } nullNodeStatuses && nullNodeStatuses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Statuses = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the field is required</summary>
-        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
         /// <summary>Array of stage IDs where the field is required</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? StageIds { get => _explicitNullValueStageIds; set { _explicitNullValueStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stage_ids"); else _explicitNullProperties?.Remove("stage_ids"); } }
+        public List<int?>? StageIds { get => _explicitNullValueStageIds; set { _explicitNullValueStageIds = value; AdditionalData?.Remove("stage_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stage_ids"); else _explicitNullProperties?.Remove("stage_ids"); } }
         private List<int?>? _explicitNullValueStageIds = default!;
 #nullable restore
 #else
-        public List<int?> StageIds { get => _explicitNullValueStageIds; set { _explicitNullValueStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stage_ids"); else _explicitNullProperties?.Remove("stage_ids"); } }
+        public List<int?> StageIds { get => _explicitNullValueStageIds; set { _explicitNullValueStageIds = value; AdditionalData?.Remove("stage_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stage_ids"); else _explicitNullProperties?.Remove("stage_ids"); } }
         private List<int?> _explicitNullValueStageIds = default!;
 #endif
         /// <summary>Pipeline-specific status requirements, mapping pipeline ID to array of statuses</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealField200ResponseDataRequiredFieldsStatuses? Statuses { get => _explicitNullValueStatuses; set { _explicitNullValueStatuses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statuses"); else _explicitNullProperties?.Remove("statuses"); } }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealField200ResponseDataRequiredFieldsStatuses? Statuses { get => _explicitNullValueStatuses; set { _explicitNullValueStatuses = value; AdditionalData?.Remove("statuses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statuses"); else _explicitNullProperties?.Remove("statuses"); } }
         private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealField200ResponseDataRequiredFieldsStatuses? _explicitNullValueStatuses = default!;
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealField200ResponseDataRequiredFieldsStatuses Statuses { get => _explicitNullValueStatuses; set { _explicitNullValueStatuses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statuses"); else _explicitNullProperties?.Remove("statuses"); } }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealField200ResponseDataRequiredFieldsStatuses Statuses { get => _explicitNullValueStatuses; set { _explicitNullValueStatuses = value; AdditionalData?.Remove("statuses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statuses"); else _explicitNullProperties?.Remove("statuses"); } }
         private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealField200ResponseDataRequiredFieldsStatuses _explicitNullValueStatuses = default!;
 #endif
         /// <summary>
