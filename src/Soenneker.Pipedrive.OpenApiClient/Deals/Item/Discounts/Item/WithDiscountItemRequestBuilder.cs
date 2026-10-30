@@ -49,7 +49,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Discounts.Item
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteAdditionalDiscountResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteAdditionalDiscountResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteAdditionalDiscountResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteAdditionalDiscountResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Edits a discount added to a deal, changing the deal value if the deal has one-time products attached.
@@ -69,7 +69,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Discounts.Item
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateAdditionalDiscountResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateAdditionalDiscountResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateAdditionalDiscountResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateAdditionalDiscountResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Removes a discount from a deal, changing the deal value if the deal has one-time products attached.

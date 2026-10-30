@@ -12,20 +12,34 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AddPersonField200ResponseDataUiVisibility : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("add_visible_flag") is { } nullNodeAddVisibleFlag && nullNodeAddVisibleFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddVisibleFlag = null;
+            if (parseNode.GetChildNode("details_visible_flag") is { } nullNodeDetailsVisibleFlag && nullNodeDetailsVisibleFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetailsVisibleFlag = null;
+            if (parseNode.GetChildNode("show_in_add_deal_dialog") is { } nullNodeShowInAddDealDialog && nullNodeShowInAddDealDialog.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowInAddDealDialog = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the field is shown in the add modal</summary>
-        public bool? AddVisibleFlag { get; set; }
+        public bool? AddVisibleFlag { get => _explicitNullValueAddVisibleFlag; set { _explicitNullValueAddVisibleFlag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_visible_flag"); else _explicitNullProperties?.Remove("add_visible_flag"); } }
+        private bool? _explicitNullValueAddVisibleFlag = default!;
         /// <summary>Whether the field is shown in the details view</summary>
-        public bool? DetailsVisibleFlag { get; set; }
+        public bool? DetailsVisibleFlag { get => _explicitNullValueDetailsVisibleFlag; set { _explicitNullValueDetailsVisibleFlag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details_visible_flag"); else _explicitNullProperties?.Remove("details_visible_flag"); } }
+        private bool? _explicitNullValueDetailsVisibleFlag = default!;
         /// <summary>Configuration for showing the field in the add deal dialog</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200ResponseDataUiVisibilityShowInAddDealDialog? ShowInAddDealDialog { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200ResponseDataUiVisibilityShowInAddDealDialog? ShowInAddDealDialog { get => _explicitNullValueShowInAddDealDialog; set { _explicitNullValueShowInAddDealDialog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_in_add_deal_dialog"); else _explicitNullProperties?.Remove("show_in_add_deal_dialog"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200ResponseDataUiVisibilityShowInAddDealDialog? _explicitNullValueShowInAddDealDialog = default!;
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200ResponseDataUiVisibilityShowInAddDealDialog ShowInAddDealDialog { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200ResponseDataUiVisibilityShowInAddDealDialog ShowInAddDealDialog { get => _explicitNullValueShowInAddDealDialog; set { _explicitNullValueShowInAddDealDialog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_in_add_deal_dialog"); else _explicitNullProperties?.Remove("show_in_add_deal_dialog"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200ResponseDataUiVisibilityShowInAddDealDialog _explicitNullValueShowInAddDealDialog = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200ResponseDataUiVisibility"/> and sets the default values.
@@ -42,7 +56,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public static global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200ResponseDataUiVisibility CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200ResponseDataUiVisibility();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200ResponseDataUiVisibility(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,6 +81,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteBoolValue("add_visible_flag", AddVisibleFlag);
             writer.WriteBoolValue("details_visible_flag", DetailsVisibleFlag);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPersonField200ResponseDataUiVisibilityShowInAddDealDialog>("show_in_add_deal_dialog", ShowInAddDealDialog);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

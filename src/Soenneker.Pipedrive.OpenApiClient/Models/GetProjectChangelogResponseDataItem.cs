@@ -11,50 +11,74 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetProjectChangelogResponseDataItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actor_user_id") is { } nullNodeActorUserId && nullNodeActorUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActorUserId = null;
+            if (parseNode.GetChildNode("change_source") is { } nullNodeChangeSource && nullNodeChangeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChangeSource = null;
+            if (parseNode.GetChildNode("change_source_user_agent") is { } nullNodeChangeSourceUserAgent && nullNodeChangeSourceUserAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChangeSourceUserAgent = null;
+            if (parseNode.GetChildNode("new_values") is { } nullNodeNewValues && nullNodeNewValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewValues = null;
+            if (parseNode.GetChildNode("old_values") is { } nullNodeOldValues && nullNodeOldValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldValues = null;
+            if (parseNode.GetChildNode("time") is { } nullNodeTime && nullNodeTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Time = null;
+        }
+
         /// <summary>The ID of the user who made the change</summary>
-        public int? ActorUserId { get; set; }
+        public int? ActorUserId { get => _explicitNullValueActorUserId; set { _explicitNullValueActorUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor_user_id"); else _explicitNullProperties?.Remove("actor_user_id"); } }
+        private int? _explicitNullValueActorUserId = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The source of change, for example &apos;app&apos;, &apos;mobile&apos;, &apos;api&apos;, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChangeSource { get; set; }
+        public string? ChangeSource { get => _explicitNullValueChangeSource; set { _explicitNullValueChangeSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("change_source"); else _explicitNullProperties?.Remove("change_source"); } }
+        private string? _explicitNullValueChangeSource = default!;
 #nullable restore
 #else
-        public string ChangeSource { get; set; }
+        public string ChangeSource { get => _explicitNullValueChangeSource; set { _explicitNullValueChangeSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("change_source"); else _explicitNullProperties?.Remove("change_source"); } }
+        private string _explicitNullValueChangeSource = default!;
 #endif
         /// <summary>The user agent from which the change was made</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChangeSourceUserAgent { get; set; }
+        public string? ChangeSourceUserAgent { get => _explicitNullValueChangeSourceUserAgent; set { _explicitNullValueChangeSourceUserAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("change_source_user_agent"); else _explicitNullProperties?.Remove("change_source_user_agent"); } }
+        private string? _explicitNullValueChangeSourceUserAgent = default!;
 #nullable restore
 #else
-        public string ChangeSourceUserAgent { get; set; }
+        public string ChangeSourceUserAgent { get => _explicitNullValueChangeSourceUserAgent; set { _explicitNullValueChangeSourceUserAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("change_source_user_agent"); else _explicitNullProperties?.Remove("change_source_user_agent"); } }
+        private string _explicitNullValueChangeSourceUserAgent = default!;
 #endif
         /// <summary>A map of field keys to their new values after the change</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItemNewValues? NewValues { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItemNewValues? NewValues { get => _explicitNullValueNewValues; set { _explicitNullValueNewValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_values"); else _explicitNullProperties?.Remove("new_values"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItemNewValues? _explicitNullValueNewValues = default!;
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItemNewValues NewValues { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItemNewValues NewValues { get => _explicitNullValueNewValues; set { _explicitNullValueNewValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_values"); else _explicitNullProperties?.Remove("new_values"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItemNewValues _explicitNullValueNewValues = default!;
 #endif
         /// <summary>A map of field keys to their previous values before the change</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItemOldValues? OldValues { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItemOldValues? OldValues { get => _explicitNullValueOldValues; set { _explicitNullValueOldValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_values"); else _explicitNullProperties?.Remove("old_values"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItemOldValues? _explicitNullValueOldValues = default!;
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItemOldValues OldValues { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItemOldValues OldValues { get => _explicitNullValueOldValues; set { _explicitNullValueOldValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_values"); else _explicitNullProperties?.Remove("old_values"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItemOldValues _explicitNullValueOldValues = default!;
 #endif
         /// <summary>The date and time of the change in ISO 8601 format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Time { get; set; }
+        public string? Time { get => _explicitNullValueTime; set { _explicitNullValueTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time"); else _explicitNullProperties?.Remove("time"); } }
+        private string? _explicitNullValueTime = default!;
 #nullable restore
 #else
-        public string Time { get; set; }
+        public string Time { get => _explicitNullValueTime; set { _explicitNullValueTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time"); else _explicitNullProperties?.Remove("time"); } }
+        private string _explicitNullValueTime = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItem"/> and sets the default values.
@@ -71,7 +95,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public static global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +126,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItemNewValues>("new_values", NewValues);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProjectChangelogResponseDataItemOldValues>("old_values", OldValues);
             writer.WriteStringValue("time", Time);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

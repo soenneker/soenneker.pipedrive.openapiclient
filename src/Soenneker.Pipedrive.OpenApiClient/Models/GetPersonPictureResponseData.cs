@@ -11,34 +11,57 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetPersonPictureResponseData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("active_flag") is { } nullNodeActiveFlag && nullNodeActiveFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveFlag = null;
+            if (parseNode.GetChildNode("added_by_user_id") is { } nullNodeAddedByUserId && nullNodeAddedByUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedByUserId = null;
+            if (parseNode.GetChildNode("file_size") is { } nullNodeFileSize && nullNodeFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileSize = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("item_id") is { } nullNodeItemId && nullNodeItemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemId = null;
+            if (parseNode.GetChildNode("item_type") is { } nullNodeItemType && nullNodeItemType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemType = null;
+            if (parseNode.GetChildNode("pictures") is { } nullNodePictures && nullNodePictures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pictures = null;
+        }
+
         /// <summary>Whether the picture is active or not.</summary>
-        public bool? ActiveFlag { get; set; }
+        public bool? ActiveFlag { get => _explicitNullValueActiveFlag; set { _explicitNullValueActiveFlag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_flag"); else _explicitNullProperties?.Remove("active_flag"); } }
+        private bool? _explicitNullValueActiveFlag = default!;
         /// <summary>The ID of the user who added the picture.</summary>
-        public int? AddedByUserId { get; set; }
+        public int? AddedByUserId { get => _explicitNullValueAddedByUserId; set { _explicitNullValueAddedByUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("added_by_user_id"); else _explicitNullProperties?.Remove("added_by_user_id"); } }
+        private int? _explicitNullValueAddedByUserId = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The file size in bytes.</summary>
-        public int? FileSize { get; set; }
+        public int? FileSize { get => _explicitNullValueFileSize; set { _explicitNullValueFileSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_size"); else _explicitNullProperties?.Remove("file_size"); } }
+        private int? _explicitNullValueFileSize = default!;
         /// <summary>The ID of the picture.</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The ID of the person this picture belongs to.</summary>
-        public int? ItemId { get; set; }
+        public int? ItemId { get => _explicitNullValueItemId; set { _explicitNullValueItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_id"); else _explicitNullProperties?.Remove("item_id"); } }
+        private int? _explicitNullValueItemId = default!;
         /// <summary>The type of item the picture is associated with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ItemType { get; set; }
+        public string? ItemType { get => _explicitNullValueItemType; set { _explicitNullValueItemType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_type"); else _explicitNullProperties?.Remove("item_type"); } }
+        private string? _explicitNullValueItemType = default!;
 #nullable restore
 #else
-        public string ItemType { get; set; }
+        public string ItemType { get => _explicitNullValueItemType; set { _explicitNullValueItemType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_type"); else _explicitNullProperties?.Remove("item_type"); } }
+        private string _explicitNullValueItemType = default!;
 #endif
         /// <summary>Picture URLs indexed by size.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseDataPictures? Pictures { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseDataPictures? Pictures { get => _explicitNullValuePictures; set { _explicitNullValuePictures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pictures"); else _explicitNullProperties?.Remove("pictures"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseDataPictures? _explicitNullValuePictures = default!;
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseDataPictures Pictures { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseDataPictures Pictures { get => _explicitNullValuePictures; set { _explicitNullValuePictures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pictures"); else _explicitNullProperties?.Remove("pictures"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseDataPictures _explicitNullValuePictures = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseData"/> and sets the default values.
@@ -55,7 +78,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public static global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +111,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteIntValue("item_id", ItemId);
             writer.WriteStringValue("item_type", ItemType);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseDataPictures>("pictures", Pictures);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

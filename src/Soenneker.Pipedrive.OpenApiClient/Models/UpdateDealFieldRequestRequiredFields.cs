@@ -12,26 +12,41 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateDealFieldRequestRequiredFields : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("stage_ids") is { } nullNodeStageIds && nullNodeStageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StageIds = null;
+            if (parseNode.GetChildNode("statuses") is { } nullNodeStatuses && nullNodeStatuses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Statuses = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the field is required. When false, the field is optional. When true with empty stage_ids, the field is required everywhere. When true with specific stage_ids, the field is required only at those stages. Default is false.</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>Array of deal stage IDs where this field is required. Must reference valid, active deal stages. Empty array when enabled is false. The stages must be in pipelines where this field is visible (show_in_pipelines).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? StageIds { get; set; }
+        public List<int?>? StageIds { get => _explicitNullValueStageIds; set { _explicitNullValueStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stage_ids"); else _explicitNullProperties?.Remove("stage_ids"); } }
+        private List<int?>? _explicitNullValueStageIds = default!;
 #nullable restore
 #else
-        public List<int?> StageIds { get; set; }
+        public List<int?> StageIds { get => _explicitNullValueStageIds; set { _explicitNullValueStageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stage_ids"); else _explicitNullProperties?.Remove("stage_ids"); } }
+        private List<int?> _explicitNullValueStageIds = default!;
 #endif
         /// <summary>Pipeline-specific status requirements for when deals are won or lost. Keys are pipeline IDs (as strings), values are arrays of status strings (&apos;won&apos;, &apos;lost&apos;). Example - `{&quot;1&quot;:[&quot;won&quot;,&quot;lost&quot;],&quot;2&quot;:[&quot;won&quot;]}` means the field is required when marking deals as won or lost in pipeline 1, and only when won in pipeline 2. Must reference valid, active pipelines.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFieldsStatuses? Statuses { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFieldsStatuses? Statuses { get => _explicitNullValueStatuses; set { _explicitNullValueStatuses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statuses"); else _explicitNullProperties?.Remove("statuses"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFieldsStatuses? _explicitNullValueStatuses = default!;
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFieldsStatuses Statuses { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFieldsStatuses Statuses { get => _explicitNullValueStatuses; set { _explicitNullValueStatuses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statuses"); else _explicitNullProperties?.Remove("statuses"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFieldsStatuses _explicitNullValueStatuses = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFields"/> and sets the default values.
@@ -49,7 +64,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public static global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFields CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFields();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFields(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,6 +89,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteCollectionOfPrimitiveValues<int?>("stage_ids", StageIds);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFieldsStatuses>("statuses", Statuses);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -55,6 +55,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Leads.Item.ConvertNamespace.Deal
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "404", global::Soenneker.Pipedrive.OpenApiClient.Models.ConvertLeadToDeal404Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddConvertLeadToDealResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddConvertLeadToDealResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

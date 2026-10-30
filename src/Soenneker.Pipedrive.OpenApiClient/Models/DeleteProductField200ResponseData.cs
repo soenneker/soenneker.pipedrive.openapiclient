@@ -11,52 +11,78 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DeleteProductField200ResponseData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("field_code") is { } nullNodeFieldCode && nullNodeFieldCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldCode = null;
+            if (parseNode.GetChildNode("field_name") is { } nullNodeFieldName && nullNodeFieldName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldName = null;
+            if (parseNode.GetChildNode("field_type") is { } nullNodeFieldType && nullNodeFieldType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldType = null;
+            if (parseNode.GetChildNode("is_custom_field") is { } nullNodeIsCustomField && nullNodeIsCustomField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCustomField = null;
+            if (parseNode.GetChildNode("is_optional_response_field") is { } nullNodeIsOptionalResponseField && nullNodeIsOptionalResponseField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOptionalResponseField = null;
+            if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
+            if (parseNode.GetChildNode("subfields") is { } nullNodeSubfields && nullNodeSubfields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subfields = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique identifier for the field (40-character hash for custom fields)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FieldCode { get; set; }
+        public string? FieldCode { get => _explicitNullValueFieldCode; set { _explicitNullValueFieldCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_code"); else _explicitNullProperties?.Remove("field_code"); } }
+        private string? _explicitNullValueFieldCode = default!;
 #nullable restore
 #else
-        public string FieldCode { get; set; }
+        public string FieldCode { get => _explicitNullValueFieldCode; set { _explicitNullValueFieldCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_code"); else _explicitNullProperties?.Remove("field_code"); } }
+        private string _explicitNullValueFieldCode = default!;
 #endif
         /// <summary>The display name/label of the field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FieldName { get; set; }
+        public string? FieldName { get => _explicitNullValueFieldName; set { _explicitNullValueFieldName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_name"); else _explicitNullProperties?.Remove("field_name"); } }
+        private string? _explicitNullValueFieldName = default!;
 #nullable restore
 #else
-        public string FieldName { get; set; }
+        public string FieldName { get => _explicitNullValueFieldName; set { _explicitNullValueFieldName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_name"); else _explicitNullProperties?.Remove("field_name"); } }
+        private string _explicitNullValueFieldName = default!;
 #endif
         /// <summary>The type of the field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FieldType { get; set; }
+        public string? FieldType { get => _explicitNullValueFieldType; set { _explicitNullValueFieldType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_type"); else _explicitNullProperties?.Remove("field_type"); } }
+        private string? _explicitNullValueFieldType = default!;
 #nullable restore
 #else
-        public string FieldType { get; set; }
+        public string FieldType { get => _explicitNullValueFieldType; set { _explicitNullValueFieldType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_type"); else _explicitNullProperties?.Remove("field_type"); } }
+        private string _explicitNullValueFieldType = default!;
 #endif
         /// <summary>Whether this is a user-created custom field</summary>
-        public bool? IsCustomField { get; set; }
+        public bool? IsCustomField { get => _explicitNullValueIsCustomField; set { _explicitNullValueIsCustomField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_custom_field"); else _explicitNullProperties?.Remove("is_custom_field"); } }
+        private bool? _explicitNullValueIsCustomField = default!;
         /// <summary>Whether this field is not returned by default in entity responses</summary>
-        public bool? IsOptionalResponseField { get; set; }
+        public bool? IsOptionalResponseField { get => _explicitNullValueIsOptionalResponseField; set { _explicitNullValueIsOptionalResponseField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_optional_response_field"); else _explicitNullProperties?.Remove("is_optional_response_field"); } }
+        private bool? _explicitNullValueIsOptionalResponseField = default!;
         /// <summary>Array of available options for enum/set fields, null for other field types</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseDataOptionsItem>? Options { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseDataOptionsItem>? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseDataOptionsItem>? _explicitNullValueOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseDataOptionsItem> Options { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseDataOptionsItem> Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseDataOptionsItem> _explicitNullValueOptions = default!;
 #endif
         /// <summary>Array of subfields for complex field types (address, monetary), null for simple field types</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseDataSubfieldsItem>? Subfields { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseDataSubfieldsItem>? Subfields { get => _explicitNullValueSubfields; set { _explicitNullValueSubfields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subfields"); else _explicitNullProperties?.Remove("subfields"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseDataSubfieldsItem>? _explicitNullValueSubfields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseDataSubfieldsItem> Subfields { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseDataSubfieldsItem> Subfields { get => _explicitNullValueSubfields; set { _explicitNullValueSubfields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subfields"); else _explicitNullProperties?.Remove("subfields"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseDataSubfieldsItem> _explicitNullValueSubfields = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseData"/> and sets the default values.
@@ -73,7 +99,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public static global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -106,6 +132,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteBoolValue("is_optional_response_field", IsOptionalResponseField);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseDataOptionsItem>("options", Options);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.DeleteProductField200ResponseDataSubfieldsItem>("subfields", Subfields);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

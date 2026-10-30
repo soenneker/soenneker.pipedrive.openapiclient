@@ -49,7 +49,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Organizations.Search
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationSearchResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationSearchResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationSearchResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationSearchResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Searches all organizations by name, address, notes and/or custom fields. This endpoint is a wrapper of &lt;a href=&quot;https://developers.pipedrive.com/docs/api/v1/ItemSearch#searchItem&quot;&gt;/v1/itemSearch&lt;/a&gt; with a narrower OAuth scope.

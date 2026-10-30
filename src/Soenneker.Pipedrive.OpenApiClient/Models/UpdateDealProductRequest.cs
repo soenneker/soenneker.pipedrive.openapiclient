@@ -12,41 +12,75 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateDealProductRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billing_frequency") is { } nullNodeBillingFrequency && nullNodeBillingFrequency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingFrequency = null;
+            if (parseNode.GetChildNode("billing_frequency_cycles") is { } nullNodeBillingFrequencyCycles && nullNodeBillingFrequencyCycles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingFrequencyCycles = null;
+            if (parseNode.GetChildNode("billing_start_date") is { } nullNodeBillingStartDate && nullNodeBillingStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingStartDate = null;
+            if (parseNode.GetChildNode("comments") is { } nullNodeComments && nullNodeComments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comments = null;
+            if (parseNode.GetChildNode("discount") is { } nullNodeDiscount && nullNodeDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discount = null;
+            if (parseNode.GetChildNode("discount_type") is { } nullNodeDiscountType && nullNodeDiscountType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountType = null;
+            if (parseNode.GetChildNode("is_enabled") is { } nullNodeIsEnabled && nullNodeIsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEnabled = null;
+            if (parseNode.GetChildNode("item_price") is { } nullNodeItemPrice && nullNodeItemPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemPrice = null;
+            if (parseNode.GetChildNode("product_id") is { } nullNodeProductId && nullNodeProductId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductId = null;
+            if (parseNode.GetChildNode("product_variation_id") is { } nullNodeProductVariationId && nullNodeProductVariationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductVariationId = null;
+            if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("tax") is { } nullNodeTax && nullNodeTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tax = null;
+            if (parseNode.GetChildNode("tax_method") is { } nullNodeTaxMethod && nullNodeTaxMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxMethod = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Only available in Growth and above plansHow often a customer is billed for access to a service or productTo set `billing_frequency` different than `one-time`, the deal must not have installments associatedA deal can have up to 20 products attached with `billing_frequency` different than `one-time`</summary>
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealProductRequestBillingFrequency? BillingFrequency { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealProductRequestBillingFrequency? BillingFrequency { get => _explicitNullValueBillingFrequency; set { _explicitNullValueBillingFrequency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_frequency"); else _explicitNullProperties?.Remove("billing_frequency"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealProductRequestBillingFrequency? _explicitNullValueBillingFrequency = default!;
         /// <summary>Only available in Growth and above plansThe number of times the billing frequency repeats for a product in a dealWhen `billing_frequency` is set to `one-time`, this field must be `null`When `billing_frequency` is set to `weekly`, this field cannot be `null`For all the other values of `billing_frequency`, `null` represents a product billed indefinitelyMust be a positive integer less or equal to 208</summary>
-        public int? BillingFrequencyCycles { get; set; }
+        public int? BillingFrequencyCycles { get => _explicitNullValueBillingFrequencyCycles; set { _explicitNullValueBillingFrequencyCycles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_frequency_cycles"); else _explicitNullProperties?.Remove("billing_frequency_cycles"); } }
+        private int? _explicitNullValueBillingFrequencyCycles = default!;
         /// <summary>Only available in Growth and above plansThe billing start date. Must be between 10 years in the past and 10 years in the future</summary>
-        public Date? BillingStartDate { get; set; }
+        public Date? BillingStartDate { get => _explicitNullValueBillingStartDate; set { _explicitNullValueBillingStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_start_date"); else _explicitNullProperties?.Remove("billing_start_date"); } }
+        private Date? _explicitNullValueBillingStartDate = default!;
         /// <summary>The comments of the product</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Comments { get; set; }
+        public string? Comments { get => _explicitNullValueComments; set { _explicitNullValueComments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comments"); else _explicitNullProperties?.Remove("comments"); } }
+        private string? _explicitNullValueComments = default!;
 #nullable restore
 #else
-        public string Comments { get; set; }
+        public string Comments { get => _explicitNullValueComments; set { _explicitNullValueComments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comments"); else _explicitNullProperties?.Remove("comments"); } }
+        private string _explicitNullValueComments = default!;
 #endif
         /// <summary>The value of the discount. The `discount_type` field can be used to specify whether the value is an amount or a percentage</summary>
-        public double? Discount { get; set; }
+        public double? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        private double? _explicitNullValueDiscount = default!;
         /// <summary>The value of the discount. The `discount_type` field can be used to specify whether the value is an amount or a percentage</summary>
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealProductRequestDiscountType? DiscountType { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealProductRequestDiscountType? DiscountType { get => _explicitNullValueDiscountType; set { _explicitNullValueDiscountType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount_type"); else _explicitNullProperties?.Remove("discount_type"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealProductRequestDiscountType? _explicitNullValueDiscountType = default!;
         /// <summary>Whether this product is enabled for the dealNot possible to disable the product if the deal has installments associated and the product is the last one enabledNot possible to enable the product if the deal has installments associated and the product is recurring</summary>
-        public bool? IsEnabled { get; set; }
+        public bool? IsEnabled { get => _explicitNullValueIsEnabled; set { _explicitNullValueIsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_enabled"); else _explicitNullProperties?.Remove("is_enabled"); } }
+        private bool? _explicitNullValueIsEnabled = default!;
         /// <summary>The price value of the product</summary>
-        public double? ItemPrice { get; set; }
+        public double? ItemPrice { get => _explicitNullValueItemPrice; set { _explicitNullValueItemPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_price"); else _explicitNullProperties?.Remove("item_price"); } }
+        private double? _explicitNullValueItemPrice = default!;
         /// <summary>The ID of the product</summary>
-        public int? ProductId { get; set; }
+        public int? ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_id"); else _explicitNullProperties?.Remove("product_id"); } }
+        private int? _explicitNullValueProductId = default!;
         /// <summary>The ID of the product variation</summary>
-        public int? ProductVariationId { get; set; }
+        public int? ProductVariationId { get => _explicitNullValueProductVariationId; set { _explicitNullValueProductVariationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_variation_id"); else _explicitNullProperties?.Remove("product_variation_id"); } }
+        private int? _explicitNullValueProductVariationId = default!;
         /// <summary>The quantity of the product</summary>
-        public double? Quantity { get; set; }
+        public double? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        private double? _explicitNullValueQuantity = default!;
         /// <summary>The product tax</summary>
-        public double? Tax { get; set; }
+        public double? Tax { get => _explicitNullValueTax; set { _explicitNullValueTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax"); else _explicitNullProperties?.Remove("tax"); } }
+        private double? _explicitNullValueTax = default!;
         /// <summary>The tax option to be applied to the products. When using `inclusive`, the tax percentage will already be included in the price. When using `exclusive`, the tax will not be included in the price. When using `none`, no tax will be added. Use the `tax` field for defining the tax percentage amount. By default, the user setting value for tax options will be used. Changing this in one product affects the rest of the products attached to the deal</summary>
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealProductRequestTaxMethod? TaxMethod { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealProductRequestTaxMethod? TaxMethod { get => _explicitNullValueTaxMethod; set { _explicitNullValueTaxMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_method"); else _explicitNullProperties?.Remove("tax_method"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealProductRequestTaxMethod? _explicitNullValueTaxMethod = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealProductRequest"/> and sets the default values.
         /// </summary>
@@ -65,7 +99,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public static global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealProductRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealProductRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealProductRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -110,6 +144,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteDoubleValue("quantity", Quantity);
             writer.WriteDoubleValue("tax", Tax);
             writer.WriteEnumValue<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealProductRequestTaxMethod>("tax_method", TaxMethod);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

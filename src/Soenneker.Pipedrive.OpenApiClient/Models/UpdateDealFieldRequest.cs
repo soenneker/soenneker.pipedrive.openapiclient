@@ -11,48 +11,70 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateDealFieldRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("field_name") is { } nullNodeFieldName && nullNodeFieldName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldName = null;
+            if (parseNode.GetChildNode("important_fields") is { } nullNodeImportantFields && nullNodeImportantFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportantFields = null;
+            if (parseNode.GetChildNode("required_fields") is { } nullNodeRequiredFields && nullNodeRequiredFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequiredFields = null;
+            if (parseNode.GetChildNode("ui_visibility") is { } nullNodeUiVisibility && nullNodeUiVisibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UiVisibility = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Field description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Field name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FieldName { get; set; }
+        public string? FieldName { get => _explicitNullValueFieldName; set { _explicitNullValueFieldName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_name"); else _explicitNullProperties?.Remove("field_name"); } }
+        private string? _explicitNullValueFieldName = default!;
 #nullable restore
 #else
-        public string FieldName { get; set; }
+        public string FieldName { get => _explicitNullValueFieldName; set { _explicitNullValueFieldName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_name"); else _explicitNullProperties?.Remove("field_name"); } }
+        private string _explicitNullValueFieldName = default!;
 #endif
         /// <summary>Configuration for highlighting the field at specific stages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestImportantFields? ImportantFields { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestImportantFields? ImportantFields { get => _explicitNullValueImportantFields; set { _explicitNullValueImportantFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("important_fields"); else _explicitNullProperties?.Remove("important_fields"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestImportantFields? _explicitNullValueImportantFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestImportantFields ImportantFields { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestImportantFields ImportantFields { get => _explicitNullValueImportantFields; set { _explicitNullValueImportantFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("important_fields"); else _explicitNullProperties?.Remove("important_fields"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestImportantFields _explicitNullValueImportantFields = default!;
 #endif
         /// <summary>Required fields configuration for marking the field as mandatory when interacted with in the Pipedrive web UI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFields? RequiredFields { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFields? RequiredFields { get => _explicitNullValueRequiredFields; set { _explicitNullValueRequiredFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required_fields"); else _explicitNullProperties?.Remove("required_fields"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFields? _explicitNullValueRequiredFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFields RequiredFields { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFields RequiredFields { get => _explicitNullValueRequiredFields; set { _explicitNullValueRequiredFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required_fields"); else _explicitNullProperties?.Remove("required_fields"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFields _explicitNullValueRequiredFields = default!;
 #endif
         /// <summary>UI visibility settings for the field. Controls where the field appears in the Pipedrive web UI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestUiVisibility? UiVisibility { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestUiVisibility? UiVisibility { get => _explicitNullValueUiVisibility; set { _explicitNullValueUiVisibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ui_visibility"); else _explicitNullProperties?.Remove("ui_visibility"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestUiVisibility? _explicitNullValueUiVisibility = default!;
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestUiVisibility UiVisibility { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestUiVisibility UiVisibility { get => _explicitNullValueUiVisibility; set { _explicitNullValueUiVisibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ui_visibility"); else _explicitNullProperties?.Remove("ui_visibility"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestUiVisibility _explicitNullValueUiVisibility = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequest"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public static global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestImportantFields>("important_fields", ImportantFields);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestRequiredFields>("required_fields", RequiredFields);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealFieldRequestUiVisibility>("ui_visibility", UiVisibility);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,24 +11,37 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetItemSearchResponseData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
+            if (parseNode.GetChildNode("related_items") is { } nullNodeRelatedItems && nullNodeRelatedItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelatedItems = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The array of found items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataItemsItem>? Items { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataItemsItem>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataItemsItem>? _explicitNullValueItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataItemsItem> Items { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataItemsItem> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataItemsItem> _explicitNullValueItems = default!;
 #endif
         /// <summary>The array of related items if `search_for_related_items` was enabled</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataRelatedItemsItem>? RelatedItems { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataRelatedItemsItem>? RelatedItems { get => _explicitNullValueRelatedItems; set { _explicitNullValueRelatedItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_items"); else _explicitNullProperties?.Remove("related_items"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataRelatedItemsItem>? _explicitNullValueRelatedItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataRelatedItemsItem> RelatedItems { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataRelatedItemsItem> RelatedItems { get => _explicitNullValueRelatedItems; set { _explicitNullValueRelatedItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("related_items"); else _explicitNullProperties?.Remove("related_items"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataRelatedItemsItem> _explicitNullValueRelatedItems = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseData"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public static global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataItemsItem>("items", Items);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.GetItemSearchResponseDataRelatedItemsItem>("related_items", RelatedItems);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

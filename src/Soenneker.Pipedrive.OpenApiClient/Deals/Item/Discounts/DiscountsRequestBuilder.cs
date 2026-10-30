@@ -62,7 +62,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Discounts
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetAdditionalDiscountsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetAdditionalDiscountsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetAdditionalDiscountsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetAdditionalDiscountsResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Adds a discount to a deal, changing the deal value if the deal has one-time products attached.
@@ -82,7 +82,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Discounts
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddAdditionalDiscountResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddAdditionalDiscountResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddAdditionalDiscountResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddAdditionalDiscountResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists discounts attached to a deal.

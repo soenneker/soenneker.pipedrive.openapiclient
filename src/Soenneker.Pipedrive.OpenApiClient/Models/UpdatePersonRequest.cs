@@ -11,97 +11,142 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdatePersonRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("birthday") is { } nullNodeBirthday && nullNodeBirthday.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Birthday = null;
+            if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("emails") is { } nullNodeEmails && nullNodeEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Emails = null;
+            if (parseNode.GetChildNode("im") is { } nullNodeIm && nullNodeIm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Im = null;
+            if (parseNode.GetChildNode("job_title") is { } nullNodeJobTitle && nullNodeJobTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobTitle = null;
+            if (parseNode.GetChildNode("label_ids") is { } nullNodeLabelIds && nullNodeLabelIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelIds = null;
+            if (parseNode.GetChildNode("marketing_status") is { } nullNodeMarketingStatus && nullNodeMarketingStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarketingStatus = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
+            if (parseNode.GetChildNode("org_id") is { } nullNodeOrgId && nullNodeOrgId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrgId = null;
+            if (parseNode.GetChildNode("owner_id") is { } nullNodeOwnerId && nullNodeOwnerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerId = null;
+            if (parseNode.GetChildNode("phones") is { } nullNodePhones && nullNodePhones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phones = null;
+            if (parseNode.GetChildNode("postal_address") is { } nullNodePostalAddress && nullNodePostalAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostalAddress = null;
+            if (parseNode.GetChildNode("visible_to") is { } nullNodeVisibleTo && nullNodeVisibleTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibleTo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The birthday of the person. Only accepted when contact sync is enabled for the company; otherwise the request returns 403.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Birthday { get; set; }
+        public string? Birthday { get => _explicitNullValueBirthday; set { _explicitNullValueBirthday = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("birthday"); else _explicitNullProperties?.Remove("birthday"); } }
+        private string? _explicitNullValueBirthday = default!;
 #nullable restore
 #else
-        public string Birthday { get; set; }
+        public string Birthday { get => _explicitNullValueBirthday; set { _explicitNullValueBirthday = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("birthday"); else _explicitNullProperties?.Remove("birthday"); } }
+        private string _explicitNullValueBirthday = default!;
 #endif
         /// <summary>An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestCustomFields? CustomFields { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestCustomFields? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestCustomFields? _explicitNullValueCustomFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestCustomFields CustomFields { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestCustomFields CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestCustomFields _explicitNullValueCustomFields = default!;
 #endif
         /// <summary>The emails of the person</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestEmailsItem>? Emails { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestEmailsItem>? Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestEmailsItem>? _explicitNullValueEmails = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestEmailsItem> Emails { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestEmailsItem> Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestEmailsItem> _explicitNullValueEmails = default!;
 #endif
         /// <summary>The instant messaging accounts of the person. Only accepted when contact sync is enabled for the company; otherwise the request returns 403.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestImItem>? Im { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestImItem>? Im { get => _explicitNullValueIm; set { _explicitNullValueIm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("im"); else _explicitNullProperties?.Remove("im"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestImItem>? _explicitNullValueIm = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestImItem> Im { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestImItem> Im { get => _explicitNullValueIm; set { _explicitNullValueIm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("im"); else _explicitNullProperties?.Remove("im"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestImItem> _explicitNullValueIm = default!;
 #endif
         /// <summary>The job title of the person. Only accepted when contact sync is enabled for the company; otherwise the request returns 403.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JobTitle { get; set; }
+        public string? JobTitle { get => _explicitNullValueJobTitle; set { _explicitNullValueJobTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_title"); else _explicitNullProperties?.Remove("job_title"); } }
+        private string? _explicitNullValueJobTitle = default!;
 #nullable restore
 #else
-        public string JobTitle { get; set; }
+        public string JobTitle { get => _explicitNullValueJobTitle; set { _explicitNullValueJobTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_title"); else _explicitNullProperties?.Remove("job_title"); } }
+        private string _explicitNullValueJobTitle = default!;
 #endif
         /// <summary>The IDs of labels assigned to the person</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? LabelIds { get; set; }
+        public List<int?>? LabelIds { get => _explicitNullValueLabelIds; set { _explicitNullValueLabelIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_ids"); else _explicitNullProperties?.Remove("label_ids"); } }
+        private List<int?>? _explicitNullValueLabelIds = default!;
 #nullable restore
 #else
-        public List<int?> LabelIds { get; set; }
+        public List<int?> LabelIds { get => _explicitNullValueLabelIds; set { _explicitNullValueLabelIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_ids"); else _explicitNullProperties?.Remove("label_ids"); } }
+        private List<int?> _explicitNullValueLabelIds = default!;
 #endif
         /// <summary>If the person does not have a valid email address, then the marketing status is **not set** and `no_consent` is returned for the `marketing_status` value when the new person is created. If the change is forbidden, the status will remain unchanged for every call that tries to modify the marketing status. Please be aware that it is only allowed **once** to change the marketing status from an old status to a new one.&lt;table&gt;&lt;tr&gt;&lt;th&gt;Value&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;`no_consent`&lt;/td&gt;&lt;td&gt;The customer has not given consent to receive any marketing communications&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;`unsubscribed`&lt;/td&gt;&lt;td&gt;The customers have unsubscribed from ALL marketing communications&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;`subscribed`&lt;/td&gt;&lt;td&gt;The customers are subscribed and are counted towards marketing caps&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;`archived`&lt;/td&gt;&lt;td&gt;The customers with `subscribed` status can be moved to `archived` to save consent, but they are not paid for&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary>
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestMarketingStatus? MarketingStatus { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestMarketingStatus? MarketingStatus { get => _explicitNullValueMarketingStatus; set { _explicitNullValueMarketingStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketing_status"); else _explicitNullProperties?.Remove("marketing_status"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestMarketingStatus? _explicitNullValueMarketingStatus = default!;
         /// <summary>The name of the person</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Contact sync notes of the person, maximum 10 000 characters. Only accepted when contact sync is enabled for the company; otherwise the request returns 403.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Notes { get; set; }
+        public string? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private string? _explicitNullValueNotes = default!;
 #nullable restore
 #else
-        public string Notes { get; set; }
+        public string Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private string _explicitNullValueNotes = default!;
 #endif
         /// <summary>The ID of the organization linked to the person</summary>
-        public int? OrgId { get; set; }
+        public int? OrgId { get => _explicitNullValueOrgId; set { _explicitNullValueOrgId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("org_id"); else _explicitNullProperties?.Remove("org_id"); } }
+        private int? _explicitNullValueOrgId = default!;
         /// <summary>The ID of the user who owns the person</summary>
-        public int? OwnerId { get; set; }
+        public int? OwnerId { get => _explicitNullValueOwnerId; set { _explicitNullValueOwnerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_id"); else _explicitNullProperties?.Remove("owner_id"); } }
+        private int? _explicitNullValueOwnerId = default!;
         /// <summary>The phones of the person</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestPhonesItem>? Phones { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestPhonesItem>? Phones { get => _explicitNullValuePhones; set { _explicitNullValuePhones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phones"); else _explicitNullProperties?.Remove("phones"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestPhonesItem>? _explicitNullValuePhones = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestPhonesItem> Phones { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestPhonesItem> Phones { get => _explicitNullValuePhones; set { _explicitNullValuePhones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phones"); else _explicitNullProperties?.Remove("phones"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestPhonesItem> _explicitNullValuePhones = default!;
 #endif
         /// <summary>Postal address of the person, included if contact sync is enabled for the company</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestPostalAddress? PostalAddress { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestPostalAddress? PostalAddress { get => _explicitNullValuePostalAddress; set { _explicitNullValuePostalAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postal_address"); else _explicitNullProperties?.Remove("postal_address"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestPostalAddress? _explicitNullValuePostalAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestPostalAddress PostalAddress { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestPostalAddress PostalAddress { get => _explicitNullValuePostalAddress; set { _explicitNullValuePostalAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postal_address"); else _explicitNullProperties?.Remove("postal_address"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestPostalAddress _explicitNullValuePostalAddress = default!;
 #endif
         /// <summary>The visibility of the person</summary>
-        public int? VisibleTo { get; set; }
+        public int? VisibleTo { get => _explicitNullValueVisibleTo; set { _explicitNullValueVisibleTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible_to"); else _explicitNullProperties?.Remove("visible_to"); } }
+        private int? _explicitNullValueVisibleTo = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequest"/> and sets the default values.
         /// </summary>
@@ -117,7 +162,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public static global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -164,6 +209,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestPhonesItem>("phones", Phones);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePersonRequestPostalAddress>("postal_address", PostalAddress);
             writer.WriteIntValue("visible_to", VisibleTo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

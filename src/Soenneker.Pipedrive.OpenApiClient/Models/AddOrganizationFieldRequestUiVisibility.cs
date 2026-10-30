@@ -12,28 +12,45 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AddOrganizationFieldRequestUiVisibility : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("add_visible_flag") is { } nullNodeAddVisibleFlag && nullNodeAddVisibleFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddVisibleFlag = null;
+            if (parseNode.GetChildNode("details_visible_flag") is { } nullNodeDetailsVisibleFlag && nullNodeDetailsVisibleFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetailsVisibleFlag = null;
+            if (parseNode.GetChildNode("show_in_add_deal_dialog") is { } nullNodeShowInAddDealDialog && nullNodeShowInAddDealDialog.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowInAddDealDialog = null;
+            if (parseNode.GetChildNode("show_in_add_person_dialog") is { } nullNodeShowInAddPersonDialog && nullNodeShowInAddPersonDialog.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowInAddPersonDialog = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the field is shown in the add organization modal. Default is false. Cannot be set to false for the &apos;name&apos; system field.</summary>
-        public bool? AddVisibleFlag { get; set; }
+        public bool? AddVisibleFlag { get => _explicitNullValueAddVisibleFlag; set { _explicitNullValueAddVisibleFlag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_visible_flag"); else _explicitNullProperties?.Remove("add_visible_flag"); } }
+        private bool? _explicitNullValueAddVisibleFlag = default!;
         /// <summary>Whether the field is shown in the organization details view. Default is true.</summary>
-        public bool? DetailsVisibleFlag { get; set; }
+        public bool? DetailsVisibleFlag { get => _explicitNullValueDetailsVisibleFlag; set { _explicitNullValueDetailsVisibleFlag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details_visible_flag"); else _explicitNullProperties?.Remove("details_visible_flag"); } }
+        private bool? _explicitNullValueDetailsVisibleFlag = default!;
         /// <summary>Configuration for showing this organization field when adding a new deal. Only available for custom fields or specific eligible system fields. Default is show=false, order=null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibilityShowInAddDealDialog? ShowInAddDealDialog { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibilityShowInAddDealDialog? ShowInAddDealDialog { get => _explicitNullValueShowInAddDealDialog; set { _explicitNullValueShowInAddDealDialog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_in_add_deal_dialog"); else _explicitNullProperties?.Remove("show_in_add_deal_dialog"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibilityShowInAddDealDialog? _explicitNullValueShowInAddDealDialog = default!;
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibilityShowInAddDealDialog ShowInAddDealDialog { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibilityShowInAddDealDialog ShowInAddDealDialog { get => _explicitNullValueShowInAddDealDialog; set { _explicitNullValueShowInAddDealDialog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_in_add_deal_dialog"); else _explicitNullProperties?.Remove("show_in_add_deal_dialog"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibilityShowInAddDealDialog _explicitNullValueShowInAddDealDialog = default!;
 #endif
         /// <summary>Configuration for showing this organization field when adding a new person. Only available for custom fields or specific eligible system fields. Default is show=false, order=null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibilityShowInAddPersonDialog? ShowInAddPersonDialog { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibilityShowInAddPersonDialog? ShowInAddPersonDialog { get => _explicitNullValueShowInAddPersonDialog; set { _explicitNullValueShowInAddPersonDialog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_in_add_person_dialog"); else _explicitNullProperties?.Remove("show_in_add_person_dialog"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibilityShowInAddPersonDialog? _explicitNullValueShowInAddPersonDialog = default!;
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibilityShowInAddPersonDialog ShowInAddPersonDialog { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibilityShowInAddPersonDialog ShowInAddPersonDialog { get => _explicitNullValueShowInAddPersonDialog; set { _explicitNullValueShowInAddPersonDialog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_in_add_person_dialog"); else _explicitNullProperties?.Remove("show_in_add_person_dialog"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibilityShowInAddPersonDialog _explicitNullValueShowInAddPersonDialog = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibility"/> and sets the default values.
@@ -52,7 +69,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public static global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibility CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibility();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibility(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +96,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteBoolValue("details_visible_flag", DetailsVisibleFlag);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibilityShowInAddDealDialog>("show_in_add_deal_dialog", ShowInAddDealDialog);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddOrganizationFieldRequestUiVisibilityShowInAddPersonDialog>("show_in_add_person_dialog", ShowInAddPersonDialog);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

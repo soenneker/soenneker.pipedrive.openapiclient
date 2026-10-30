@@ -12,19 +12,31 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AddDealField200ResponseDataUiVisibilityShowInPipelines : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("pipeline_ids") is { } nullNodePipelineIds && nullNodePipelineIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineIds = null;
+            if (parseNode.GetChildNode("show_in_all") is { } nullNodeShowInAll && nullNodeShowInAll.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowInAll = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specific pipeline IDs where the field is shown (if show_in_all is false)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? PipelineIds { get; set; }
+        public List<int?>? PipelineIds { get => _explicitNullValuePipelineIds; set { _explicitNullValuePipelineIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_ids"); else _explicitNullProperties?.Remove("pipeline_ids"); } }
+        private List<int?>? _explicitNullValuePipelineIds = default!;
 #nullable restore
 #else
-        public List<int?> PipelineIds { get; set; }
+        public List<int?> PipelineIds { get => _explicitNullValuePipelineIds; set { _explicitNullValuePipelineIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_ids"); else _explicitNullProperties?.Remove("pipeline_ids"); } }
+        private List<int?> _explicitNullValuePipelineIds = default!;
 #endif
         /// <summary>Whether the field is shown in all pipelines</summary>
-        public bool? ShowInAll { get; set; }
+        public bool? ShowInAll { get => _explicitNullValueShowInAll; set { _explicitNullValueShowInAll = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_in_all"); else _explicitNullProperties?.Remove("show_in_all"); } }
+        private bool? _explicitNullValueShowInAll = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField200ResponseDataUiVisibilityShowInPipelines"/> and sets the default values.
         /// </summary>
@@ -40,7 +52,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public static global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField200ResponseDataUiVisibilityShowInPipelines CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField200ResponseDataUiVisibilityShowInPipelines();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealField200ResponseDataUiVisibilityShowInPipelines(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +75,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<int?>("pipeline_ids", PipelineIds);
             writer.WriteBoolValue("show_in_all", ShowInAll);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

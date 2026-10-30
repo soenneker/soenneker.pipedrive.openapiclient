@@ -11,70 +11,104 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetOrganizationFields200ResponseDataItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("field_code") is { } nullNodeFieldCode && nullNodeFieldCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldCode = null;
+            if (parseNode.GetChildNode("field_name") is { } nullNodeFieldName && nullNodeFieldName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldName = null;
+            if (parseNode.GetChildNode("field_type") is { } nullNodeFieldType && nullNodeFieldType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldType = null;
+            if (parseNode.GetChildNode("important_fields") is { } nullNodeImportantFields && nullNodeImportantFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportantFields = null;
+            if (parseNode.GetChildNode("is_custom_field") is { } nullNodeIsCustomField && nullNodeIsCustomField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCustomField = null;
+            if (parseNode.GetChildNode("is_optional_response_field") is { } nullNodeIsOptionalResponseField && nullNodeIsOptionalResponseField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOptionalResponseField = null;
+            if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
+            if (parseNode.GetChildNode("required_fields") is { } nullNodeRequiredFields && nullNodeRequiredFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequiredFields = null;
+            if (parseNode.GetChildNode("subfields") is { } nullNodeSubfields && nullNodeSubfields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subfields = null;
+            if (parseNode.GetChildNode("ui_visibility") is { } nullNodeUiVisibility && nullNodeUiVisibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UiVisibility = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique identifier for the field (40-character hash for custom fields)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FieldCode { get; set; }
+        public string? FieldCode { get => _explicitNullValueFieldCode; set { _explicitNullValueFieldCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_code"); else _explicitNullProperties?.Remove("field_code"); } }
+        private string? _explicitNullValueFieldCode = default!;
 #nullable restore
 #else
-        public string FieldCode { get; set; }
+        public string FieldCode { get => _explicitNullValueFieldCode; set { _explicitNullValueFieldCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_code"); else _explicitNullProperties?.Remove("field_code"); } }
+        private string _explicitNullValueFieldCode = default!;
 #endif
         /// <summary>The display name/label of the field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FieldName { get; set; }
+        public string? FieldName { get => _explicitNullValueFieldName; set { _explicitNullValueFieldName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_name"); else _explicitNullProperties?.Remove("field_name"); } }
+        private string? _explicitNullValueFieldName = default!;
 #nullable restore
 #else
-        public string FieldName { get; set; }
+        public string FieldName { get => _explicitNullValueFieldName; set { _explicitNullValueFieldName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_name"); else _explicitNullProperties?.Remove("field_name"); } }
+        private string _explicitNullValueFieldName = default!;
 #endif
         /// <summary>The type of the field</summary>
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemFieldType? FieldType { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemFieldType? FieldType { get => _explicitNullValueFieldType; set { _explicitNullValueFieldType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_type"); else _explicitNullProperties?.Remove("field_type"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemFieldType? _explicitNullValueFieldType = default!;
         /// <summary>Important fields configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemImportantFields? ImportantFields { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemImportantFields? ImportantFields { get => _explicitNullValueImportantFields; set { _explicitNullValueImportantFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("important_fields"); else _explicitNullProperties?.Remove("important_fields"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemImportantFields? _explicitNullValueImportantFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemImportantFields ImportantFields { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemImportantFields ImportantFields { get => _explicitNullValueImportantFields; set { _explicitNullValueImportantFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("important_fields"); else _explicitNullProperties?.Remove("important_fields"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemImportantFields _explicitNullValueImportantFields = default!;
 #endif
         /// <summary>Whether this is a user-created custom field</summary>
-        public bool? IsCustomField { get; set; }
+        public bool? IsCustomField { get => _explicitNullValueIsCustomField; set { _explicitNullValueIsCustomField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_custom_field"); else _explicitNullProperties?.Remove("is_custom_field"); } }
+        private bool? _explicitNullValueIsCustomField = default!;
         /// <summary>Whether this field is not returned by default in entity responses</summary>
-        public bool? IsOptionalResponseField { get; set; }
+        public bool? IsOptionalResponseField { get => _explicitNullValueIsOptionalResponseField; set { _explicitNullValueIsOptionalResponseField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_optional_response_field"); else _explicitNullProperties?.Remove("is_optional_response_field"); } }
+        private bool? _explicitNullValueIsOptionalResponseField = default!;
         /// <summary>Array of available options for enum/set fields, null for other field types</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemOptionsItem>? Options { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemOptionsItem>? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemOptionsItem>? _explicitNullValueOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemOptionsItem> Options { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemOptionsItem> Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemOptionsItem> _explicitNullValueOptions = default!;
 #endif
         /// <summary>Required fields configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemRequiredFields? RequiredFields { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemRequiredFields? RequiredFields { get => _explicitNullValueRequiredFields; set { _explicitNullValueRequiredFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required_fields"); else _explicitNullProperties?.Remove("required_fields"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemRequiredFields? _explicitNullValueRequiredFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemRequiredFields RequiredFields { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemRequiredFields RequiredFields { get => _explicitNullValueRequiredFields; set { _explicitNullValueRequiredFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required_fields"); else _explicitNullProperties?.Remove("required_fields"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemRequiredFields _explicitNullValueRequiredFields = default!;
 #endif
         /// <summary>Array of subfields for complex field types (address, monetary), null for simple field types</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemSubfieldsItem>? Subfields { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemSubfieldsItem>? Subfields { get => _explicitNullValueSubfields; set { _explicitNullValueSubfields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subfields"); else _explicitNullProperties?.Remove("subfields"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemSubfieldsItem>? _explicitNullValueSubfields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemSubfieldsItem> Subfields { get; set; }
+        public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemSubfieldsItem> Subfields { get => _explicitNullValueSubfields; set { _explicitNullValueSubfields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subfields"); else _explicitNullProperties?.Remove("subfields"); } }
+        private List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemSubfieldsItem> _explicitNullValueSubfields = default!;
 #endif
         /// <summary>UI visibility settings (only included when requested via include_fields parameter)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemUiVisibility? UiVisibility { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemUiVisibility? UiVisibility { get => _explicitNullValueUiVisibility; set { _explicitNullValueUiVisibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ui_visibility"); else _explicitNullProperties?.Remove("ui_visibility"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemUiVisibility? _explicitNullValueUiVisibility = default!;
 #nullable restore
 #else
-        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemUiVisibility UiVisibility { get; set; }
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemUiVisibility UiVisibility { get => _explicitNullValueUiVisibility; set { _explicitNullValueUiVisibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ui_visibility"); else _explicitNullProperties?.Remove("ui_visibility"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemUiVisibility _explicitNullValueUiVisibility = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItem"/> and sets the default values.
@@ -91,7 +125,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public static global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -130,6 +164,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemRequiredFields>("required_fields", RequiredFields);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemSubfieldsItem>("subfields", Subfields);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetOrganizationFields200ResponseDataItemUiVisibility>("ui_visibility", UiVisibility);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

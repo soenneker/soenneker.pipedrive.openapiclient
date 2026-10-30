@@ -49,7 +49,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item.Picture
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns the picture associated with a person. The picture URLs include both 128x128 and 512x512 pixel versions.

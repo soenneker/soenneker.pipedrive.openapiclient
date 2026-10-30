@@ -49,7 +49,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Products.Item.Duplicate
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.DuplicateProduct201Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.DuplicateProduct201Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.DuplicateProduct201Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.DuplicateProduct201Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a duplicate of an existing product including all variations, prices, and custom fields.

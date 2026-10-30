@@ -64,7 +64,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Deals.Item.Installments
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddAInstallmentResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddAInstallmentResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddAInstallmentResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddAInstallmentResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Adds an installment to a deal.An installment can only be added if the deal includes at least one one-time product. If the deal contains at least one recurring product, adding installments is not allowed.Only available in Growth and above plans.

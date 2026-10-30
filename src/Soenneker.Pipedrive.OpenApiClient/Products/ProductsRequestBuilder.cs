@@ -68,7 +68,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Products
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetProductsResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Adds a new product to the Products inventory. For more information, see the tutorial for &lt;a href=&quot;https://pipedrive.readme.io/docs/adding-a-product&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;adding a product&lt;/a&gt;.
@@ -88,7 +88,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Products
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProduct201Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddProduct201Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.AddProduct201Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.AddProduct201Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns data about all products.

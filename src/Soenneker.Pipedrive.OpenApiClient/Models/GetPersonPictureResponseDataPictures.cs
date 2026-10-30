@@ -12,24 +12,37 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetPersonPictureResponseDataPictures : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("512") is { } nullNodeFiveOneTwo && nullNodeFiveOneTwo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FiveOneTwo = null;
+            if (parseNode.GetChildNode("128") is { } nullNodeOneTwoEight && nullNodeOneTwoEight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OneTwoEight = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The URL of the 512x512 picture.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FiveOneTwo { get; set; }
+        public string? FiveOneTwo { get => _explicitNullValueFiveOneTwo; set { _explicitNullValueFiveOneTwo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("512"); else _explicitNullProperties?.Remove("512"); } }
+        private string? _explicitNullValueFiveOneTwo = default!;
 #nullable restore
 #else
-        public string FiveOneTwo { get; set; }
+        public string FiveOneTwo { get => _explicitNullValueFiveOneTwo; set { _explicitNullValueFiveOneTwo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("512"); else _explicitNullProperties?.Remove("512"); } }
+        private string _explicitNullValueFiveOneTwo = default!;
 #endif
         /// <summary>The URL of the 128x128 picture.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OneTwoEight { get; set; }
+        public string? OneTwoEight { get => _explicitNullValueOneTwoEight; set { _explicitNullValueOneTwoEight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("128"); else _explicitNullProperties?.Remove("128"); } }
+        private string? _explicitNullValueOneTwoEight = default!;
 #nullable restore
 #else
-        public string OneTwoEight { get; set; }
+        public string OneTwoEight { get => _explicitNullValueOneTwoEight; set { _explicitNullValueOneTwoEight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("128"); else _explicitNullProperties?.Remove("128"); } }
+        private string _explicitNullValueOneTwoEight = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseDataPictures"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public static global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseDataPictures CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseDataPictures();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonPictureResponseDataPictures(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("512", FiveOneTwo);
             writer.WriteStringValue("128", OneTwoEight);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
