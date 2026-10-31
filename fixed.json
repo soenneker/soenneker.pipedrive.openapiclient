@@ -1862,6 +1862,24 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Add a follower",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddDealFollower201Response"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "user_id": 1,
+                    "add_time": "2021-01-01T00:00:00Z"
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -2468,6 +2486,43 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Add a product to the deal",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddDealProduct201Response"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "id": 3,
+                    "sum": 90,
+                    "tax": 0,
+                    "deal_id": 1,
+                    "name": "Mechanical Pencil",
+                    "product_id": 1,
+                    "product_variation_id": null,
+                    "order_nr": 50,
+                    "add_time": "2019-12-19T11:36:49Z",
+                    "update_time": "2019-12-19T11:36:49Z",
+                    "comments": "",
+                    "currency": "USD",
+                    "discount": 0,
+                    "quantity": 1,
+                    "item_price": 90,
+                    "tax_method": "inclusive",
+                    "discount_type": "percentage",
+                    "is_enabled": true,
+                    "billing_frequency": "one-time",
+                    "billing_frequency_cycles": null,
+                    "billing_start_date": "2019-12-19"
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -2799,6 +2854,68 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Add many products to a deal",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddManyDealProductResponse"
+                },
+                "example": {
+                  "success": true,
+                  "data": [
+                    {
+                      "id": 1,
+                      "sum": 60.46,
+                      "tax": 0,
+                      "deal_id": 1,
+                      "name": "Product 1",
+                      "product_id": 1,
+                      "product_variation_id": null,
+                      "order_nr": 10,
+                      "add_time": "2019-12-19T11:36:49Z",
+                      "update_time": "2019-12-19T11:36:49Z",
+                      "comments": "",
+                      "currency": "USD",
+                      "discount": 0,
+                      "quantity": 2,
+                      "item_price": 30.23,
+                      "tax_method": "none",
+                      "discount_type": "percentage",
+                      "is_enabled": true,
+                      "billing_frequency": "one-time",
+                      "billing_frequency_cycles": null,
+                      "billing_start_date": null
+                    },
+                    {
+                      "id": 2,
+                      "sum": 40.5,
+                      "tax": 0,
+                      "deal_id": 1,
+                      "name": "Product 2",
+                      "product_id": 2,
+                      "product_variation_id": null,
+                      "order_nr": 20,
+                      "add_time": "2019-12-19T11:36:49Z",
+                      "update_time": "2019-12-19T11:36:49Z",
+                      "comments": "",
+                      "currency": "USD",
+                      "discount": 0,
+                      "quantity": 1,
+                      "item_price": 40.5,
+                      "tax_method": "none",
+                      "discount_type": "percentage",
+                      "is_enabled": true,
+                      "billing_frequency": "one-time",
+                      "billing_frequency_cycles": null,
+                      "billing_start_date": null
+                    }
+                  ]
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -2928,6 +3045,31 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Discount added to deal",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddAdditionalDiscountResponse"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "id": "30195b0e-7577-4f52-a5cf-f3ee39b9d1e0",
+                    "description": "10%",
+                    "amount": 10,
+                    "type": "percentage",
+                    "deal_id": 1,
+                    "created_at": "2024-03-12T10:30:05Z",
+                    "created_by": 1,
+                    "updated_at": "2024-03-12T10:30:05Z",
+                    "updated_by": 1
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -5073,6 +5215,24 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Add a follower",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddPersonFollower201Response"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "user_id": 1,
+                    "add_time": "2021-01-01T00:00:00Z"
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -6606,6 +6766,24 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Add a follower",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddOrganizationFollower201Response"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "user_id": 1,
+                    "add_time": "2021-01-01T00:00:00Z"
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -7763,6 +7941,65 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Add product data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddProduct201Response"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "id": 1,
+                    "name": "Mechanical Pencil",
+                    "code": "MPENCIL",
+                    "description": "Product description",
+                    "unit": "",
+                    "tax": 0,
+                    "category": "Retail",
+                    "is_linkable": true,
+                    "is_deleted": false,
+                    "visible_to": 3,
+                    "owner_id": 1234,
+                    "add_time": "2019-12-19T11:36:49Z",
+                    "update_time": "2019-12-19T11:36:49Z",
+                    "billing_frequency": "monthly",
+                    "billing_frequency_cycles": 4,
+                    "prices": [
+                      {
+                        "product_id": 1,
+                        "price": 5,
+                        "currency": "EUR",
+                        "cost": 2,
+                        "direct_cost": 1,
+                        "notes": "this is a note"
+                      }
+                    ],
+                    "custom_fields": {
+                      "type": "object",
+                      "description": "A map of custom fields with hash-based keys",
+                      "additionalProperties": {
+                        "oneOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "type": "object",
+                            "additionalProperties": true
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -7897,6 +8134,24 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Add a follower",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddProductFollower201Response"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "user_id": 1,
+                    "add_time": "2021-01-01T00:00:00Z"
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -8489,6 +8744,65 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Duplicate product data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DuplicateProduct201Response"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "id": 1,
+                    "name": "Mechanical Pencil",
+                    "code": "MPENCIL",
+                    "description": "Product description",
+                    "unit": "",
+                    "tax": 0,
+                    "category": "Retail",
+                    "is_linkable": true,
+                    "is_deleted": false,
+                    "visible_to": 3,
+                    "owner_id": 1234,
+                    "add_time": "2019-12-19T11:36:49Z",
+                    "update_time": "2019-12-19T11:36:49Z",
+                    "billing_frequency": "monthly",
+                    "billing_frequency_cycles": 4,
+                    "prices": [
+                      {
+                        "product_id": 1,
+                        "price": 5,
+                        "currency": "EUR",
+                        "cost": 2,
+                        "direct_cost": 1,
+                        "notes": "this is a note"
+                      }
+                    ],
+                    "custom_fields": {
+                      "type": "object",
+                      "description": "A map of custom fields with hash-based keys",
+                      "additionalProperties": {
+                        "oneOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "type": "object",
+                            "additionalProperties": true
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -8643,6 +8957,35 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Add a product variation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddProductVariation201Response"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "id": 2,
+                    "name": "Upgraded Mechanical Pencil",
+                    "product_id": 1,
+                    "prices": [
+                      {
+                        "product_variation_id": 2,
+                        "price": 5,
+                        "currency": "EUR",
+                        "cost": 2,
+                        "direct_cost": 3,
+                        "notes": "This is the price for the upgraded mechanical pencil"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -8897,6 +9240,26 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Image added to product.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddProductImageResponse"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "id": 1,
+                    "product_id": 1,
+                    "company_id": "1",
+                    "add_time": "2025-03-10"
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -12007,6 +12370,49 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Add project",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddProject201Response"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "id": 3,
+                    "title": "Project",
+                    "description": "Description",
+                    "status": "open",
+                    "board_id": 1,
+                    "phase_id": 1,
+                    "owner_id": 1,
+                    "start_date": "2026-04-15",
+                    "end_date": "2026-04-23",
+                    "deal_ids": [
+                      1
+                    ],
+                    "person_ids": [
+                      1
+                    ],
+                    "org_ids": [
+                      1
+                    ],
+                    "label_ids": [
+                      1
+                    ],
+                    "health_status": 10,
+                    "add_time": "2026-04-14T10:45:20.852Z",
+                    "update_time": "2026-04-14T10:45:20.852Z",
+                    "status_change_time": "2026-04-14T10:45:20.852Z",
+                    "archive_time": null,
+                    "custom_fields": {}
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -13026,6 +13432,41 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Created task.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddTaskResponse"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "id": 1,
+                    "title": "Task 1",
+                    "creator_id": 2,
+                    "description": "Task description",
+                    "project_id": 1,
+                    "is_done": false,
+                    "is_milestone": false,
+                    "due_date": "2026-10-11",
+                    "start_date": "2026-09-01",
+                    "parent_task_id": null,
+                    "assignee_ids": [
+                      2,
+                      3
+                    ],
+                    "priority": null,
+                    "add_time": "2026-09-14T08:14:40.000Z",
+                    "update_time": "2026-09-14T08:14:40.000Z",
+                    "marked_as_done_time": null
+                  },
+                  "additional_data": null
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
