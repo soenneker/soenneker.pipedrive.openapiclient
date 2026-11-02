@@ -14306,755 +14306,6 @@
   },
   "components": {
     "schemas": {
-      "ActivityItem": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "The ID of the activity"
-          },
-          "subject": {
-            "type": "string",
-            "description": "The subject of the activity"
-          },
-          "type": {
-            "type": "string",
-            "description": "The type of the activity"
-          },
-          "owner_id": {
-            "type": "integer",
-            "description": "The ID of the user who owns the activity"
-          },
-          "creator_user_id": {
-            "type": "integer",
-            "description": "The ID of the user who created the activity"
-          },
-          "is_deleted": {
-            "type": "boolean",
-            "description": "Whether the activity is deleted or not"
-          },
-          "add_time": {
-            "type": "string",
-            "description": "The creation date and time of the activity"
-          },
-          "update_time": {
-            "type": "string",
-            "description": "The last updated date and time of the activity"
-          },
-          "deal_id": {
-            "type": "integer",
-            "description": "The ID of the deal linked to the activity",
-            "nullable": true
-          },
-          "lead_id": {
-            "type": "string",
-            "description": "The ID of the lead linked to the activity",
-            "nullable": true
-          },
-          "person_id": {
-            "type": "integer",
-            "description": "The ID of the person linked to the activity",
-            "nullable": true
-          },
-          "org_id": {
-            "type": "integer",
-            "description": "The ID of the organization linked to the activity",
-            "nullable": true
-          },
-          "project_id": {
-            "type": "integer",
-            "description": "The ID of the project linked to the activity",
-            "nullable": true
-          },
-          "due_date": {
-            "type": "string",
-            "description": "The due date of the activity"
-          },
-          "due_time": {
-            "type": "string",
-            "description": "The due time of the activity",
-            "nullable": true
-          },
-          "duration": {
-            "type": "string",
-            "description": "The duration of the activity",
-            "nullable": true
-          },
-          "busy": {
-            "type": "boolean",
-            "description": "Whether the activity marks the assignee as busy or not in their calendar"
-          },
-          "done": {
-            "type": "boolean",
-            "description": "Whether the activity is marked as done or not"
-          },
-          "marked_as_done_time": {
-            "type": "string",
-            "description": "The date and time when the activity was marked as done",
-            "nullable": true
-          },
-          "location": {
-            "$ref": "#/components/schemas/ActivityItemLocation"
-          },
-          "participants": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ActivityItemParticipantsItem"
-            },
-            "description": "The participants of the activity"
-          },
-          "attendees": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ActivityItemAttendeesItem"
-            },
-            "description": "The attendees of the activity"
-          },
-          "conference_meeting_client": {
-            "type": "string",
-            "description": "The client used for the conference meeting"
-          },
-          "conference_meeting_url": {
-            "type": "string",
-            "description": "The URL of the conference meeting"
-          },
-          "conference_meeting_id": {
-            "type": "string",
-            "description": "The ID of the conference meeting"
-          },
-          "public_description": {
-            "type": "string",
-            "description": "The public description of the activity"
-          },
-          "priority": {
-            "type": "integer",
-            "description": "The priority of the activity. Mappable to a specific string using activityFields API."
-          },
-          "outcome": {
-            "type": "integer",
-            "description": "The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API.",
-            "nullable": true
-          },
-          "note": {
-            "type": "string",
-            "description": "The note of the activity"
-          }
-        }
-      },
-      "Deal": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "The ID of the deal"
-          },
-          "title": {
-            "type": "string",
-            "description": "The title of the deal"
-          },
-          "owner_id": {
-            "type": "integer",
-            "description": "The ID of the user who owns the deal"
-          },
-          "person_id": {
-            "type": "integer",
-            "description": "The ID of the person linked to the deal",
-            "nullable": true
-          },
-          "org_id": {
-            "type": "integer",
-            "description": "The ID of the organization linked to the deal",
-            "nullable": true
-          },
-          "pipeline_id": {
-            "type": "integer",
-            "description": "The ID of the pipeline associated with the deal"
-          },
-          "stage_id": {
-            "type": "integer",
-            "description": "The ID of the deal stage"
-          },
-          "value": {
-            "type": "number",
-            "description": "The value of the deal"
-          },
-          "currency": {
-            "type": "string",
-            "description": "The currency associated with the deal"
-          },
-          "add_time": {
-            "type": "string",
-            "description": "The creation date and time of the deal"
-          },
-          "update_time": {
-            "type": "string",
-            "description": "The last updated date and time of the deal",
-            "nullable": true
-          },
-          "stage_change_time": {
-            "type": "string",
-            "description": "The last updated date and time of the deal stage",
-            "nullable": true
-          },
-          "is_deleted": {
-            "type": "boolean",
-            "description": "Whether the deal is deleted or not"
-          },
-          "is_archived": {
-            "type": "boolean",
-            "description": "Whether the deal is archived or not"
-          },
-          "status": {
-            "type": "string",
-            "description": "The status of the deal"
-          },
-          "probability": {
-            "type": "number",
-            "description": "The success probability percentage of the deal",
-            "nullable": true
-          },
-          "lost_reason": {
-            "type": "string",
-            "description": "The reason for losing the deal",
-            "nullable": true
-          },
-          "visible_to": {
-            "type": "integer",
-            "description": "The visibility of the deal"
-          },
-          "close_time": {
-            "type": "string",
-            "description": "The date and time of closing the deal",
-            "nullable": true
-          },
-          "won_time": {
-            "type": "string",
-            "description": "The date and time of changing the deal status as won",
-            "nullable": true
-          },
-          "lost_time": {
-            "type": "string",
-            "description": "The date and time of changing the deal status as lost",
-            "nullable": true
-          },
-          "expected_close_date": {
-            "type": "string",
-            "description": "The expected close date of the deal",
-            "format": "date",
-            "nullable": true
-          },
-          "label_ids": {
-            "type": "array",
-            "items": {
-              "type": "integer"
-            },
-            "description": "The IDs of labels assigned to the deal"
-          },
-          "origin": {
-            "type": "string",
-            "description": "The way this Deal was created. \u0060origin\u0060 field is set by Pipedrive when Deal is created and cannot be changed."
-          },
-          "origin_id": {
-            "type": "string",
-            "description": "The optional ID to further distinguish the origin of the deal - e.g. Which API integration created this Deal.",
-            "nullable": true
-          },
-          "channel": {
-            "type": "integer",
-            "description": "The ID of your Marketing channel this Deal was created from. Recognized Marketing channels can be configured in your \u003Ca href=\u0022https://app.pipedrive.com/settings/fields\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003ECompany settings\u003C/a\u003E.",
-            "nullable": true
-          },
-          "channel_id": {
-            "type": "string",
-            "description": "The optional ID to further distinguish the Marketing channel.",
-            "nullable": true
-          },
-          "source_lead_id": {
-            "type": "string",
-            "description": "The ID of the lead if the deal was converted from a lead. Only included when requested via include_fields parameter.",
-            "format": "uuid",
-            "nullable": true
-          },
-          "arr": {
-            "type": "number",
-            "description": "Only available in Growth and above plans\n\nThe Annual Recurring Revenue of the deal\n\nNull if there are no products attached to the deal\n",
-            "nullable": true
-          },
-          "mrr": {
-            "type": "number",
-            "description": "Only available in Growth and above plans\n\nThe Monthly Recurring Revenue of the deal\n\nNull if there are no products attached to the deal\n",
-            "nullable": true
-          },
-          "acv": {
-            "type": "number",
-            "description": "Only available in Growth and above plans\n\nThe Annual Contract Value of the deal\n\nNull if there are no products attached to the deal\n",
-            "nullable": true
-          },
-          "custom_fields": {
-            "$ref": "#/components/schemas/DealCustomFieldsProperty"
-          }
-        }
-      },
-      "FollowerItem": {
-        "type": "object",
-        "properties": {
-          "user_id": {
-            "type": "integer",
-            "description": "The ID of the user following the entity"
-          },
-          "add_time": {
-            "type": "string",
-            "description": "The add time of the following"
-          }
-        }
-      },
-      "OrganizationItem": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "The ID of the organization"
-          },
-          "name": {
-            "type": "string",
-            "description": "The name of the organization"
-          },
-          "owner_id": {
-            "type": "integer",
-            "description": "The ID of the user who owns the organization"
-          },
-          "add_time": {
-            "type": "string",
-            "description": "The creation date and time of the organization"
-          },
-          "update_time": {
-            "type": "string",
-            "description": "The last updated date and time of the organization",
-            "nullable": true
-          },
-          "is_deleted": {
-            "type": "boolean",
-            "description": "Whether the organization is deleted or not"
-          },
-          "visible_to": {
-            "type": "integer",
-            "description": "The visibility of the organization"
-          },
-          "address": {
-            "$ref": "#/components/schemas/OrganizationItemAddress"
-          },
-          "label_ids": {
-            "type": "array",
-            "items": {
-              "type": "integer"
-            },
-            "description": "The IDs of labels assigned to the organization"
-          },
-          "website": {
-            "type": "string",
-            "description": "The website of the organization",
-            "nullable": true
-          },
-          "linkedin": {
-            "type": "string",
-            "description": "The LinkedIn profile URL of the organization",
-            "nullable": true
-          },
-          "industry": {
-            "type": "integer",
-            "description": "The industry the organization belongs to",
-            "nullable": true
-          },
-          "annual_revenue": {
-            "type": "integer",
-            "description": "The annual revenue of the organization",
-            "nullable": true
-          },
-          "employee_count": {
-            "type": "integer",
-            "description": "The number of employees in the organization",
-            "nullable": true
-          },
-          "custom_fields": {
-            "$ref": "#/components/schemas/OrganizationItemCustomFieldsProperty"
-          }
-        }
-      },
-      "Person": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "The ID of the person"
-          },
-          "name": {
-            "type": "string",
-            "description": "The name of the person"
-          },
-          "first_name": {
-            "type": "string",
-            "description": "The first name of the person"
-          },
-          "last_name": {
-            "type": "string",
-            "description": "The last name of the person"
-          },
-          "owner_id": {
-            "type": "integer",
-            "description": "The ID of the user who owns the person"
-          },
-          "org_id": {
-            "type": "integer",
-            "description": "The ID of the organization linked to the person"
-          },
-          "add_time": {
-            "type": "string",
-            "description": "The creation date and time of the person"
-          },
-          "update_time": {
-            "type": "string",
-            "description": "The last updated date and time of the person",
-            "nullable": true
-          },
-          "emails": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PersonEmailsItem"
-            },
-            "description": "The emails of the person"
-          },
-          "phones": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PersonPhonesItem"
-            },
-            "description": "The phones of the person"
-          },
-          "is_deleted": {
-            "type": "boolean",
-            "description": "Whether the person is deleted or not"
-          },
-          "visible_to": {
-            "type": "integer",
-            "description": "The visibility of the person"
-          },
-          "label_ids": {
-            "type": "array",
-            "items": {
-              "type": "integer"
-            },
-            "description": "The IDs of labels assigned to the person"
-          },
-          "picture_id": {
-            "type": "integer",
-            "description": "The ID of the picture associated with the person",
-            "nullable": true
-          },
-          "postal_address": {
-            "$ref": "#/components/schemas/PersonPostalAddress"
-          },
-          "notes": {
-            "type": "string",
-            "description": "Contact sync notes of the person, maximum 10 000 characters, included if contact sync is enabled for the company"
-          },
-          "im": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PersonImItem"
-            },
-            "description": "The instant messaging accounts of the person, included if contact sync is enabled for the company"
-          },
-          "birthday": {
-            "type": "string",
-            "description": "The birthday of the person, included if contact sync is enabled for the company"
-          },
-          "job_title": {
-            "type": "string",
-            "description": "The job title of the person, included if contact sync is enabled for the company"
-          },
-          "custom_fields": {
-            "$ref": "#/components/schemas/PersonCustomFieldsProperty"
-          }
-        }
-      },
-      "ActivityItemLocation": {
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "description": "The full address of the activity"
-          },
-          "country": {
-            "type": "string",
-            "description": "Country of the activity",
-            "nullable": true
-          },
-          "admin_area_level_1": {
-            "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the activity",
-            "nullable": true
-          },
-          "admin_area_level_2": {
-            "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the activity",
-            "nullable": true
-          },
-          "locality": {
-            "type": "string",
-            "description": "Locality (e.g. city) of the activity",
-            "nullable": true
-          },
-          "sublocality": {
-            "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the activity",
-            "nullable": true
-          },
-          "route": {
-            "type": "string",
-            "description": "Route (e.g. street) of the activity",
-            "nullable": true
-          },
-          "street_number": {
-            "type": "string",
-            "description": "Street number of the activity",
-            "nullable": true
-          },
-          "subpremise": {
-            "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the activity",
-            "nullable": true
-          },
-          "postal_code": {
-            "type": "string",
-            "description": "Postal code of the activity",
-            "nullable": true
-          }
-        },
-        "description": "Location of the activity",
-        "nullable": true
-      },
-      "ActivityItemParticipantsItem": {
-        "type": "object",
-        "properties": {
-          "person_id": {
-            "type": "integer",
-            "description": "The ID of the person"
-          },
-          "primary": {
-            "type": "boolean",
-            "description": "Whether the person is the primary participant or not"
-          }
-        }
-      },
-      "ActivityItemAttendeesItem": {
-        "type": "object",
-        "properties": {
-          "email": {
-            "type": "string",
-            "description": "The email address of the attendee"
-          },
-          "name": {
-            "type": "string",
-            "description": "The name of the attendee"
-          },
-          "status": {
-            "type": "string",
-            "description": "The status of the attendee"
-          },
-          "is_organizer": {
-            "type": "boolean",
-            "description": "Whether the attendee is the organizer or not"
-          },
-          "person_id": {
-            "type": "integer",
-            "description": "The ID of the person if the attendee has a person record"
-          },
-          "user_id": {
-            "type": "integer",
-            "description": "The ID of the user if the attendee is a user"
-          }
-        }
-      },
-      "DealCustomFields": {
-        "type": "object",
-        "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
-      },
-      "OrganizationItemAddress": {
-        "title": "OrganizationItemAddress",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "description": "The full address of the organization"
-          },
-          "country": {
-            "type": "string",
-            "description": "Country of the organization",
-            "nullable": true
-          },
-          "admin_area_level_1": {
-            "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the organization",
-            "nullable": true
-          },
-          "admin_area_level_2": {
-            "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the organization",
-            "nullable": true
-          },
-          "locality": {
-            "type": "string",
-            "description": "Locality (e.g. city) of the organization",
-            "nullable": true
-          },
-          "sublocality": {
-            "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the organization",
-            "nullable": true
-          },
-          "route": {
-            "type": "string",
-            "description": "Route (e.g. street) of the organization",
-            "nullable": true
-          },
-          "street_number": {
-            "type": "string",
-            "description": "Street number of the organization",
-            "nullable": true
-          },
-          "subpremise": {
-            "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the organization",
-            "nullable": true
-          },
-          "postal_code": {
-            "type": "string",
-            "description": "Postal code of the organization",
-            "nullable": true
-          }
-        },
-        "description": "The address of the organization",
-        "nullable": true
-      },
-      "OrganizationItemCustomFields": {
-        "type": "object",
-        "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
-      },
-      "PersonEmailsItem": {
-        "title": "PersonItemEmail",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "description": "The email address of the person"
-          },
-          "primary": {
-            "type": "boolean",
-            "description": "Whether the email is primary or not"
-          },
-          "label": {
-            "type": "string",
-            "description": "The email address classification label"
-          }
-        }
-      },
-      "PersonPhonesItem": {
-        "title": "PersonItemPhone",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "description": "The phone number of the person"
-          },
-          "primary": {
-            "type": "boolean",
-            "description": "Whether the phone number is primary or not"
-          },
-          "label": {
-            "type": "string",
-            "description": "The phone number classification label"
-          }
-        }
-      },
-      "PersonPostalAddress": {
-        "title": "PersonItemAddress",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "description": "The full address of the person"
-          },
-          "country": {
-            "type": "string",
-            "description": "Country of the person",
-            "nullable": true
-          },
-          "admin_area_level_1": {
-            "type": "string",
-            "description": "Admin area level 1 (e.g. state) of the person",
-            "nullable": true
-          },
-          "admin_area_level_2": {
-            "type": "string",
-            "description": "Admin area level 2 (e.g. county) of the person",
-            "nullable": true
-          },
-          "locality": {
-            "type": "string",
-            "description": "Locality (e.g. city) of the person",
-            "nullable": true
-          },
-          "sublocality": {
-            "type": "string",
-            "description": "Sublocality (e.g. neighborhood) of the person",
-            "nullable": true
-          },
-          "route": {
-            "type": "string",
-            "description": "Route (e.g. street) of the person",
-            "nullable": true
-          },
-          "street_number": {
-            "type": "string",
-            "description": "Street number of the person",
-            "nullable": true
-          },
-          "subpremise": {
-            "type": "string",
-            "description": "Subpremise (e.g. apartment/suite number) of the person",
-            "nullable": true
-          },
-          "postal_code": {
-            "type": "string",
-            "description": "Postal code of the person",
-            "nullable": true
-          }
-        },
-        "description": "Postal address of the person, included if contact sync is enabled for the company",
-        "nullable": true
-      },
-      "PersonImItem": {
-        "title": "PersonItemIm",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string",
-            "description": "The instant messaging account of the person"
-          },
-          "primary": {
-            "type": "boolean",
-            "description": "Whether the instant messaging account is primary or not"
-          },
-          "label": {
-            "type": "string",
-            "description": "The instant messaging account classification label"
-          }
-        }
-      },
-      "PersonCustomFields": {
-        "type": "object",
-        "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
-      },
       "GetActivitiesResponse": {
         "title": "GetActivitiesResponse",
         "type": "object",
@@ -16332,13 +15583,6 @@
           }
         }
       },
-      "AddDealFieldOptionsRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AddDealFieldOptionsRequestItem"
-        },
-        "description": "Array of options to add. Each item must contain a label. At least one option is required."
-      },
       "AddDealFieldOptions200Response": {
         "type": "object",
         "properties": {
@@ -16356,13 +15600,6 @@
           }
         }
       },
-      "DeleteDealFieldOptionsRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DeleteDealFieldOptionsRequestItem"
-        },
-        "description": "Array of option IDs to delete. Each item must contain an ID of the option to delete. At least one option ID is required. The entire request fails if any option does not exist."
-      },
       "DeleteDealFieldOptions200Response": {
         "type": "object",
         "properties": {
@@ -16379,13 +15616,6 @@
             "$ref": "#/components/schemas/DeleteDealFieldOptions200ResponseAdditionalData"
           }
         }
-      },
-      "UpdateDealFieldOptionsRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/UpdateDealFieldOptionsRequestItem"
-        },
-        "description": "Array of options to update. Each item must contain an ID and the updated label. At least one option is required. The entire request fails if any option does not exist."
       },
       "UpdateDealFieldOptions200Response": {
         "type": "object",
@@ -16878,13 +16108,6 @@
           }
         }
       },
-      "AddPersonFieldOptionsRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AddPersonFieldOptionsRequestItem"
-        },
-        "description": "Array of options to add. Each item must contain a label. At least one option is required."
-      },
       "AddPersonFieldOptions200Response": {
         "type": "object",
         "properties": {
@@ -16902,13 +16125,6 @@
           }
         }
       },
-      "DeletePersonFieldOptionsRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DeletePersonFieldOptionsRequestItem"
-        },
-        "description": "Array of option IDs to delete. Each item must contain an ID of the option to delete. At least one option ID is required. The entire request fails if any option does not exist."
-      },
       "DeletePersonFieldOptions200Response": {
         "type": "object",
         "properties": {
@@ -16925,13 +16141,6 @@
             "$ref": "#/components/schemas/DeletePersonFieldOptions200ResponseAdditionalData"
           }
         }
-      },
-      "UpdatePersonFieldOptionsRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/UpdatePersonFieldOptionsRequestItem"
-        },
-        "description": "Array of options to update. Each item must contain an ID and the updated label. At least one option is required. The entire request fails if any option does not exist."
       },
       "UpdatePersonFieldOptions200Response": {
         "type": "object",
@@ -17338,13 +16547,6 @@
           }
         }
       },
-      "AddOrganizationFieldOptionsRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AddOrganizationFieldOptionsRequestItem"
-        },
-        "description": "Array of options to add. Each item must contain a label. At least one option is required."
-      },
       "AddOrganizationFieldOptions200Response": {
         "type": "object",
         "properties": {
@@ -17362,13 +16564,6 @@
           }
         }
       },
-      "DeleteOrganizationFieldOptionsRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DeleteOrganizationFieldOptionsRequestItem"
-        },
-        "description": "Array of option IDs to delete. Each item must contain an ID of the option to delete. At least one option ID is required. The entire request fails if any option does not exist."
-      },
       "DeleteOrganizationFieldOptions200Response": {
         "type": "object",
         "properties": {
@@ -17385,13 +16580,6 @@
             "$ref": "#/components/schemas/DeleteOrganizationFieldOptions200ResponseAdditionalData"
           }
         }
-      },
-      "UpdateOrganizationFieldOptionsRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/UpdateOrganizationFieldOptionsRequestItem"
-        },
-        "description": "Array of options to update. Each item must contain an ID and the updated label. At least one option is required. The entire request fails if any option does not exist."
       },
       "UpdateOrganizationFieldOptions200Response": {
         "type": "object",
@@ -18000,13 +17188,6 @@
           }
         }
       },
-      "AddProductFieldOptionsRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AddProductFieldOptionsRequestItem"
-        },
-        "description": "Array of options to add. Each item must contain a label. At least one option is required."
-      },
       "AddProductFieldOptions200Response": {
         "type": "object",
         "properties": {
@@ -18024,13 +17205,6 @@
           }
         }
       },
-      "DeleteProductFieldOptionsRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DeleteProductFieldOptionsRequestItem"
-        },
-        "description": "Array of option IDs to delete. Each item must contain an ID of the option to delete. At least one option ID is required. The entire request fails if any option does not exist."
-      },
       "DeleteProductFieldOptions200Response": {
         "type": "object",
         "properties": {
@@ -18047,13 +17221,6 @@
             "$ref": "#/components/schemas/DeleteProductFieldOptions200ResponseAdditionalData"
           }
         }
-      },
-      "UpdateProductFieldOptionsRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/UpdateProductFieldOptionsRequestItem"
-        },
-        "description": "Array of options to update. Each item must contain an ID and the updated label. At least one option is required. The entire request fails if any option does not exist."
       },
       "UpdateProductFieldOptions200Response": {
         "type": "object",
@@ -18606,13 +17773,6 @@
           }
         }
       },
-      "AddProjectFieldOptionsRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AddProjectFieldOptionsRequestItem"
-        },
-        "description": "Array of options to add. Each item must contain a label. At least one option is required."
-      },
       "AddProjectFieldOptions200Response": {
         "type": "object",
         "properties": {
@@ -18630,13 +17790,6 @@
           }
         }
       },
-      "DeleteProjectFieldOptionsRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DeleteProjectFieldOptionsRequestItem"
-        },
-        "description": "Array of option IDs to delete. Each item must contain an ID of the option to delete. At least one option ID is required. The entire request fails if any option does not exist."
-      },
       "DeleteProjectFieldOptions200Response": {
         "type": "object",
         "properties": {
@@ -18653,13 +17806,6 @@
             "$ref": "#/components/schemas/DeleteProjectFieldOptions200ResponseAdditionalData"
           }
         }
-      },
-      "UpdateProjectFieldOptionsRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/UpdateProjectFieldOptionsRequestItem"
-        },
-        "description": "Array of options to update. Each item must contain an ID and the updated label. At least one option is required. The entire request fails if any option does not exist."
       },
       "UpdateProjectFieldOptions200Response": {
         "type": "object",
@@ -19481,10 +18627,6 @@
           }
         }
       },
-      "ExamplePayload": {
-        "type": "object",
-        "description": "Placeholder schema for path example refs"
-      },
       "AddDealFieldOptionsRequestRequestBody": {
         "type": "array",
         "items": {
@@ -19589,18 +18731,6 @@
           "$ref": "#/components/schemas/UpdateProjectFieldOptionsRequestRequestBodyItem"
         },
         "description": "Array of options to update. Each item must contain an ID and the updated label. At least one option is required. The entire request fails if any option does not exist."
-      },
-      "DealCustomFieldsProperty": {
-        "type": "object",
-        "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
-      },
-      "OrganizationItemCustomFieldsProperty": {
-        "type": "object",
-        "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
-      },
-      "PersonCustomFieldsProperty": {
-        "type": "object",
-        "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
       "GetActivitiesResponseDataItem": {
         "type": "object",
@@ -22642,20 +21772,6 @@
           }
         }
       },
-      "AddDealFieldOptionsRequestItem": {
-        "required": [
-          "label"
-        ],
-        "type": "object",
-        "properties": {
-          "label": {
-            "maxLength": 255,
-            "minLength": 1,
-            "type": "string",
-            "description": "The display label for the new option"
-          }
-        }
-      },
       "AddDealFieldOptions200ResponseDataItem": {
         "required": [
           "id",
@@ -22677,18 +21793,6 @@
         "type": "object",
         "nullable": true
       },
-      "DeleteDealFieldOptionsRequestItem": {
-        "required": [
-          "id"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "The unique identifier of the option to delete"
-          }
-        }
-      },
       "DeleteDealFieldOptions200ResponseDataItem": {
         "required": [
           "id",
@@ -22709,25 +21813,6 @@
       "DeleteDealFieldOptions200ResponseAdditionalData": {
         "type": "object",
         "nullable": true
-      },
-      "UpdateDealFieldOptionsRequestItem": {
-        "required": [
-          "id",
-          "label"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "The unique identifier of the option to update"
-          },
-          "label": {
-            "maxLength": 255,
-            "minLength": 1,
-            "type": "string",
-            "description": "The new display label for the option"
-          }
-        }
       },
       "UpdateDealFieldOptions200ResponseDataItem": {
         "required": [
@@ -23933,20 +23018,6 @@
           }
         }
       },
-      "AddPersonFieldOptionsRequestItem": {
-        "required": [
-          "label"
-        ],
-        "type": "object",
-        "properties": {
-          "label": {
-            "maxLength": 255,
-            "minLength": 1,
-            "type": "string",
-            "description": "The display label for the new option"
-          }
-        }
-      },
       "AddPersonFieldOptions200ResponseDataItem": {
         "required": [
           "id",
@@ -23968,18 +23039,6 @@
         "type": "object",
         "nullable": true
       },
-      "DeletePersonFieldOptionsRequestItem": {
-        "required": [
-          "id"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "The unique identifier of the option to delete"
-          }
-        }
-      },
       "DeletePersonFieldOptions200ResponseDataItem": {
         "required": [
           "id",
@@ -24000,25 +23059,6 @@
       "DeletePersonFieldOptions200ResponseAdditionalData": {
         "type": "object",
         "nullable": true
-      },
-      "UpdatePersonFieldOptionsRequestItem": {
-        "required": [
-          "id",
-          "label"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "The unique identifier of the option to update"
-          },
-          "label": {
-            "maxLength": 255,
-            "minLength": 1,
-            "type": "string",
-            "description": "The new display label for the option"
-          }
-        }
       },
       "UpdatePersonFieldOptions200ResponseDataItem": {
         "required": [
@@ -24948,20 +23988,6 @@
           }
         }
       },
-      "AddOrganizationFieldOptionsRequestItem": {
-        "required": [
-          "label"
-        ],
-        "type": "object",
-        "properties": {
-          "label": {
-            "maxLength": 255,
-            "minLength": 1,
-            "type": "string",
-            "description": "The display label for the new option"
-          }
-        }
-      },
       "AddOrganizationFieldOptions200ResponseDataItem": {
         "required": [
           "id",
@@ -24983,18 +24009,6 @@
         "type": "object",
         "nullable": true
       },
-      "DeleteOrganizationFieldOptionsRequestItem": {
-        "required": [
-          "id"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "The unique identifier of the option to delete"
-          }
-        }
-      },
       "DeleteOrganizationFieldOptions200ResponseDataItem": {
         "required": [
           "id",
@@ -25015,25 +24029,6 @@
       "DeleteOrganizationFieldOptions200ResponseAdditionalData": {
         "type": "object",
         "nullable": true
-      },
-      "UpdateOrganizationFieldOptionsRequestItem": {
-        "required": [
-          "id",
-          "label"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "The unique identifier of the option to update"
-          },
-          "label": {
-            "maxLength": 255,
-            "minLength": 1,
-            "type": "string",
-            "description": "The new display label for the option"
-          }
-        }
       },
       "UpdateOrganizationFieldOptions200ResponseDataItem": {
         "required": [
@@ -26180,20 +25175,6 @@
           }
         }
       },
-      "AddProductFieldOptionsRequestItem": {
-        "required": [
-          "label"
-        ],
-        "type": "object",
-        "properties": {
-          "label": {
-            "maxLength": 255,
-            "minLength": 1,
-            "type": "string",
-            "description": "The display label for the new option"
-          }
-        }
-      },
       "AddProductFieldOptions200ResponseDataItem": {
         "required": [
           "id",
@@ -26215,18 +25196,6 @@
         "type": "object",
         "nullable": true
       },
-      "DeleteProductFieldOptionsRequestItem": {
-        "required": [
-          "id"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "The unique identifier of the option to delete"
-          }
-        }
-      },
       "DeleteProductFieldOptions200ResponseDataItem": {
         "required": [
           "id",
@@ -26247,25 +25216,6 @@
       "DeleteProductFieldOptions200ResponseAdditionalData": {
         "type": "object",
         "nullable": true
-      },
-      "UpdateProductFieldOptionsRequestItem": {
-        "required": [
-          "id",
-          "label"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "The unique identifier of the option to update"
-          },
-          "label": {
-            "maxLength": 255,
-            "minLength": 1,
-            "type": "string",
-            "description": "The new display label for the option"
-          }
-        }
       },
       "UpdateProductFieldOptions200ResponseDataItem": {
         "required": [
@@ -27238,20 +26188,6 @@
           }
         }
       },
-      "AddProjectFieldOptionsRequestItem": {
-        "required": [
-          "label"
-        ],
-        "type": "object",
-        "properties": {
-          "label": {
-            "maxLength": 255,
-            "minLength": 1,
-            "type": "string",
-            "description": "The display label for the new option"
-          }
-        }
-      },
       "AddProjectFieldOptions200ResponseDataItem": {
         "required": [
           "id",
@@ -27273,18 +26209,6 @@
         "type": "object",
         "nullable": true
       },
-      "DeleteProjectFieldOptionsRequestItem": {
-        "required": [
-          "id"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "The unique identifier of the option to delete"
-          }
-        }
-      },
       "DeleteProjectFieldOptions200ResponseDataItem": {
         "required": [
           "id",
@@ -27305,25 +26229,6 @@
       "DeleteProjectFieldOptions200ResponseAdditionalData": {
         "type": "object",
         "nullable": true
-      },
-      "UpdateProjectFieldOptionsRequestItem": {
-        "required": [
-          "id",
-          "label"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "The unique identifier of the option to update"
-          },
-          "label": {
-            "maxLength": 255,
-            "minLength": 1,
-            "type": "string",
-            "description": "The new display label for the option"
-          }
-        }
       },
       "UpdateProjectFieldOptions200ResponseDataItem": {
         "required": [
@@ -41655,5 +40560,1102 @@
       "name": "Beta",
       "description": "Beta endpoints are endpoints that may have changes without a regular 60-90 day notice period.\n"
     }
-  ]
+  ],
+  "x-client-unused-schemas": {
+    "ActivityItem": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The ID of the activity"
+        },
+        "subject": {
+          "type": "string",
+          "description": "The subject of the activity"
+        },
+        "type": {
+          "type": "string",
+          "description": "The type of the activity"
+        },
+        "owner_id": {
+          "type": "integer",
+          "description": "The ID of the user who owns the activity"
+        },
+        "creator_user_id": {
+          "type": "integer",
+          "description": "The ID of the user who created the activity"
+        },
+        "is_deleted": {
+          "type": "boolean",
+          "description": "Whether the activity is deleted or not"
+        },
+        "add_time": {
+          "type": "string",
+          "description": "The creation date and time of the activity"
+        },
+        "update_time": {
+          "type": "string",
+          "description": "The last updated date and time of the activity"
+        },
+        "deal_id": {
+          "type": "integer",
+          "description": "The ID of the deal linked to the activity",
+          "nullable": true
+        },
+        "lead_id": {
+          "type": "string",
+          "description": "The ID of the lead linked to the activity",
+          "nullable": true
+        },
+        "person_id": {
+          "type": "integer",
+          "description": "The ID of the person linked to the activity",
+          "nullable": true
+        },
+        "org_id": {
+          "type": "integer",
+          "description": "The ID of the organization linked to the activity",
+          "nullable": true
+        },
+        "project_id": {
+          "type": "integer",
+          "description": "The ID of the project linked to the activity",
+          "nullable": true
+        },
+        "due_date": {
+          "type": "string",
+          "description": "The due date of the activity"
+        },
+        "due_time": {
+          "type": "string",
+          "description": "The due time of the activity",
+          "nullable": true
+        },
+        "duration": {
+          "type": "string",
+          "description": "The duration of the activity",
+          "nullable": true
+        },
+        "busy": {
+          "type": "boolean",
+          "description": "Whether the activity marks the assignee as busy or not in their calendar"
+        },
+        "done": {
+          "type": "boolean",
+          "description": "Whether the activity is marked as done or not"
+        },
+        "marked_as_done_time": {
+          "type": "string",
+          "description": "The date and time when the activity was marked as done",
+          "nullable": true
+        },
+        "location": {
+          "$ref": "#/components/schemas/ActivityItemLocation"
+        },
+        "participants": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/ActivityItemParticipantsItem"
+          },
+          "description": "The participants of the activity"
+        },
+        "attendees": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/ActivityItemAttendeesItem"
+          },
+          "description": "The attendees of the activity"
+        },
+        "conference_meeting_client": {
+          "type": "string",
+          "description": "The client used for the conference meeting"
+        },
+        "conference_meeting_url": {
+          "type": "string",
+          "description": "The URL of the conference meeting"
+        },
+        "conference_meeting_id": {
+          "type": "string",
+          "description": "The ID of the conference meeting"
+        },
+        "public_description": {
+          "type": "string",
+          "description": "The public description of the activity"
+        },
+        "priority": {
+          "type": "integer",
+          "description": "The priority of the activity. Mappable to a specific string using activityFields API."
+        },
+        "outcome": {
+          "type": "integer",
+          "description": "The ID of the Outcome for the activity. The available Outcome values depend on the activity type and can be retrieved using the Activity Fields API.",
+          "nullable": true
+        },
+        "note": {
+          "type": "string",
+          "description": "The note of the activity"
+        }
+      }
+    },
+    "Deal": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The ID of the deal"
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the deal"
+        },
+        "owner_id": {
+          "type": "integer",
+          "description": "The ID of the user who owns the deal"
+        },
+        "person_id": {
+          "type": "integer",
+          "description": "The ID of the person linked to the deal",
+          "nullable": true
+        },
+        "org_id": {
+          "type": "integer",
+          "description": "The ID of the organization linked to the deal",
+          "nullable": true
+        },
+        "pipeline_id": {
+          "type": "integer",
+          "description": "The ID of the pipeline associated with the deal"
+        },
+        "stage_id": {
+          "type": "integer",
+          "description": "The ID of the deal stage"
+        },
+        "value": {
+          "type": "number",
+          "description": "The value of the deal"
+        },
+        "currency": {
+          "type": "string",
+          "description": "The currency associated with the deal"
+        },
+        "add_time": {
+          "type": "string",
+          "description": "The creation date and time of the deal"
+        },
+        "update_time": {
+          "type": "string",
+          "description": "The last updated date and time of the deal",
+          "nullable": true
+        },
+        "stage_change_time": {
+          "type": "string",
+          "description": "The last updated date and time of the deal stage",
+          "nullable": true
+        },
+        "is_deleted": {
+          "type": "boolean",
+          "description": "Whether the deal is deleted or not"
+        },
+        "is_archived": {
+          "type": "boolean",
+          "description": "Whether the deal is archived or not"
+        },
+        "status": {
+          "type": "string",
+          "description": "The status of the deal"
+        },
+        "probability": {
+          "type": "number",
+          "description": "The success probability percentage of the deal",
+          "nullable": true
+        },
+        "lost_reason": {
+          "type": "string",
+          "description": "The reason for losing the deal",
+          "nullable": true
+        },
+        "visible_to": {
+          "type": "integer",
+          "description": "The visibility of the deal"
+        },
+        "close_time": {
+          "type": "string",
+          "description": "The date and time of closing the deal",
+          "nullable": true
+        },
+        "won_time": {
+          "type": "string",
+          "description": "The date and time of changing the deal status as won",
+          "nullable": true
+        },
+        "lost_time": {
+          "type": "string",
+          "description": "The date and time of changing the deal status as lost",
+          "nullable": true
+        },
+        "expected_close_date": {
+          "type": "string",
+          "description": "The expected close date of the deal",
+          "format": "date",
+          "nullable": true
+        },
+        "label_ids": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "description": "The IDs of labels assigned to the deal"
+        },
+        "origin": {
+          "type": "string",
+          "description": "The way this Deal was created. \u0060origin\u0060 field is set by Pipedrive when Deal is created and cannot be changed."
+        },
+        "origin_id": {
+          "type": "string",
+          "description": "The optional ID to further distinguish the origin of the deal - e.g. Which API integration created this Deal.",
+          "nullable": true
+        },
+        "channel": {
+          "type": "integer",
+          "description": "The ID of your Marketing channel this Deal was created from. Recognized Marketing channels can be configured in your \u003Ca href=\u0022https://app.pipedrive.com/settings/fields\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003ECompany settings\u003C/a\u003E.",
+          "nullable": true
+        },
+        "channel_id": {
+          "type": "string",
+          "description": "The optional ID to further distinguish the Marketing channel.",
+          "nullable": true
+        },
+        "source_lead_id": {
+          "type": "string",
+          "description": "The ID of the lead if the deal was converted from a lead. Only included when requested via include_fields parameter.",
+          "format": "uuid",
+          "nullable": true
+        },
+        "arr": {
+          "type": "number",
+          "description": "Only available in Growth and above plans\n\nThe Annual Recurring Revenue of the deal\n\nNull if there are no products attached to the deal\n",
+          "nullable": true
+        },
+        "mrr": {
+          "type": "number",
+          "description": "Only available in Growth and above plans\n\nThe Monthly Recurring Revenue of the deal\n\nNull if there are no products attached to the deal\n",
+          "nullable": true
+        },
+        "acv": {
+          "type": "number",
+          "description": "Only available in Growth and above plans\n\nThe Annual Contract Value of the deal\n\nNull if there are no products attached to the deal\n",
+          "nullable": true
+        },
+        "custom_fields": {
+          "$ref": "#/components/schemas/DealCustomFieldsProperty"
+        }
+      }
+    },
+    "FollowerItem": {
+      "type": "object",
+      "properties": {
+        "user_id": {
+          "type": "integer",
+          "description": "The ID of the user following the entity"
+        },
+        "add_time": {
+          "type": "string",
+          "description": "The add time of the following"
+        }
+      }
+    },
+    "OrganizationItem": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The ID of the organization"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the organization"
+        },
+        "owner_id": {
+          "type": "integer",
+          "description": "The ID of the user who owns the organization"
+        },
+        "add_time": {
+          "type": "string",
+          "description": "The creation date and time of the organization"
+        },
+        "update_time": {
+          "type": "string",
+          "description": "The last updated date and time of the organization",
+          "nullable": true
+        },
+        "is_deleted": {
+          "type": "boolean",
+          "description": "Whether the organization is deleted or not"
+        },
+        "visible_to": {
+          "type": "integer",
+          "description": "The visibility of the organization"
+        },
+        "address": {
+          "$ref": "#/components/schemas/OrganizationItemAddress"
+        },
+        "label_ids": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "description": "The IDs of labels assigned to the organization"
+        },
+        "website": {
+          "type": "string",
+          "description": "The website of the organization",
+          "nullable": true
+        },
+        "linkedin": {
+          "type": "string",
+          "description": "The LinkedIn profile URL of the organization",
+          "nullable": true
+        },
+        "industry": {
+          "type": "integer",
+          "description": "The industry the organization belongs to",
+          "nullable": true
+        },
+        "annual_revenue": {
+          "type": "integer",
+          "description": "The annual revenue of the organization",
+          "nullable": true
+        },
+        "employee_count": {
+          "type": "integer",
+          "description": "The number of employees in the organization",
+          "nullable": true
+        },
+        "custom_fields": {
+          "$ref": "#/components/schemas/OrganizationItemCustomFieldsProperty"
+        }
+      }
+    },
+    "Person": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The ID of the person"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the person"
+        },
+        "first_name": {
+          "type": "string",
+          "description": "The first name of the person"
+        },
+        "last_name": {
+          "type": "string",
+          "description": "The last name of the person"
+        },
+        "owner_id": {
+          "type": "integer",
+          "description": "The ID of the user who owns the person"
+        },
+        "org_id": {
+          "type": "integer",
+          "description": "The ID of the organization linked to the person"
+        },
+        "add_time": {
+          "type": "string",
+          "description": "The creation date and time of the person"
+        },
+        "update_time": {
+          "type": "string",
+          "description": "The last updated date and time of the person",
+          "nullable": true
+        },
+        "emails": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/PersonEmailsItem"
+          },
+          "description": "The emails of the person"
+        },
+        "phones": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/PersonPhonesItem"
+          },
+          "description": "The phones of the person"
+        },
+        "is_deleted": {
+          "type": "boolean",
+          "description": "Whether the person is deleted or not"
+        },
+        "visible_to": {
+          "type": "integer",
+          "description": "The visibility of the person"
+        },
+        "label_ids": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "description": "The IDs of labels assigned to the person"
+        },
+        "picture_id": {
+          "type": "integer",
+          "description": "The ID of the picture associated with the person",
+          "nullable": true
+        },
+        "postal_address": {
+          "$ref": "#/components/schemas/PersonPostalAddress"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Contact sync notes of the person, maximum 10 000 characters, included if contact sync is enabled for the company"
+        },
+        "im": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/PersonImItem"
+          },
+          "description": "The instant messaging accounts of the person, included if contact sync is enabled for the company"
+        },
+        "birthday": {
+          "type": "string",
+          "description": "The birthday of the person, included if contact sync is enabled for the company"
+        },
+        "job_title": {
+          "type": "string",
+          "description": "The job title of the person, included if contact sync is enabled for the company"
+        },
+        "custom_fields": {
+          "$ref": "#/components/schemas/PersonCustomFieldsProperty"
+        }
+      }
+    },
+    "ActivityItemLocation": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "The full address of the activity"
+        },
+        "country": {
+          "type": "string",
+          "description": "Country of the activity",
+          "nullable": true
+        },
+        "admin_area_level_1": {
+          "type": "string",
+          "description": "Admin area level 1 (e.g. state) of the activity",
+          "nullable": true
+        },
+        "admin_area_level_2": {
+          "type": "string",
+          "description": "Admin area level 2 (e.g. county) of the activity",
+          "nullable": true
+        },
+        "locality": {
+          "type": "string",
+          "description": "Locality (e.g. city) of the activity",
+          "nullable": true
+        },
+        "sublocality": {
+          "type": "string",
+          "description": "Sublocality (e.g. neighborhood) of the activity",
+          "nullable": true
+        },
+        "route": {
+          "type": "string",
+          "description": "Route (e.g. street) of the activity",
+          "nullable": true
+        },
+        "street_number": {
+          "type": "string",
+          "description": "Street number of the activity",
+          "nullable": true
+        },
+        "subpremise": {
+          "type": "string",
+          "description": "Subpremise (e.g. apartment/suite number) of the activity",
+          "nullable": true
+        },
+        "postal_code": {
+          "type": "string",
+          "description": "Postal code of the activity",
+          "nullable": true
+        }
+      },
+      "description": "Location of the activity",
+      "nullable": true
+    },
+    "ActivityItemParticipantsItem": {
+      "type": "object",
+      "properties": {
+        "person_id": {
+          "type": "integer",
+          "description": "The ID of the person"
+        },
+        "primary": {
+          "type": "boolean",
+          "description": "Whether the person is the primary participant or not"
+        }
+      }
+    },
+    "ActivityItemAttendeesItem": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "The email address of the attendee"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the attendee"
+        },
+        "status": {
+          "type": "string",
+          "description": "The status of the attendee"
+        },
+        "is_organizer": {
+          "type": "boolean",
+          "description": "Whether the attendee is the organizer or not"
+        },
+        "person_id": {
+          "type": "integer",
+          "description": "The ID of the person if the attendee has a person record"
+        },
+        "user_id": {
+          "type": "integer",
+          "description": "The ID of the user if the attendee is a user"
+        }
+      }
+    },
+    "DealCustomFields": {
+      "type": "object",
+      "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
+    },
+    "OrganizationItemAddress": {
+      "title": "OrganizationItemAddress",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "The full address of the organization"
+        },
+        "country": {
+          "type": "string",
+          "description": "Country of the organization",
+          "nullable": true
+        },
+        "admin_area_level_1": {
+          "type": "string",
+          "description": "Admin area level 1 (e.g. state) of the organization",
+          "nullable": true
+        },
+        "admin_area_level_2": {
+          "type": "string",
+          "description": "Admin area level 2 (e.g. county) of the organization",
+          "nullable": true
+        },
+        "locality": {
+          "type": "string",
+          "description": "Locality (e.g. city) of the organization",
+          "nullable": true
+        },
+        "sublocality": {
+          "type": "string",
+          "description": "Sublocality (e.g. neighborhood) of the organization",
+          "nullable": true
+        },
+        "route": {
+          "type": "string",
+          "description": "Route (e.g. street) of the organization",
+          "nullable": true
+        },
+        "street_number": {
+          "type": "string",
+          "description": "Street number of the organization",
+          "nullable": true
+        },
+        "subpremise": {
+          "type": "string",
+          "description": "Subpremise (e.g. apartment/suite number) of the organization",
+          "nullable": true
+        },
+        "postal_code": {
+          "type": "string",
+          "description": "Postal code of the organization",
+          "nullable": true
+        }
+      },
+      "description": "The address of the organization",
+      "nullable": true
+    },
+    "OrganizationItemCustomFields": {
+      "type": "object",
+      "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
+    },
+    "PersonEmailsItem": {
+      "title": "PersonItemEmail",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "The email address of the person"
+        },
+        "primary": {
+          "type": "boolean",
+          "description": "Whether the email is primary or not"
+        },
+        "label": {
+          "type": "string",
+          "description": "The email address classification label"
+        }
+      }
+    },
+    "PersonPhonesItem": {
+      "title": "PersonItemPhone",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "The phone number of the person"
+        },
+        "primary": {
+          "type": "boolean",
+          "description": "Whether the phone number is primary or not"
+        },
+        "label": {
+          "type": "string",
+          "description": "The phone number classification label"
+        }
+      }
+    },
+    "PersonPostalAddress": {
+      "title": "PersonItemAddress",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "The full address of the person"
+        },
+        "country": {
+          "type": "string",
+          "description": "Country of the person",
+          "nullable": true
+        },
+        "admin_area_level_1": {
+          "type": "string",
+          "description": "Admin area level 1 (e.g. state) of the person",
+          "nullable": true
+        },
+        "admin_area_level_2": {
+          "type": "string",
+          "description": "Admin area level 2 (e.g. county) of the person",
+          "nullable": true
+        },
+        "locality": {
+          "type": "string",
+          "description": "Locality (e.g. city) of the person",
+          "nullable": true
+        },
+        "sublocality": {
+          "type": "string",
+          "description": "Sublocality (e.g. neighborhood) of the person",
+          "nullable": true
+        },
+        "route": {
+          "type": "string",
+          "description": "Route (e.g. street) of the person",
+          "nullable": true
+        },
+        "street_number": {
+          "type": "string",
+          "description": "Street number of the person",
+          "nullable": true
+        },
+        "subpremise": {
+          "type": "string",
+          "description": "Subpremise (e.g. apartment/suite number) of the person",
+          "nullable": true
+        },
+        "postal_code": {
+          "type": "string",
+          "description": "Postal code of the person",
+          "nullable": true
+        }
+      },
+      "description": "Postal address of the person, included if contact sync is enabled for the company",
+      "nullable": true
+    },
+    "PersonImItem": {
+      "title": "PersonItemIm",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "The instant messaging account of the person"
+        },
+        "primary": {
+          "type": "boolean",
+          "description": "Whether the instant messaging account is primary or not"
+        },
+        "label": {
+          "type": "string",
+          "description": "The instant messaging account classification label"
+        }
+      }
+    },
+    "PersonCustomFields": {
+      "type": "object",
+      "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
+    },
+    "AddDealFieldOptionsRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/AddDealFieldOptionsRequestItem"
+      },
+      "description": "Array of options to add. Each item must contain a label. At least one option is required."
+    },
+    "DeleteDealFieldOptionsRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DeleteDealFieldOptionsRequestItem"
+      },
+      "description": "Array of option IDs to delete. Each item must contain an ID of the option to delete. At least one option ID is required. The entire request fails if any option does not exist."
+    },
+    "UpdateDealFieldOptionsRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/UpdateDealFieldOptionsRequestItem"
+      },
+      "description": "Array of options to update. Each item must contain an ID and the updated label. At least one option is required. The entire request fails if any option does not exist."
+    },
+    "AddPersonFieldOptionsRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/AddPersonFieldOptionsRequestItem"
+      },
+      "description": "Array of options to add. Each item must contain a label. At least one option is required."
+    },
+    "DeletePersonFieldOptionsRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DeletePersonFieldOptionsRequestItem"
+      },
+      "description": "Array of option IDs to delete. Each item must contain an ID of the option to delete. At least one option ID is required. The entire request fails if any option does not exist."
+    },
+    "UpdatePersonFieldOptionsRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/UpdatePersonFieldOptionsRequestItem"
+      },
+      "description": "Array of options to update. Each item must contain an ID and the updated label. At least one option is required. The entire request fails if any option does not exist."
+    },
+    "AddOrganizationFieldOptionsRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/AddOrganizationFieldOptionsRequestItem"
+      },
+      "description": "Array of options to add. Each item must contain a label. At least one option is required."
+    },
+    "DeleteOrganizationFieldOptionsRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DeleteOrganizationFieldOptionsRequestItem"
+      },
+      "description": "Array of option IDs to delete. Each item must contain an ID of the option to delete. At least one option ID is required. The entire request fails if any option does not exist."
+    },
+    "UpdateOrganizationFieldOptionsRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/UpdateOrganizationFieldOptionsRequestItem"
+      },
+      "description": "Array of options to update. Each item must contain an ID and the updated label. At least one option is required. The entire request fails if any option does not exist."
+    },
+    "AddProductFieldOptionsRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/AddProductFieldOptionsRequestItem"
+      },
+      "description": "Array of options to add. Each item must contain a label. At least one option is required."
+    },
+    "DeleteProductFieldOptionsRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DeleteProductFieldOptionsRequestItem"
+      },
+      "description": "Array of option IDs to delete. Each item must contain an ID of the option to delete. At least one option ID is required. The entire request fails if any option does not exist."
+    },
+    "UpdateProductFieldOptionsRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/UpdateProductFieldOptionsRequestItem"
+      },
+      "description": "Array of options to update. Each item must contain an ID and the updated label. At least one option is required. The entire request fails if any option does not exist."
+    },
+    "AddProjectFieldOptionsRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/AddProjectFieldOptionsRequestItem"
+      },
+      "description": "Array of options to add. Each item must contain a label. At least one option is required."
+    },
+    "DeleteProjectFieldOptionsRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DeleteProjectFieldOptionsRequestItem"
+      },
+      "description": "Array of option IDs to delete. Each item must contain an ID of the option to delete. At least one option ID is required. The entire request fails if any option does not exist."
+    },
+    "UpdateProjectFieldOptionsRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/UpdateProjectFieldOptionsRequestItem"
+      },
+      "description": "Array of options to update. Each item must contain an ID and the updated label. At least one option is required. The entire request fails if any option does not exist."
+    },
+    "ExamplePayload": {
+      "type": "object",
+      "description": "Placeholder schema for path example refs"
+    },
+    "DealCustomFieldsProperty": {
+      "type": "object",
+      "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
+    },
+    "OrganizationItemCustomFieldsProperty": {
+      "type": "object",
+      "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
+    },
+    "PersonCustomFieldsProperty": {
+      "type": "object",
+      "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
+    },
+    "AddDealFieldOptionsRequestItem": {
+      "required": [
+        "label"
+      ],
+      "type": "object",
+      "properties": {
+        "label": {
+          "maxLength": 255,
+          "minLength": 1,
+          "type": "string",
+          "description": "The display label for the new option"
+        }
+      }
+    },
+    "DeleteDealFieldOptionsRequestItem": {
+      "required": [
+        "id"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The unique identifier of the option to delete"
+        }
+      }
+    },
+    "UpdateDealFieldOptionsRequestItem": {
+      "required": [
+        "id",
+        "label"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The unique identifier of the option to update"
+        },
+        "label": {
+          "maxLength": 255,
+          "minLength": 1,
+          "type": "string",
+          "description": "The new display label for the option"
+        }
+      }
+    },
+    "AddPersonFieldOptionsRequestItem": {
+      "required": [
+        "label"
+      ],
+      "type": "object",
+      "properties": {
+        "label": {
+          "maxLength": 255,
+          "minLength": 1,
+          "type": "string",
+          "description": "The display label for the new option"
+        }
+      }
+    },
+    "DeletePersonFieldOptionsRequestItem": {
+      "required": [
+        "id"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The unique identifier of the option to delete"
+        }
+      }
+    },
+    "UpdatePersonFieldOptionsRequestItem": {
+      "required": [
+        "id",
+        "label"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The unique identifier of the option to update"
+        },
+        "label": {
+          "maxLength": 255,
+          "minLength": 1,
+          "type": "string",
+          "description": "The new display label for the option"
+        }
+      }
+    },
+    "AddOrganizationFieldOptionsRequestItem": {
+      "required": [
+        "label"
+      ],
+      "type": "object",
+      "properties": {
+        "label": {
+          "maxLength": 255,
+          "minLength": 1,
+          "type": "string",
+          "description": "The display label for the new option"
+        }
+      }
+    },
+    "DeleteOrganizationFieldOptionsRequestItem": {
+      "required": [
+        "id"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The unique identifier of the option to delete"
+        }
+      }
+    },
+    "UpdateOrganizationFieldOptionsRequestItem": {
+      "required": [
+        "id",
+        "label"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The unique identifier of the option to update"
+        },
+        "label": {
+          "maxLength": 255,
+          "minLength": 1,
+          "type": "string",
+          "description": "The new display label for the option"
+        }
+      }
+    },
+    "AddProductFieldOptionsRequestItem": {
+      "required": [
+        "label"
+      ],
+      "type": "object",
+      "properties": {
+        "label": {
+          "maxLength": 255,
+          "minLength": 1,
+          "type": "string",
+          "description": "The display label for the new option"
+        }
+      }
+    },
+    "DeleteProductFieldOptionsRequestItem": {
+      "required": [
+        "id"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The unique identifier of the option to delete"
+        }
+      }
+    },
+    "UpdateProductFieldOptionsRequestItem": {
+      "required": [
+        "id",
+        "label"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The unique identifier of the option to update"
+        },
+        "label": {
+          "maxLength": 255,
+          "minLength": 1,
+          "type": "string",
+          "description": "The new display label for the option"
+        }
+      }
+    },
+    "AddProjectFieldOptionsRequestItem": {
+      "required": [
+        "label"
+      ],
+      "type": "object",
+      "properties": {
+        "label": {
+          "maxLength": 255,
+          "minLength": 1,
+          "type": "string",
+          "description": "The display label for the new option"
+        }
+      }
+    },
+    "DeleteProjectFieldOptionsRequestItem": {
+      "required": [
+        "id"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The unique identifier of the option to delete"
+        }
+      }
+    },
+    "UpdateProjectFieldOptionsRequestItem": {
+      "required": [
+        "id",
+        "label"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The unique identifier of the option to update"
+        },
+        "label": {
+          "maxLength": 255,
+          "minLength": 1,
+          "type": "string",
+          "description": "The new display label for the option"
+        }
+      }
+    }
+  }
 }
