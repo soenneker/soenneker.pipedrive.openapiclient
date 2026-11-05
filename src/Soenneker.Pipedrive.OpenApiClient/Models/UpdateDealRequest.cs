@@ -20,6 +20,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         {
             if (parseNode.GetChildNode("archive_time") is null) { _explicitNullValueArchiveTime = default!; _explicitNullProperties?.Remove("archive_time"); }
             else if (parseNode.GetChildNode("archive_time") is { } nullNodeArchiveTime && nullNodeArchiveTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArchiveTime = null;
+            if (parseNode.GetChildNode("channel") is null) { _explicitNullValueChannel = default!; _explicitNullProperties?.Remove("channel"); }
+            else if (parseNode.GetChildNode("channel") is { } nullNodeChannel && nullNodeChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Channel = null;
+            if (parseNode.GetChildNode("channel_id") is null) { _explicitNullValueChannelId = default!; _explicitNullProperties?.Remove("channel_id"); }
+            else if (parseNode.GetChildNode("channel_id") is { } nullNodeChannelId && nullNodeChannelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelId = null;
             if (parseNode.GetChildNode("close_time") is null) { _explicitNullValueCloseTime = default!; _explicitNullProperties?.Remove("close_time"); }
             else if (parseNode.GetChildNode("close_time") is { } nullNodeCloseTime && nullNodeCloseTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseTime = null;
             if (parseNode.GetChildNode("currency") is null) { _explicitNullValueCurrency = default!; _explicitNullProperties?.Remove("currency"); }
@@ -73,6 +77,19 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
 #else
         public string ArchiveTime { get => _explicitNullValueArchiveTime; set { _explicitNullValueArchiveTime = value; AdditionalData?.Remove("archive_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archive_time"); else _explicitNullProperties?.Remove("archive_time"); } }
         private string _explicitNullValueArchiveTime = default!;
+#endif
+        /// <summary>The ID of Marketing channel this deal was created from. Provided value must be one of the channels configured for your company. You can fetch allowed values with &lt;a href=&quot;https://developers.pipedrive.com/docs/api/v1/DealFields#getDealField&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;GET /v1/dealFields&lt;/a&gt;.</summary>
+        public int? Channel { get => _explicitNullValueChannel; set { _explicitNullValueChannel = value; AdditionalData?.Remove("channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel"); else _explicitNullProperties?.Remove("channel"); } }
+        private int? _explicitNullValueChannel = default!;
+        /// <summary>The optional ID to further distinguish the Marketing channel.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; AdditionalData?.Remove("channel_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
+        private string? _explicitNullValueChannelId = default!;
+#nullable restore
+#else
+        public string ChannelId { get => _explicitNullValueChannelId; set { _explicitNullValueChannelId = value; AdditionalData?.Remove("channel_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_id"); else _explicitNullProperties?.Remove("channel_id"); } }
+        private string _explicitNullValueChannelId = default!;
 #endif
         /// <summary>The date and time of closing the deal. Can only be set if deal status is won or lost.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -223,6 +240,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "archive_time", n => { ArchiveTime = n.GetStringValue(); } },
+                { "channel", n => { Channel = n.GetIntValue(); } },
+                { "channel_id", n => { ChannelId = n.GetStringValue(); } },
                 { "close_time", n => { CloseTime = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealRequestCustomFields>(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealRequestCustomFields.CreateFromDiscriminatorValue); } },
@@ -253,6 +272,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("archive_time", ArchiveTime);
+            writer.WriteIntValue("channel", Channel);
+            writer.WriteStringValue("channel_id", ChannelId);
             writer.WriteStringValue("close_time", CloseTime);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateDealRequestCustomFields>("custom_fields", CustomFields);

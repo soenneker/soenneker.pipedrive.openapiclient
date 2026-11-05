@@ -14695,6 +14695,21 @@
             },
             "description": "The IDs of labels assigned to the deal"
           },
+          "channel": {
+            "type": "integer",
+            "description": "The ID of Marketing channel this deal was created from. Provided value must be one of the channels configured for your company. You can fetch allowed values with \u003Ca href=\u0022https://developers.pipedrive.com/docs/api/v1/DealFields#getDealField\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003EGET /v1/dealFields\u003C/a\u003E.",
+            "nullable": true
+          },
+          "channel_id": {
+            "type": "string",
+            "description": "The optional ID to further distinguish the Marketing channel.",
+            "nullable": true
+          },
+          "origin_id": {
+            "type": "string",
+            "description": "The optional ID to further distinguish the origin of the deal - e.g. Which API integration created this deal. If omitted, \u0060origin_id\u0060 will be set to null.",
+            "nullable": true
+          },
           "custom_fields": {
             "$ref": "#/components/schemas/AddDealRequestCustomFields"
           }
@@ -14848,6 +14863,16 @@
               "type": "integer"
             },
             "description": "The IDs of labels assigned to the deal"
+          },
+          "channel": {
+            "type": "integer",
+            "description": "The ID of Marketing channel this deal was created from. Provided value must be one of the channels configured for your company. You can fetch allowed values with \u003Ca href=\u0022https://developers.pipedrive.com/docs/api/v1/DealFields#getDealField\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003EGET /v1/dealFields\u003C/a\u003E.",
+            "nullable": true
+          },
+          "channel_id": {
+            "type": "string",
+            "description": "The optional ID to further distinguish the Marketing channel.",
+            "nullable": true
           },
           "custom_fields": {
             "$ref": "#/components/schemas/UpdateDealRequestCustomFields"
