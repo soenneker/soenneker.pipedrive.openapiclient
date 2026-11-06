@@ -127,7 +127,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <summary>Whether the deal is archived or not</summary>
         public bool? IsArchived { get => _explicitNullValueIsArchived; set { _explicitNullValueIsArchived = value; AdditionalData?.Remove("is_archived"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_archived"); else _explicitNullProperties?.Remove("is_archived"); } }
         private bool? _explicitNullValueIsArchived = default!;
-        /// <summary>Whether the deal is deleted or not</summary>
+        /// <summary>Only used to restore a previously deleted deal. The only accepted value is `false`; omit the field otherwise.</summary>
         public bool? IsDeleted { get => _explicitNullValueIsDeleted; set { _explicitNullValueIsDeleted = value; AdditionalData?.Remove("is_deleted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_deleted"); else _explicitNullProperties?.Remove("is_deleted"); } }
         private bool? _explicitNullValueIsDeleted = default!;
         /// <summary>The IDs of labels assigned to the deal</summary>

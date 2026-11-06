@@ -34,8 +34,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             else if (parseNode.GetChildNode("expected_close_date") is { } nullNodeExpectedCloseDate && nullNodeExpectedCloseDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpectedCloseDate = null;
             if (parseNode.GetChildNode("is_archived") is null) { _explicitNullValueIsArchived = default!; _explicitNullProperties?.Remove("is_archived"); }
             else if (parseNode.GetChildNode("is_archived") is { } nullNodeIsArchived && nullNodeIsArchived.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsArchived = null;
-            if (parseNode.GetChildNode("is_deleted") is null) { _explicitNullValueIsDeleted = default!; _explicitNullProperties?.Remove("is_deleted"); }
-            else if (parseNode.GetChildNode("is_deleted") is { } nullNodeIsDeleted && nullNodeIsDeleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDeleted = null;
             if (parseNode.GetChildNode("label_ids") is null) { _explicitNullValueLabelIds = default!; _explicitNullProperties?.Remove("label_ids"); }
             else if (parseNode.GetChildNode("label_ids") is { } nullNodeLabelIds && nullNodeLabelIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelIds = null;
             if (parseNode.GetChildNode("lost_reason") is null) { _explicitNullValueLostReason = default!; _explicitNullProperties?.Remove("lost_reason"); }
@@ -129,9 +127,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <summary>Whether the deal is archived or not</summary>
         public bool? IsArchived { get => _explicitNullValueIsArchived; set { _explicitNullValueIsArchived = value; AdditionalData?.Remove("is_archived"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_archived"); else _explicitNullProperties?.Remove("is_archived"); } }
         private bool? _explicitNullValueIsArchived = default!;
-        /// <summary>Whether the deal is deleted or not</summary>
-        public bool? IsDeleted { get => _explicitNullValueIsDeleted; set { _explicitNullValueIsDeleted = value; AdditionalData?.Remove("is_deleted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_deleted"); else _explicitNullProperties?.Remove("is_deleted"); } }
-        private bool? _explicitNullValueIsDeleted = default!;
         /// <summary>The IDs of labels assigned to the deal</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -259,7 +254,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
                 { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealRequestCustomFields>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealRequestCustomFields.CreateFromDiscriminatorValue); } },
                 { "expected_close_date", n => { ExpectedCloseDate = n.GetDateValue(); } },
                 { "is_archived", n => { IsArchived = n.GetBoolValue(); } },
-                { "is_deleted", n => { IsDeleted = n.GetBoolValue(); } },
                 { "label_ids", n => { LabelIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "lost_reason", n => { LostReason = n.GetStringValue(); } },
                 { "lost_time", n => { LostTime = n.GetStringValue(); } },
@@ -292,7 +286,6 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddDealRequestCustomFields>("custom_fields", CustomFields);
             writer.WriteDateValue("expected_close_date", ExpectedCloseDate);
             writer.WriteBoolValue("is_archived", IsArchived);
-            writer.WriteBoolValue("is_deleted", IsDeleted);
             writer.WriteCollectionOfPrimitiveValues<int?>("label_ids", LabelIds);
             writer.WriteStringValue("lost_reason", LostReason);
             writer.WriteStringValue("lost_time", LostTime);
