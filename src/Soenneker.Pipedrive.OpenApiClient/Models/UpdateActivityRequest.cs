@@ -216,7 +216,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(19)
             {
                 { "attendees", n => { Attendees = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateActivityRequestAttendeesItem>(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateActivityRequestAttendeesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "busy", n => { Busy = n.GetBoolValue(); } },

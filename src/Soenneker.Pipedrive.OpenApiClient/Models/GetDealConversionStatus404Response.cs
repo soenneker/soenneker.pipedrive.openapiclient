@@ -100,7 +100,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "additional_data", n => { AdditionalDataProperty = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealConversionStatus404ResponseAdditionalData>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealConversionStatus404ResponseAdditionalData.CreateFromDiscriminatorValue); } },
                 { "data", n => { DataEscaped = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealConversionStatus404ResponseData>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetDealConversionStatus404ResponseData.CreateFromDiscriminatorValue); } },

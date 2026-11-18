@@ -195,7 +195,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(17)
             {
                 { "add_time", n => { AddTime = n.GetStringValue(); } },
                 { "billing_frequency", n => { var parsed = n.GetEnumValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetProduct200ResponseDataBillingFrequency>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBillingFrequency = default; _explicitNullProperties?.Remove("billing_frequency"); AdditionalData["billing_frequency"] = unknown; } else { BillingFrequency = parsed; AdditionalData.Remove("billing_frequency"); } } },

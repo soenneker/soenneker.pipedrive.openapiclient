@@ -176,7 +176,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(15)
             {
                 { "board_id", n => { BoardId = n.GetIntValue(); } },
                 { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProjectRequestCustomFields>(global::Soenneker.Pipedrive.OpenApiClient.Models.UpdateProjectRequestCustomFields.CreateFromDiscriminatorValue); } },
