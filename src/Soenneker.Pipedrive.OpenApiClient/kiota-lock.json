@@ -2,7 +2,7 @@
   "descriptionHash": "9039A905635A64B1DA56BE0179E952FAAA1BA2D365AD995D6D61FC85D687A9BA58F1D8799A7FD55EBE2EA72A013C46143D78F3CACF699F2ED295EA572441F08B",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.38.0",
+  "kiotaVersion": "1.39.0",
   "clientClassName": "PipedriveOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Pipedrive.OpenApiClient",
