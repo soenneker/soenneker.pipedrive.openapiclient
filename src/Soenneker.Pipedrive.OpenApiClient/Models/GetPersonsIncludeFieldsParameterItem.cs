@@ -100,6 +100,14 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         #pragma warning disable CS1591
         DoiStatus,
         #pragma warning restore CS1591
+        [EnumMember(Value = "track_open")]
+        #pragma warning disable CS1591
+        TrackOpen,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "track_click")]
+        #pragma warning disable CS1591
+        TrackClick,
+        #pragma warning restore CS1591
         [EnumMember(Value = "smart_bcc_email")]
         #pragma warning disable CS1591
         SmartBccEmail,

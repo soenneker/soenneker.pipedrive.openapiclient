@@ -71,7 +71,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonsResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetPersonsResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Adds a new person. &lt;br&gt;If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field. &lt;br&gt;The `im`, `postal_address`, `notes`, `birthday` and `job_title` fields don&apos;t exist by default in Pipedrive and are only created when you set up your contact sync — attempting to set any of them without contact sync enabled returns a 403.
+        /// Adds a new person.&lt;br&gt;The `im`, `postal_address`, `notes`, `birthday` and `job_title` fields don&apos;t exist by default in Pipedrive and are only created when you set up your contact sync — attempting to set any of them without contact sync enabled returns a 403.&lt;br&gt;If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field.&lt;br&gt;If the company has the Email tracking consent setting enabled, then this endpoint will also accept and return the `track_open` and `track_click` fields.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -110,7 +110,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
             return requestInfo;
         }
         /// <summary>
-        /// Adds a new person. &lt;br&gt;If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field. &lt;br&gt;The `im`, `postal_address`, `notes`, `birthday` and `job_title` fields don&apos;t exist by default in Pipedrive and are only created when you set up your contact sync — attempting to set any of them without contact sync enabled returns a 403.
+        /// Adds a new person.&lt;br&gt;The `im`, `postal_address`, `notes`, `birthday` and `job_title` fields don&apos;t exist by default in Pipedrive and are only created when you set up your contact sync — attempting to set any of them without contact sync enabled returns a 403.&lt;br&gt;If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field.&lt;br&gt;If the company has the Email tracking consent setting enabled, then this endpoint will also accept and return the `track_open` and `track_click` fields.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -182,7 +182,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons
             [QueryParameter("ids")]
             public int?[] Ids { get; set; }
 #endif
-            /// <summary>Optional comma separated string array of additional fields to include. `marketing_status` and `doi_status` can only be included if the company has marketing app enabled.</summary>
+            /// <summary>Optional comma separated string array of additional fields to include. &lt;br&gt;`marketing_status` and `doi_status` can only be included if the company has marketing app enabled. &lt;br&gt;`track_open` and `track_click` can only be included if the company has the Email tracking consent setting enabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include_fields")]

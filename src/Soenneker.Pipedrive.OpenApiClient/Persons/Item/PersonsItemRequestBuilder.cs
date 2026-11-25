@@ -64,7 +64,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.DeletePersonResponse>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.DeletePersonResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns the details of a specific person. Fields `ims`, `postal_address`, `notes`, `birthday`, and `job_title` are only included if contact sync is enabled for the company.
+        /// Returns the details of a specific person. &lt;br&gt;Fields `ims`, `postal_address`, `notes`, `birthday`, and `job_title` are only included if contact sync is enabled for the company.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetPerson200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -82,7 +82,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Pipedrive.OpenApiClient.Models.GetPerson200Response>(requestInfo, global::Soenneker.Pipedrive.OpenApiClient.Models.GetPerson200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates the properties of a person. &lt;br&gt;If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field. &lt;br&gt;The `im`, `postal_address`, `notes`, `birthday` and `job_title` fields don&apos;t exist by default in Pipedrive and are only created when you set up your contact sync — attempting to set any of them without contact sync enabled returns a 403.
+        /// Updates the properties of a person. &lt;br&gt;The `im`, `postal_address`, `notes`, `birthday` and `job_title` fields don&apos;t exist by default in Pipedrive and are only created when you set up your contact sync — attempting to set any of them without contact sync enabled returns a 403. &lt;br&gt;If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field. &lt;br&gt;If the company has the Email tracking consent setting enabled, then this endpoint will also accept and return the `track_open` and `track_click` fields.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.UpdatePerson200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -121,7 +121,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item
             return requestInfo;
         }
         /// <summary>
-        /// Returns the details of a specific person. Fields `ims`, `postal_address`, `notes`, `birthday`, and `job_title` are only included if contact sync is enabled for the company.
+        /// Returns the details of a specific person. &lt;br&gt;Fields `ims`, `postal_address`, `notes`, `birthday`, and `job_title` are only included if contact sync is enabled for the company.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -140,7 +140,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item
             return requestInfo;
         }
         /// <summary>
-        /// Updates the properties of a person. &lt;br&gt;If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field. &lt;br&gt;The `im`, `postal_address`, `notes`, `birthday` and `job_title` fields don&apos;t exist by default in Pipedrive and are only created when you set up your contact sync — attempting to set any of them without contact sync enabled returns a 403.
+        /// Updates the properties of a person. &lt;br&gt;The `im`, `postal_address`, `notes`, `birthday` and `job_title` fields don&apos;t exist by default in Pipedrive and are only created when you set up your contact sync — attempting to set any of them without contact sync enabled returns a 403. &lt;br&gt;If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field. &lt;br&gt;If the company has the Email tracking consent setting enabled, then this endpoint will also accept and return the `track_open` and `track_click` fields.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -171,7 +171,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item
             return new global::Soenneker.Pipedrive.OpenApiClient.Persons.Item.PersonsItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns the details of a specific person. Fields `ims`, `postal_address`, `notes`, `birthday`, and `job_title` are only included if contact sync is enabled for the company.
+        /// Returns the details of a specific person. &lt;br&gt;Fields `ims`, `postal_address`, `notes`, `birthday`, and `job_title` are only included if contact sync is enabled for the company.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PersonsItemRequestBuilderGetQueryParameters 
@@ -186,7 +186,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Persons.Item
             [QueryParameter("custom_fields")]
             public string[] CustomFields { get; set; }
 #endif
-            /// <summary>Optional comma separated string array of additional fields to include. `marketing_status` and `doi_status` can only be included if the company has marketing app enabled.</summary>
+            /// <summary>Optional comma separated string array of additional fields to include. &lt;br&gt;`marketing_status` and `doi_status` can only be included if the company has marketing app enabled. &lt;br&gt;`track_open` and `track_click` can only be included if the company has the Email tracking consent setting enabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include_fields")]

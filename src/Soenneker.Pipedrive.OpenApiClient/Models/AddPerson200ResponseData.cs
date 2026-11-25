@@ -53,6 +53,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             else if (parseNode.GetChildNode("picture_id") is { } nullNodePictureId && nullNodePictureId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PictureId = null;
             if (parseNode.GetChildNode("postal_address") is null) { _explicitNullValuePostalAddress = default!; _explicitNullProperties?.Remove("postal_address"); }
             else if (parseNode.GetChildNode("postal_address") is { } nullNodePostalAddress && nullNodePostalAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostalAddress = null;
+            if (parseNode.GetChildNode("track_click") is null) { _explicitNullValueTrackClick = default!; _explicitNullProperties?.Remove("track_click"); }
+            else if (parseNode.GetChildNode("track_click") is { } nullNodeTrackClick && nullNodeTrackClick.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackClick = null;
+            if (parseNode.GetChildNode("track_open") is null) { _explicitNullValueTrackOpen = default!; _explicitNullProperties?.Remove("track_open"); }
+            else if (parseNode.GetChildNode("track_open") is { } nullNodeTrackOpen && nullNodeTrackOpen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackOpen = null;
             if (parseNode.GetChildNode("update_time") is null) { _explicitNullValueUpdateTime = default!; _explicitNullProperties?.Remove("update_time"); }
             else if (parseNode.GetChildNode("update_time") is { } nullNodeUpdateTime && nullNodeUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateTime = null;
             if (parseNode.GetChildNode("visible_to") is null) { _explicitNullValueVisibleTo = default!; _explicitNullProperties?.Remove("visible_to"); }
@@ -206,6 +210,12 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200ResponseDataPostalAddress PostalAddress { get => _explicitNullValuePostalAddress; set { _explicitNullValuePostalAddress = value; AdditionalData?.Remove("postal_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postal_address"); else _explicitNullProperties?.Remove("postal_address"); } }
         private global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200ResponseDataPostalAddress _explicitNullValuePostalAddress = default!;
 #endif
+        /// <summary>The email link click tracking consent of the person, included if the company has the Email tracking consent setting enabled</summary>
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200ResponseDataTrackClick? TrackClick { get => _explicitNullValueTrackClick; set { _explicitNullValueTrackClick = value; AdditionalData?.Remove("track_click"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("track_click"); else _explicitNullProperties?.Remove("track_click"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200ResponseDataTrackClick? _explicitNullValueTrackClick = default!;
+        /// <summary>The email open tracking consent of the person, included if the company has the Email tracking consent setting enabled</summary>
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200ResponseDataTrackOpen? TrackOpen { get => _explicitNullValueTrackOpen; set { _explicitNullValueTrackOpen = value; AdditionalData?.Remove("track_open"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("track_open"); else _explicitNullProperties?.Remove("track_open"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200ResponseDataTrackOpen? _explicitNullValueTrackOpen = default!;
         /// <summary>The last updated date and time of the person</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -242,7 +252,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(20)
+            return new Dictionary<string, Action<IParseNode>>(22)
             {
                 { "add_time", n => { AddTime = n.GetStringValue(); } },
                 { "birthday", n => { Birthday = n.GetStringValue(); } },
@@ -262,6 +272,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
                 { "phones", n => { Phones = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200ResponseDataPhonesItem>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200ResponseDataPhonesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "picture_id", n => { PictureId = n.GetIntValue(); } },
                 { "postal_address", n => { PostalAddress = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200ResponseDataPostalAddress>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200ResponseDataPostalAddress.CreateFromDiscriminatorValue); } },
+                { "track_click", n => { var parsed = n.GetEnumValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200ResponseDataTrackClick>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTrackClick = default; _explicitNullProperties?.Remove("track_click"); AdditionalData["track_click"] = unknown; } else { TrackClick = parsed; AdditionalData.Remove("track_click"); } } },
+                { "track_open", n => { var parsed = n.GetEnumValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200ResponseDataTrackOpen>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTrackOpen = default; _explicitNullProperties?.Remove("track_open"); AdditionalData["track_open"] = unknown; } else { TrackOpen = parsed; AdditionalData.Remove("track_open"); } } },
                 { "update_time", n => { UpdateTime = n.GetStringValue(); } },
                 { "visible_to", n => { VisibleTo = n.GetIntValue(); } },
             };
@@ -291,6 +303,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200ResponseDataPhonesItem>("phones", Phones);
             writer.WriteIntValue("picture_id", PictureId);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200ResponseDataPostalAddress>("postal_address", PostalAddress);
+            writer.WriteEnumValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200ResponseDataTrackClick>("track_click", TrackClick);
+            writer.WriteEnumValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddPerson200ResponseDataTrackOpen>("track_open", TrackOpen);
             writer.WriteStringValue("update_time", UpdateTime);
             writer.WriteIntValue("visible_to", VisibleTo);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

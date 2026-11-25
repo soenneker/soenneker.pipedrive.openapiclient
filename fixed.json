@@ -4485,7 +4485,7 @@
           {
             "name": "include_fields",
             "in": "query",
-            "description": "Optional comma separated string array of additional fields to include. \u0060marketing_status\u0060 and \u0060doi_status\u0060 can only be included if the company has marketing app enabled.",
+            "description": "Optional comma separated string array of additional fields to include. \u003Cbr\u003E\u0060marketing_status\u0060 and \u0060doi_status\u0060 can only be included if the company has marketing app enabled. \u003Cbr\u003E\u0060track_open\u0060 and \u0060track_click\u0060 can only be included if the company has the Email tracking consent setting enabled.",
             "explode": false,
             "schema": {
               "uniqueItems": true,
@@ -4653,7 +4653,7 @@
           "Persons"
         ],
         "summary": "Add a new person",
-        "description": "Adds a new person. \u003Cbr\u003EIf the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the \u0060marketing_status\u0060 field. \u003Cbr\u003EThe \u0060im\u0060, \u0060postal_address\u0060, \u0060notes\u0060, \u0060birthday\u0060 and \u0060job_title\u0060 fields don\u0027t exist by default in Pipedrive and are only created when you set up your contact sync \u2014 attempting to set any of them without contact sync enabled returns a 403.",
+        "description": "Adds a new person.\u003Cbr\u003EThe \u0060im\u0060, \u0060postal_address\u0060, \u0060notes\u0060, \u0060birthday\u0060 and \u0060job_title\u0060 fields don\u0027t exist by default in Pipedrive and are only created when you set up your contact sync \u2014 attempting to set any of them without contact sync enabled returns a 403.\u003Cbr\u003EIf the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the \u0060marketing_status\u0060 field.\u003Cbr\u003EIf the company has the Email tracking consent setting enabled, then this endpoint will also accept and return the \u0060track_open\u0060 and \u0060track_click\u0060 fields.",
         "operationId": "AddPerson",
         "requestBody": {
           "content": {
@@ -4760,7 +4760,7 @@
           }
         ],
         "x-token-cost": 5,
-        "x-tool-description": "Creates a new contact person, requiring only a name. The im, postal_address, notes, birthday, and job_title fields are only accepted when contact sync is enabled for the company; otherwise the request returns 403. If the company uses the Campaigns product, this endpoint also accepts and returns the marketing_status field."
+        "x-tool-description": "Creates a new contact person, requiring only a name. The im, postal_address, notes, birthday, and job_title fields are only accepted when contact sync is enabled for the company; otherwise the request returns 403. If the company uses the Campaigns product, this endpoint also accepts and returns the marketing_status field. If the company has the Email tracking consent setting enabled, this endpoint also accepts and returns the track_open and track_click fields."
       }
     },
     "/persons/{id}": {
@@ -4817,7 +4817,7 @@
           "Persons"
         ],
         "summary": "Get details of a person",
-        "description": "Returns the details of a specific person. Fields \u0060ims\u0060, \u0060postal_address\u0060, \u0060notes\u0060, \u0060birthday\u0060, and \u0060job_title\u0060 are only included if contact sync is enabled for the company.",
+        "description": "Returns the details of a specific person. \u003Cbr\u003EFields \u0060ims\u0060, \u0060postal_address\u0060, \u0060notes\u0060, \u0060birthday\u0060, and \u0060job_title\u0060 are only included if contact sync is enabled for the company.",
         "operationId": "GetPerson",
         "parameters": [
           {
@@ -4832,7 +4832,7 @@
           {
             "name": "include_fields",
             "in": "query",
-            "description": "Optional comma separated string array of additional fields to include. \u0060marketing_status\u0060 and \u0060doi_status\u0060 can only be included if the company has marketing app enabled.",
+            "description": "Optional comma separated string array of additional fields to include. \u003Cbr\u003E\u0060marketing_status\u0060 and \u0060doi_status\u0060 can only be included if the company has marketing app enabled. \u003Cbr\u003E\u0060track_open\u0060 and \u0060track_click\u0060 can only be included if the company has the Email tracking consent setting enabled.",
             "explode": false,
             "schema": {
               "uniqueItems": true,
@@ -4976,7 +4976,7 @@
           "Persons"
         ],
         "summary": "Update a person",
-        "description": "Updates the properties of a person. \u003Cbr\u003EIf the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the \u0060marketing_status\u0060 field. \u003Cbr\u003EThe \u0060im\u0060, \u0060postal_address\u0060, \u0060notes\u0060, \u0060birthday\u0060 and \u0060job_title\u0060 fields don\u0027t exist by default in Pipedrive and are only created when you set up your contact sync \u2014 attempting to set any of them without contact sync enabled returns a 403.",
+        "description": "Updates the properties of a person. \u003Cbr\u003EThe \u0060im\u0060, \u0060postal_address\u0060, \u0060notes\u0060, \u0060birthday\u0060 and \u0060job_title\u0060 fields don\u0027t exist by default in Pipedrive and are only created when you set up your contact sync \u2014 attempting to set any of them without contact sync enabled returns a 403. \u003Cbr\u003EIf the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the \u0060marketing_status\u0060 field. \u003Cbr\u003EIf the company has the Email tracking consent setting enabled, then this endpoint will also accept and return the \u0060track_open\u0060 and \u0060track_click\u0060 fields.",
         "operationId": "UpdatePerson",
         "parameters": [
           {
@@ -5094,7 +5094,7 @@
           }
         ],
         "x-token-cost": 5,
-        "x-tool-description": "Updates a contact person. The im, postal_address, notes, birthday, and job_title fields are only accepted when contact sync is enabled for the company; otherwise the request returns 403. If the company uses the Campaigns product, this endpoint also accepts and returns the marketing_status field."
+        "x-tool-description": "Updates a contact person. The im, postal_address, notes, birthday, and job_title fields are only accepted when contact sync is enabled for the company; otherwise the request returns 403. If the company uses the Campaigns product, this endpoint also accepts and returns the marketing_status field. If the company has the Email tracking consent setting enabled, this endpoint also accepts and returns the track_open and track_click fields (no_preference_set, consent_given, or consent_declined)."
       }
     },
     "/persons/{id}/followers": {
@@ -15798,6 +15798,12 @@
           "marketing_status": {
             "$ref": "#/components/schemas/AddPersonRequestMarketingStatus"
           },
+          "track_open": {
+            "$ref": "#/components/schemas/AddPersonRequestTrackOpen"
+          },
+          "track_click": {
+            "$ref": "#/components/schemas/AddPersonRequestTrackClick"
+          },
           "custom_fields": {
             "$ref": "#/components/schemas/AddPersonRequestCustomFields"
           }
@@ -15906,6 +15912,12 @@
           },
           "marketing_status": {
             "$ref": "#/components/schemas/UpdatePersonRequestMarketingStatus"
+          },
+          "track_open": {
+            "$ref": "#/components/schemas/UpdatePersonRequestTrackOpen"
+          },
+          "track_click": {
+            "$ref": "#/components/schemas/UpdatePersonRequestTrackClick"
           },
           "custom_fields": {
             "$ref": "#/components/schemas/UpdatePersonRequestCustomFields"
@@ -21998,6 +22010,12 @@
             "type": "string",
             "description": "The job title of the person, included if contact sync is enabled for the company"
           },
+          "track_open": {
+            "$ref": "#/components/schemas/GetPersonsResponseDataItemTrackOpen"
+          },
+          "track_click": {
+            "$ref": "#/components/schemas/GetPersonsResponseDataItemTrackClick"
+          },
           "custom_fields": {
             "$ref": "#/components/schemas/GetPersonsResponseDataItemCustomFields"
           }
@@ -22221,6 +22239,12 @@
             "type": "string",
             "description": "The job title of the person, included if contact sync is enabled for the company"
           },
+          "track_open": {
+            "$ref": "#/components/schemas/AddPerson200ResponseDataTrackOpen"
+          },
+          "track_click": {
+            "$ref": "#/components/schemas/AddPerson200ResponseDataTrackClick"
+          },
           "custom_fields": {
             "$ref": "#/components/schemas/AddPerson200ResponseDataCustomFields"
           }
@@ -22326,6 +22350,12 @@
           "job_title": {
             "type": "string",
             "description": "The job title of the person, included if contact sync is enabled for the company"
+          },
+          "track_open": {
+            "$ref": "#/components/schemas/GetPerson200ResponseDataTrackOpen"
+          },
+          "track_click": {
+            "$ref": "#/components/schemas/GetPerson200ResponseDataTrackClick"
           },
           "custom_fields": {
             "$ref": "#/components/schemas/GetPerson200ResponseDataCustomFields"
@@ -22538,6 +22568,12 @@
           "job_title": {
             "type": "string",
             "description": "The job title of the person, included if contact sync is enabled for the company"
+          },
+          "track_open": {
+            "$ref": "#/components/schemas/UpdatePerson200ResponseDataTrackOpen"
+          },
+          "track_click": {
+            "$ref": "#/components/schemas/UpdatePerson200ResponseDataTrackClick"
           },
           "custom_fields": {
             "$ref": "#/components/schemas/UpdatePerson200ResponseDataCustomFields"
@@ -32885,6 +32921,60 @@
           ]
         }
       },
+      "AddPersonRequestTrackOpen": {
+        "enum": [
+          "no_preference_set",
+          "consent_given",
+          "consent_declined"
+        ],
+        "type": "string",
+        "description": "The email open tracking consent of the person. Only accepted if the company has the Email tracking consent setting enabled.\u003Ctable\u003E\u003Ctr\u003E\u003Cth\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060no_preference_set\u0060\u003C/td\u003E\u003Ctd\u003EThe person has not set a preference\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060consent_given\u0060\u003C/td\u003E\u003Ctd\u003EThe person has given consent\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060consent_declined\u0060\u003C/td\u003E\u003Ctd\u003EThe person has declined consent\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E",
+        "x-ms-enum": {
+          "name": "AddPersonRequestTrackOpen",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "no_preference_set",
+              "name": "NoPreferenceSet"
+            },
+            {
+              "value": "consent_given",
+              "name": "ConsentGiven"
+            },
+            {
+              "value": "consent_declined",
+              "name": "ConsentDeclined"
+            }
+          ]
+        }
+      },
+      "AddPersonRequestTrackClick": {
+        "enum": [
+          "no_preference_set",
+          "consent_given",
+          "consent_declined"
+        ],
+        "type": "string",
+        "description": "The email link click tracking consent of the person. Only accepted if the company has the Email tracking consent setting enabled.\u003Ctable\u003E\u003Ctr\u003E\u003Cth\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060no_preference_set\u0060\u003C/td\u003E\u003Ctd\u003EThe person has not set a preference\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060consent_given\u0060\u003C/td\u003E\u003Ctd\u003EThe person has given consent\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060consent_declined\u0060\u003C/td\u003E\u003Ctd\u003EThe person has declined consent\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E",
+        "x-ms-enum": {
+          "name": "AddPersonRequestTrackClick",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "no_preference_set",
+              "name": "NoPreferenceSet"
+            },
+            {
+              "value": "consent_given",
+              "name": "ConsentGiven"
+            },
+            {
+              "value": "consent_declined",
+              "name": "ConsentDeclined"
+            }
+          ]
+        }
+      },
       "UpdatePersonRequestMarketingStatus": {
         "enum": [
           "no_consent",
@@ -32913,6 +33003,60 @@
             {
               "value": "archived",
               "name": "Archived"
+            }
+          ]
+        }
+      },
+      "UpdatePersonRequestTrackOpen": {
+        "enum": [
+          "no_preference_set",
+          "consent_given",
+          "consent_declined"
+        ],
+        "type": "string",
+        "description": "The email open tracking consent of the person. Only accepted if the company has the Email tracking consent setting enabled.\u003Ctable\u003E\u003Ctr\u003E\u003Cth\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060no_preference_set\u0060\u003C/td\u003E\u003Ctd\u003EThe person has not set a preference\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060consent_given\u0060\u003C/td\u003E\u003Ctd\u003EThe person has given consent\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060consent_declined\u0060\u003C/td\u003E\u003Ctd\u003EThe person has declined consent\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E",
+        "x-ms-enum": {
+          "name": "UpdatePersonRequestTrackOpen",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "no_preference_set",
+              "name": "NoPreferenceSet"
+            },
+            {
+              "value": "consent_given",
+              "name": "ConsentGiven"
+            },
+            {
+              "value": "consent_declined",
+              "name": "ConsentDeclined"
+            }
+          ]
+        }
+      },
+      "UpdatePersonRequestTrackClick": {
+        "enum": [
+          "no_preference_set",
+          "consent_given",
+          "consent_declined"
+        ],
+        "type": "string",
+        "description": "The email link click tracking consent of the person. Only accepted if the company has the Email tracking consent setting enabled.\u003Ctable\u003E\u003Ctr\u003E\u003Cth\u003EValue\u003C/th\u003E\u003Cth\u003EDescription\u003C/th\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060no_preference_set\u0060\u003C/td\u003E\u003Ctd\u003EThe person has not set a preference\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060consent_given\u0060\u003C/td\u003E\u003Ctd\u003EThe person has given consent\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u0060consent_declined\u0060\u003C/td\u003E\u003Ctd\u003EThe person has declined consent\u003C/td\u003E\u003C/tr\u003E\u003C/table\u003E",
+        "x-ms-enum": {
+          "name": "UpdatePersonRequestTrackClick",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "no_preference_set",
+              "name": "NoPreferenceSet"
+            },
+            {
+              "value": "consent_given",
+              "name": "ConsentGiven"
+            },
+            {
+              "value": "consent_declined",
+              "name": "ConsentDeclined"
             }
           ]
         }
@@ -35148,6 +35292,222 @@
             {
               "value": "rejected",
               "name": "Rejected"
+            }
+          ]
+        }
+      },
+      "GetPersonsResponseDataItemTrackOpen": {
+        "enum": [
+          "no_preference_set",
+          "consent_given",
+          "consent_declined"
+        ],
+        "type": "string",
+        "description": "The email open tracking consent of the person, included if the company has the Email tracking consent setting enabled",
+        "x-ms-enum": {
+          "name": "GetPersonsResponseDataItemTrackOpen",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "no_preference_set",
+              "name": "NoPreferenceSet"
+            },
+            {
+              "value": "consent_given",
+              "name": "ConsentGiven"
+            },
+            {
+              "value": "consent_declined",
+              "name": "ConsentDeclined"
+            }
+          ]
+        }
+      },
+      "GetPersonsResponseDataItemTrackClick": {
+        "enum": [
+          "no_preference_set",
+          "consent_given",
+          "consent_declined"
+        ],
+        "type": "string",
+        "description": "The email link click tracking consent of the person, included if the company has the Email tracking consent setting enabled",
+        "x-ms-enum": {
+          "name": "GetPersonsResponseDataItemTrackClick",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "no_preference_set",
+              "name": "NoPreferenceSet"
+            },
+            {
+              "value": "consent_given",
+              "name": "ConsentGiven"
+            },
+            {
+              "value": "consent_declined",
+              "name": "ConsentDeclined"
+            }
+          ]
+        }
+      },
+      "AddPerson200ResponseDataTrackOpen": {
+        "enum": [
+          "no_preference_set",
+          "consent_given",
+          "consent_declined"
+        ],
+        "type": "string",
+        "description": "The email open tracking consent of the person, included if the company has the Email tracking consent setting enabled",
+        "x-ms-enum": {
+          "name": "AddPerson200ResponseDataTrackOpen",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "no_preference_set",
+              "name": "NoPreferenceSet"
+            },
+            {
+              "value": "consent_given",
+              "name": "ConsentGiven"
+            },
+            {
+              "value": "consent_declined",
+              "name": "ConsentDeclined"
+            }
+          ]
+        }
+      },
+      "AddPerson200ResponseDataTrackClick": {
+        "enum": [
+          "no_preference_set",
+          "consent_given",
+          "consent_declined"
+        ],
+        "type": "string",
+        "description": "The email link click tracking consent of the person, included if the company has the Email tracking consent setting enabled",
+        "x-ms-enum": {
+          "name": "AddPerson200ResponseDataTrackClick",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "no_preference_set",
+              "name": "NoPreferenceSet"
+            },
+            {
+              "value": "consent_given",
+              "name": "ConsentGiven"
+            },
+            {
+              "value": "consent_declined",
+              "name": "ConsentDeclined"
+            }
+          ]
+        }
+      },
+      "GetPerson200ResponseDataTrackOpen": {
+        "enum": [
+          "no_preference_set",
+          "consent_given",
+          "consent_declined"
+        ],
+        "type": "string",
+        "description": "The email open tracking consent of the person, included if the company has the Email tracking consent setting enabled",
+        "x-ms-enum": {
+          "name": "GetPerson200ResponseDataTrackOpen",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "no_preference_set",
+              "name": "NoPreferenceSet"
+            },
+            {
+              "value": "consent_given",
+              "name": "ConsentGiven"
+            },
+            {
+              "value": "consent_declined",
+              "name": "ConsentDeclined"
+            }
+          ]
+        }
+      },
+      "GetPerson200ResponseDataTrackClick": {
+        "enum": [
+          "no_preference_set",
+          "consent_given",
+          "consent_declined"
+        ],
+        "type": "string",
+        "description": "The email link click tracking consent of the person, included if the company has the Email tracking consent setting enabled",
+        "x-ms-enum": {
+          "name": "GetPerson200ResponseDataTrackClick",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "no_preference_set",
+              "name": "NoPreferenceSet"
+            },
+            {
+              "value": "consent_given",
+              "name": "ConsentGiven"
+            },
+            {
+              "value": "consent_declined",
+              "name": "ConsentDeclined"
+            }
+          ]
+        }
+      },
+      "UpdatePerson200ResponseDataTrackOpen": {
+        "enum": [
+          "no_preference_set",
+          "consent_given",
+          "consent_declined"
+        ],
+        "type": "string",
+        "description": "The email open tracking consent of the person, included if the company has the Email tracking consent setting enabled",
+        "x-ms-enum": {
+          "name": "UpdatePerson200ResponseDataTrackOpen",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "no_preference_set",
+              "name": "NoPreferenceSet"
+            },
+            {
+              "value": "consent_given",
+              "name": "ConsentGiven"
+            },
+            {
+              "value": "consent_declined",
+              "name": "ConsentDeclined"
+            }
+          ]
+        }
+      },
+      "UpdatePerson200ResponseDataTrackClick": {
+        "enum": [
+          "no_preference_set",
+          "consent_given",
+          "consent_declined"
+        ],
+        "type": "string",
+        "description": "The email link click tracking consent of the person, included if the company has the Email tracking consent setting enabled",
+        "x-ms-enum": {
+          "name": "UpdatePerson200ResponseDataTrackClick",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "no_preference_set",
+              "name": "NoPreferenceSet"
+            },
+            {
+              "value": "consent_given",
+              "name": "ConsentGiven"
+            },
+            {
+              "value": "consent_declined",
+              "name": "ConsentDeclined"
             }
           ]
         }
@@ -39288,6 +39648,8 @@
           "last_outgoing_mail_time",
           "marketing_status",
           "doi_status",
+          "track_open",
+          "track_click",
           "smart_bcc_email"
         ],
         "type": "string",
@@ -39388,6 +39750,14 @@
               "name": "DoiStatus"
             },
             {
+              "value": "track_open",
+              "name": "TrackOpen"
+            },
+            {
+              "value": "track_click",
+              "name": "TrackClick"
+            },
+            {
               "value": "smart_bcc_email",
               "name": "SmartBccEmail"
             }
@@ -39419,6 +39789,8 @@
           "last_outgoing_mail_time",
           "marketing_status",
           "doi_status",
+          "track_open",
+          "track_click",
           "smart_bcc_email"
         ],
         "type": "string",
@@ -39517,6 +39889,14 @@
             {
               "value": "doi_status",
               "name": "DoiStatus"
+            },
+            {
+              "value": "track_open",
+              "name": "TrackOpen"
+            },
+            {
+              "value": "track_click",
+              "name": "TrackClick"
             },
             {
               "value": "smart_bcc_email",
@@ -41057,6 +41437,12 @@
           "type": "string",
           "description": "The job title of the person, included if contact sync is enabled for the company"
         },
+        "track_open": {
+          "$ref": "#/components/schemas/PersonTrackOpen"
+        },
+        "track_click": {
+          "$ref": "#/components/schemas/PersonTrackClick"
+        },
         "custom_fields": {
           "$ref": "#/components/schemas/PersonCustomFieldsProperty"
         }
@@ -41684,6 +42070,60 @@
           "type": "string",
           "description": "The new display label for the option"
         }
+      }
+    },
+    "PersonTrackOpen": {
+      "enum": [
+        "no_preference_set",
+        "consent_given",
+        "consent_declined"
+      ],
+      "type": "string",
+      "description": "The email open tracking consent of the person, included if the company has the Email tracking consent setting enabled",
+      "x-ms-enum": {
+        "name": "PersonTrackOpen",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "no_preference_set",
+            "name": "NoPreferenceSet"
+          },
+          {
+            "value": "consent_given",
+            "name": "ConsentGiven"
+          },
+          {
+            "value": "consent_declined",
+            "name": "ConsentDeclined"
+          }
+        ]
+      }
+    },
+    "PersonTrackClick": {
+      "enum": [
+        "no_preference_set",
+        "consent_given",
+        "consent_declined"
+      ],
+      "type": "string",
+      "description": "The email link click tracking consent of the person, included if the company has the Email tracking consent setting enabled",
+      "x-ms-enum": {
+        "name": "PersonTrackClick",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "no_preference_set",
+            "name": "NoPreferenceSet"
+          },
+          {
+            "value": "consent_given",
+            "name": "ConsentGiven"
+          },
+          {
+            "value": "consent_declined",
+            "name": "ConsentDeclined"
+          }
+        ]
       }
     }
   }

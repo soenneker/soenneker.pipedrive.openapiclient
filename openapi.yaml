@@ -7954,7 +7954,7 @@ paths:
               - desc
         - in: query
           name: include_fields
-          description: Optional comma separated string array of additional fields to include. `marketing_status` and `doi_status` can only be included if the company has marketing app enabled.
+          description: Optional comma separated string array of additional fields to include. <br>`marketing_status` and `doi_status` can only be included if the company has marketing app enabled. <br>`track_open` and `track_click` can only be included if the company has the Email tracking consent setting enabled.
           schema:
             type: array
             uniqueItems: true
@@ -7984,6 +7984,8 @@ paths:
                 - last_outgoing_mail_time
                 - marketing_status
                 - doi_status
+                - track_open
+                - track_click
                 - smart_bcc_email
           style: form
           explode: false
@@ -8187,6 +8189,20 @@ paths:
                             job_title:
                               type: string
                               description: 'The job title of the person, included if contact sync is enabled for the company'
+                            track_open:
+                              type: string
+                              description: 'The email open tracking consent of the person, included if the company has the Email tracking consent setting enabled'
+                              enum:
+                                - no_preference_set
+                                - consent_given
+                                - consent_declined
+                            track_click:
+                              type: string
+                              description: 'The email link click tracking consent of the person, included if the company has the Email tracking consent setting enabled'
+                              enum:
+                                - no_preference_set
+                                - consent_given
+                                - consent_declined
                             custom_fields:
                               type: object
                               additionalProperties: true
@@ -8257,9 +8273,9 @@ paths:
                   next_cursor: eyJmaWVsZCI6ImlkIiwiZmllbGRWYWx1ZSI6Nywic29ydERpcmVjdGlvbiI6ImFzYyIsImlkIjo3fQ
     post:
       summary: Add a new person
-      description: 'Adds a new person. <br>If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field. <br>The `im`, `postal_address`, `notes`, `birthday` and `job_title` fields don''t exist by default in Pipedrive and are only created when you set up your contact sync — attempting to set any of them without contact sync enabled returns a 403.'
+      description: 'Adds a new person.<br>The `im`, `postal_address`, `notes`, `birthday` and `job_title` fields don''t exist by default in Pipedrive and are only created when you set up your contact sync — attempting to set any of them without contact sync enabled returns a 403.<br>If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field.<br>If the company has the Email tracking consent setting enabled, then this endpoint will also accept and return the `track_open` and `track_click` fields.'
       x-token-cost: 5
-      x-tool-description: 'Creates a new contact person, requiring only a name. The im, postal_address, notes, birthday, and job_title fields are only accepted when contact sync is enabled for the company; otherwise the request returns 403. If the company uses the Campaigns product, this endpoint also accepts and returns the marketing_status field.'
+      x-tool-description: 'Creates a new contact person, requiring only a name. The im, postal_address, notes, birthday, and job_title fields are only accepted when contact sync is enabled for the company; otherwise the request returns 403. If the company uses the Campaigns product, this endpoint also accepts and returns the marketing_status field. If the company has the Email tracking consent setting enabled, this endpoint also accepts and returns the track_open and track_click fields.'
       operationId: addPerson
       tags:
         - Persons
@@ -8405,6 +8421,20 @@ paths:
                     - unsubscribed
                     - subscribed
                     - archived
+                track_open:
+                  type: string
+                  description: The email open tracking consent of the person. Only accepted if the company has the Email tracking consent setting enabled.<table><tr><th>Value</th><th>Description</th></tr><tr><td>`no_preference_set`</td><td>The person has not set a preference</td></tr><tr><td>`consent_given`</td><td>The person has given consent</td></tr><tr><td>`consent_declined`</td><td>The person has declined consent</td></tr></table>
+                  enum:
+                    - no_preference_set
+                    - consent_given
+                    - consent_declined
+                track_click:
+                  type: string
+                  description: The email link click tracking consent of the person. Only accepted if the company has the Email tracking consent setting enabled.<table><tr><th>Value</th><th>Description</th></tr><tr><td>`no_preference_set`</td><td>The person has not set a preference</td></tr><tr><td>`consent_given`</td><td>The person has given consent</td></tr><tr><td>`consent_declined`</td><td>The person has declined consent</td></tr></table>
+                  enum:
+                    - no_preference_set
+                    - consent_given
+                    - consent_declined
                 custom_fields:
                   type: object
                   additionalProperties: true
@@ -8572,6 +8602,20 @@ paths:
                           job_title:
                             type: string
                             description: 'The job title of the person, included if contact sync is enabled for the company'
+                          track_open:
+                            type: string
+                            description: 'The email open tracking consent of the person, included if the company has the Email tracking consent setting enabled'
+                            enum:
+                              - no_preference_set
+                              - consent_given
+                              - consent_declined
+                          track_click:
+                            type: string
+                            description: 'The email link click tracking consent of the person, included if the company has the Email tracking consent setting enabled'
+                            enum:
+                              - no_preference_set
+                              - consent_given
+                              - consent_declined
                           custom_fields:
                             type: object
                             additionalProperties: true
@@ -8673,7 +8717,7 @@ paths:
                   id: 1
     get:
       summary: Get details of a person
-      description: 'Returns the details of a specific person. Fields `ims`, `postal_address`, `notes`, `birthday`, and `job_title` are only included if contact sync is enabled for the company.'
+      description: 'Returns the details of a specific person. <br>Fields `ims`, `postal_address`, `notes`, `birthday`, and `job_title` are only included if contact sync is enabled for the company.'
       x-token-cost: 1
       operationId: getPerson
       tags:
@@ -8692,7 +8736,7 @@ paths:
             type: integer
         - in: query
           name: include_fields
-          description: Optional comma separated string array of additional fields to include. `marketing_status` and `doi_status` can only be included if the company has marketing app enabled.
+          description: Optional comma separated string array of additional fields to include. <br>`marketing_status` and `doi_status` can only be included if the company has marketing app enabled. <br>`track_open` and `track_click` can only be included if the company has the Email tracking consent setting enabled.
           schema:
             type: array
             uniqueItems: true
@@ -8722,6 +8766,8 @@ paths:
                 - last_outgoing_mail_time
                 - marketing_status
                 - doi_status
+                - track_open
+                - track_click
                 - smart_bcc_email
           style: form
           explode: false
@@ -8909,6 +8955,20 @@ paths:
                           job_title:
                             type: string
                             description: 'The job title of the person, included if contact sync is enabled for the company'
+                          track_open:
+                            type: string
+                            description: 'The email open tracking consent of the person, included if the company has the Email tracking consent setting enabled'
+                            enum:
+                              - no_preference_set
+                              - consent_given
+                              - consent_declined
+                          track_click:
+                            type: string
+                            description: 'The email link click tracking consent of the person, included if the company has the Email tracking consent setting enabled'
+                            enum:
+                              - no_preference_set
+                              - consent_given
+                              - consent_declined
                           custom_fields:
                             type: object
                             additionalProperties: true
@@ -8969,9 +9029,9 @@ paths:
                     postal_code: '94085'
     patch:
       summary: Update a person
-      description: 'Updates the properties of a person. <br>If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field. <br>The `im`, `postal_address`, `notes`, `birthday` and `job_title` fields don''t exist by default in Pipedrive and are only created when you set up your contact sync — attempting to set any of them without contact sync enabled returns a 403.'
+      description: 'Updates the properties of a person. <br>The `im`, `postal_address`, `notes`, `birthday` and `job_title` fields don''t exist by default in Pipedrive and are only created when you set up your contact sync — attempting to set any of them without contact sync enabled returns a 403. <br>If the company uses the [Campaigns product](https://pipedrive.readme.io/docs/campaigns-in-pipedrive-api), then this endpoint will also accept and return the `marketing_status` field. <br>If the company has the Email tracking consent setting enabled, then this endpoint will also accept and return the `track_open` and `track_click` fields.'
       x-token-cost: 5
-      x-tool-description: 'Updates a contact person. The im, postal_address, notes, birthday, and job_title fields are only accepted when contact sync is enabled for the company; otherwise the request returns 403. If the company uses the Campaigns product, this endpoint also accepts and returns the marketing_status field.'
+      x-tool-description: 'Updates a contact person. The im, postal_address, notes, birthday, and job_title fields are only accepted when contact sync is enabled for the company; otherwise the request returns 403. If the company uses the Campaigns product, this endpoint also accepts and returns the marketing_status field. If the company has the Email tracking consent setting enabled, this endpoint also accepts and returns the track_open and track_click fields (no_preference_set, consent_given, or consent_declined).'
       operationId: updatePerson
       tags:
         - Persons
@@ -9119,6 +9179,20 @@ paths:
                     - unsubscribed
                     - subscribed
                     - archived
+                track_open:
+                  type: string
+                  description: The email open tracking consent of the person. Only accepted if the company has the Email tracking consent setting enabled.<table><tr><th>Value</th><th>Description</th></tr><tr><td>`no_preference_set`</td><td>The person has not set a preference</td></tr><tr><td>`consent_given`</td><td>The person has given consent</td></tr><tr><td>`consent_declined`</td><td>The person has declined consent</td></tr></table>
+                  enum:
+                    - no_preference_set
+                    - consent_given
+                    - consent_declined
+                track_click:
+                  type: string
+                  description: The email link click tracking consent of the person. Only accepted if the company has the Email tracking consent setting enabled.<table><tr><th>Value</th><th>Description</th></tr><tr><td>`no_preference_set`</td><td>The person has not set a preference</td></tr><tr><td>`consent_given`</td><td>The person has given consent</td></tr><tr><td>`consent_declined`</td><td>The person has declined consent</td></tr></table>
+                  enum:
+                    - no_preference_set
+                    - consent_given
+                    - consent_declined
                 custom_fields:
                   type: object
                   additionalProperties: true
@@ -9286,6 +9360,20 @@ paths:
                           job_title:
                             type: string
                             description: 'The job title of the person, included if contact sync is enabled for the company'
+                          track_open:
+                            type: string
+                            description: 'The email open tracking consent of the person, included if the company has the Email tracking consent setting enabled'
+                            enum:
+                              - no_preference_set
+                              - consent_given
+                              - consent_declined
+                          track_click:
+                            type: string
+                            description: 'The email link click tracking consent of the person, included if the company has the Email tracking consent setting enabled'
+                            enum:
+                              - no_preference_set
+                              - consent_given
+                              - consent_declined
                           custom_fields:
                             type: object
                             additionalProperties: true
@@ -23958,6 +24046,20 @@ components:
         job_title:
           type: string
           description: 'The job title of the person, included if contact sync is enabled for the company'
+        track_open:
+          type: string
+          description: 'The email open tracking consent of the person, included if the company has the Email tracking consent setting enabled'
+          enum:
+            - no_preference_set
+            - consent_given
+            - consent_declined
+        track_click:
+          type: string
+          description: 'The email link click tracking consent of the person, included if the company has the Email tracking consent setting enabled'
+          enum:
+            - no_preference_set
+            - consent_given
+            - consent_declined
         custom_fields:
           type: object
           additionalProperties: true
