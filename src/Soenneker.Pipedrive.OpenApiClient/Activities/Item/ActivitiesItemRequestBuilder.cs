@@ -22,7 +22,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivitiesItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities/{id}{?include_fields}", pathParameters)
+        public ActivitiesItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities/{id}{?custom_fields,include_fields,include_option_labels*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivitiesItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities/{id}{?include_fields}", rawUrl)
+        public ActivitiesItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities/{id}{?custom_fields,include_fields,include_option_labels*}", rawUrl)
         {
         }
         /// <summary>
@@ -164,6 +164,16 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ActivitiesItemRequestBuilderGetQueryParameters 
         {
+            /// <summary>Optional comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for faster results and smaller response.&lt;br/&gt;A maximum of 15 keys is allowed.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("custom_fields")]
+            public string[]? CustomFields { get; set; }
+#nullable restore
+#else
+            [QueryParameter("custom_fields")]
+            public string[] CustomFields { get; set; }
+#endif
             /// <summary>Optional comma separated string array of additional fields to include</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -174,6 +184,9 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities.Item
             [QueryParameter("include_fields")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.AttendeesItem[] IncludeFields { get; set; }
 #endif
+            /// <summary>When provided with a &apos;true&apos; value, single option and multiple option custom fields values contain objects in the form of &apos;{ id: number, label: string }&apos; instead of plain id</summary>
+            [QueryParameter("include_option_labels")]
+            public bool? IncludeOptionLabels { get; set; }
         }
     }
 }

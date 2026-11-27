@@ -181,6 +181,22 @@ paths:
           style: form
           explode: false
         - in: query
+          name: custom_fields
+          description: 'Optional comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for faster results and smaller response.<br/>A maximum of 15 keys is allowed.'
+          schema:
+            type: array
+            uniqueItems: true
+            maxItems: 15
+            items:
+              type: string
+          style: form
+          explode: false
+        - in: query
+          name: include_option_labels
+          description: 'When provided with a ''true'' value, single option and multiple option custom fields values contain objects in the form of ''{ id: number, label: string }'' instead of plain id'
+          schema:
+            type: boolean
+        - in: query
           name: limit
           description: 'For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.'
           schema:
@@ -384,6 +400,10 @@ paths:
                             note:
                               type: string
                               description: The note of the activity
+                            custom_fields:
+                              type: object
+                              additionalProperties: true
+                              description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
                       additional_data:
                         type: object
                         description: The additional data of the list
@@ -442,6 +462,7 @@ paths:
                     priority: 263
                     outcome: 101
                     note: Note
+                    custom_fields: {}
                 additional_data:
                   next_cursor: eyJmaWVsZCI6ImlkIiwiZmllbGRWYWx1ZSI6Nywic29ydERpcmVjdGlvbiI6ImFzYyIsImlkIjo3fQ
     post:
@@ -581,6 +602,10 @@ paths:
                 note:
                   type: string
                   description: The note of the activity
+                custom_fields:
+                  type: object
+                  additionalProperties: true
+                  description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
       responses:
         '200':
           description: Add activity
@@ -769,6 +794,10 @@ paths:
                           note:
                             type: string
                             description: The note of the activity
+                          custom_fields:
+                            type: object
+                            additionalProperties: true
+                            description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
               example:
                 success: true
                 data:
@@ -819,6 +848,7 @@ paths:
                   priority: 263
                   outcome: 101
                   note: Note
+                  custom_fields: {}
   '/activities/{id}':
     delete:
       summary: Delete an activity
@@ -891,6 +921,22 @@ paths:
                 - attendees
           style: form
           explode: false
+        - in: query
+          name: custom_fields
+          description: 'Optional comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for faster results and smaller response.<br/>A maximum of 15 keys is allowed.'
+          schema:
+            type: array
+            uniqueItems: true
+            maxItems: 15
+            items:
+              type: string
+          style: form
+          explode: false
+        - in: query
+          name: include_option_labels
+          description: 'When provided with a ''true'' value, single option and multiple option custom fields values contain objects in the form of ''{ id: number, label: string }'' instead of plain id'
+          schema:
+            type: boolean
       responses:
         '200':
           description: Get activity
@@ -1079,6 +1125,10 @@ paths:
                           note:
                             type: string
                             description: The note of the activity
+                          custom_fields:
+                            type: object
+                            additionalProperties: true
+                            description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
               example:
                 success: true
                 data:
@@ -1129,6 +1179,7 @@ paths:
                   priority: 263
                   outcome: 101
                   note: Note
+                  custom_fields: {}
     patch:
       summary: Update an activity
       description: Updates the properties of an activity.
@@ -1273,6 +1324,10 @@ paths:
                 note:
                   type: string
                   description: The note of the activity
+                custom_fields:
+                  type: object
+                  additionalProperties: true
+                  description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
       responses:
         '200':
           description: Edit activity
@@ -1461,6 +1516,10 @@ paths:
                           note:
                             type: string
                             description: The note of the activity
+                          custom_fields:
+                            type: object
+                            additionalProperties: true
+                            description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
               example:
                 success: true
                 data:
@@ -1511,6 +1570,7 @@ paths:
                   priority: 263
                   outcome: 101
                   note: Note
+                  custom_fields: {}
   /activityFields:
     get:
       summary: Get all activity fields
@@ -1534,6 +1594,8 @@ paths:
               type: string
               enum:
                 - ui_visibility
+                - required_on_creation
+                - required_on_completion
           style: form
           explode: false
         - in: query
@@ -1678,6 +1740,42 @@ paths:
                             details_visible_flag:
                               type: boolean
                               description: Whether the field is shown in the details view (read-only)
+                            show_in_activity_types:
+                              type: object
+                              description: Activity types the field is available for. Stored values are kept when a field becomes unavailable for a type and are still returned when reading the activity.
+                              properties:
+                                show_in_all:
+                                  type: boolean
+                                  description: 'Whether the field is available for all activity types, including ones created later'
+                                activity_type_ids:
+                                  type: array
+                                  description: IDs of the activity types the field is available for. Only present when `show_in_all` is `false`.
+                                  items:
+                                    type: integer
+                        required_on_creation:
+                          type: object
+                          description: Activity types for which the field is required when an activity is created (only included when requested via include_fields parameter).
+                          properties:
+                            required_in_all:
+                              type: boolean
+                              description: Whether the field is required for all activity types
+                            activity_type_ids:
+                              type: array
+                              description: IDs of the activity types the field is required for
+                              items:
+                                type: integer
+                        required_on_completion:
+                          type: object
+                          description: Activity types for which the field is required when an activity is marked as done (only included when requested via include_fields parameter).
+                          properties:
+                            required_in_all:
+                              type: boolean
+                              description: Whether the field is required for all activity types
+                            activity_type_ids:
+                              type: array
+                              description: IDs of the activity types the field is required for
+                              items:
+                                type: integer
                   additional_data:
                     type: object
                     properties:
@@ -1716,6 +1814,18 @@ paths:
                     ui_visibility:
                       add_visible_flag: true
                       details_visible_flag: true
+                      show_in_activity_types:
+                        show_in_all: false
+                        activity_type_ids:
+                          - 1
+                          - 2
+                    required_on_creation:
+                      required_in_all: false
+                      activity_type_ids:
+                        - 1
+                    required_on_completion:
+                      required_in_all: true
+                      activity_type_ids: []
                   - field_name: Location
                     field_code: location
                     description: Physical location where the activity takes place
@@ -1757,6 +1867,10 @@ paths:
                     ui_visibility:
                       add_visible_flag: true
                       details_visible_flag: true
+                    required_on_creation:
+                      required_in_all: false
+                      activity_type_ids:
+                        - 1
                 additional_data:
                   next_cursor: eyJmaWVsZCI6ImlkIiwiZmllbGRWYWx1ZSI6Nywic29ydERpcmVjdGlvbiI6ImFzYyIsImlkIjo3fQ
   '/activityFields/{field_code}':
@@ -1788,6 +1902,8 @@ paths:
               type: string
               enum:
                 - ui_visibility
+                - required_on_creation
+                - required_on_completion
           style: form
           explode: false
       responses:
@@ -1916,6 +2032,42 @@ paths:
                           details_visible_flag:
                             type: boolean
                             description: Whether the field is shown in the details view (read-only)
+                          show_in_activity_types:
+                            type: object
+                            description: Activity types the field is available for. Stored values are kept when a field becomes unavailable for a type and are still returned when reading the activity.
+                            properties:
+                              show_in_all:
+                                type: boolean
+                                description: 'Whether the field is available for all activity types, including ones created later'
+                              activity_type_ids:
+                                type: array
+                                description: IDs of the activity types the field is available for. Only present when `show_in_all` is `false`.
+                                items:
+                                  type: integer
+                      required_on_creation:
+                        type: object
+                        description: Activity types for which the field is required when an activity is created (only included when requested via include_fields parameter).
+                        properties:
+                          required_in_all:
+                            type: boolean
+                            description: Whether the field is required for all activity types
+                          activity_type_ids:
+                            type: array
+                            description: IDs of the activity types the field is required for
+                            items:
+                              type: integer
+                      required_on_completion:
+                        type: object
+                        description: Activity types for which the field is required when an activity is marked as done (only included when requested via include_fields parameter).
+                        properties:
+                          required_in_all:
+                            type: boolean
+                            description: Whether the field is required for all activity types
+                          activity_type_ids:
+                            type: array
+                            description: IDs of the activity types the field is required for
+                            items:
+                              type: integer
               example:
                 success: true
                 data:
@@ -23657,6 +23809,10 @@ components:
         note:
           type: string
           description: The note of the activity
+        custom_fields:
+          type: object
+          additionalProperties: true
+          description: 'An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.'
     Deal:
       type: object
       properties:

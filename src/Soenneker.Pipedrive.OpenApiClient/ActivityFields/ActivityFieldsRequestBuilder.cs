@@ -112,11 +112,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.ActivityFields
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.UiVisibilityItem[]? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFieldsIncludeFieldsParameterItem[]? IncludeFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.UiVisibilityItem[] IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFieldsIncludeFieldsParameterItem[] IncludeFields { get; set; }
 #endif
             /// <summary>For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.</summary>
             [QueryParameter("limit")]

@@ -35,7 +35,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivitiesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities{?cursor*,deal_id*,done*,filter_id*,ids,include_fields,lead_id*,limit*,org_id*,owner_id*,person_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", pathParameters)
+        public ActivitiesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities{?cursor*,custom_fields,deal_id*,done*,filter_id*,ids,include_fields,include_option_labels*,lead_id*,limit*,org_id*,owner_id*,person_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivitiesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities{?cursor*,deal_id*,done*,filter_id*,ids,include_fields,lead_id*,limit*,org_id*,owner_id*,person_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", rawUrl)
+        public ActivitiesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/activities{?cursor*,custom_fields,deal_id*,done*,filter_id*,ids,include_fields,include_option_labels*,lead_id*,limit*,org_id*,owner_id*,person_id*,sort_by*,sort_direction*,updated_since*,updated_until*}", rawUrl)
         {
         }
         /// <summary>
@@ -150,6 +150,16 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities
             [QueryParameter("cursor")]
             public string Cursor { get; set; }
 #endif
+            /// <summary>Optional comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for faster results and smaller response.&lt;br/&gt;A maximum of 15 keys is allowed.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("custom_fields")]
+            public string[]? CustomFields { get; set; }
+#nullable restore
+#else
+            [QueryParameter("custom_fields")]
+            public string[] CustomFields { get; set; }
+#endif
             /// <summary>If supplied, only activities linked to the specified deal are returned. If filter_id is provided, this is ignored.</summary>
             [QueryParameter("deal_id")]
             public int? DealId { get; set; }
@@ -179,6 +189,9 @@ namespace Soenneker.Pipedrive.OpenApiClient.Activities
             [QueryParameter("include_fields")]
             public global::Soenneker.Pipedrive.OpenApiClient.Models.AttendeesItem[] IncludeFields { get; set; }
 #endif
+            /// <summary>When provided with a &apos;true&apos; value, single option and multiple option custom fields values contain objects in the form of &apos;{ id: number, label: string }&apos; instead of plain id</summary>
+            [QueryParameter("include_option_labels")]
+            public bool? IncludeOptionLabels { get; set; }
             /// <summary>If supplied, only activities linked to the specified lead are returned. If filter_id is provided, this is ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

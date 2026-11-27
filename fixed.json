@@ -135,6 +135,28 @@
             }
           },
           {
+            "name": "custom_fields",
+            "in": "query",
+            "description": "Optional comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for faster results and smaller response.\u003Cbr/\u003EA maximum of 15 keys is allowed.",
+            "explode": false,
+            "schema": {
+              "maxItems": 15,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "include_option_labels",
+            "in": "query",
+            "description": "When provided with a \u0027true\u0027 value, single option and multiple option custom fields values contain objects in the form of \u0027{ id: number, label: string }\u0027 instead of plain id",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
             "name": "limit",
             "in": "query",
             "description": "For pagination, the limit of entries to be returned. If not provided, 100 items will be returned. Please note that a maximum value of 500 is allowed.",
@@ -219,7 +241,8 @@
                       "public_description": "Public Description",
                       "priority": 263,
                       "outcome": 101,
-                      "note": "Note"
+                      "note": "Note",
+                      "custom_fields": {}
                     }
                   ],
                   "additional_data": {
@@ -323,7 +346,8 @@
                     "public_description": "Public Description",
                     "priority": 263,
                     "outcome": 101,
-                    "note": "Note"
+                    "note": "Note",
+                    "custom_fields": {}
                   }
                 }
               }
@@ -422,6 +446,28 @@
                 "$ref": "#/components/schemas/AttendeesItem"
               }
             }
+          },
+          {
+            "name": "custom_fields",
+            "in": "query",
+            "description": "Optional comma separated string array of custom fields keys to include. If you are only interested in a particular set of custom fields, please use this parameter for faster results and smaller response.\u003Cbr/\u003EA maximum of 15 keys is allowed.",
+            "explode": false,
+            "schema": {
+              "maxItems": 15,
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "include_option_labels",
+            "in": "query",
+            "description": "When provided with a \u0027true\u0027 value, single option and multiple option custom fields values contain objects in the form of \u0027{ id: number, label: string }\u0027 instead of plain id",
+            "schema": {
+              "type": "boolean"
+            }
           }
         ],
         "responses": {
@@ -488,7 +534,8 @@
                     "public_description": "Public Description",
                     "priority": 263,
                     "outcome": 101,
-                    "note": "Note"
+                    "note": "Note",
+                    "custom_fields": {}
                   }
                 }
               }
@@ -599,7 +646,8 @@
                     "public_description": "Public Description",
                     "priority": 263,
                     "outcome": 101,
-                    "note": "Note"
+                    "note": "Note",
+                    "custom_fields": {}
                   }
                 }
               }
@@ -638,7 +686,7 @@
               "uniqueItems": true,
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/UiVisibilityItem"
+                "$ref": "#/components/schemas/GetActivityFieldsIncludeFieldsParameterItem"
               }
             }
           },
@@ -711,7 +759,24 @@
                       "is_optional_response_field": false,
                       "ui_visibility": {
                         "add_visible_flag": true,
-                        "details_visible_flag": true
+                        "details_visible_flag": true,
+                        "show_in_activity_types": {
+                          "show_in_all": false,
+                          "activity_type_ids": [
+                            1,
+                            2
+                          ]
+                        }
+                      },
+                      "required_on_creation": {
+                        "required_in_all": false,
+                        "activity_type_ids": [
+                          1
+                        ]
+                      },
+                      "required_on_completion": {
+                        "required_in_all": true,
+                        "activity_type_ids": []
                       }
                     },
                     {
@@ -777,6 +842,12 @@
                       "ui_visibility": {
                         "add_visible_flag": true,
                         "details_visible_flag": true
+                      },
+                      "required_on_creation": {
+                        "required_in_all": false,
+                        "activity_type_ids": [
+                          1
+                        ]
                       }
                     }
                   ],
@@ -828,7 +899,7 @@
               "uniqueItems": true,
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/UiVisibilityItem"
+                "$ref": "#/components/schemas/GetActivityFieldIncludeFieldsParameterItem"
               }
             }
           }
@@ -14418,6 +14489,9 @@
           "note": {
             "type": "string",
             "description": "The note of the activity"
+          },
+          "custom_fields": {
+            "$ref": "#/components/schemas/AddActivityRequestCustomFields"
           }
         }
       },
@@ -14544,6 +14618,9 @@
           "note": {
             "type": "string",
             "description": "The note of the activity"
+          },
+          "custom_fields": {
+            "$ref": "#/components/schemas/UpdateActivityRequestCustomFields"
           }
         }
       },
@@ -18905,6 +18982,9 @@
           "note": {
             "type": "string",
             "description": "The note of the activity"
+          },
+          "custom_fields": {
+            "$ref": "#/components/schemas/GetActivitiesResponseDataItemCustomFields"
           }
         }
       },
@@ -19006,6 +19086,10 @@
             "description": "The ID of the user if the attendee is a user"
           }
         }
+      },
+      "AddActivityRequestCustomFields": {
+        "type": "object",
+        "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
       "AddActivity200ResponseData": {
         "type": "object",
@@ -19139,6 +19223,9 @@
           "note": {
             "type": "string",
             "description": "The note of the activity"
+          },
+          "custom_fields": {
+            "$ref": "#/components/schemas/AddActivity200ResponseDataCustomFields"
           }
         }
       },
@@ -19283,6 +19370,9 @@
           "note": {
             "type": "string",
             "description": "The note of the activity"
+          },
+          "custom_fields": {
+            "$ref": "#/components/schemas/GetActivity200ResponseDataCustomFields"
           }
         }
       },
@@ -19373,6 +19463,10 @@
             "description": "The ID of the user if the attendee is a user"
           }
         }
+      },
+      "UpdateActivityRequestCustomFields": {
+        "type": "object",
+        "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
       "UpdateActivity200ResponseData": {
         "type": "object",
@@ -19506,6 +19600,9 @@
           "note": {
             "type": "string",
             "description": "The note of the activity"
+          },
+          "custom_fields": {
+            "$ref": "#/components/schemas/UpdateActivity200ResponseDataCustomFields"
           }
         }
       },
@@ -19556,6 +19653,12 @@
           },
           "ui_visibility": {
             "$ref": "#/components/schemas/GetActivityFields200ResponseDataItemUiVisibility"
+          },
+          "required_on_creation": {
+            "$ref": "#/components/schemas/GetActivityFields200ResponseDataItemRequiredOnCreation"
+          },
+          "required_on_completion": {
+            "$ref": "#/components/schemas/GetActivityFields200ResponseDataItemRequiredOnCompletion"
           }
         }
       },
@@ -19616,6 +19719,12 @@
           },
           "ui_visibility": {
             "$ref": "#/components/schemas/GetActivityField200ResponseDataUiVisibility"
+          },
+          "required_on_creation": {
+            "$ref": "#/components/schemas/GetActivityField200ResponseDataRequiredOnCreation"
+          },
+          "required_on_completion": {
+            "$ref": "#/components/schemas/GetActivityField200ResponseDataRequiredOnCompletion"
           }
         }
       },
@@ -28029,6 +28138,10 @@
           }
         }
       },
+      "GetActivitiesResponseDataItemCustomFields": {
+        "type": "object",
+        "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
+      },
       "AddActivity200ResponseDataLocation": {
         "type": "object",
         "properties": {
@@ -28126,6 +28239,10 @@
             "description": "The ID of the user if the attendee is a user"
           }
         }
+      },
+      "AddActivity200ResponseDataCustomFields": {
+        "type": "object",
+        "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
       },
       "GetActivity200ResponseDataLocation": {
         "type": "object",
@@ -28225,6 +28342,10 @@
           }
         }
       },
+      "GetActivity200ResponseDataCustomFields": {
+        "type": "object",
+        "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
+      },
       "UpdateActivity200ResponseDataLocation": {
         "type": "object",
         "properties": {
@@ -28323,6 +28444,10 @@
           }
         }
       },
+      "UpdateActivity200ResponseDataCustomFields": {
+        "type": "object",
+        "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
+      },
       "GetActivityFields200ResponseDataItemOptionsItem": {
         "type": "object",
         "properties": {
@@ -28387,9 +28512,46 @@
           "details_visible_flag": {
             "type": "boolean",
             "description": "Whether the field is shown in the details view (read-only)"
+          },
+          "show_in_activity_types": {
+            "$ref": "#/components/schemas/GetActivityFields200ResponseDataItemUiVisibilityShowInActivityTypes"
           }
         },
         "description": "UI visibility settings (only included when requested via include_fields parameter)"
+      },
+      "GetActivityFields200ResponseDataItemRequiredOnCreation": {
+        "type": "object",
+        "properties": {
+          "required_in_all": {
+            "type": "boolean",
+            "description": "Whether the field is required for all activity types"
+          },
+          "activity_type_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "IDs of the activity types the field is required for"
+          }
+        },
+        "description": "Activity types for which the field is required when an activity is created (only included when requested via include_fields parameter)."
+      },
+      "GetActivityFields200ResponseDataItemRequiredOnCompletion": {
+        "type": "object",
+        "properties": {
+          "required_in_all": {
+            "type": "boolean",
+            "description": "Whether the field is required for all activity types"
+          },
+          "activity_type_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "IDs of the activity types the field is required for"
+          }
+        },
+        "description": "Activity types for which the field is required when an activity is marked as done (only included when requested via include_fields parameter)."
       },
       "GetActivityField200ResponseDataOptionsItem": {
         "type": "object",
@@ -28455,9 +28617,46 @@
           "details_visible_flag": {
             "type": "boolean",
             "description": "Whether the field is shown in the details view (read-only)"
+          },
+          "show_in_activity_types": {
+            "$ref": "#/components/schemas/GetActivityField200ResponseDataUiVisibilityShowInActivityTypes"
           }
         },
         "description": "UI visibility settings (only included when requested via include_fields parameter)"
+      },
+      "GetActivityField200ResponseDataRequiredOnCreation": {
+        "type": "object",
+        "properties": {
+          "required_in_all": {
+            "type": "boolean",
+            "description": "Whether the field is required for all activity types"
+          },
+          "activity_type_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "IDs of the activity types the field is required for"
+          }
+        },
+        "description": "Activity types for which the field is required when an activity is created (only included when requested via include_fields parameter)."
+      },
+      "GetActivityField200ResponseDataRequiredOnCompletion": {
+        "type": "object",
+        "properties": {
+          "required_in_all": {
+            "type": "boolean",
+            "description": "Whether the field is required for all activity types"
+          },
+          "activity_type_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "IDs of the activity types the field is required for"
+          }
+        },
+        "description": "Activity types for which the field is required when an activity is marked as done (only included when requested via include_fields parameter)."
       },
       "GetDeals200ResponseDataItemCustomFields": {
         "type": "object",
@@ -31738,6 +31937,40 @@
       "GetProjectChangelogResponseDataItemOldValues": {
         "type": "object",
         "description": "A map of field keys to their previous values before the change"
+      },
+      "GetActivityFields200ResponseDataItemUiVisibilityShowInActivityTypes": {
+        "type": "object",
+        "properties": {
+          "show_in_all": {
+            "type": "boolean",
+            "description": "Whether the field is available for all activity types, including ones created later"
+          },
+          "activity_type_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "IDs of the activity types the field is available for. Only present when \u0060show_in_all\u0060 is \u0060false\u0060."
+          }
+        },
+        "description": "Activity types the field is available for. Stored values are kept when a field becomes unavailable for a type and are still returned when reading the activity."
+      },
+      "GetActivityField200ResponseDataUiVisibilityShowInActivityTypes": {
+        "type": "object",
+        "properties": {
+          "show_in_all": {
+            "type": "boolean",
+            "description": "Whether the field is available for all activity types, including ones created later"
+          },
+          "activity_type_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "IDs of the activity types the field is available for. Only present when \u0060show_in_all\u0060 is \u0060false\u0060."
+          }
+        },
+        "description": "Activity types the field is available for. Stored values are kept when a field becomes unavailable for a type and are still returned when reading the activity."
       },
       "GetDealSearchResponseDataItemsItemItem": {
         "type": "object",
@@ -38855,18 +39088,54 @@
           ]
         }
       },
-      "UiVisibilityItem": {
+      "GetActivityFieldsIncludeFieldsParameterItem": {
         "enum": [
-          "ui_visibility"
+          "ui_visibility",
+          "required_on_creation",
+          "required_on_completion"
         ],
         "type": "string",
         "x-ms-enum": {
-          "name": "UiVisibilityItem",
+          "name": "GetActivityFieldsIncludeFieldsParameterItem",
           "modelAsString": false,
           "values": [
             {
               "value": "ui_visibility",
               "name": "UiVisibility"
+            },
+            {
+              "value": "required_on_creation",
+              "name": "RequiredOnCreation"
+            },
+            {
+              "value": "required_on_completion",
+              "name": "RequiredOnCompletion"
+            }
+          ]
+        }
+      },
+      "GetActivityFieldIncludeFieldsParameterItem": {
+        "enum": [
+          "ui_visibility",
+          "required_on_creation",
+          "required_on_completion"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "GetActivityFieldIncludeFieldsParameterItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "ui_visibility",
+              "name": "UiVisibility"
+            },
+            {
+              "value": "required_on_creation",
+              "name": "RequiredOnCreation"
+            },
+            {
+              "value": "required_on_completion",
+              "name": "RequiredOnCompletion"
             }
           ]
         }
@@ -40362,6 +40631,22 @@
           ]
         }
       },
+      "UiVisibilityItem": {
+        "enum": [
+          "ui_visibility"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "UiVisibilityItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "ui_visibility",
+              "name": "UiVisibility"
+            }
+          ]
+        }
+      },
       "SearchLeadsFieldsParameterItem": {
         "enum": [
           "custom_fields",
@@ -41103,6 +41388,9 @@
         "note": {
           "type": "string",
           "description": "The note of the activity"
+        },
+        "custom_fields": {
+          "$ref": "#/components/schemas/ActivityItemCustomFieldsProperty"
         }
       }
     },
@@ -41546,6 +41834,10 @@
         }
       }
     },
+    "ActivityItemCustomFields": {
+      "type": "object",
+      "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
+    },
     "DealCustomFields": {
       "type": "object",
       "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
@@ -41834,6 +42126,10 @@
     "ExamplePayload": {
       "type": "object",
       "description": "Placeholder schema for path example refs"
+    },
+    "ActivityItemCustomFieldsProperty": {
+      "type": "object",
+      "description": "An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to \u0060null\u0060. For multi-option fields (field type \u0060set\u0060), use \u0060null\u0060 to clear the selection \u2014 sending an empty array \u0060[]\u0060 is not supported and will result in a validation error."
     },
     "DealCustomFieldsProperty": {
       "type": "object",

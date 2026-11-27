@@ -22,6 +22,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             else if (parseNode.GetChildNode("add_visible_flag") is { } nullNodeAddVisibleFlag && nullNodeAddVisibleFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddVisibleFlag = null;
             if (parseNode.GetChildNode("details_visible_flag") is null) { _explicitNullValueDetailsVisibleFlag = default!; _explicitNullProperties?.Remove("details_visible_flag"); }
             else if (parseNode.GetChildNode("details_visible_flag") is { } nullNodeDetailsVisibleFlag && nullNodeDetailsVisibleFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetailsVisibleFlag = null;
+            if (parseNode.GetChildNode("show_in_activity_types") is null) { _explicitNullValueShowInActivityTypes = default!; _explicitNullProperties?.Remove("show_in_activity_types"); }
+            else if (parseNode.GetChildNode("show_in_activity_types") is { } nullNodeShowInActivityTypes && nullNodeShowInActivityTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowInActivityTypes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,6 +34,16 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <summary>Whether the field is shown in the details view (read-only)</summary>
         public bool? DetailsVisibleFlag { get => _explicitNullValueDetailsVisibleFlag; set { _explicitNullValueDetailsVisibleFlag = value; AdditionalData?.Remove("details_visible_flag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details_visible_flag"); else _explicitNullProperties?.Remove("details_visible_flag"); } }
         private bool? _explicitNullValueDetailsVisibleFlag = default!;
+        /// <summary>Activity types the field is available for. Stored values are kept when a field becomes unavailable for a type and are still returned when reading the activity.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemUiVisibilityShowInActivityTypes? ShowInActivityTypes { get => _explicitNullValueShowInActivityTypes; set { _explicitNullValueShowInActivityTypes = value; AdditionalData?.Remove("show_in_activity_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_in_activity_types"); else _explicitNullProperties?.Remove("show_in_activity_types"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemUiVisibilityShowInActivityTypes? _explicitNullValueShowInActivityTypes = default!;
+#nullable restore
+#else
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemUiVisibilityShowInActivityTypes ShowInActivityTypes { get => _explicitNullValueShowInActivityTypes; set { _explicitNullValueShowInActivityTypes = value; AdditionalData?.Remove("show_in_activity_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_in_activity_types"); else _explicitNullProperties?.Remove("show_in_activity_types"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemUiVisibilityShowInActivityTypes _explicitNullValueShowInActivityTypes = default!;
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemUiVisibility"/> and sets the default values.
         /// </summary>
@@ -59,6 +71,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             {
                 { "add_visible_flag", n => { AddVisibleFlag = n.GetBoolValue(); } },
                 { "details_visible_flag", n => { DetailsVisibleFlag = n.GetBoolValue(); } },
+                { "show_in_activity_types", n => { ShowInActivityTypes = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemUiVisibilityShowInActivityTypes>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemUiVisibilityShowInActivityTypes.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -70,6 +83,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("add_visible_flag", AddVisibleFlag);
             writer.WriteBoolValue("details_visible_flag", DetailsVisibleFlag);
+            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemUiVisibilityShowInActivityTypes>("show_in_activity_types", ShowInActivityTypes);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

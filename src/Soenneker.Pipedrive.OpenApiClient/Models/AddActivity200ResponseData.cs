@@ -31,6 +31,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             else if (parseNode.GetChildNode("conference_meeting_url") is { } nullNodeConferenceMeetingUrl && nullNodeConferenceMeetingUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConferenceMeetingUrl = null;
             if (parseNode.GetChildNode("creator_user_id") is null) { _explicitNullValueCreatorUserId = default!; _explicitNullProperties?.Remove("creator_user_id"); }
             else if (parseNode.GetChildNode("creator_user_id") is { } nullNodeCreatorUserId && nullNodeCreatorUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatorUserId = null;
+            if (parseNode.GetChildNode("custom_fields") is null) { _explicitNullValueCustomFields = default!; _explicitNullProperties?.Remove("custom_fields"); }
+            else if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
             if (parseNode.GetChildNode("deal_id") is null) { _explicitNullValueDealId = default!; _explicitNullProperties?.Remove("deal_id"); }
             else if (parseNode.GetChildNode("deal_id") is { } nullNodeDealId && nullNodeDealId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DealId = null;
             if (parseNode.GetChildNode("done") is null) { _explicitNullValueDone = default!; _explicitNullProperties?.Remove("done"); }
@@ -135,6 +137,16 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <summary>The ID of the user who created the activity</summary>
         public int? CreatorUserId { get => _explicitNullValueCreatorUserId; set { _explicitNullValueCreatorUserId = value; AdditionalData?.Remove("creator_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creator_user_id"); else _explicitNullProperties?.Remove("creator_user_id"); } }
         private int? _explicitNullValueCreatorUserId = default!;
+        /// <summary>An object where each key represents a custom field. All custom fields are referenced as randomly generated 40-character hashes. To clear a custom field value, set it to `null`. For multi-option fields (field type `set`), use `null` to clear the selection — sending an empty array `[]` is not supported and will result in a validation error.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddActivity200ResponseDataCustomFields? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; AdditionalData?.Remove("custom_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.AddActivity200ResponseDataCustomFields? _explicitNullValueCustomFields = default!;
+#nullable restore
+#else
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.AddActivity200ResponseDataCustomFields CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; AdditionalData?.Remove("custom_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.AddActivity200ResponseDataCustomFields _explicitNullValueCustomFields = default!;
+#endif
         /// <summary>The ID of the deal linked to the activity</summary>
         public int? DealId { get => _explicitNullValueDealId; set { _explicitNullValueDealId = value; AdditionalData?.Remove("deal_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deal_id"); else _explicitNullProperties?.Remove("deal_id"); } }
         private int? _explicitNullValueDealId = default!;
@@ -308,7 +320,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(29)
+            return new Dictionary<string, Action<IParseNode>>(30)
             {
                 { "add_time", n => { AddTime = n.GetStringValue(); } },
                 { "attendees", n => { Attendees = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.AddActivity200ResponseDataAttendeesItem>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddActivity200ResponseDataAttendeesItem.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -317,6 +329,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
                 { "conference_meeting_id", n => { ConferenceMeetingId = n.GetStringValue(); } },
                 { "conference_meeting_url", n => { ConferenceMeetingUrl = n.GetStringValue(); } },
                 { "creator_user_id", n => { CreatorUserId = n.GetIntValue(); } },
+                { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddActivity200ResponseDataCustomFields>(global::Soenneker.Pipedrive.OpenApiClient.Models.AddActivity200ResponseDataCustomFields.CreateFromDiscriminatorValue); } },
                 { "deal_id", n => { DealId = n.GetIntValue(); } },
                 { "done", n => { Done = n.GetBoolValue(); } },
                 { "due_date", n => { DueDate = n.GetStringValue(); } },
@@ -355,6 +368,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteStringValue("conference_meeting_id", ConferenceMeetingId);
             writer.WriteStringValue("conference_meeting_url", ConferenceMeetingUrl);
             writer.WriteIntValue("creator_user_id", CreatorUserId);
+            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.AddActivity200ResponseDataCustomFields>("custom_fields", CustomFields);
             writer.WriteIntValue("deal_id", DealId);
             writer.WriteBoolValue("done", Done);
             writer.WriteStringValue("due_date", DueDate);

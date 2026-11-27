@@ -89,11 +89,11 @@ namespace Soenneker.Pipedrive.OpenApiClient.ActivityFields.Item
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.UiVisibilityItem[]? IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFieldIncludeFieldsParameterItem[]? IncludeFields { get; set; }
 #nullable restore
 #else
             [QueryParameter("include_fields")]
-            public global::Soenneker.Pipedrive.OpenApiClient.Models.UiVisibilityItem[] IncludeFields { get; set; }
+            public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFieldIncludeFieldsParameterItem[] IncludeFields { get; set; }
 #endif
         }
     }

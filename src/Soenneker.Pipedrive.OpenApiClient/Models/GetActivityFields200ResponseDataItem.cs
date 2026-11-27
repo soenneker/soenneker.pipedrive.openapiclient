@@ -29,6 +29,10 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             else if (parseNode.GetChildNode("is_optional_response_field") is { } nullNodeIsOptionalResponseField && nullNodeIsOptionalResponseField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOptionalResponseField = null;
             if (parseNode.GetChildNode("options") is null) { _explicitNullValueOptions = default!; _explicitNullProperties?.Remove("options"); }
             else if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
+            if (parseNode.GetChildNode("required_on_completion") is null) { _explicitNullValueRequiredOnCompletion = default!; _explicitNullProperties?.Remove("required_on_completion"); }
+            else if (parseNode.GetChildNode("required_on_completion") is { } nullNodeRequiredOnCompletion && nullNodeRequiredOnCompletion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequiredOnCompletion = null;
+            if (parseNode.GetChildNode("required_on_creation") is null) { _explicitNullValueRequiredOnCreation = default!; _explicitNullProperties?.Remove("required_on_creation"); }
+            else if (parseNode.GetChildNode("required_on_creation") is { } nullNodeRequiredOnCreation && nullNodeRequiredOnCreation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequiredOnCreation = null;
             if (parseNode.GetChildNode("subfields") is null) { _explicitNullValueSubfields = default!; _explicitNullProperties?.Remove("subfields"); }
             else if (parseNode.GetChildNode("subfields") is { } nullNodeSubfields && nullNodeSubfields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subfields = null;
             if (parseNode.GetChildNode("ui_visibility") is null) { _explicitNullValueUiVisibility = default!; _explicitNullProperties?.Remove("ui_visibility"); }
@@ -76,6 +80,26 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemOptionsItem> Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
         private List<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemOptionsItem> _explicitNullValueOptions = default!;
 #endif
+        /// <summary>Activity types for which the field is required when an activity is marked as done (only included when requested via include_fields parameter).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemRequiredOnCompletion? RequiredOnCompletion { get => _explicitNullValueRequiredOnCompletion; set { _explicitNullValueRequiredOnCompletion = value; AdditionalData?.Remove("required_on_completion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required_on_completion"); else _explicitNullProperties?.Remove("required_on_completion"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemRequiredOnCompletion? _explicitNullValueRequiredOnCompletion = default!;
+#nullable restore
+#else
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemRequiredOnCompletion RequiredOnCompletion { get => _explicitNullValueRequiredOnCompletion; set { _explicitNullValueRequiredOnCompletion = value; AdditionalData?.Remove("required_on_completion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required_on_completion"); else _explicitNullProperties?.Remove("required_on_completion"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemRequiredOnCompletion _explicitNullValueRequiredOnCompletion = default!;
+#endif
+        /// <summary>Activity types for which the field is required when an activity is created (only included when requested via include_fields parameter).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemRequiredOnCreation? RequiredOnCreation { get => _explicitNullValueRequiredOnCreation; set { _explicitNullValueRequiredOnCreation = value; AdditionalData?.Remove("required_on_creation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required_on_creation"); else _explicitNullProperties?.Remove("required_on_creation"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemRequiredOnCreation? _explicitNullValueRequiredOnCreation = default!;
+#nullable restore
+#else
+        public global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemRequiredOnCreation RequiredOnCreation { get => _explicitNullValueRequiredOnCreation; set { _explicitNullValueRequiredOnCreation = value; AdditionalData?.Remove("required_on_creation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required_on_creation"); else _explicitNullProperties?.Remove("required_on_creation"); } }
+        private global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemRequiredOnCreation _explicitNullValueRequiredOnCreation = default!;
+#endif
         /// <summary>Array of subfields for complex field types (address, monetary), null for simple field types</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -119,7 +143,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(8)
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "field_code", n => { FieldCode = n.GetStringValue(); } },
                 { "field_name", n => { FieldName = n.GetStringValue(); } },
@@ -127,6 +151,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
                 { "is_custom_field", n => { IsCustomField = n.GetBoolValue(); } },
                 { "is_optional_response_field", n => { IsOptionalResponseField = n.GetBoolValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemOptionsItem>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemOptionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "required_on_completion", n => { RequiredOnCompletion = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemRequiredOnCompletion>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemRequiredOnCompletion.CreateFromDiscriminatorValue); } },
+                { "required_on_creation", n => { RequiredOnCreation = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemRequiredOnCreation>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemRequiredOnCreation.CreateFromDiscriminatorValue); } },
                 { "subfields", n => { Subfields = n.GetCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemSubfieldsItem>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemSubfieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "ui_visibility", n => { UiVisibility = n.GetObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemUiVisibility>(global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemUiVisibility.CreateFromDiscriminatorValue); } },
             };
@@ -144,6 +170,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteBoolValue("is_custom_field", IsCustomField);
             writer.WriteBoolValue("is_optional_response_field", IsOptionalResponseField);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemOptionsItem>("options", Options);
+            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemRequiredOnCompletion>("required_on_completion", RequiredOnCompletion);
+            writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemRequiredOnCreation>("required_on_creation", RequiredOnCreation);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemSubfieldsItem>("subfields", Subfields);
             writer.WriteObjectValue<global::Soenneker.Pipedrive.OpenApiClient.Models.GetActivityFields200ResponseDataItemUiVisibility>("ui_visibility", UiVisibility);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
