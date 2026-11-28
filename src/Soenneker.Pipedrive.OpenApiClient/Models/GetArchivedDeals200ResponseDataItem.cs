@@ -223,8 +223,8 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
         public int? PipelineId { get => _explicitNullValuePipelineId; set { _explicitNullValuePipelineId = value; AdditionalData?.Remove("pipeline_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_id"); else _explicitNullProperties?.Remove("pipeline_id"); } }
         private int? _explicitNullValuePipelineId = default!;
         /// <summary>The success probability percentage of the deal</summary>
-        public double? Probability { get => _explicitNullValueProbability; set { _explicitNullValueProbability = value; AdditionalData?.Remove("probability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("probability"); else _explicitNullProperties?.Remove("probability"); } }
-        private double? _explicitNullValueProbability = default!;
+        public int? Probability { get => _explicitNullValueProbability; set { _explicitNullValueProbability = value; AdditionalData?.Remove("probability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("probability"); else _explicitNullProperties?.Remove("probability"); } }
+        private int? _explicitNullValueProbability = default!;
         /// <summary>The ID of the lead if the deal was converted from a lead. Only included when requested via include_fields parameter.</summary>
         public Guid? SourceLeadId { get => _explicitNullValueSourceLeadId; set { _explicitNullValueSourceLeadId = value; AdditionalData?.Remove("source_lead_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_lead_id"); else _explicitNullProperties?.Remove("source_lead_id"); } }
         private Guid? _explicitNullValueSourceLeadId = default!;
@@ -334,7 +334,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
                 { "owner_id", n => { OwnerId = n.GetIntValue(); } },
                 { "person_id", n => { PersonId = n.GetIntValue(); } },
                 { "pipeline_id", n => { PipelineId = n.GetIntValue(); } },
-                { "probability", n => { Probability = n.GetDoubleValue(); } },
+                { "probability", n => { Probability = n.GetIntValue(); } },
                 { "source_lead_id", n => { SourceLeadId = n.GetGuidValue(); } },
                 { "stage_change_time", n => { StageChangeTime = n.GetStringValue(); } },
                 { "stage_id", n => { StageId = n.GetIntValue(); } },
@@ -375,7 +375,7 @@ namespace Soenneker.Pipedrive.OpenApiClient.Models
             writer.WriteIntValue("owner_id", OwnerId);
             writer.WriteIntValue("person_id", PersonId);
             writer.WriteIntValue("pipeline_id", PipelineId);
-            writer.WriteDoubleValue("probability", Probability);
+            writer.WriteIntValue("probability", Probability);
             writer.WriteGuidValue("source_lead_id", SourceLeadId);
             writer.WriteStringValue("stage_change_time", StageChangeTime);
             writer.WriteIntValue("stage_id", StageId);

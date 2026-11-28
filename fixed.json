@@ -14699,7 +14699,8 @@
           },
           "owner_id": {
             "type": "integer",
-            "description": "The ID of the user who owns the deal"
+            "description": "The ID of the user who owns the deal",
+            "nullable": true
           },
           "person_id": {
             "type": "integer",
@@ -14713,11 +14714,13 @@
           },
           "pipeline_id": {
             "type": "integer",
-            "description": "The ID of the pipeline associated with the deal"
+            "description": "The ID of the pipeline associated with the deal",
+            "nullable": true
           },
           "stage_id": {
             "type": "integer",
-            "description": "The ID of the deal stage"
+            "description": "The ID of the deal stage",
+            "nullable": true
           },
           "value": {
             "type": "number",
@@ -14725,11 +14728,13 @@
           },
           "currency": {
             "type": "string",
-            "description": "The currency associated with the deal"
+            "description": "The currency associated with the deal",
+            "nullable": true
           },
           "is_archived": {
             "type": "boolean",
-            "description": "Whether the deal is archived or not"
+            "description": "Whether the deal is archived or not",
+            "nullable": true
           },
           "archive_time": {
             "type": "string",
@@ -14738,43 +14743,52 @@
           },
           "status": {
             "type": "string",
-            "description": "The status of the deal"
+            "description": "The status of the deal",
+            "nullable": true
           },
           "probability": {
-            "type": "number",
-            "description": "The success probability percentage of the deal"
+            "type": "integer",
+            "description": "The success probability percentage of the deal",
+            "nullable": true
           },
           "lost_reason": {
             "type": "string",
-            "description": "The reason for losing the deal. Can only be set if deal status is lost."
+            "description": "The reason for losing the deal. Can only be set if deal status is lost.",
+            "nullable": true
           },
           "visible_to": {
             "type": "integer",
-            "description": "The visibility of the deal"
+            "description": "The visibility of the deal",
+            "nullable": true
           },
           "close_time": {
             "type": "string",
-            "description": "The date and time of closing the deal. Can only be set if deal status is won or lost."
+            "description": "The date and time of closing the deal. Can only be set if deal status is won or lost.",
+            "nullable": true
           },
           "won_time": {
             "type": "string",
-            "description": "The date and time of changing the deal status as won. Can only be set if deal status is won."
+            "description": "The date and time of changing the deal status as won. Can only be set if deal status is won.",
+            "nullable": true
           },
           "lost_time": {
             "type": "string",
-            "description": "The date and time of changing the deal status as lost. Can only be set if deal status is lost."
+            "description": "The date and time of changing the deal status as lost. Can only be set if deal status is lost.",
+            "nullable": true
           },
           "expected_close_date": {
             "type": "string",
             "description": "The expected close date of the deal",
-            "format": "date"
+            "format": "date",
+            "nullable": true
           },
           "label_ids": {
             "type": "array",
             "items": {
               "type": "integer"
             },
-            "description": "The IDs of labels assigned to the deal"
+            "description": "The IDs of labels assigned to the deal",
+            "nullable": true
           },
           "channel": {
             "type": "integer",
@@ -14910,7 +14924,7 @@
             "description": "The status of the deal"
           },
           "probability": {
-            "type": "number",
+            "type": "integer",
             "description": "The success probability percentage of the deal"
           },
           "lost_reason": {
@@ -19796,7 +19810,7 @@
             "description": "The status of the deal"
           },
           "probability": {
-            "type": "number",
+            "type": "integer",
             "description": "The success probability percentage of the deal",
             "nullable": true
           },
@@ -19965,7 +19979,7 @@
             "description": "The status of the deal"
           },
           "probability": {
-            "type": "number",
+            "type": "integer",
             "description": "The success probability percentage of the deal",
             "nullable": true
           },
@@ -20119,7 +20133,7 @@
             "description": "The status of the deal"
           },
           "probability": {
-            "type": "number",
+            "type": "integer",
             "description": "The success probability percentage of the deal",
             "nullable": true
           },
@@ -20293,7 +20307,7 @@
             "description": "The status of the deal"
           },
           "probability": {
-            "type": "number",
+            "type": "integer",
             "description": "The success probability percentage of the deal",
             "nullable": true
           },
@@ -20451,7 +20465,7 @@
             "description": "The status of the deal"
           },
           "probability": {
-            "type": "number",
+            "type": "integer",
             "description": "The success probability percentage of the deal",
             "nullable": true
           },
@@ -41462,7 +41476,7 @@
           "description": "The status of the deal"
         },
         "probability": {
-          "type": "number",
+          "type": "integer",
           "description": "The success probability percentage of the deal",
           "nullable": true
         },
